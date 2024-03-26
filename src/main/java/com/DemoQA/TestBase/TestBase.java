@@ -20,6 +20,7 @@ public class TestBase {
 
 	public TC00_SampleClass d0;
 	public TC01_HomePage d1;
+	//public TC02_Page2 d2;
 
 	@BeforeMethod
 	public void startBrowser () {
