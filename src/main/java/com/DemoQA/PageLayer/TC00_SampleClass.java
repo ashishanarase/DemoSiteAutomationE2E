@@ -8,7 +8,7 @@ import com.DemoQA.TestBase.TestBase;
 
 public class TC00_SampleClass extends TestBase {
 	
-	public TC00_SampleClass (){
+	public TC00_SampleClass () {
 		PageFactory.initElements(driver, this);
 	}
 	
