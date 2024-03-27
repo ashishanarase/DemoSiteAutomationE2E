@@ -8,7 +8,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.io.FileHandler;
 import com.DemoQA.TestBase.TestBase;
 
-public class takeScreenShot extends TestBase {
+public class screenShot extends TestBase {
 
 	public static void takeScreenShot()  {
 		try {
