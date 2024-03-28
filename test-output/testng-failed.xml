@@ -5,9 +5,9 @@
     <classes>
       <class name="com.DemoQA.TestCase.TestCase">
         <methods>
-          <include name="TC01_openBrower"/>
           <include name="closeBrowser"/>
           <include name="startBrowser"/>
+          <include name="TC02_elementAction"/>
         </methods>
       </class> <!-- com.DemoQA.TestCase.TestCase -->
     </classes>
