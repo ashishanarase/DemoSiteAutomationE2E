@@ -5,7 +5,6 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import com.DemoQA.TestBase.TestBase;
-import utilityPackage.commonMethods;
 
 
 public class TC01_HomePage extends TestBase {

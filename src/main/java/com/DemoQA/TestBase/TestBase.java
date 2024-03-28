@@ -33,6 +33,7 @@ public class TestBase {
 
 			d0 = new TC00_SampleClass();
 			d1 = new TC01_HomePage();
+			d2 = new TC02_ElementHandeling ();
 
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
@@ -47,6 +48,7 @@ public class TestBase {
 
 			d0 = new TC00_SampleClass();
 			d1 = new TC01_HomePage();
+			d2 = new TC02_ElementHandeling ();
 
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
