@@ -5,14 +5,30 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import com.DemoQA.TestBase.TestBase;
-import utilityPackage.screenShot;
+import utilityPackage.commonMethods;
+
 
 public class TC01_HomePage extends TestBase {
 
 	//------------ Xpath Repository -------------
 
-	@FindBy (xpath = " ")
-	private WebElement txtbox_userName_homePage;
+	@FindBy (xpath = "//h5[text()=\"Elements\"]")
+	private WebElement btn_elements_homePage;
+	
+	@FindBy (xpath = "//h5[text()=\"Forms\"]")
+	private WebElement btn_forms_homePage;
+	
+	@FindBy (xpath = "//h5[text()=\"Alerts, Frame & Windows\"]")
+	private WebElement btn_alertsFrameWindows_homePage;
+	
+	@FindBy (xpath = "//h5[text()=\"Widgets\"]")
+	private WebElement btn_widgets_homePage;
+	
+	@FindBy (xpath = "//h5[text()=\"Interactions\"]")
+	private WebElement btn_interactions_homePage;
+	
+	@FindBy (xpath = "//h5[text()=\"Book Store Application\"]")
+	private WebElement btn_bookStoreApplication_homePage;
 
 	//------------ Action Methods -------------	
 
@@ -30,8 +46,39 @@ public class TC01_HomePage extends TestBase {
 
 		Thread.sleep(3000);
 		
-		screenShot.takeScreenShot();
-
+	}
+	
+	public void titleValidation (String expectedTitle) {
+		String actualTitle = driver.getTitle();
+		if (actualTitle.equals(expectedTitle)) {
+			System.out.println("Tab Title Validated");
+		}
+		else {
+			System.out.println("Tab Title not matching with expected title");
+		}
+	}
+	
+	public void navigateToElements () {
+		btn_elements_homePage.click();
+	}
+	
+	public void navigateToForms () {
+		btn_forms_homePage.click();
+	}
+	
+	public void navigateToAlerts () {
+		btn_alertsFrameWindows_homePage.click();
+	}
+	
+	public void navigateToWidgets () {
+		btn_widgets_homePage.click();
+	}
+	
+	public void navigateToInteractions () {
+		btn_interactions_homePage.click();
 	}
 
+	public void navigateToBookStoreApp () {
+	btn_bookStoreApplication_homePage.click();
+	}
 }

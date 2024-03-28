@@ -8,24 +8,26 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import com.DemoQA.PageLayer.TC00_SampleClass;
 import com.DemoQA.PageLayer.TC01_HomePage;
+import com.DemoQA.PageLayer.TC02_ElementHandeling;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 
 	public static WebDriver driver;
 
-	static String demoUrl = "https://demoqa.com";
+	static String demoUrl = "https://demoqa.com/";
 	static String desiredBrowser = "chrome";       // firefox
 	static String browserVersion = "123.0.6312.59";
 
 	public TC00_SampleClass d0;
 	public TC01_HomePage d1;
-	//public TC02_Page2 d2;
+	public TC02_ElementHandeling d2;
 	//public TC03_Page3 d3;
 
 	@BeforeMethod
 	public void startBrowser () {
-		if (desiredBrowser=="chrome") {
+		if (desiredBrowser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().browserVersion(browserVersion).setup(); //.browserVersion(browserVersion)
 			driver = new ChromeDriver();
 
@@ -39,7 +41,7 @@ public class TestBase {
 			driver.get(demoUrl);
 		}
 		
-		else if (desiredBrowser=="firefox") {
+		else if (desiredBrowser.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 
