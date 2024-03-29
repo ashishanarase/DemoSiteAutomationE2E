@@ -1,6 +1,8 @@
 package com.DemoQA.TestBase;
 
 import java.time.Duration;
+
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -15,7 +17,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestBase {
 
 	public static WebDriver driver;
-
+	
 	static String demoUrl = "https://demoqa.com/";
 	static String desiredBrowser = "chrome";       // firefox
 	static String browserVersion = "123.0.6312.59";
