@@ -2,7 +2,8 @@ package com.DemoQA.TestBase;
 
 import java.time.Duration;
 
-
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -17,6 +18,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestBase {
 
 	public static WebDriver driver;
+	public static Logger logger;
 	
 	static String demoUrl = "https://demoqa.com/";
 	static String desiredBrowser = "chrome";       // firefox
@@ -32,6 +34,7 @@ public class TestBase {
 		if (desiredBrowser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().browserVersion(browserVersion).setup(); //.browserVersion(browserVersion)
 			driver = new ChromeDriver();
+			logger = LogManager.getLogger(getClass());
 
 			d0 = new TC00_SampleClass();
 			d1 = new TC01_HomePage();
