@@ -2,9 +2,14 @@
 <suite name="MyTestSuite">
     <test name="RegressionTest">
         <!-- Specify test classes or methods to include -->
-        <classes>
-            <class name="com.DemoQA.PageLayer.TC01_HomePage"/>
-            <class name="com.DemoQA.PageLayer.TC02_ElementHandeling"/>
-        </classes>
+         <classes>
+            <class name="com.DemoQA.TestCase.TestCase">
+                <methods>
+                    <include name="TC01_openBrower"/>
+                    <include name="TC02_elementAction"/>
+                    <!-- You can include additional test methods here -->
+                </methods>
+            </class>
+ </classes>
     </test>
 </suite>
