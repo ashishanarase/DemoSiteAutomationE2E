@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite">
+    <test name="RegressionTest">
+        <!-- Specify test classes or methods to include -->
+        <classes>
+            <class name="com.DemoQA.PageLayer.TC01_HomePage"/>
+            <class name="com.DemoQA.PageLayer.TC02_ElementHandeling"/>
+        </classes>
+    </test>
+</suite>
