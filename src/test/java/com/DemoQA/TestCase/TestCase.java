@@ -4,18 +4,34 @@ import org.testng.annotations.Test;
 
 import com.DemoQA.TestBase.TestBase;
 
+import utilityPackage.commonMethods;
+
 public class TestCase extends TestBase {
 	
-	@Test
-	public void TC01_openBrower() throws InterruptedException {
+	@Test (priority=0, enabled=true, timeOut = 30000)
+	public void actionOnBrowser() throws InterruptedException {
 		d1.actionOnBrowser();
-		d1.titleValidation("DEMOQA");		
+		commonMethods.titleValidation("OrangeHRM");	
 	}
-	@Test 
-	public void TC02_elementAction() {
-		d1.titleValidation("DEMOQA");
-		d1.navigateToElements();
+	
+	@Test (priority=1, invocationCount = 2)
+	public void loginLogOut() throws InterruptedException {
+		d1.login();
+		commonMethods.titleValidation("OrangeHRM");
+		d1.logOut();
+	}
+	
+	@Test (priority=2, dependsOnMethods = {"loginLogOut"})
+	public void elementAction ()
+	{
+		commonMethods.titleValidation("OrangeHRM");
 		d2.actionOnElements();
+	}
+	
+	@Test (priority=3, description = "Difference between getWindowHandle & getWindowHandles")
+	public void windowHandling() throws InterruptedException  {
+		d3.WindowHandling();
+				
 	}
 
 }

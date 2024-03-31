@@ -1,34 +1,38 @@
 package com.DemoQA.PageLayer;
 
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
 import com.DemoQA.TestBase.TestBase;
 
 
 public class TC01_HomePage extends TestBase {
+	
+	public TC01_HomePage () {
+		PageFactory.initElements(driver, this);
+	}
 
 	//------------ Xpath Repository -------------
 
-	@FindBy (xpath = "//h5[text()=\"Elements\"]")
-	private WebElement btn_elements_homePage;
+	@FindBy (xpath = "//input[@placeholder=\"Username\"]")
+	private WebElement txtBox_userName_homePage;
 	
-	@FindBy (xpath = "//h5[text()=\"Forms\"]")
-	private WebElement btn_forms_homePage;
+	@FindBy (xpath = "//input[@placeholder=\"Password\"]")
+	private WebElement txtBox_password_homePage;
 	
-	@FindBy (xpath = "//h5[text()=\"Alerts, Frame & Windows\"]")
-	private WebElement btn_alertsFrameWindows_homePage;
+	@FindBy (xpath = "//button[@type=\"submit\"]")
+	private WebElement btn_login_homePage;
+		
+	@FindBy (xpath = "//h6[text()=\"Dashboard\"]//following::p[1]")
+	private WebElement btn_userName_dashboard;
 	
-	@FindBy (xpath = "//h5[text()=\"Widgets\"]")
-	private WebElement btn_widgets_homePage;
+	@FindBy (xpath = "(//a[@role=\"menuitem\"])[4]")
+	private WebElement btn_logOut_dashboard;
 	
-	@FindBy (xpath = "//h5[text()=\"Interactions\"]")
-	private WebElement btn_interactions_homePage;
-	
-	@FindBy (xpath = "//h5[text()=\"Book Store Application\"]")
-	private WebElement btn_bookStoreApplication_homePage;
-
 	//------------ Action Methods -------------	
 
 	public void actionOnBrowser() throws InterruptedException {
@@ -45,39 +49,19 @@ public class TC01_HomePage extends TestBase {
 
 		Thread.sleep(3000);
 		
-	}
-	
-	public void titleValidation (String expectedTitle) {
-		String actualTitle = driver.getTitle();
-		if (actualTitle.equals(expectedTitle)) {
-			System.out.println("Tab Title Validated");
-		}
-		else {
-			System.out.println("Tab Title not matching with expected title");
-		}
-	}
-	
-	public void navigateToElements () {
-		btn_elements_homePage.click();
-	}
-	
-	public void navigateToForms () {
-		btn_forms_homePage.click();
-	}
-	
-	public void navigateToAlerts () {
-		btn_alertsFrameWindows_homePage.click();
-	}
-	
-	public void navigateToWidgets () {
-		btn_widgets_homePage.click();
-	}
-	
-	public void navigateToInteractions () {
-		btn_interactions_homePage.click();
+		driver.manage().window().maximize();
+		
 	}
 
-	public void navigateToBookStoreApp () {
-	btn_bookStoreApplication_homePage.click();
+	public void login () {
+		txtBox_userName_homePage.sendKeys("Admin");
+		txtBox_password_homePage.sendKeys("admin123");
+		btn_login_homePage.click();
 	}
+	
+	public void logOut () {
+		btn_userName_dashboard.click();
+		btn_logOut_dashboard.click();
+	}
+	
 }

@@ -9,6 +9,16 @@ import org.openqa.selenium.io.FileHandler;
 import com.DemoQA.TestBase.TestBase;
 
 public class commonMethods extends TestBase {
+	
+	public static void titleValidation (String expectedTitle) {
+		String actualTitle = driver.getTitle();
+		if (actualTitle.equals(expectedTitle)) {
+			System.out.println("Tab Title Validated");
+		}
+		else {
+			System.out.println("Tab Title not matching with expected title");
+		}
+	}
 
 	public static void takeScreenShot()  {
 		try {
