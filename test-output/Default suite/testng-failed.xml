@@ -5,9 +5,10 @@
     <classes>
       <class name="com.DemoQA.TestCase.TestCase">
         <methods>
+          <include name="webElementAction"/>
           <include name="closeBrowser"/>
           <include name="startBrowser"/>
-          <include name="windowHandling"/>
+          <include name="loginLogOut"/>
         </methods>
       </class> <!-- com.DemoQA.TestCase.TestCase -->
     </classes>

@@ -29,8 +29,6 @@ public class TC03_WindowHandling extends TestBase {
 	@FindBy (xpath = "(//a[@target=\"_blank\"])[4]")
 	private WebElement btn_handle4_homePage;
 	
-	@FindBy (xpath = "//span[text()=\"See more on Facebook\")]")
-	private WebElement txt_facebook_homePage;
 
 	//------------ Action Methods ------------
 	
@@ -58,9 +56,7 @@ public class TC03_WindowHandling extends TestBase {
 			System.out.println(title);
 			if (title.contains("Facebook")) {
 				System.out.println("Switched to Desired Window");
-				Thread.sleep(3000);
-				boolean value = txt_facebook_homePage.isDisplayed();
-				System.out.println(value);
+				Thread.sleep(3000);				
 			}
 		}
 		

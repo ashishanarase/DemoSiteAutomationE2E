@@ -27,7 +27,7 @@ public class TC01_HomePage extends TestBase {
 	@FindBy (xpath = "//button[@type=\"submit\"]")
 	private WebElement btn_login_homePage;
 		
-	@FindBy (xpath = "//h6[text()=\"Dashboard\"]//following::p[1]")
+	@FindBy (xpath = "//span[@class=\"oxd-userdropdown-tab\"]")
 	private WebElement btn_userName_dashboard;
 	
 	@FindBy (xpath = "(//a[@role=\"menuitem\"])[4]")

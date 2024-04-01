@@ -22,16 +22,22 @@ public class TestCase extends TestBase {
 	}
 	
 	@Test (priority=2, dependsOnMethods = {"loginLogOut"})
-	public void elementAction ()
-	{
+	public void webElementAction () {
+		d1.login();
 		commonMethods.titleValidation("OrangeHRM");
 		d2.actionOnElements();
+		d1.logOut();
 	}
 	
 	@Test (priority=3, description = "Difference between getWindowHandle & getWindowHandles")
 	public void windowHandling() throws InterruptedException  {
-		d3.WindowHandling();
-				
+		d3.WindowHandling();				
 	}
+	
+	@Test (priority=4)
+	public void clickOperationType() throws InterruptedException  {
+		d4.clickOperationType();			
+	}
+	
 
 }

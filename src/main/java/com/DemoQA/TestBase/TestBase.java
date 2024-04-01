@@ -11,8 +11,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import com.DemoQA.PageLayer.TC00_SampleClass;
 import com.DemoQA.PageLayer.TC01_HomePage;
-import com.DemoQA.PageLayer.TC02_ElementHandeling;
+import com.DemoQA.PageLayer.TC02_WebElementTypes;
 import com.DemoQA.PageLayer.TC03_WindowHandling;
+import com.DemoQA.PageLayer.TC04_ClickOperationType;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -27,9 +28,9 @@ public class TestBase {
 
 	public TC00_SampleClass d0;
 	public TC01_HomePage d1;
-	public TC02_ElementHandeling d2;
+	public TC02_WebElementTypes d2;
 	public TC03_WindowHandling d3;
-	
+	public TC04_ClickOperationType d4;
 
 	@BeforeMethod
 	public void startBrowser () {
@@ -40,8 +41,9 @@ public class TestBase {
 
 			d0 = new TC00_SampleClass();
 			d1 = new TC01_HomePage();
-			d2 = new TC02_ElementHandeling ();
+			d2 = new TC02_WebElementTypes ();
 			d3 = new TC03_WindowHandling ();
+			d4 = new TC04_ClickOperationType ();
 
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
@@ -56,7 +58,7 @@ public class TestBase {
 
 			d0 = new TC00_SampleClass();
 			d1 = new TC01_HomePage();
-			d2 = new TC02_ElementHandeling ();
+			d2 = new TC02_WebElementTypes ();
 			d3 = new TC03_WindowHandling ();
 
 			driver.manage().window().maximize();
