@@ -47,7 +47,7 @@ public class TestCase extends TestBase {
 	
 	@Test (priority=5)
 	public void dynamicTableStructure() throws InterruptedException  {
-		
+		//Get the number of Rows and Columns from table dynamically 
 		d5.dynamicTableStructure();			
 	}
 	

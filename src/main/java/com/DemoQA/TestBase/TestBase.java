@@ -15,6 +15,8 @@ import com.DemoQA.PageLayer.TC02_WebElementTypes;
 import com.DemoQA.PageLayer.TC03_WindowHandling;
 import com.DemoQA.PageLayer.TC04_ClickOperationType;
 import com.DemoQA.PageLayer.TC05_DynamicTableStructure;
+import com.DemoQA.PageLayer.TC06_ExtentReportExample;
+import com.DemoQA.PageLayer.TC07_IframeHandling;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -25,7 +27,7 @@ public class TestBase {
 	
 	static String demoUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
 	static String desiredBrowser = "chrome";       // firefox
-	static String browserVersion = "123.0.6312.59";
+	static String browserVersion = "123.0.6312.106";
 
 	public TC00_SampleClass d0;
 	public TC01_HomePage d1;
@@ -33,6 +35,8 @@ public class TestBase {
 	public TC03_WindowHandling d3;
 	public TC04_ClickOperationType d4;
 	public TC05_DynamicTableStructure d5;
+	public TC06_ExtentReportExample d6;
+	public TC07_IframeHandling d7;
 
 	@BeforeMethod
 	public void startBrowser () {		
@@ -44,6 +48,8 @@ public class TestBase {
 		d3 = new TC03_WindowHandling ();
 		d4 = new TC04_ClickOperationType ();
 		d5 = new TC05_DynamicTableStructure ();
+		d6 = new TC06_ExtentReportExample ();
+		d7 = new TC07_IframeHandling ();
 		
 		if (desiredBrowser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().browserVersion(browserVersion).setup(); //.browserVersion(browserVersion)

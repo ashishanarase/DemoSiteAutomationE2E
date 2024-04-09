@@ -15,8 +15,9 @@ public class TC05_DynamicTableStructure extends TestBase {
 
 	//------------ Xpath Repository -------------
 
-	@FindBy (xpath = "//table[@class=\"ds-w-full ds-table ds-table-xs ds-table-auto  ds-w-full ds-overflow-scroll ds-scrollbar-hide\"]")
-	private WebElement element_table_homePage;
+//	@FindBy (xpath = "//table[@class=\"ds-w-full ds-table ds-table-xs ds-table-auto  ds-w-full ds-overflow-scroll ds-scrollbar-hide\"]")
+//	private WebElement element_table_homePage;
+//  Xpath from repository not working 
 
 	//------------ Action Methods -------------	
 
@@ -27,6 +28,8 @@ public class TC05_DynamicTableStructure extends TestBase {
 
 		driver.get("https://www.espncricinfo.com/records/trophy/team-highest-innings-totals/indian-premier-league-117");
 
+		WebElement element_table_homePage = driver.findElement(By.xpath("//table[@class=\"ds-w-full ds-table ds-table-xs ds-table-auto  ds-w-full ds-overflow-scroll ds-scrollbar-hide\"]"));
+			
 		int rowCount = element_table_homePage.findElements(By.tagName("tr")).size();
 		System.out.println(rowCount);
 
