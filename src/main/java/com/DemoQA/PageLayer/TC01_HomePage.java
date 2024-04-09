@@ -12,6 +12,9 @@ import com.DemoQA.TestBase.TestBase;
 
 public class TC01_HomePage extends TestBase {
 	
+	//Dimension Class and Point Class usage
+	//Login and Logout on Demo Website
+	
 	public TC01_HomePage () {
 		PageFactory.initElements(driver, this);
 	}

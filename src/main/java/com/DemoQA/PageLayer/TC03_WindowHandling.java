@@ -12,6 +12,9 @@ import com.DemoQA.TestBase.TestBase;
 
 public class TC03_WindowHandling extends TestBase {
 	
+	//Difference between getWindowHandle & getWindowHandles 
+	//Window switch using Desired Index value and Title out of multiple windows
+	
 	public TC03_WindowHandling () {
 		PageFactory.initElements(driver, this);
 	}

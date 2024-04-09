@@ -11,6 +11,8 @@ import com.DemoQA.TestBase.TestBase;
 
 public class TC04_ClickOperationType extends TestBase {
 
+	//Different ways to perform click on webelement
+	
 	public TC04_ClickOperationType () {
 		PageFactory.initElements(driver, this);
 	}

@@ -8,6 +8,8 @@ import com.DemoQA.TestBase.TestBase;
 
 public class TC02_WebElementTypes extends TestBase {
 	
+	//Different Type of Xpath and Handling them
+	
 	public TC02_WebElementTypes () {
 		PageFactory.initElements(driver, this);
 	}

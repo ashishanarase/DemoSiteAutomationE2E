@@ -14,6 +14,7 @@ import com.DemoQA.PageLayer.TC01_HomePage;
 import com.DemoQA.PageLayer.TC02_WebElementTypes;
 import com.DemoQA.PageLayer.TC03_WindowHandling;
 import com.DemoQA.PageLayer.TC04_ClickOperationType;
+import com.DemoQA.PageLayer.TC05_DynamicTableStructure;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -31,19 +32,23 @@ public class TestBase {
 	public TC02_WebElementTypes d2;
 	public TC03_WindowHandling d3;
 	public TC04_ClickOperationType d4;
+	public TC05_DynamicTableStructure d5;
 
 	@BeforeMethod
-	public void startBrowser () {
+	public void startBrowser () {		
+
+		//obj references
+		d0 = new TC00_SampleClass();
+		d1 = new TC01_HomePage();
+		d2 = new TC02_WebElementTypes ();
+		d3 = new TC03_WindowHandling ();
+		d4 = new TC04_ClickOperationType ();
+		d5 = new TC05_DynamicTableStructure ();
+		
 		if (desiredBrowser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().browserVersion(browserVersion).setup(); //.browserVersion(browserVersion)
 			driver = new ChromeDriver();
 			logger = LogManager.getLogger(getClass());
-
-			d0 = new TC00_SampleClass();
-			d1 = new TC01_HomePage();
-			d2 = new TC02_WebElementTypes ();
-			d3 = new TC03_WindowHandling ();
-			d4 = new TC04_ClickOperationType ();
 
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
@@ -55,12 +60,7 @@ public class TestBase {
 		else if (desiredBrowser.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-
-			d0 = new TC00_SampleClass();
-			d1 = new TC01_HomePage();
-			d2 = new TC02_WebElementTypes ();
-			d3 = new TC03_WindowHandling ();
-
+			
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -71,6 +71,8 @@ public class TestBase {
 	
 	@AfterMethod	
 	public void closeBrowser() throws InterruptedException {
+		Thread.sleep(1000);
+		driver.manage().deleteAllCookies();
 		Thread.sleep(2000);
 		driver.quit();
 	}
