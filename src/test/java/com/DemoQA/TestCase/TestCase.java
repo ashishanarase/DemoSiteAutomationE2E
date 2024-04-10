@@ -51,5 +51,25 @@ public class TestCase extends TestBase {
 		d5.dynamicTableStructure();			
 	}
 	
+	@Test (priority=6)
+	public void extentReportExample() throws InterruptedException  {
+		//Extent Report Example
+		
+	}
+	
+	@Test (priority=7)
+	public void iFrameHandling() throws InterruptedException  {
+		//Handled Iframe on Google.com 
+		d7.iframeHandling();
+		
+	}
+	
+	@Test (priority=8)
+	public void fetchSearchResultCount() throws InterruptedException  {
+		//Fetch the search result count dynamically in run time. 
+		//Assume here we can send any input in search box and code should work properly.
+		d8.fetchSearchResultCount();
+	}
+	
 
 }

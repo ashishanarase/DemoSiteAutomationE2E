@@ -17,6 +17,7 @@ import com.DemoQA.PageLayer.TC04_ClickOperationType;
 import com.DemoQA.PageLayer.TC05_DynamicTableStructure;
 import com.DemoQA.PageLayer.TC06_ExtentReportExample;
 import com.DemoQA.PageLayer.TC07_IframeHandling;
+import com.DemoQA.PageLayer.TC08_SearchResultCount;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -37,24 +38,27 @@ public class TestBase {
 	public TC05_DynamicTableStructure d5;
 	public TC06_ExtentReportExample d6;
 	public TC07_IframeHandling d7;
+	public TC08_SearchResultCount d8;
 
 	@BeforeMethod
 	public void startBrowser () {		
 
-		//obj references
-		d0 = new TC00_SampleClass();
-		d1 = new TC01_HomePage();
-		d2 = new TC02_WebElementTypes ();
-		d3 = new TC03_WindowHandling ();
-		d4 = new TC04_ClickOperationType ();
-		d5 = new TC05_DynamicTableStructure ();
-		d6 = new TC06_ExtentReportExample ();
-		d7 = new TC07_IframeHandling ();
 		
 		if (desiredBrowser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().browserVersion(browserVersion).setup(); //.browserVersion(browserVersion)
 			driver = new ChromeDriver();
 			logger = LogManager.getLogger(getClass());
+			
+			//obj references
+			d0 = new TC00_SampleClass();
+			d1 = new TC01_HomePage();
+			d2 = new TC02_WebElementTypes ();
+			d3 = new TC03_WindowHandling ();
+			d4 = new TC04_ClickOperationType ();
+			d5 = new TC05_DynamicTableStructure ();
+			d6 = new TC06_ExtentReportExample ();
+			d7 = new TC07_IframeHandling ();
+			d8 = new TC08_SearchResultCount ();
 
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
@@ -66,6 +70,17 @@ public class TestBase {
 		else if (desiredBrowser.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
+			
+			//obj references
+			d0 = new TC00_SampleClass();
+			d1 = new TC01_HomePage();
+			d2 = new TC02_WebElementTypes ();
+			d3 = new TC03_WindowHandling ();
+			d4 = new TC04_ClickOperationType ();
+			d5 = new TC05_DynamicTableStructure ();
+			d6 = new TC06_ExtentReportExample ();
+			d7 = new TC07_IframeHandling ();
+			d8 = new TC08_SearchResultCount ();
 			
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();

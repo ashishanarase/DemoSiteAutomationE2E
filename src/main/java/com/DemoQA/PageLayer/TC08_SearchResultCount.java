@@ -8,20 +8,24 @@ import com.DemoQA.TestBase.TestBase;
 
 public class TC08_SearchResultCount extends TestBase {
 
+	//Fetch the search result count dynamically in run time. 
+	//Assume here we can send any input in search box and code should work properly.
+	
 	public TC08_SearchResultCount () {
 		PageFactory.initElements(driver, this);
 	}
+	
 
 	//------------ Xpath Repository -------------
 
 	@FindBy (xpath = "//input[@id=\"twotabsearchtextbox\"]")
-	public WebElement txtBox_searchBox_homePage;
+	private WebElement txtBox_searchBox_homePage;
 
 	@FindBy (xpath = "//input[@id=\"nav-search-submit-button\"]")
-	public WebElement btn_search_homePage;
+	private WebElement btn_search_homePage;
 
 	@FindBy (xpath = "//h1[@class=\"a-size-base s-desktop-toolbar a-text-normal\"]")
-	public WebElement txt_searchResult_homePage;
+	private WebElement txt_searchResult_homePage;
 
 	//------------ Action Methods -------------	
 
@@ -31,15 +35,15 @@ public class TC08_SearchResultCount extends TestBase {
 
 		String desiredSearchText = "Motorola Mobiles";
 
-		//		WebElement txtBox_searchBox_homePage = driver.findElement(By.xpath("//input[@id=\"twotabsearchtextbox\"]"));
+		//WebElement txtBox_searchBox_homePage = driver.findElement(By.xpath("//input[@id=\"twotabsearchtextbox\"]"));
 
 		txtBox_searchBox_homePage.sendKeys(desiredSearchText);
 
-		//			WebElement btn_search_homePage = driver.findElement(By.xpath("//input[@id=\"nav-search-submit-button\"]"));
+		//WebElement btn_search_homePage = driver.findElement(By.xpath("//input[@id=\"nav-search-submit-button\"]"));
 
 		btn_search_homePage.click();
 
-		//		WebElement txt_searchResult_homePage = driver.findElement(By.xpath("//h1[@class=\"a-size-base s-desktop-toolbar a-text-normal\"]"));
+		//WebElement txt_searchResult_homePage = driver.findElement(By.xpath("//h1[@class=\"a-size-base s-desktop-toolbar a-text-normal\"]"));
 
 		String resultText = txt_searchResult_homePage.getText();
 
