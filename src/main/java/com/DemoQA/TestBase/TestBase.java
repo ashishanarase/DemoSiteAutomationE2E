@@ -18,6 +18,9 @@ import com.DemoQA.PageLayer.TC05_DynamicTableStructure;
 import com.DemoQA.PageLayer.TC06_ExtentReportExample;
 import com.DemoQA.PageLayer.TC07_IframeHandling;
 import com.DemoQA.PageLayer.TC08_SearchResultCount;
+import com.DemoQA.PageLayer.TC09_AlertHandling;
+import com.DemoQA.PageLayer.TC10_DropdownHandling;
+import com.DemoQA.PageLayer.TC11_ExplicitWaitConditions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -39,6 +42,9 @@ public class TestBase {
 	public TC06_ExtentReportExample d6;
 	public TC07_IframeHandling d7;
 	public TC08_SearchResultCount d8;
+	public TC09_AlertHandling d9;
+	public TC10_DropdownHandling d10;
+	public TC11_ExplicitWaitConditions d11;
 
 	@BeforeMethod
 	public void startBrowser () {		
@@ -49,28 +55,14 @@ public class TestBase {
 			driver = new ChromeDriver();
 			logger = LogManager.getLogger(getClass());
 			
-			//obj references
-			d0 = new TC00_SampleClass();
-			d1 = new TC01_HomePage();
-			d2 = new TC02_WebElementTypes ();
-			d3 = new TC03_WindowHandling ();
-			d4 = new TC04_ClickOperationType ();
-			d5 = new TC05_DynamicTableStructure ();
-			d6 = new TC06_ExtentReportExample ();
-			d7 = new TC07_IframeHandling ();
-			d8 = new TC08_SearchResultCount ();
-
-			driver.manage().window().maximize();
-			driver.manage().deleteAllCookies();
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-			driver.get(demoUrl);
 		}
 		
 		else if (desiredBrowser.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-			
+			logger = LogManager.getLogger(getClass());
+		}
+		
 			//obj references
 			d0 = new TC00_SampleClass();
 			d1 = new TC01_HomePage();
@@ -81,6 +73,9 @@ public class TestBase {
 			d6 = new TC06_ExtentReportExample ();
 			d7 = new TC07_IframeHandling ();
 			d8 = new TC08_SearchResultCount ();
+			d9 = new TC09_AlertHandling ();
+			d10 = new TC10_DropdownHandling ();
+			d11 = new TC11_ExplicitWaitConditions();
 			
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
@@ -88,7 +83,7 @@ public class TestBase {
 
 			driver.get(demoUrl);
 		}
-	}
+	
 	
 	@AfterMethod	
 	public void closeBrowser() throws InterruptedException {

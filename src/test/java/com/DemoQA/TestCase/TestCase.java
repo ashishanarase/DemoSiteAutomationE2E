@@ -71,5 +71,11 @@ public class TestCase extends TestBase {
 		d8.fetchSearchResultCount();
 	}
 	
+	@Test (priority=9)
+	public void alertHandling() throws InterruptedException  {
+		//Different Type of Alert and Handling them
+		d9.alertHandling();
+	}
+	
 
 }
