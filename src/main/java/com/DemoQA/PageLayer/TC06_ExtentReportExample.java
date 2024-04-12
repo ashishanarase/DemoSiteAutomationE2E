@@ -1,11 +1,15 @@
 package com.DemoQA.PageLayer;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.DemoQA.TestBase.TestBase;
 import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
 
 
 public class TC06_ExtentReportExample extends TestBase {
@@ -22,7 +26,7 @@ public class TC06_ExtentReportExample extends TestBase {
 
 	//------------ Action Methods -------------	
 
-	/* public void extentReportExample() {
+	 public void extentReportExample() {
 		
 		ExtentHtmlReporter report  = new ExtentHtmlReporter("ExtentReport.html");
 
@@ -49,10 +53,9 @@ public class TC06_ExtentReportExample extends TestBase {
 
 		test.pass("This step shows usage of pass (details)");
 
-		driver.quit();
 		test.pass("Browser Closed");
 		test.info("Test Completed");
 		extent.flush();
 		//		test.fail("details", MediaEntityBuilder.createScreenCaptureFromPath("screenshot.jpg").build().);
-	}  */
+	} 
 }

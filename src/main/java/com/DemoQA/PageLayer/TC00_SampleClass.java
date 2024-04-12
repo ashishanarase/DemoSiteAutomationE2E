@@ -8,6 +8,8 @@ import com.DemoQA.TestBase.TestBase;
 
 public class TC00_SampleClass extends TestBase {
 	
+	//this is sample class
+	
 	public TC00_SampleClass () {
 		PageFactory.initElements(driver, this);
 	}

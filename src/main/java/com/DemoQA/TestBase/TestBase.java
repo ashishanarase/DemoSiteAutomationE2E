@@ -31,7 +31,7 @@ public class TestBase {
 	
 	static String demoUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
 	static String desiredBrowser = "chrome";       // firefox
-	static String browserVersion = "123.0.6312.106";
+	static String browserVersion = "123.0.6312.107";
 
 	public TC00_SampleClass d0;
 	public TC01_HomePage d1;

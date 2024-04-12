@@ -54,6 +54,7 @@ public class TestCase extends TestBase {
 	@Test (priority=6)
 	public void extentReportExample() throws InterruptedException  {
 		//Extent Report Example
+		d6.extentReportExample();
 		
 	}
 	
@@ -77,5 +78,15 @@ public class TestCase extends TestBase {
 		d9.alertHandling();
 	}
 	
+	@Test (priority=10)
+	public void dropdownHandling() throws InterruptedException  {
+		//DropdownHandling and Get Dropdown Options Using Select Class 
+		d10.dropdownHandling();
+	}
 
+	@Test (priority=11)
+	public void explicitWaitConditions() throws InterruptedException  {
+		//Different ExplicitWait Conditions handling
+		d11.explicitWaitConditions();
+	}
 }
