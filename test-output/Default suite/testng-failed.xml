@@ -5,16 +5,9 @@
     <classes>
       <class name="com.DemoQA.TestCase.TestCase">
         <methods>
-          <include name="dynamicTableStructure"/>
-          <include name="clickOperationType"/>
           <include name="closeBrowser"/>
-          <include name="fetchSearchResultCount"/>
           <include name="startBrowser"/>
           <include name="explicitWaitConditions"/>
-          <include name="dropdownHandling"/>
-          <include name="iFrameHandling"/>
-          <include name="extentReportExample"/>
-          <include name="alertHandling"/>
         </methods>
       </class> <!-- com.DemoQA.TestCase.TestCase -->
     </classes>
