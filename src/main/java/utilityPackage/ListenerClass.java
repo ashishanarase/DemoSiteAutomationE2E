@@ -21,7 +21,8 @@ public class ListenerClass extends TestBase implements ITestListener {
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		
+		System.out.println("Failed Case");
+		commonMethods.takeScreenShot();
 	}
 
 	@Override

@@ -1,11 +1,12 @@
 package com.DemoQA.TestCase;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import com.DemoQA.TestBase.TestBase;
-
+import utilityPackage.ListenerClass;
 import utilityPackage.commonMethods;
 
+@Listeners(ListenerClass.class)
 public class TestCase extends TestBase {
 	
 	@Test (priority=0, enabled=true, timeOut = 30000)

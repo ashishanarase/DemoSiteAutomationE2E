@@ -8,57 +8,61 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Failed suite [Default suite]</th></tr>
-<tr><td><a href="#t0">Default test(failed)</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">334,689</td><td></td><td></td></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">12</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">274,951</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Failed suite [Default suite]</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test(failed) &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.DemoQA.TestCase.TestCase</td><td><a href="#m0">explicitWaitConditions</a></td><td rowspan="1">1712950081058</td><td rowspan="1">19027</td></tr><tr class="failedeven"><td><a href="#m1">iFrameHandling</a></td><td rowspan="1">1712949891699</td><td rowspan="1">15000</td></tr><tr><th colspan="4">Default test(failed) &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">com.DemoQA.TestCase.TestCase</td><td><a href="#m2">alertHandling</a></td><td rowspan="1">1712949983350</td><td rowspan="1">21105</td></tr><tr class="passedeven"><td><a href="#m3">clickOperationType</a></td><td rowspan="1">1712949774466</td><td rowspan="1">25087</td></tr><tr class="passedeven"><td><a href="#m4">dropdownHandling</a></td><td rowspan="1">1712950027122</td><td rowspan="1">33514</td></tr><tr class="passedeven"><td><a href="#m5">dynamicTableStructure</a></td><td rowspan="1">1712949815513</td><td rowspan="1">37821</td></tr><tr class="passedeven"><td><a href="#m6">extentReportExample</a></td><td rowspan="1">1712949869926</td><td rowspan="1">7628</td></tr><tr class="passedeven"><td><a href="#m7">fetchSearchResultCount</a></td><td rowspan="1">1712949931371</td><td rowspan="1">24077</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.DemoQA.TestCase.TestCase</td><td><a href="#m0">explicitWaitConditions</a></td><td rowspan="1">1713000926115</td><td rowspan="1">18631</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="12">com.DemoQA.TestCase.TestCase</td><td><a href="#m1">actionOnBrowser</a></td><td rowspan="1">1713000686016</td><td rowspan="1">4656</td></tr><tr class="passedeven"><td><a href="#m2">alertHandling</a></td><td rowspan="1">1713000866662</td><td rowspan="1">17252</td></tr><tr class="passedeven"><td><a href="#m3">clickOperationType</a></td><td rowspan="1">1713000777663</td><td rowspan="1">9950</td></tr><tr class="passedeven"><td><a href="#m4">dropdownHandling</a></td><td rowspan="1">1713000892356</td><td rowspan="1">25283</td></tr><tr class="passedeven"><td><a href="#m5">dynamicTableStructure</a></td><td rowspan="1">1713000796718</td><td rowspan="1">5074</td></tr><tr class="passedeven"><td><a href="#m6">extentReportExample</a></td><td rowspan="1">1713000813966</td><td rowspan="1">5676</td></tr><tr class="passedeven"><td><a href="#m7">fetchSearchResultCount</a></td><td rowspan="1">1713000845728</td><td rowspan="1">11969</td></tr><tr class="passedeven"><td><a href="#m8">iFrameHandling</a></td><td rowspan="1">1713000830431</td><td rowspan="1">5959</td></tr><tr class="passedeven"><td><a href="#m9">loginLogOut</a></td><td rowspan="2">1713000712713</td><td rowspan="2">4259</td></tr><tr class="passedeven"><td><a href="#m10">loginLogOut</a></td></tr><tr class="passedeven"><td><a href="#m11">webElementAction</a></td><td rowspan="1">1713000729535</td><td rowspan="1">5575</td></tr><tr class="passedeven"><td><a href="#m12">windowHandling</a></td><td rowspan="1">1713000752373</td><td rowspan="1">13175</td></tr></tbody>
 </table>
-<h2>Default test(failed)</h2><h3 id="m0">com.DemoQA.TestCase.TestCase#explicitWaitConditions</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: elementId (tried for 10 second(s) with 500 milliseconds interval)
+<h2>Default test</h2><h3 id="m0">com.DemoQA.TestCase.TestCase#explicitWaitConditions</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: elementId (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.18.0&apos;, revision: &apos;b6bf9de7cc*&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.107, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\ASHISH\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61452}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61452/devtoo..., se:cdpVersion: 123.0.6312.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7db95c97cae58f1d3cffbd3f4baf528f
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.123, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\ASHISH\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50827}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50827/devtoo..., se:cdpVersion: 123.0.6312.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8ab32b3bf9b65f74e9676ca8da844974
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 	at com.DemoQA.PageLayer.TC11_ExplicitWaitConditions.explicitWaitConditions(TC11_ExplicitWaitConditions.java:63)
-	at com.DemoQA.TestCase.TestCase.explicitWaitConditions(TestCase.java:90)
+	at com.DemoQA.TestCase.TestCase.explicitWaitConditions(TestCase.java:93)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.DemoQA.TestCase.TestCase#iFrameHandling</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//iframe[@frameborder=&quot;0&quot;])[1]&quot;}
-  (Session info: chrome=123.0.6312.107)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.18.0&apos;, revision: &apos;b6bf9de7cc*&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [fd2294f443889cb79f4cf4cf152c4bc3, findElement {value=(//iframe[@frameborder=&quot;0&quot;])[1], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 123.0.6312.107, chrome: {chromedriverVersion: 123.0.6312.122 (31f8248cdd9..., userDataDir: C:\Users\ASHISH\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61179}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61179/devtoo..., se:cdpVersion: 123.0.6312.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: fd2294f443889cb79f4cf4cf152c4bc3
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy16.getWrappedElement(Unknown Source)
-	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:1105)
-	at com.DemoQA.PageLayer.TC07_IframeHandling.iframeHandling(TC07_IframeHandling.java:37)
-	at com.DemoQA.TestCase.TestCase.iFrameHandling(TestCase.java:64)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.DemoQA.TestCase.TestCase#actionOnBrowser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m2">com.DemoQA.TestCase.TestCase#alertHandling</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m3">com.DemoQA.TestCase.TestCase#clickOperationType</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m4">com.DemoQA.TestCase.TestCase#dropdownHandling</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m5">com.DemoQA.TestCase.TestCase#dynamicTableStructure</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m6">com.DemoQA.TestCase.TestCase#extentReportExample</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m7">com.DemoQA.TestCase.TestCase#fetchSearchResultCount</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.DemoQA.TestCase.TestCase#iFrameHandling</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.DemoQA.TestCase.TestCase#loginLogOut</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">com.DemoQA.TestCase.TestCase#loginLogOut</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">com.DemoQA.TestCase.TestCase#webElementAction</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">com.DemoQA.TestCase.TestCase#windowHandling</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

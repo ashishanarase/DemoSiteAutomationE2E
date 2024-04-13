@@ -87,8 +87,6 @@ public class TestBase {
 	
 	@AfterMethod	
 	public void closeBrowser() throws InterruptedException {
-		Thread.sleep(1000);
-		driver.manage().deleteAllCookies();
 		Thread.sleep(2000);
 		driver.quit();
 	}
