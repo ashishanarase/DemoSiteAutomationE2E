@@ -60,23 +60,23 @@ public class TC11_ExplicitWaitConditions extends TestBase {
 		
 		//Element to Be Clickable: Waits until the element is present in the DOM and clickable.
 		//This condition is useful when waiting for an element to become interactive, such as a button or a link.
-		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id("elementId")));
+	//	WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id("elementId")));
 
 		//Visibility of Element: Waits until the element is present in the DOM and visible. 
 		//This condition is useful when waiting for an element to become visible on the web page.
-		WebElement element2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("elementId")));
+	//	WebElement element2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("elementId")));
 		
 		//Invisibility of Element: Waits until the element is no longer visible on the web page. 
 		//This condition is useful when waiting for an element to disappear, such as a loading spinner or a popup.
-		boolean elementInvisible = wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("elementId")));
+	//	boolean elementInvisible = wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("elementId")));
 
 		//Presence of Element: Waits until the element is present in the DOM, regardless of its visibility. 
 		//This condition is useful when waiting for an element to be added to the DOM.
-		WebElement element3 = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("elementId")));
+	//	WebElement element3 = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("elementId")));
 
 		//Text to Be Present in Element: Waits until the specified text is present within the element. 
 		//This condition is useful when waiting for dynamic content to appear.
-		boolean textPresent = wait.until(ExpectedConditions.textToBePresentInElementLocated(By.id("elementId"), "expectedText"));
+	//	boolean textPresent = wait.until(ExpectedConditions.textToBePresentInElementLocated(By.id("elementId"), "expectedText"));
 
 		//Title Contains: Waits until the title of the web page contains the specified text.
 		boolean titleContains = wait.until(ExpectedConditions.titleContains("expectedText"));
