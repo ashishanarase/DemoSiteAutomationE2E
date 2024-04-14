@@ -10,8 +10,6 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
-
-
 public class TC06_ExtentReportExample extends TestBase {
 
 	//Extent Report Example
@@ -56,6 +54,6 @@ public class TC06_ExtentReportExample extends TestBase {
 		test.pass("Browser Closed");
 		test.info("Test Completed");
 		extent.flush();
-		//		test.fail("details", MediaEntityBuilder.createScreenCaptureFromPath("screenshot.jpg").build().);
+		//test.fail("details", MediaEntityBuilder.createScreenCaptureFromPath("screenshot.jpg").build().);
 	} 
 }
