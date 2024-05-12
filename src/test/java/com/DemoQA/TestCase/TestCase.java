@@ -1,5 +1,7 @@
 package com.DemoQA.TestCase;
 
+import java.io.IOException;
+
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import com.DemoQA.TestBase.TestBase;
@@ -89,5 +91,11 @@ public class TestCase extends TestBase {
 	public void explicitWaitConditions() throws InterruptedException  {
 		//Different ExplicitWait Conditions handling
 		d11.explicitWaitConditions();
+	}
+	
+	@Test (priority=12)
+	public void brokenLinkValidation() throws InterruptedException, IOException  {
+		//Broken Link Validation 
+		d12.brokenLinkValidation("https://www.amazon.in");
 	}
 }

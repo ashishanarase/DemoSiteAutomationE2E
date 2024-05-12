@@ -1,7 +1,6 @@
 package com.DemoQA.TestBase;
 
 import java.time.Duration;
-
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -21,6 +20,7 @@ import com.DemoQA.PageLayer.TC08_SearchResultCount;
 import com.DemoQA.PageLayer.TC09_AlertHandling;
 import com.DemoQA.PageLayer.TC10_DropdownHandling;
 import com.DemoQA.PageLayer.TC11_ExplicitWaitConditions;
+import com.DemoQA.PageLayer.TC12_BrokenLinkValidation;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -45,6 +45,7 @@ public class TestBase {
 	public TC09_AlertHandling d9;
 	public TC10_DropdownHandling d10;
 	public TC11_ExplicitWaitConditions d11;
+	public TC12_BrokenLinkValidation d12;
 
 	@BeforeMethod
 	public void startBrowser () {		
@@ -76,6 +77,7 @@ public class TestBase {
 			d9 = new TC09_AlertHandling ();
 			d10 = new TC10_DropdownHandling ();
 			d11 = new TC11_ExplicitWaitConditions();
+			d12 = new TC12_BrokenLinkValidation ();
 			
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
