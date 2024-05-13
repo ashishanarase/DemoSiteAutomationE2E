@@ -57,7 +57,7 @@ public class TC12_BrokenLinkValidation extends TestBase {
 					System.out.println("Broken Link = " + urlLink);
 				}
 				else {
-					System.out.println();
+					System.out.println("Valid Link = "+ urlLink);
 				}
 			}				
 		}
