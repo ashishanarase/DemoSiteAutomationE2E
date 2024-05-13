@@ -7,7 +7,7 @@
         <methods>
           <include name="closeBrowser"/>
           <include name="startBrowser"/>
-          <include name="explicitWaitConditions"/>
+          <include name="brokenLinkValidation"/>
         </methods>
       </class> <!-- com.DemoQA.TestCase.TestCase -->
     </classes>
