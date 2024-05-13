@@ -32,34 +32,47 @@ public class TC12_BrokenLinkValidation extends TestBase {
 
 		driver.get(desiredUrl);
 
-		List <WebElement> urlList = driver.findElements(By.tagName("a"));
+		List <WebElement> elementLinks = driver.findElements(By.tagName("a"));
 
-		System.out.println("Total Number of Links = "+urlList.size());
+		System.out.println("Total Number of Links = "+elementLinks.size());
 
-		//List <WebElement> activeLinks = new ArrayList <WebElement>();
+		List <String> linkList = new ArrayList <String>();
 
-		for (int i = 0; i<urlList.size(); i++) {
-			if (urlList.get(i).getAttribute("href") != null) {
+		for (WebElement element : elementLinks) {
+			String url = element.getAttribute("href");
+			linkList.add(url);
+		}
 
-				String urlLink = urlList.get(i).getAttribute("href");
+		long stTime = System.currentTimeMillis();
+		linkList.parallelStream().forEach(element -> checkBrokenLink(element));
+		long endTime = System.currentTimeMillis();
 
-				URL link = new URL(urlLink);
+		System.out.print("Total time taken = "+(endTime-stTime));
 
-				HttpURLConnection httpCon = (HttpURLConnection) link.openConnection();
+	}
 
-				Thread.sleep(2000);
+	public static void checkBrokenLink(String linkUrl) {
+		try {
+			URL link = new URL(linkUrl);
 
-				httpCon.connect();
+			HttpURLConnection httpCon = (HttpURLConnection) link.openConnection();
 
-				int responseCode = httpCon.getResponseCode();
+			httpCon.setConnectTimeout(5000);
 
-				if (responseCode >= 400) {
-					System.out.println("Broken Link = " + urlLink);
-				}
-				else {
-					System.out.println("Valid Link = "+ urlLink);
-				}
-			}				
+			httpCon.connect();
+
+			int responseCode = httpCon.getResponseCode();
+
+			if (responseCode >= 400) {
+				System.out.println("Broken Link URL with message = " +httpCon.getResponseMessage() +" " + linkUrl);
+			}
+			else {
+				System.out.println("Valid Link URL with message = "+httpCon.getResponseMessage());
+			}
+		}
+		catch (IOException e) {
+			
+			e.printStackTrace();
 		}
 	}
 }
