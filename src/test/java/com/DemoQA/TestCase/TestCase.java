@@ -104,4 +104,9 @@ public class TestCase extends TestBase {
 		//Broken Link Validation 
 		d13.mouseActionClass();
 	}
+	
+	@Test ()
+	public void dataProviderMethod() {
+		d14.dataProviderMethod();
+	}
 }

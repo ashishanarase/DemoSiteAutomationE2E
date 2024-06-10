@@ -8,11 +8,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.DemoQA.TestBase.TestBase;
 
-public class TC00_SampleClass extends TestBase {
+public class TC14_DataProviderInTestNg extends TestBase {
 	
 	//this is sample class
 	
-	public TC00_SampleClass () {
+	public TC14_DataProviderInTestNg () {
 		PageFactory.initElements(driver, this);
 	}
 	
@@ -41,7 +41,7 @@ public class TC00_SampleClass extends TestBase {
     
 	//------------ Action Methods -------------	
 	
-	public void sampleMethod() {
+	public void dataProviderMethod() {
 		
 	}
 
