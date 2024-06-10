@@ -98,4 +98,10 @@ public class TestCase extends TestBase {
 		//Broken Link Validation 
 		d12.brokenLinkValidation("https://www.amazon.in");
 	}
+	
+	@Test (priority=13)
+	public void mouseActionClass() throws InterruptedException  {
+		//Broken Link Validation 
+		d13.mouseActionClass();
+	}
 }

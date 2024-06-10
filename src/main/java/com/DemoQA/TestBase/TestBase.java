@@ -21,6 +21,7 @@ import com.DemoQA.PageLayer.TC09_AlertHandling;
 import com.DemoQA.PageLayer.TC10_DropdownHandling;
 import com.DemoQA.PageLayer.TC11_ExplicitWaitConditions;
 import com.DemoQA.PageLayer.TC12_BrokenLinkValidation;
+import com.DemoQA.PageLayer.TC13_MouseActionClass;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -46,6 +47,7 @@ public class TestBase {
 	public TC10_DropdownHandling d10;
 	public TC11_ExplicitWaitConditions d11;
 	public TC12_BrokenLinkValidation d12;
+	public TC13_MouseActionClass d13;
 
 	@BeforeMethod
 	public void startBrowser () {		
@@ -78,6 +80,7 @@ public class TestBase {
 			d10 = new TC10_DropdownHandling ();
 			d11 = new TC11_ExplicitWaitConditions();
 			d12 = new TC12_BrokenLinkValidation ();
+			d13 = new TC13_MouseActionClass ();
 			
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
