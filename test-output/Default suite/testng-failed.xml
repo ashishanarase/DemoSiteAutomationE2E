@@ -7,7 +7,7 @@
         <methods>
           <include name="closeBrowser"/>
           <include name="startBrowser"/>
-          <include name="loginLogOut"/>
+          <include name="dataProviderMethod"/>
         </methods>
       </class> <!-- com.DemoQA.TestCase.TestCase -->
     </classes>

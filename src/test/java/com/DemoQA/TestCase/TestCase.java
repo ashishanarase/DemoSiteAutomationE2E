@@ -2,8 +2,11 @@ package com.DemoQA.TestCase;
 
 import java.io.IOException;
 
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
+import com.DemoQA.PageLayer.TC14_DataProviderInTestNg;
 import com.DemoQA.TestBase.TestBase;
 import utilityPackage.ListenerClass;
 import utilityPackage.commonMethods;
@@ -105,8 +108,8 @@ public class TestCase extends TestBase {
 		d13.mouseActionClass();
 	}
 	
-	@Test (priority=14) //dataProvider= "loginCasesData")
-	public void dataProviderMethod() {
-		d14.dataProviderMethod(null, null);
+	@Test (priority=14, dataProvider= "loginCasesData", dataProviderClass = TC14_DataProviderInTestNg.class)
+	public void dataProviderMethod(String userName, String passWord) throws InterruptedException {
+		d14.dataProviderMethod(userName, passWord);
 	}
 }
