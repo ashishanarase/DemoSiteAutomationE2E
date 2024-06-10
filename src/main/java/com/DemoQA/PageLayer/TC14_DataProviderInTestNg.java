@@ -30,8 +30,20 @@ public class TC14_DataProviderInTestNg extends TestBase {
 	//------------ Action Methods -------------	
 	
 	@DataProvider
-	public void loginCasesData() {
+	public Object [][] loginCasesData() {
 		
+		Object [][] data = new Object[3][2];
+		data[1][1] = "standard_user";
+		data[1][2] = "secret_sauce";
+		
+		data[2][1] = "locked_out_user";
+		data[2][2] = "secret_sauce";
+		
+		data[3][1] = "problem_user";
+		data[3][2] = "secret_sauce";
+		
+		
+		return data;		
 	}
 	
 	
@@ -42,6 +54,8 @@ public class TC14_DataProviderInTestNg extends TestBase {
 		Duration time = driver.manage().timeouts().getPageLoadTimeout();
 		
 		System.out.println(time);
+		
+		
 	}
 
 }
