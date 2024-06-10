@@ -22,10 +22,14 @@ public class TC14_DataProviderInTestNg extends TestBase {
 	//------------ Xpath Repository -------------
 	
 	// Using @FindBy to locate a single element by ID
- //   @FindBy(xpath = " ")
-//    private WebElement prefix_name_page;
+    @FindBy(xpath = "//input[@placeholder=\"Username\"]")
+    private WebElement txtBox_userName_homePage;
+    
+    @FindBy(xpath = "//input[@placeholder=\"Password\"]")
+    private WebElement txtBox_passWord_homePage;
 
-   
+    @FindBy(id="login-button")
+    private WebElement btn_login_homePage;
     
 	//------------ Action Methods -------------	
 	
@@ -41,13 +45,12 @@ public class TC14_DataProviderInTestNg extends TestBase {
 		
 		data[3][1] = "problem_user";
 		data[3][2] = "secret_sauce";
-		
-		
+				
 		return data;		
 	}
 	
 	
-	public void dataProviderMethod(String userName, String passWord) {
+	public void dataProviderMethod(String userName, String passWord) throws InterruptedException {
 		
 		driver.get("https://www.saucedemo.com");
 		
@@ -55,6 +58,15 @@ public class TC14_DataProviderInTestNg extends TestBase {
 		
 		System.out.println(time);
 		
+		txtBox_userName_homePage.sendKeys(userName);
+		
+		Thread.sleep(2000);
+		
+		txtBox_passWord_homePage.sendKeys(passWord);
+		
+		Thread.sleep(2000);
+		
+		btn_login_homePage.click();
 		
 	}
 
