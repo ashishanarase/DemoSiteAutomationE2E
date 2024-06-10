@@ -107,6 +107,6 @@ public class TestCase extends TestBase {
 	
 	@Test (priority=14) //dataProvider= "loginCasesData")
 	public void dataProviderMethod() {
-		d14.dataProviderMethod();
+		d14.dataProviderMethod(null, null);
 	}
 }
