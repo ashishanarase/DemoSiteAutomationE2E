@@ -105,7 +105,7 @@ public class TestCase extends TestBase {
 		d13.mouseActionClass();
 	}
 	
-	@Test ()
+	@Test (priority=14) //dataProvider= "loginCasesData")
 	public void dataProviderMethod() {
 		d14.dataProviderMethod();
 	}

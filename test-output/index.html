@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\ASHISH\AppData\Local\Temp\testng-eclipse-537506590\testng-customsuite.xml</span>
+                    <span>C:\Users\ashish.anarase\AppData\Local\Temp\testng-eclipse--1617782284\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.DemoQA.TestCase.TestCase" class="method navigator-link" hash-for-method="brokenLinkValidation">brokenLinkValidation</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.DemoQA.TestCase.TestCase" class="method navigator-link" hash-for-method="loginLogOut">loginLogOut</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.DemoQA.TestCase.TestCase" class="method navigator-link" hash-for-method="loginLogOut">loginLogOut</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -126,9 +131,16 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="brokenLinkValidation">
-                  </a> <!-- brokenLinkValidation -->
-                  <span class="method-name">brokenLinkValidation</span>
+                  <a name="loginLogOut">
+                  </a> <!-- loginLogOut -->
+                  <span class="method-name">loginLogOut</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginLogOut">
+                  </a> <!-- loginLogOut -->
+                  <span class="method-name">loginLogOut</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +148,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\ASHISH\AppData\Local\Temp\testng-eclipse-537506590\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\ashish.anarase\AppData\Local\Temp\testng-eclipse--1617782284\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -147,7 +159,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;com.DemoQA.TestCase.TestCase&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;brokenLinkValidation&quot;/&gt;
+          &lt;include name=&quot;loginLogOut&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.DemoQA.TestCase.TestCase --&gt;
     &lt;/classes&gt;
@@ -189,16 +201,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'brokenLinkValidation')
+data.setCell(0, 1, 'loginLogOut')
 data.setCell(0, 2, 'com.DemoQA.TestCase.TestCase')
-data.setCell(0, 3, 70004);
+data.setCell(0, 3, 4252);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'loginLogOut')
+data.setCell(1, 2, 'com.DemoQA.TestCase.TestCase')
+data.setCell(1, 3, 2926);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -213,35 +229,39 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">12 ignored methods</span>
+            <span class="header-content">14 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.DemoQA.TestCase.TestCase</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">windowHandling</span>
-                <br/>
                 <span class="ignored-method-name">dynamicTableStructure</span>
                 <br/>
                 <span class="ignored-method-name">webElementAction</span>
                 <br/>
-                <span class="ignored-method-name">alertHandling</span>
+                <span class="ignored-method-name">windowHandling</span>
                 <br/>
                 <span class="ignored-method-name">fetchSearchResultCount</span>
                 <br/>
-                <span class="ignored-method-name">dropdownHandling</span>
+                <span class="ignored-method-name">brokenLinkValidation</span>
                 <br/>
-                <span class="ignored-method-name">loginLogOut</span>
-                <br/>
-                <span class="ignored-method-name">extentReportExample</span>
+                <span class="ignored-method-name">dataProviderMethod</span>
                 <br/>
                 <span class="ignored-method-name">actionOnBrowser</span>
+                <br/>
+                <span class="ignored-method-name">alertHandling</span>
+                <br/>
+                <span class="ignored-method-name">explicitWaitConditions</span>
+                <br/>
+                <span class="ignored-method-name">mouseActionClass</span>
+                <br/>
+                <span class="ignored-method-name">extentReportExample</span>
                 <br/>
                 <span class="ignored-method-name">iFrameHandling</span>
                 <br/>
                 <span class="ignored-method-name">clickOperationType</span>
                 <br/>
-                <span class="ignored-method-name">explicitWaitConditions</span>
+                <span class="ignored-method-name">dropdownHandling</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -259,12 +279,24 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">brokenLinkValidation</span>
-                <span class="method-start">14904 ms</span>
+                <span class="method-name">loginLogOut</span>
+                <span class="method-start">11451 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">84915 ms</span>
+                <span class="method-start">14379 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">startBrowser</span>
+                <span class="method-start">18286 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">loginLogOut</span>
+                <span class="method-start">28934 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">33187 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

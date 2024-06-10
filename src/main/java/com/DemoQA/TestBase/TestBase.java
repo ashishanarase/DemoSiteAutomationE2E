@@ -19,7 +19,7 @@ import com.DemoQA.PageLayer.TC07_IframeHandling;
 import com.DemoQA.PageLayer.TC08_SearchResultCount;
 import com.DemoQA.PageLayer.TC09_AlertHandling;
 import com.DemoQA.PageLayer.TC10_DropdownHandling;
-import com.DemoQA.PageLayer.TC11_ExplicitWaitConditions;
+import com.DemoQA.PageLayer.TC11_ExplicitAndFluentWaits;
 import com.DemoQA.PageLayer.TC12_BrokenLinkValidation;
 import com.DemoQA.PageLayer.TC13_MouseActionClass;
 import com.DemoQA.PageLayer.TC14_DataProviderInTestNg;
@@ -33,9 +33,8 @@ public class TestBase {
 	
 	static String demoUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
 	static String desiredBrowser = "chrome";       // firefox
-	static String browserVersion = "123.0.6312.107";
+	static String browserVersion = "125.0.6422.142";
 
-	public TC00_SampleClass d0;
 	public TC01_HomePage d1;
 	public TC02_WebElementTypes d2;
 	public TC03_WindowHandling d3;
@@ -46,7 +45,7 @@ public class TestBase {
 	public TC08_SearchResultCount d8;
 	public TC09_AlertHandling d9;
 	public TC10_DropdownHandling d10;
-	public TC11_ExplicitWaitConditions d11;
+	public TC11_ExplicitAndFluentWaits d11;
 	public TC12_BrokenLinkValidation d12;
 	public TC13_MouseActionClass d13;
 	public TC14_DataProviderInTestNg d14;
@@ -69,7 +68,6 @@ public class TestBase {
 		}
 		
 			//obj references
-			d0 = new TC00_SampleClass();
 			d1 = new TC01_HomePage();
 			d2 = new TC02_WebElementTypes ();
 			d3 = new TC03_WindowHandling ();
@@ -80,7 +78,7 @@ public class TestBase {
 			d8 = new TC08_SearchResultCount ();
 			d9 = new TC09_AlertHandling ();
 			d10 = new TC10_DropdownHandling ();
-			d11 = new TC11_ExplicitWaitConditions();
+			d11 = new TC11_ExplicitAndFluentWaits();
 			d12 = new TC12_BrokenLinkValidation ();
 			d13 = new TC13_MouseActionClass ();
 			d14 = new TC14_DataProviderInTestNg ();
@@ -90,8 +88,7 @@ public class TestBase {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			
 			driver.navigate().refresh();
-			driver.navigate();
-			
+			driver.navigate();			
 
 			driver.get(demoUrl);
 		}

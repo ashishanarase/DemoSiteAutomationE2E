@@ -31,7 +31,7 @@ public class TC13_MouseActionClass extends TestBase {
 	
 	public void mouseActionClass() throws InterruptedException {
 		
-		driver.get("https://www.browserstack.com/guide");
+		driver.get("https://webdriveruniversity.com/Actions/index.html");
 		
 		Actions action = new Actions (driver);
 		
