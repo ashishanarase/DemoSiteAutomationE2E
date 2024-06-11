@@ -104,7 +104,7 @@ public class TestCase extends TestBase {
 	
 	@Test (priority=13)
 	public void mouseActionClass() throws InterruptedException  {
-		//Broken Link Validation 
+		//Mouse Action class usages 
 		d13.mouseActionClass();
 	}
 	

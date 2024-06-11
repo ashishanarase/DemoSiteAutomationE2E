@@ -3,25 +3,46 @@ package utilityPackage;
 import java.io.File;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.Color;
 import org.testng.Assert;
 
 import com.DemoQA.TestBase.TestBase;
 
 public class commonMethods extends TestBase {
-	
+
 	public static void titleValidation (String expectedTitle) {
 		String actualTitle = driver.getTitle();
-		
+
 		Assert.assertEquals(actualTitle, expectedTitle);
-		
+
 		if (actualTitle.equals(expectedTitle)) {
 			System.out.println("Tab Title Validated");
 		}
 		else {
 			System.out.println("Tab Title not matching with expected title");
+		}
+	}
+
+	public static void colorValidation(WebElement desiredElement, String expectedColor ) {
+
+		System.out.println("Expected Color Code =" + expectedColor);
+
+		String rgbaColor = desiredElement.getCssValue("background-color");
+
+		Color formatColor = Color.fromString(rgbaColor);
+
+		String actualColor = formatColor.asHex();
+
+		System.out.println("Actual Color Code =" + actualColor);
+
+		if (expectedColor.equals(actualColor)) {
+			System.out.println("Color validation successfully done");
 		}
 	}
 
@@ -49,7 +70,7 @@ public class commonMethods extends TestBase {
 			FileHandler.copy(srcFile, destFile);
 
 			System.out.println("Screenshot captured and saved at: " + destFile.getAbsolutePath());
-		
+
 		} catch (Exception e) {
 			System.out.println("Failed to capture screenshot: " + e.getMessage());
 		}
