@@ -1,81 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-10T23:47:17 IST" name="Default suite" finished-at="2024-06-10T23:48:35 IST" duration-ms="77773">
+  <suite started-at="2024-06-11T18:42:15 IST" name="Default suite" finished-at="2024-06-11T18:42:25 IST" duration-ms="10343">
     <groups>
     </groups>
-    <test started-at="2024-06-10T23:47:17 IST" name="Default test" finished-at="2024-06-10T23:48:35 IST" duration-ms="77773">
+    <test started-at="2024-06-11T18:42:15 IST" name="Default test" finished-at="2024-06-11T18:42:25 IST" duration-ms="10343">
       <class name="com.DemoQA.TestCase.TestCase">
-        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@18271936]" started-at="2024-06-10T23:47:17 IST" name="startBrowser" finished-at="2024-06-10T23:47:23 IST" duration-ms="5556" status="PASS">
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@18271936]" started-at="2024-06-11T18:42:15 IST" name="startBrowser" finished-at="2024-06-11T18:42:20 IST" duration-ms="4759" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method signature="dataProviderMethod(java.lang.String,java.lang.String)[pri:14, instance:com.DemoQA.TestCase.TestCase@18271936]" started-at="2024-06-10T23:47:23 IST" name="dataProviderMethod" data-provider="loginCasesData" finished-at="2024-06-10T23:47:28 IST" duration-ms="4864" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[standard_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="actionOnBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@18271936]" started-at="2024-06-11T18:42:20 IST" name="actionOnBrowser" finished-at="2024-06-11T18:42:23 IST" duration-ms="3149" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [OrangeHRM Noy] but found [OrangeHRM]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [OrangeHRM Noy] but found [OrangeHRM]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at utilityPackage.commonMethods.titleValidation(commonMethods.java:18)
+at com.DemoQA.TestCase.TestCase.actionOnBrowser(TestCase.java:21)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:47)
+at org.testng.internal.invokers.InvokeMethodRunnable.call(InvokeMethodRunnable.java:76)
+at org.testng.internal.invokers.InvokeMethodRunnable.call(InvokeMethodRunnable.java:11)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- dataProviderMethod -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@18271936]" started-at="2024-06-10T23:47:28 IST" name="closeBrowser" finished-at="2024-06-10T23:47:30 IST" duration-ms="2415" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@18271936]" started-at="2024-06-10T23:47:30 IST" name="startBrowser" finished-at="2024-06-10T23:47:49 IST" duration-ms="18805" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startBrowser -->
-        <test-method signature="dataProviderMethod(java.lang.String,java.lang.String)[pri:14, instance:com.DemoQA.TestCase.TestCase@18271936]" started-at="2024-06-10T23:47:49 IST" name="dataProviderMethod" data-provider="loginCasesData" finished-at="2024-06-10T23:47:54 IST" duration-ms="4864" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[locked_out_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dataProviderMethod -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@18271936]" started-at="2024-06-10T23:47:54 IST" name="closeBrowser" finished-at="2024-06-10T23:47:56 IST" duration-ms="2411" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@18271936]" started-at="2024-06-10T23:47:56 IST" name="startBrowser" finished-at="2024-06-10T23:48:27 IST" duration-ms="31315" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startBrowser -->
-        <test-method signature="dataProviderMethod(java.lang.String,java.lang.String)[pri:14, instance:com.DemoQA.TestCase.TestCase@18271936]" started-at="2024-06-10T23:48:27 IST" name="dataProviderMethod" data-provider="loginCasesData" finished-at="2024-06-10T23:48:33 IST" duration-ms="5077" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[problem_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dataProviderMethod -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@18271936]" started-at="2024-06-10T23:48:33 IST" name="closeBrowser" finished-at="2024-06-10T23:48:35 IST" duration-ms="2362" status="PASS">
+        </test-method> <!-- actionOnBrowser -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@18271936]" started-at="2024-06-11T18:42:23 IST" name="closeBrowser" finished-at="2024-06-11T18:42:25 IST" duration-ms="2271" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

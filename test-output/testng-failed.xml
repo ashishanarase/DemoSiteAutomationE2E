@@ -7,7 +7,7 @@
         <methods>
           <include name="closeBrowser"/>
           <include name="startBrowser"/>
-          <include name="dataProviderMethod"/>
+          <include name="actionOnBrowser"/>
         </methods>
       </class> <!-- com.DemoQA.TestCase.TestCase -->
     </classes>

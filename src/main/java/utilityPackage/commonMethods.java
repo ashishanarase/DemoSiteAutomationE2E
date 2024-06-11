@@ -6,12 +6,17 @@ import java.time.format.DateTimeFormatter;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.io.FileHandler;
+import org.testng.Assert;
+
 import com.DemoQA.TestBase.TestBase;
 
 public class commonMethods extends TestBase {
 	
 	public static void titleValidation (String expectedTitle) {
 		String actualTitle = driver.getTitle();
+		
+		Assert.assertEquals(actualTitle, expectedTitle);
+		
 		if (actualTitle.equals(expectedTitle)) {
 			System.out.println("Tab Title Validated");
 		}
