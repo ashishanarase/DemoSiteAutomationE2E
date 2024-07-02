@@ -39,7 +39,33 @@ public class TC15_MultipleTabAndWindows extends TestBase {
 
 		System.out.println("Script focus on "+ title2);
 		
+		Set <String> list = driver.getWindowHandles();
 		
+		System.out.println(list);
+
+	}
+	
+	public void multipleTab() throws InterruptedException {
+
+		driver.get("https://www.youtube.com/");
+		// Opens a new window and switches to new window
+
+		String title1 = driver.getTitle();
+
+		System.out.println("Script focus on "+ title1);
+
+		driver.switchTo().newWindow(WindowType.TAB);
+
+		// Opens LambdaTest homepage in the newly opened window
+		driver.navigate().to("https://www.flipkart.com/");
+
+		String title2 = driver.getTitle();
+
+		System.out.println("Script focus on "+ title2);
+		
+		Set <String> list = driver.getWindowHandles();
+		
+		System.out.println(list);
 
 	}
 
