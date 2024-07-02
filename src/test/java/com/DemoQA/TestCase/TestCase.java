@@ -118,6 +118,7 @@ public class TestCase extends TestBase {
 	public void multipleTabAndWindows() throws InterruptedException  {
 		//Mouse Action class usages 
 		d15.multipleWindow();
+		d15.multipleTab();
 	}
 	
 }
