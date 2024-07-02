@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-12T19:12:17 IST" name="Default suite" finished-at="2024-06-12T19:12:18 IST" duration-ms="1520">
+  <suite started-at="2024-07-02T18:25:34 IST" name="Default suite" finished-at="2024-07-02T18:25:34 IST" duration-ms="925">
     <groups>
     </groups>
-    <test started-at="2024-06-12T19:12:17 IST" name="Default test" finished-at="2024-06-12T19:12:18 IST" duration-ms="1520">
+    <test started-at="2024-07-02T18:25:34 IST" name="Default test" finished-at="2024-07-02T18:25:34 IST" duration-ms="925">
       <class name="com.DemoQA.TestCase.TestCase">
-        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@18271936]" started-at="2024-06-12T19:12:17 IST" name="startBrowser" finished-at="2024-06-12T19:12:18 IST" duration-ms="1464" status="FAIL">
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@18271936]" started-at="2024-07-02T18:25:34 IST" name="startBrowser" finished-at="2024-07-02T18:25:34 IST" duration-ms="876" status="FAIL">
           <exception class="java.lang.NoSuchMethodError">
             <message>
               <![CDATA['void org.apache.commons.io.FileUtils.copyInputStreamToFile(java.io.InputStream, java.io.File)']]>
@@ -58,7 +58,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method signature="mouseActionClass()[pri:13, instance:com.DemoQA.TestCase.TestCase@18271936]" started-at="2024-06-12T19:12:18 IST" name="mouseActionClass" finished-at="2024-06-12T19:12:18 IST" duration-ms="0" status="SKIP">
+        <test-method signature="actionOnBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@18271936]" started-at="2024-07-02T18:25:34 IST" name="actionOnBrowser" finished-at="2024-07-02T18:25:34 IST" duration-ms="1" status="SKIP">
           <exception class="java.lang.NoSuchMethodError">
             <message>
               <![CDATA['void org.apache.commons.io.FileUtils.copyInputStreamToFile(java.io.InputStream, java.io.File)']]>
@@ -108,8 +108,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.NoSuchMethodError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- mouseActionClass -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@18271936]" started-at="2024-06-12T19:12:18 IST" name="closeBrowser" finished-at="2024-06-12T19:12:18 IST" duration-ms="0" status="SKIP">
+        </test-method> <!-- actionOnBrowser -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@18271936]" started-at="2024-07-02T18:25:34 IST" name="closeBrowser" finished-at="2024-07-02T18:25:34 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
