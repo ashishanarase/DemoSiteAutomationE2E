@@ -23,6 +23,7 @@ import com.DemoQA.PageLayer.TC11_ExplicitAndFluentWaits;
 import com.DemoQA.PageLayer.TC12_BrokenLinkValidation;
 import com.DemoQA.PageLayer.TC13_MouseActionClass;
 import com.DemoQA.PageLayer.TC14_DataProviderInTestNg;
+import com.DemoQA.PageLayer.TC15_MultipleTabAndWindows;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -49,6 +50,7 @@ public class TestBase {
 	public TC12_BrokenLinkValidation d12;
 	public TC13_MouseActionClass d13;
 	public TC14_DataProviderInTestNg d14;
+	public TC15_MultipleTabAndWindows d15;
 
 	@BeforeMethod
 	public void startBrowser () {		
@@ -82,6 +84,7 @@ public class TestBase {
 			d12 = new TC12_BrokenLinkValidation ();
 			d13 = new TC13_MouseActionClass ();
 			d14 = new TC14_DataProviderInTestNg ();
+			d15 = new TC15_MultipleTabAndWindows ();
 			
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();

@@ -1,12 +1,8 @@
 package com.DemoQA.PageLayer;
 
-import org.openqa.selenium.WebElement;
+import java.util.Set;
 import org.openqa.selenium.WindowType;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindBys;
-import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.PageFactory;
-
 import com.DemoQA.TestBase.TestBase;
 
 public class TC15_MultipleTabAndWindows extends TestBase {
@@ -25,7 +21,7 @@ public class TC15_MultipleTabAndWindows extends TestBase {
 
 	//------------ Action Methods -------------	
 
-	public void multipleWindow() {
+	public void multipleWindow() throws InterruptedException {
 
 		driver.get("https://www.google.com/");
 		// Opens a new window and switches to new window
@@ -42,7 +38,8 @@ public class TC15_MultipleTabAndWindows extends TestBase {
 		String title2 = driver.getTitle();
 
 		System.out.println("Script focus on "+ title2);
-
+		
+		
 
 	}
 

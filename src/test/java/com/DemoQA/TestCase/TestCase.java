@@ -1,6 +1,7 @@
 package com.DemoQA.TestCase;
 
 import java.io.IOException;
+import java.util.Set;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
@@ -112,4 +113,11 @@ public class TestCase extends TestBase {
 	public void dataProviderMethod(String userName, String passWord) throws InterruptedException {
 		d14.dataProviderMethod(userName, passWord);
 	}
+	
+	@Test (priority=15)
+	public void multipleTabAndWindows() throws InterruptedException  {
+		//Mouse Action class usages 
+		d15.multipleWindow();
+	}
+	
 }
