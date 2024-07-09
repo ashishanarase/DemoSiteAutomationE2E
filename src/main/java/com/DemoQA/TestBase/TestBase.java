@@ -24,6 +24,7 @@ import com.DemoQA.PageLayer.TC12_BrokenLinkValidation;
 import com.DemoQA.PageLayer.TC13_MouseActionClass;
 import com.DemoQA.PageLayer.TC14_DataProviderInTestNg;
 import com.DemoQA.PageLayer.TC15_MultipleTabAndWindows;
+import com.DemoQA.PageLayer.TC16_SSLCertificate;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -51,6 +52,7 @@ public class TestBase {
 	public TC13_MouseActionClass d13;
 	public TC14_DataProviderInTestNg d14;
 	public TC15_MultipleTabAndWindows d15;
+	public TC16_SSLCertificate d16;
 
 	@BeforeMethod
 	public void startBrowser () {		
@@ -85,6 +87,7 @@ public class TestBase {
 			d13 = new TC13_MouseActionClass ();
 			d14 = new TC14_DataProviderInTestNg ();
 			d15 = new TC15_MultipleTabAndWindows ();
+			d16 = new TC16_SSLCertificate ();
 			
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();

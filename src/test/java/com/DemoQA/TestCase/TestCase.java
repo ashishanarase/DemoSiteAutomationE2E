@@ -111,14 +111,21 @@ public class TestCase extends TestBase {
 	
 	@Test (priority=14, dataProvider= "loginCasesData", dataProviderClass = TC14_DataProviderInTestNg.class)
 	public void dataProviderMethod(String userName, String passWord) throws InterruptedException {
+		//DataProvider Class
 		d14.dataProviderMethod(userName, passWord);
 	}
 	
 	@Test (priority=15)
 	public void multipleTabAndWindows() throws InterruptedException  {
-		//Mouse Action class usages 
+		//Handling multiple Tab and Windows
 		d15.multipleWindow();
 		d15.multipleTab();
+	}
+	
+	@Test (priority=16)
+	public void sslCertificateMethod() throws InterruptedException  {
+		//Accepting SSL Certificate
+		d16.sslCertificateMethod();
 	}
 	
 }
