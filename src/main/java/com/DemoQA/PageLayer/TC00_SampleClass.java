@@ -12,7 +12,6 @@ public class TC00_SampleClass extends TestBase {
 	
 	//this is sample class
 	
-	
 	public TC00_SampleClass () {
 		PageFactory.initElements(driver, this);
 	}
@@ -24,7 +23,7 @@ public class TC00_SampleClass extends TestBase {
     private WebElement prefix_name_page;
 
     // Using @FindBys to locate an element with multiple criteria (AND)
-    //where it uses a logical AND between the conditions.
+    //where it uses a logical AND between the conditions (All xpath need to bo correct).
     @FindBys({
         @FindBy(id = " "),
         @FindBy(tagName = " ")
@@ -43,6 +42,8 @@ public class TC00_SampleClass extends TestBase {
 	//------------ Action Methods -------------	
 	
 	public void sampleMethod() {
+		
+		
 		
 	}
 
