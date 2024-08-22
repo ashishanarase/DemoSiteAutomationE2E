@@ -3,13 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.DemoQA.TestCase.TestCase">
+      <class name="com.DemoQA.TestCase.ExtentReportWithScreenshotAttached">
         <methods>
-          <include name="closeBrowser"/>
-          <include name="startBrowser"/>
-          <include name="sslCertificateMethod"/>
+          <include name="endReport"/>
+          <include name="freemCRMLogoTest"/>
+          <include name="freeCrmTitleTest"/>
+          <include name="setup"/>
+          <include name="setExtent"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.DemoQA.TestCase.TestCase -->
+      </class> <!-- com.DemoQA.TestCase.ExtentReportWithScreenshotAttached -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

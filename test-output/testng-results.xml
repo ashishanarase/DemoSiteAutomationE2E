@@ -1,25 +1,186 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="0" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-15T23:12:39 IST" name="Default suite" finished-at="2024-08-15T23:13:01 IST" duration-ms="21940">
+  <suite started-at="2024-08-22T12:14:16 IST" name="Default suite" finished-at="2024-08-22T12:14:17 IST" duration-ms="1117">
     <groups>
     </groups>
-    <test started-at="2024-08-15T23:12:39 IST" name="Default test" finished-at="2024-08-15T23:13:01 IST" duration-ms="21940">
-      <class name="com.DemoQA.TestCase.TestCase">
-        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@8458f04]" started-at="2024-08-15T23:12:39 IST" name="startBrowser" finished-at="2024-08-15T23:12:51 IST" duration-ms="12630" status="PASS">
+    <test started-at="2024-08-22T12:14:16 IST" name="Default test" finished-at="2024-08-22T12:14:17 IST" duration-ms="1117">
+      <class name="com.DemoQA.TestCase.ExtentReportWithScreenshotAttached">
+        <test-method is-config="true" signature="setExtent()[pri:0, instance:com.DemoQA.TestCase.ExtentReportWithScreenshotAttached@5ddeb7cb]" started-at="2024-08-22T12:14:16 IST" name="setExtent" finished-at="2024-08-22T12:14:16 IST" duration-ms="176" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startBrowser -->
-        <test-method signature="extentReportExample()[pri:6, instance:com.DemoQA.TestCase.TestCase@8458f04]" started-at="2024-08-15T23:12:51 IST" name="extentReportExample" finished-at="2024-08-15T23:12:58 IST" duration-ms="6861" status="PASS">
+        </test-method> <!-- setExtent -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.DemoQA.TestCase.ExtentReportWithScreenshotAttached@5ddeb7cb]" started-at="2024-08-22T12:14:16 IST" name="setup" finished-at="2024-08-22T12:14:17 IST" duration-ms="884" status="FAIL">
+          <exception class="java.lang.NoSuchMethodError">
+            <message>
+              <![CDATA['void org.apache.commons.io.FileUtils.copyInputStreamToFile(java.io.InputStream, java.io.File)']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoSuchMethodError: 'void org.apache.commons.io.FileUtils.copyInputStreamToFile(java.io.InputStream, java.io.File)'
+at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:140)
+at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:92)
+at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1272)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1183)
+at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:426)
+at com.DemoQA.TestCase.ExtentReportWithScreenshotAttached.setup(ExtentReportWithScreenshotAttached.java:74)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoSuchMethodError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- extentReportExample -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@8458f04]" started-at="2024-08-15T23:12:58 IST" name="closeBrowser" finished-at="2024-08-15T23:13:01 IST" duration-ms="2383" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="freeCrmTitleTest()[pri:0, instance:com.DemoQA.TestCase.ExtentReportWithScreenshotAttached@5ddeb7cb]" started-at="2024-08-22T12:14:17 IST" name="freeCrmTitleTest" finished-at="2024-08-22T12:14:17 IST" duration-ms="1" status="SKIP">
+          <exception class="java.lang.NoSuchMethodError">
+            <message>
+              <![CDATA['void org.apache.commons.io.FileUtils.copyInputStreamToFile(java.io.InputStream, java.io.File)']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoSuchMethodError: 'void org.apache.commons.io.FileUtils.copyInputStreamToFile(java.io.InputStream, java.io.File)'
+at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:140)
+at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:92)
+at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1272)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1183)
+at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:426)
+at com.DemoQA.TestCase.ExtentReportWithScreenshotAttached.setup(ExtentReportWithScreenshotAttached.java:74)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoSuchMethodError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- com.DemoQA.TestCase.TestCase -->
+        </test-method> <!-- freeCrmTitleTest -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.DemoQA.TestCase.ExtentReportWithScreenshotAttached@5ddeb7cb]" started-at="2024-08-22T12:14:17 IST" name="tearDown" finished-at="2024-08-22T12:14:17 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.DemoQA.TestCase.ExtentReportWithScreenshotAttached@5ddeb7cb]" started-at="2024-08-22T12:14:17 IST" name="setup" finished-at="2024-08-22T12:14:17 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="freemCRMLogoTest()[pri:0, instance:com.DemoQA.TestCase.ExtentReportWithScreenshotAttached@5ddeb7cb]" started-at="2024-08-22T12:14:17 IST" name="freemCRMLogoTest" finished-at="2024-08-22T12:14:17 IST" duration-ms="0" status="SKIP">
+          <exception class="java.lang.NoSuchMethodError">
+            <message>
+              <![CDATA['void org.apache.commons.io.FileUtils.copyInputStreamToFile(java.io.InputStream, java.io.File)']]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NoSuchMethodError: 'void org.apache.commons.io.FileUtils.copyInputStreamToFile(java.io.InputStream, java.io.File)'
+at io.github.bonigarcia.wdm.online.Downloader.downloadAndExtract(Downloader.java:140)
+at io.github.bonigarcia.wdm.online.Downloader.download(Downloader.java:92)
+at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1272)
+at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1183)
+at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:426)
+at com.DemoQA.TestCase.ExtentReportWithScreenshotAttached.setup(ExtentReportWithScreenshotAttached.java:74)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:600)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NoSuchMethodError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- freemCRMLogoTest -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.DemoQA.TestCase.ExtentReportWithScreenshotAttached@5ddeb7cb]" started-at="2024-08-22T12:14:17 IST" name="tearDown" finished-at="2024-08-22T12:14:17 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="endReport()[pri:0, instance:com.DemoQA.TestCase.ExtentReportWithScreenshotAttached@5ddeb7cb]" started-at="2024-08-22T12:14:17 IST" name="endReport" finished-at="2024-08-22T12:14:17 IST" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- com.DemoQA.TestCase.ExtentReportWithScreenshotAttached -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
