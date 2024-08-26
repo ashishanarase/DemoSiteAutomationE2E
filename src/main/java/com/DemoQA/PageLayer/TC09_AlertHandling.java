@@ -16,13 +16,13 @@ public class TC09_AlertHandling extends TestBase {
 	
 	//------------ Xpath Repository -------------
 	
-		@FindBy (xpath = "//button[@onclick=\"windowAlertFunction()\"]")       	
+		@FindBy (xpath = "//button[@onclick='windowAlertFunction()']")       	
 		private WebElement btn_simpleAlert_homePage;
 		
-		@FindBy (xpath = "//button[@onclick=\"promptAlertFunction()\"]")      		 //tagname[text()="text_value"]
+		@FindBy (xpath = "//button[@onclick='promptAlertFunction()']")      		 //tagname[text()="text_value"]
 		private WebElement btn_promtAlert_homePage;
 			
-		@FindBy (xpath = "//span[text()=\"Admin\"]")      		 //tagname[text()="text_value"]
+		@FindBy (xpath = "//span[text()='Admin']")      		 //tagname[text()="text_value"]
 		private WebElement txtBox_fullName1_dashboard;
 		
 		//------------ Action Methods -------------	

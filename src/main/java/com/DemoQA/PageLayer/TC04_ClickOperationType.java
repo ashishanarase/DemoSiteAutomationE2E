@@ -19,16 +19,16 @@ public class TC04_ClickOperationType extends TestBase {
 	
 	//------------ Xpath Repository -------------
 	
-		@FindBy (xpath = "(//a[@target=\"_blank\"])[1]")
+		@FindBy (xpath = "(//a[@target='_blank'])[1]")
 		private WebElement btn_handle1_homePage;
 		
-		@FindBy (xpath = "(//a[@target=\"_blank\"])[2]")
+		@FindBy (xpath = "(//a[@target='_blank'])[2]")
 		private WebElement btn_handle2_homePage;
 		
-		@FindBy (xpath = "(//a[@target=\"_blank\"])[3]")
+		@FindBy (xpath = "(//a[@target='_blank'])[3]")
 		private WebElement btn_handle3_homePage;
 		
-		@FindBy (xpath = "(//a[@target=\"_blank\"])[4]")
+		@FindBy (xpath = "(//a[@target='_blank'])[4]")
 		private WebElement btn_handle4_homePage;
 		
 	

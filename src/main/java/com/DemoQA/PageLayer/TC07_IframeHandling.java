@@ -18,7 +18,7 @@ public class TC07_IframeHandling extends TestBase {
 
 	//------------ Xpath Repository -------------
 
-	@FindBy (xpath = "(//iframe[@frameborder=\"0\"])[1]")
+	@FindBy (xpath = "(//iframe[@frameborder='0'])[1]")
 	private WebElement ele_frameElement_iframe;
 
 	@FindBy (xpath = "//button[@class='M6CB1c rr4y5c']")

@@ -20,7 +20,7 @@ public class TC10_DropdownHandling extends TestBase {
 
 	//------------ Xpath Repository -------------
 
-	@FindBy (xpath = "//select[@id=\"searchDropdownBox\"]")
+	@FindBy (xpath = "//select[@id='searchDropdownBox']")
 	private WebElement btn_allOption_homePage;
 
 	//------------ Action Methods -------------	

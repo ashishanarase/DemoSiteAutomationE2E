@@ -16,13 +16,13 @@ public class TC02_WebElementTypes extends TestBase {
 	
 	//------------ Xpath Repository -------------
 	
-	@FindBy (xpath = "//input[@placeholder=\"Search\"]")  //tagname[@attribute="value"]
+	@FindBy (xpath = "//input[@placeholder='Search']")  //tagname[@attribute="value"]
 	private WebElement txtBox_searchBox_dashboard;
 	
-	@FindBy (xpath = "//span[text()=\"Admin\"]")      	 //tagname[text()="text_value"]
+	@FindBy (xpath = "//span[text()='Admin']")      	 //tagname[text()="text_value"]
 	private WebElement txtBox_fullName_dashboard;
 		
-	@FindBy (xpath = "//span[text()=\"Admin\"]")      	 //tagname[contains(text(),"text_value")]
+	@FindBy (xpath = "//span[text()='Admin']")      	 //tagname[contains(text(),"text_value")]
 	private WebElement txtBox_fullName1_dashboard;
 	
 														//tagname[contains(attribute,"text_value")]

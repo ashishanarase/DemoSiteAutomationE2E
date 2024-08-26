@@ -25,10 +25,10 @@ public class TC11_ExplicitAndFluentWaits extends TestBase {
 
 	//------------ Xpath Repository -------------
 	
-	@FindBy (xpath = "//input[@type=\"checkbox\"]")
+	@FindBy (xpath = "//input[@type='checkbox']")
 	private WebElement cb_checkBox_homePage;
 	
-	@FindBy (xpath = "//button[@onclick=\"swapCheckbox()\"]")
+	@FindBy (xpath = "//button[@onclick='swapCheckbox()']")
 	private WebElement btn_removeAdd_homePage;
 	
 	//------------ Action Methods -------------	

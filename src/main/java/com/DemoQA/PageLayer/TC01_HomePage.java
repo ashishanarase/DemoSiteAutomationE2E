@@ -21,19 +21,19 @@ public class TC01_HomePage extends TestBase {
 
 	//------------ Xpath Repository -------------
 
-	@FindBy (xpath = "//input[@placeholder=\"Username\"]")
+	@FindBy (xpath = "//input[@placeholder='Username']")
 	private WebElement txtBox_userName_homePage;
 	
-	@FindBy (xpath = "//input[@placeholder=\"Password\"]")
+	@FindBy (xpath = "//input[@placeholder='Password']")
 	private WebElement txtBox_password_homePage;
 	
-	@FindBy (xpath = "//button[@type=\"submit\"]")
+	@FindBy (xpath = "//button[@type='submit']")
 	private WebElement btn_login_homePage;
 		
-	@FindBy (xpath = "//span[@class=\"oxd-userdropdown-tab\"]")
+	@FindBy (xpath = "//span[@class='oxd-userdropdown-tab']")
 	private WebElement btn_userName_dashboard;
 	
-	@FindBy (xpath = "(//a[@role=\"menuitem\"])[4]")
+	@FindBy (xpath = "(//a[@role='menuitem'])[4]")
 	private WebElement btn_logOut_dashboard;
 	
 	//------------ Action Methods -------------	

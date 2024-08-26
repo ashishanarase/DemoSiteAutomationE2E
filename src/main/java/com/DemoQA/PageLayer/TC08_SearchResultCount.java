@@ -18,13 +18,13 @@ public class TC08_SearchResultCount extends TestBase {
 
 	//------------ Xpath Repository -------------
 
-	@FindBy (xpath = "//input[@id=\"twotabsearchtextbox\"]")
+	@FindBy (xpath = "//input[@id='twotabsearchtextbox']")
 	private WebElement txtBox_searchBox_homePage;
 
-	@FindBy (xpath = "//input[@id=\"nav-search-submit-button\"]")
+	@FindBy (xpath = "//input[@id='nav-search-submit-button']")
 	private WebElement btn_search_homePage;
 
-	@FindBy (xpath = "//h1[@class=\"a-size-base s-desktop-toolbar a-text-normal\"]")
+	@FindBy (xpath = "//h1[@class='a-size-base s-desktop-toolbar a-text-normal']")
 	private WebElement txt_searchResult_homePage;
 
 	//------------ Action Methods -------------	
@@ -35,15 +35,15 @@ public class TC08_SearchResultCount extends TestBase {
 
 		String desiredSearchText = "Motorola Mobiles";
 
-		//WebElement txtBox_searchBox_homePage = driver.findElement(By.xpath("//input[@id=\"twotabsearchtextbox\"]"));
+		//WebElement txtBox_searchBox_homePage = driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
 
 		txtBox_searchBox_homePage.sendKeys(desiredSearchText);
 
-		//WebElement btn_search_homePage = driver.findElement(By.xpath("//input[@id=\"nav-search-submit-button\"]"));
+		//WebElement btn_search_homePage = driver.findElement(By.xpath("//input[@id='nav-search-submit-button']"));
 
 		btn_search_homePage.click();
 
-		//WebElement txt_searchResult_homePage = driver.findElement(By.xpath("//h1[@class=\"a-size-base s-desktop-toolbar a-text-normal\"]"));
+		//WebElement txt_searchResult_homePage = driver.findElement(By.xpath("//h1[@class='a-size-base s-desktop-toolbar a-text-normal']"));
 
 		String resultText = txt_searchResult_homePage.getText();
 

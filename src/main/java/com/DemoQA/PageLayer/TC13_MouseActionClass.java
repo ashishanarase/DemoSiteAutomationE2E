@@ -17,25 +17,25 @@ public class TC13_MouseActionClass extends TestBase {
 	
 	//------------ Xpath Repository -------------
 	
-	@FindBy (xpath = "//button[text()=\"Hover Over Me First!\"]")
+	@FindBy (xpath = "//button[text()='Hover Over Me First!']")
 	private WebElement btn_hover1_homePage;
 	
-	@FindBy (xpath = "//button[text()=\"Hover Over Me Second!\"]")
+	@FindBy (xpath = "//button[text()='Hover Over Me Second!']")
 	private WebElement btn_hover2_homePage;
 	
-	@FindBy (xpath = "//button[text()=\"Hover Over Me Third!\"]")
+	@FindBy (xpath = "//button[text()='Hover Over Me Third!']")
 	private WebElement btn_hover3_homePage;
 	
-	@FindBy (xpath = "//a[text()=\"Link 1\"]")
+	@FindBy (xpath = "//a[text()='Link 1']")
 	private WebElement btn_link1_homePage;
 		
 	@FindBy (id = "double-click")
 	private WebElement btn_doubleClick_homePage;
 		
-	@FindBy (xpath = "//b[text()=\"DRAG ME TO MY TARGET!\"]")
+	@FindBy (xpath = "//b[text()='DRAG ME TO MY TARGET!']")
 	private WebElement btn_dragFrom_homePage;
 	
-	@FindBy (xpath = "//b[text()=\"DROP HERE!")
+	@FindBy (xpath = "//b[text()='DROP HERE!")
 	private WebElement btn_dragTo_homePage;
 	
 	@FindBy (xpath = "Click and Hold!")

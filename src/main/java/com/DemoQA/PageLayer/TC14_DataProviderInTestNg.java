@@ -23,10 +23,10 @@ public class TC14_DataProviderInTestNg extends TestBase {
 	//------------ Xpath Repository -------------
 
 	// Using @FindBy to locate a single element by ID
-	@FindBy(xpath = "//input[@placeholder=\"Username\"]")
+	@FindBy(xpath = "//input[@placeholder='Username']")
 	private WebElement txtBox_userName_homePage;
 
-	@FindBy(xpath = "//input[@placeholder=\"Password\"]")
+	@FindBy(xpath = "//input[@placeholder='Password']")
 	private WebElement txtBox_passWord_homePage;
 
 	@FindBy(id="login-button")

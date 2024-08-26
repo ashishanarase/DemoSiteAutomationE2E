@@ -20,16 +20,16 @@ public class TC03_WindowHandling extends TestBase {
 	}
 
 	//------------ Xpath Repository ------------
-	@FindBy (xpath = "(//a[@target=\"_blank\"])[1]")
+	@FindBy (xpath = "(//a[@target='_blank'])[1]")
 	private WebElement btn_handle1_homePage;
 	
-	@FindBy (xpath = "(//a[@target=\"_blank\"])[2]")
+	@FindBy (xpath = "(//a[@target='_blank'])[2]")
 	private WebElement btn_handle2_homePage;
 	
-	@FindBy (xpath = "(//a[@target=\"_blank\"])[3]")
+	@FindBy (xpath = "(//a[@target='_blank'])[3]")
 	private WebElement btn_handle3_homePage;
 	
-	@FindBy (xpath = "(//a[@target=\"_blank\"])[4]")
+	@FindBy (xpath = "(//a[@target='_blank'])[4]")
 	private WebElement btn_handle4_homePage;
 	
 
@@ -87,10 +87,10 @@ public class TC03_WindowHandling extends TestBase {
 //
 //	Thread.sleep(1000);
 //
-//	WebElement btn_handle1_homePage = driver.findElement(By.xpath("(//a[@target=\"_blank\"])[1]"));
-//	WebElement btn_handle2_homePage = driver.findElement(By.xpath("(//a[@target=\"_blank\"])[2]"));
-//	WebElement btn_handle3_homePage = driver.findElement(By.xpath("(//a[@target=\"_blank\"])[3]"));
-//	WebElement btn_handle4_homePage = driver.findElement(By.xpath("(//a[@target=\"_blank\"])[4]"));
+//	WebElement btn_handle1_homePage = driver.findElement(By.xpath("(//a[@target='_blank'])[1]"));
+//	WebElement btn_handle2_homePage = driver.findElement(By.xpath("(//a[@target='_blank'])[2]"));
+//	WebElement btn_handle3_homePage = driver.findElement(By.xpath("(//a[@target='_blank'])[3]"));
+//	WebElement btn_handle4_homePage = driver.findElement(By.xpath("(//a[@target='_blank'])[4]"));
 //
 //	String parentHandle = driver.getWindowHandle();
 //	Thread.sleep(1000);
