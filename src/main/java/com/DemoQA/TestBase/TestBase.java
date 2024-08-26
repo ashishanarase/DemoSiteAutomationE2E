@@ -8,7 +8,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import com.DemoQA.PageLayer.TC00_SampleClass;
 import com.DemoQA.PageLayer.TC01_HomePage;
 import com.DemoQA.PageLayer.TC02_WebElementTypes;
 import com.DemoQA.PageLayer.TC03_WindowHandling;
