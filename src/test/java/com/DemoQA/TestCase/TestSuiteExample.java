@@ -10,7 +10,6 @@ import com.DemoQA.PageLayer.TC02_WebElementTypes;
 
 public class TestSuiteExample {
 
-
 	@Test
 	public void runTestSuite () {
 		
