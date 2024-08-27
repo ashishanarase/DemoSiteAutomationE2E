@@ -14,7 +14,7 @@ import org.testng.Assert;
 
 import com.DemoQA.TestBase.TestBase;
 
-public class commonMethods extends TestBase {
+public class CommonMethods extends TestBase {
 
 	public static void titleValidation (String expectedTitle) {
 		String actualTitle = driver.getTitle();

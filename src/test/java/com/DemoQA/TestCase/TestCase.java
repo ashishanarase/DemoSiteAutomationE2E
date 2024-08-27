@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import com.DemoQA.PageLayer.TC14_DataProviderInTestNg;
 import com.DemoQA.TestBase.TestBase;
 import utilityPackage.ListenerClass;
-import utilityPackage.commonMethods;
+import utilityPackage.CommonMethods;
 
 @Listeners(ListenerClass.class)
 public class TestCase extends TestBase {
@@ -19,14 +19,14 @@ public class TestCase extends TestBase {
 	public void actionOnBrowser() throws InterruptedException {
 		//Dimension Class and Point Class usage
 		d1.actionOnBrowser();
-		commonMethods.titleValidation("OrangeHRM");	
+		CommonMethods.titleValidation("OrangeHRM");	
 	}
 	
 	@Test (priority=1, invocationCount = 2)
 	public void loginLogOut() throws InterruptedException {
 		//Login and Logout on Demo Website
 		d1.login();
-		commonMethods.titleValidation("OrangeHRM");
+		CommonMethods.titleValidation("OrangeHRM");
 		d1.logOut();
 	}
 	
@@ -34,7 +34,7 @@ public class TestCase extends TestBase {
 	public void webElementAction () {
 		//Different Type of Xpath and Handling them
 		d1.login();
-		commonMethods.titleValidation("OrangeHRM");
+		CommonMethods.titleValidation("OrangeHRM");
 		d2.actionOnElements();
 		d1.logOut();
 	}
