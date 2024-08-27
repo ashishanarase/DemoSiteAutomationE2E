@@ -8,6 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+
 import com.DemoQA.PageLayer.TC01_HomePage;
 import com.DemoQA.PageLayer.TC02_WebElementTypes;
 import com.DemoQA.PageLayer.TC03_WindowHandling;
@@ -26,16 +28,32 @@ import com.DemoQA.PageLayer.TC15_MultipleTabAndWindows;
 import com.DemoQA.PageLayer.TC16_SSLCertificate;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import utilityPackage.ConfigLoader;
+import utilityPackage.DetailsDataProvider;
 
 public class TestBase {
 
 	public static WebDriver driver;
-	public static Logger logger;
-	
-	static String demoUrl = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
-	static String desiredBrowser = "chrome";       // firefox
-	static String browserVersion = "126.0.6478.127";
 
+	static String appUrl;
+	protected static String userDirectory;
+	static String desiredBrowser = "chrome";       // firefox
+	static String browserVersion = "127.0.6533.122";
+
+	// Fetch login credentials from configuration file
+	protected String userName;
+	protected String passWord;
+	protected String invalidUserName;
+	protected String invalidPassword;
+	protected String resetUserName;
+
+	// Fetch employee details from dataprovider class
+	String[] nameDetails;
+	protected String firstName;
+	protected String middleName;
+	protected String lastName;
+	protected String employeeID;
+	
 	public TC01_HomePage d1;
 	public TC02_WebElementTypes d2;
 	public TC03_WindowHandling d3;
@@ -53,52 +71,76 @@ public class TestBase {
 	public TC15_MultipleTabAndWindows d15;
 	public TC16_SSLCertificate d16;
 
+
+	@BeforeSuite
+	public void dataGeneration() {
+		//Used to generate employee data randomly for each test run
+		DetailsDataProvider.getNameDetails();
+
+		// Load environment-specific properties from ConfigLoader
+		String environment = System.getProperty("environment", "prod");    //prod //test
+		ConfigLoader.loadConfig(environment);
+		userDirectory = ConfigLoader.getProperty("userDirectory");
+		appUrl = ConfigLoader.getProperty("appUrl");
+
+		// Fetch login credentials from configuration file
+		userName = ConfigLoader.getProperty("username");
+		passWord = ConfigLoader.getProperty("password");
+		invalidUserName = ConfigLoader.getProperty("invalidUserName");
+		invalidPassword = ConfigLoader.getProperty("invalidPassword");
+		resetUserName = ConfigLoader.getProperty("resetUserName");
+
+		// Fetch employee details from dataprovider class
+		nameDetails = DetailsDataProvider.getNameDetails();
+		firstName = nameDetails[0];
+		middleName = nameDetails[1];
+		lastName = nameDetails[2];
+		employeeID = nameDetails[3];  
+	}
 	@BeforeMethod
 	public void startBrowser () {		
 
-		
+
 		if (desiredBrowser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().browserVersion(browserVersion).setup(); //.browserVersion(browserVersion)
 			driver = new ChromeDriver();
-			logger = LogManager.getLogger(getClass());
-			
+
 		}
-		
+
 		else if (desiredBrowser.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-			logger = LogManager.getLogger(getClass());
 		}
-		
-			//obj references
-			d1 = new TC01_HomePage();
-			d2 = new TC02_WebElementTypes ();
-			d3 = new TC03_WindowHandling ();
-			d4 = new TC04_ClickOperationType ();
-			d5 = new TC05_DynamicTableStructure ();
-			d6 = new TC06_ExtentReportExample ();
-			d7 = new TC07_IframeHandling ();
-			d8 = new TC08_SearchResultCount ();
-			d9 = new TC09_AlertHandling ();
-			d10 = new TC10_DropdownHandling ();
-			d11 = new TC11_ExplicitAndFluentWaits();
-			d12 = new TC12_BrokenLinkValidation ();
-			d13 = new TC13_MouseActionClass ();
-			d14 = new TC14_DataProviderInTestNg ();
-			d15 = new TC15_MultipleTabAndWindows ();
-			d16 = new TC16_SSLCertificate ();
-			
-			driver.manage().window().maximize();
-			driver.manage().deleteAllCookies();
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-			
-			driver.navigate().refresh();
-			driver.navigate();			
 
-			driver.get(demoUrl);
-		}
-	
-	
+		//obj references
+		d1 = new TC01_HomePage();
+		d2 = new TC02_WebElementTypes ();
+		d3 = new TC03_WindowHandling ();
+		d4 = new TC04_ClickOperationType ();
+		d5 = new TC05_DynamicTableStructure ();
+		d6 = new TC06_ExtentReportExample ();
+		d7 = new TC07_IframeHandling ();
+		d8 = new TC08_SearchResultCount ();
+		d9 = new TC09_AlertHandling ();
+		d10 = new TC10_DropdownHandling ();
+		d11 = new TC11_ExplicitAndFluentWaits();
+		d12 = new TC12_BrokenLinkValidation ();
+		d13 = new TC13_MouseActionClass ();
+		d14 = new TC14_DataProviderInTestNg ();
+		d15 = new TC15_MultipleTabAndWindows ();
+		d16 = new TC16_SSLCertificate ();
+
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+		driver.navigate().refresh();
+		driver.navigate();			
+
+		driver.get(appUrl);
+	}
+
+
 	@AfterMethod	
 	public void closeBrowser() throws InterruptedException {
 		Thread.sleep(2000);

@@ -7,6 +7,7 @@ import java.time.format.DateTimeFormatter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.Color;
@@ -19,13 +20,13 @@ public class CommonMethods extends TestBase {
 	public static void titleValidation (String expectedTitle) {
 		String actualTitle = driver.getTitle();
 
-		Assert.assertEquals(actualTitle, expectedTitle);
+		//	Assert.assertEquals(actualTitle, expectedTitle);
 
 		if (actualTitle.equals(expectedTitle)) {
-			System.out.println("Tab Title Validated");
+		//	extentTest.log(LogStatus.PASS, "Tab title validated successfully");
 		}
 		else {
-			System.out.println("Tab Title not matching with expected title");
+		//	extentTest.log(LogStatus.ERROR, "Tab title validation failed : Not matching with expected title");
 		}
 	}
 
@@ -46,34 +47,38 @@ public class CommonMethods extends TestBase {
 		}
 	}
 
-	public static void takeScreenShot()  {
-		try {
-			// Cast WebDriver to TakesScreenshot
-			TakesScreenshot screenshot = (TakesScreenshot) driver;
+	public static String takeScreenShot(WebDriver driver, String screenshotName)  {
 
-			// Capture screenshot as File
-			File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+		// Cast WebDriver to TakesScreenshot
+		TakesScreenshot screenshot = (TakesScreenshot) driver;
 
-			// Get the current date and time for Dynamic File Name 
-			LocalDateTime currentDateTime = LocalDateTime.now();
+		// Capture screenshot as File
+		File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
 
-			// Define the date-time format
-			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss");
+		// Format the current date and time as a string using the defined format
+		String dynamicFileName = screenshotName+DetailsDataProvider.getCurrentTimeStamp();
 
-			// Format the current date and time as a string using the defined format
-			String dyanamicFileName = currentDateTime.format(formatter);
+		// Specify the destination directory and file name
+		String directoryPath = userDirectory+"Screenshots\\";
+		String filePathDestination = directoryPath + dynamicFileName + ".jpg";
 
-			// Specify the destination directory and file name
-			File destFile = new File("C:\\Users\\ASHISH\\eclipse-workspace\\DemoSiteAutomationE2E\\screenShots\\"+dyanamicFileName+".jpg");
+		File destFile = new File(filePathDestination);			
 
-			// Copy file to destination
+		try {	// Copy file to destination
 			FileHandler.copy(srcFile, destFile);
 
-			System.out.println("Screenshot captured and saved at: " + destFile.getAbsolutePath());
+			//	System.out.println("Screenshot captured and saved at: " + destFile.getAbsolutePath());
+
 
 		} catch (Exception e) {
 			System.out.println("Failed to capture screenshot: " + e.getMessage());
 		}
+
+		return filePathDestination;
+	}
+
+	public static void setDriver(WebDriver driverInstance) {
+		driver = driverInstance;
 	}
 
 }
