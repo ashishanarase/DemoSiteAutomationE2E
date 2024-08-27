@@ -4,7 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-
 import com.DemoQA.TestBase.TestBase;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -12,12 +11,10 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-
 public class ListenerClass extends TestBase implements ITestListener {
 	
-
-    private static ExtentReports extent;
-    private static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
+    public static ExtentReports extent;
+    public static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
    
     public static void setDriver(WebDriver driverInstance) {
         driver = driverInstance;
@@ -67,7 +64,7 @@ public class ListenerClass extends TestBase implements ITestListener {
 
         try {
             String screenshotPath = CommonMethods.takeScreenShot(driver, result.getName());
-            extentTest.get().fail("Screenshot attached").addScreenCaptureFromPath(screenshotPath);
+            extentTest.get().addScreenCaptureFromPath(screenshotPath);
         } catch (Exception e) {
             e.printStackTrace();
         }

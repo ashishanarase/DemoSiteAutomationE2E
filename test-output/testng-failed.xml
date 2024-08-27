@@ -10,9 +10,8 @@
         <methods>
           <include name="dataGeneration"/>
           <include name="closeBrowser"/>
+          <include name="TC01_LoginLogOut"/>
           <include name="startBrowser"/>
-          <include name="explicitWaitConditions"/>
-          <include name="mouseActionClass"/>
         </methods>
       </class> <!-- com.DemoQA.TestCase.TestCase -->
     </classes>

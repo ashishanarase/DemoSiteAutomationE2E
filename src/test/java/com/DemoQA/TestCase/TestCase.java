@@ -15,26 +15,26 @@ import utilityPackage.CommonMethods;
 @Listeners(ListenerClass.class)
 public class TestCase extends TestBase {
 	
-	@Test (priority=0, enabled=true, timeOut = 30000,
-			description = "Test to verify that user should be able to do the browser specific action")
-	public void actionOnBrowser() throws InterruptedException {
+	@Test (priority=0, enabled=false, timeOut = 30000,
+			description = "Test to verify browser resizing and positioning operations")
+	public void TC00_ActionOnBrowser() throws InterruptedException {
 		//Dimension Class and Point Class usage
 		d1.actionOnBrowser();
 		CommonMethods.titleValidation("OrangeHRM");	
 	}
 	
-	@Test (priority=1, invocationCount = 2,
-			description = "Test to verify that user should be able to do the browser specific action")
-	public void loginLogOut() throws InterruptedException {
+	@Test (priority=1, enabled=true, invocationCount = 2,
+			description = "Test to verify the login and logout functionality of the application")
+	public void TC01_LoginLogOut() throws InterruptedException {
 		//Login and Logout on Demo Website
 		d1.login();
 		CommonMethods.titleValidation("OrangeHRM");
 		d1.logOut();
 	}
 	
-	@Test (priority=2, dependsOnMethods = {"loginLogOut"},
-			description = "Test to verify that user should be able to do the browser specific action")
-	public void webElementAction () {
+	@Test (priority=2, enabled=false, dependsOnMethods = {"loginLogOut"},
+			description = "Test to verify interactions with various web elements such as buttons and text fields")
+	public void TC02_WebElementAction () {
 		//Different Type of Xpath and Handling them
 		d1.login();
 		CommonMethods.titleValidation("OrangeHRM");
@@ -42,106 +42,106 @@ public class TestCase extends TestBase {
 		d1.logOut();
 	}
 	
-	@Test (priority=3,
-			description = "Difference between getWindowHandle & getWindowHandles")
-	public void windowHandling() throws InterruptedException  {
+	@Test (priority=3, enabled=false,
+			description = "Test to verify window handling operations including switching between multiple windows")
+	public void TC03_WindowHandling() throws InterruptedException  {
 		//Difference between getWindowHandle & getWindowHandles 
 		//Window switch using Desired Index value and Title out of multiple windows
 		d3.WindowHandling();				
 	}
 	
-	@Test (priority=4,
-			description = "Test to verify that user should be able to do the browser specific action")
-	public void clickOperationType() throws InterruptedException  {
+	@Test (priority=4,enabled=false,
+			description = "Test to verify different ways of performing click operations on a web element")
+	public void TC04_ClickOperationType() throws InterruptedException  {
 		//Different ways to perform click on webelement
 		d4.clickOperationType();			
 	}
 	
-	@Test (priority=5,
-			description = "Test to verify that user should be able to do the browser specific action")
-	public void dynamicTableStructure() throws InterruptedException  {
+	@Test (priority=5, enabled=false,
+			description = "Test to verify dynamic table handling by fetching the number of rows and columns")
+	public void TC05_DynamicTableStructure() throws InterruptedException  {
 		//Get the number of Rows and Columns from table dynamically 
 		d5.dynamicTableStructure();			
 	}
 	
-	@Test (priority=6,
-			description = "Test to verify that user should be able to do the browser specific action")
-	public void extentReportExample() throws InterruptedException  {
+	@Test (priority=6, enabled=false,
+			description = "Test to generate and verify Extent Reports in the automation framework")
+	public void TC06_ExtentReportExample() throws InterruptedException  {
 		//Extent Report Example
 		d6.extentReportExample();
 		
 	}
 	
-	@Test (priority=7,
-			description = "Test to verify that user should be able to do the browser specific action")
-	public void iFrameHandling() throws InterruptedException  {
+	@Test (priority=7, enabled=false,
+			description = "Test to handle and interact with an iFrame element within a webpage")
+	public void TC07_IFrameHandling() throws InterruptedException  {
 		//Handled Iframe on Google.com 
 		d7.iframeHandling();
 		
 	}
 	
-	@Test (priority=8,
-			description = "Test to verify that user should be able to do the browser specific action")
-	public void fetchSearchResultCount() throws InterruptedException  {
+	@Test (priority=8, enabled=false,
+			description = "Test to dynamically fetch and validate the count of search results")
+	public void TC08_FetchSearchResultCount() throws InterruptedException  {
 		//Fetch the search result count dynamically in run time. 
 		//Assume here we can send any input in search box and code should work properly.
 		d8.fetchSearchResultCount();
 	}
 	
-	@Test (priority=9,
-			description = "Test to verify that user should be able to do the browser specific action")
-	public void alertHandling() throws InterruptedException  {
+	@Test (priority=9, enabled=false,
+			description = "Test to verify handling of different types of alert pop-ups in the browser")
+	public void TC09_AlertHandling() throws InterruptedException  {
 		//Different Type of Alert and Handling them
 		d9.alertHandling();
 	}
 	
-	@Test (priority=10,
-			description = "Test to verify that user should be able to do the browser specific action")
-	public void dropdownHandling() throws InterruptedException  {
+	@Test (priority=10, enabled=false,
+			description = "Test to verify the handling of dropdown menus and extracting options using the Select class")
+	public void TC10_DropdownHandling() throws InterruptedException  {
 		//DropdownHandling and Get Dropdown Options Using Select Class 
 		d10.dropdownHandling();
 	}
 
-	@Test (priority=11,
-			description = "Test to verify that user should be able to do the browser specific action")
-	public void explicitWaitConditions() throws InterruptedException  {
+	@Test (priority=11, enabled=false,
+			description = "Test to verify the use of different explicit wait conditions in Selenium")
+	public void TC11_ExplicitWaitConditions() throws InterruptedException  {
 		//Different ExplicitWait Conditions handling
 		d11.explicitWaitConditions();
 	}
 	
-	@Test (priority=12,
-			description = "Test to verify that user should be able to do the browser specific action")
-	public void brokenLinkValidation() throws InterruptedException, IOException  {
+	@Test (priority=12, enabled=false,
+			description = "Test to verify broken link validation by checking the status of URLs")
+	public void TC12_BrokenLinkValidation() throws InterruptedException, IOException  {
 		//Broken Link Validation 
 		d12.brokenLinkValidation("https://www.amazon.in");
 	}
 	
-	@Test (priority=13,
-			description = "Test to verify that user should be able to do the browser specific action")
-	public void mouseActionClass() throws InterruptedException  {
+	@Test (priority=13, enabled=false,
+			description = "Test to verify the usage of the Mouse Actions class for performing complex user interactions")
+	public void TC13_MouseActionClass() throws InterruptedException  {
 		//Mouse Action class usages 
 		d13.mouseActionClass();
 	}
 	
-	@Test (priority=14, 
+	@Test (priority=14, enabled=false,
 			dataProvider= "loginCasesData", dataProviderClass = TC14_DataProviderInTestNg.class,
-			description = "Test to verify that user should be able to do the browser specific action")
-	public void dataProviderMethod(String userName, String passWord) throws InterruptedException {
+			description = "Test to verify the login functionality using different data sets through a DataProvider")
+	public void TC14_DataProviderMethod(String userName, String passWord) throws InterruptedException {
 		//DataProvider Class
 		d14.dataProviderMethod(userName, passWord);
 	}
 	
-	@Test (priority=15,
-			description = "Test to verify that user should be able to do the browser specific action")
-	public void multipleTabAndWindows() throws InterruptedException  {
+	@Test (priority=15, enabled=false,
+			description = "Test to verify handling of multiple browser tabs and windows")
+	public void TC15_MultipleTabAndWindows() throws InterruptedException  {
 		//Handling multiple Tab and Windows
 		d15.multipleWindow();
 		d15.multipleTab();
 	}
 	
-	@Test (priority=16,
-			description = "Test to verify that user should be able to do the browser specific action")
-	public void sslCertificateMethod() throws InterruptedException  {
+	@Test (priority=16, enabled=false,
+			description = "Test to verify the acceptance and handling of SSL certificates in the browser")
+	public void TC16_sslCertificateMethod() throws InterruptedException  {
 		//Accepting SSL Certificate
 		d16.sslCertificateMethod();
 	}
