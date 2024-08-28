@@ -68,7 +68,7 @@ public class ListenerClass extends TestBase implements ITestListener {
             extentTest.get().addScreenCaptureFromBase64String(screenshotPath, " : Screenshot of the failed test case");
             
         } catch (Exception e) {
-            e.printStackTrace();
+        	extentTest.get().log(Status.ERROR, "An error occurred while attaching the screenshot to report : " + e.getMessage());
         }
     }
 
