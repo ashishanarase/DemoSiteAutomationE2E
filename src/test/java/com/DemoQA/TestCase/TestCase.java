@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Set;
 
 import org.testng.ITestResult;
+import org.testng.SkipException;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
@@ -30,7 +31,7 @@ public class TestCase extends TestBase{
 			description = "Test to verify the login and logout functionality of the application")
 	public void TC02_LoginLogOut() throws InterruptedException {
 		//Login and Logout on Demo Website
-		d2.login();
+		d2.login(userName,passWord);
 		CommonMethods.titleValidation("OrangeHRM");
 		d2.logOut();
 	}
@@ -39,7 +40,7 @@ public class TestCase extends TestBase{
 			description = "Test to verify interactions with various web elements such as buttons and text fields")
 	public void TC03_WebElementAction () {
 		//Different Type of Xpath and Handling them
-		d2.login();
+		d2.login(userName,passWord);
 		CommonMethods.titleValidation("OrangeHRM");
 		d3.actionOnElements();
 		d2.logOut();
@@ -60,7 +61,7 @@ public class TestCase extends TestBase{
 		//Get the number of Rows and Columns from table dynamically 
 		d5.dynamicTableStructure();			
 	}
-	
+
 	@Test (priority=6, enabled=false,
 			description = "Test to verify window handling operations including switching between multiple windows")
 	public void TC06_WindowHandling() throws InterruptedException  {
@@ -68,7 +69,7 @@ public class TestCase extends TestBase{
 		//Window switch using Desired Index value and Title out of multiple windows
 		d6.WindowHandling();				
 	}
-	
+
 	@Test (priority=7, enabled=false,
 			description = "Test to handle and interact with an iFrame element within a webpage")
 	public void TC07_IFrameHandling() throws InterruptedException  {
@@ -142,12 +143,62 @@ public class TestCase extends TestBase{
 		//Accepting SSL Certificate
 		d16.sslCertificateMethod();
 	}
-	
+
 	@Test(priority = 17, enabled = true, 
 			description = "Test to verify that user should NOT be able to login with invalid credentials_TestShouldFail")
-		public void TC17_FailedTestCase()  {
+	public void TC17_FailedTestCase()  {
 
-			d17.loginExpectedToFail(invalidUserName, invalidPassword);		
-		}	
+		d17.loginExpectedToFail(invalidUserName, invalidPassword);		
+	}	
+	
+	
+//Upcoming test case work - data driven test for validation on login saucelab web site
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	@Test(priority = 10, enabled = true, 
+			description = "This test will be marked as skipped in test report_TestShouldSkipped")
+	public void TC11_SkippedTestCase() {
+
+		boolean condition = true; // You can set this condition dynamically -true always
+		if (condition) {
+			throw new SkipException("Skipping this test because the condition is true");
+		}
+		// Code that won't be executed if the test is skipped
+		System.out.println("This test should be skipped.");
+	}
+	
+	
+	@Test (priority = 11, enabled = true,
+			description = "Test test will be marked as with some Error_TestShouldPass")
+	public void TC12_ErrorTestCase() {
+
+		d2.login(userName,passWord);
+
+		CommonMethods.titleValidation("OrangeHRM New Changes");
+
+		d2.logOut();			
+	}
+
 
 }

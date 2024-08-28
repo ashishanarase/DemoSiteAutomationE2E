@@ -27,6 +27,8 @@ import com.DemoQA.PageLayer.TC16_SSLCertificate;
 import com.DemoQA.PageLayer.TC17_FailedTestCase;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utilityPackage.ConfigLoader;
 import utilityPackage.DetailsDataProvider;
@@ -119,15 +121,15 @@ public class TestBase {
 
 		//obj references
 		action = new GenericActionTemplate();
-		d1 = new TC01_ActionOnBrowser();
-		d2 = new TC02_HomePage();
-		d3 = new TC03_WebElementTypes();		
-		d4 = new TC04_ClickOperationType();
-		d5 = new TC05_DynamicTableStructure();
-		d6 = new TC06_WindowHandling();		
-		d7 = new TC07_IframeHandling();
-		d8 = new TC08_SearchResultCount();
-		d9 = new TC09_AlertHandling();
+		d1  = new TC01_ActionOnBrowser();
+		d2  = new TC02_HomePage();
+		d3  = new TC03_WebElementTypes();		
+		d4  = new TC04_ClickOperationType();
+		d5  = new TC05_DynamicTableStructure();
+		d6  = new TC06_WindowHandling();		
+		d7  = new TC07_IframeHandling();
+		d8  = new TC08_SearchResultCount();
+		d9  = new TC09_AlertHandling();
 		d10 = new TC10_DropdownHandling();
 		d11 = new TC11_ExplicitAndFluentWaits();
 		d12 = new TC12_BrokenLinkValidation();

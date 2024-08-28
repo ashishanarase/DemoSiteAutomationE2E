@@ -49,6 +49,7 @@ public class ListenerClass extends TestBase implements ITestListener {
 
         test.log(Status.INFO, "Test Started : " + result.getMethod().getMethodName());
         test.log(Status.INFO, "Test Description : " + result.getMethod().getDescription());
+        extentTest.get().log(Status.PASS, "Navigated to the login page of WebApp");
     }
 
     @Override
@@ -62,18 +63,12 @@ public class ListenerClass extends TestBase implements ITestListener {
         extentTest.get().log(Status.FAIL, "TestCase Failed : " + result.getThrowable());
 
         try {
-        	          
-        	// Use addScreenCaptureFromBase64String for more reliable embedding
-            String screenshotPath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
-          //  String screenshotPath = CommonMethods.takeScreenShot(driver, result.getName());
-         //   extentTest.get().addScreenCaptureFromBase64String(screenshotPath, " : Screenshot of the failed test case");
-         
-         // Capture screenshot and attach to report
+        	   
             String filePathDestination = CommonMethods.takeScreenShot(driver, result.getName()); // This should return the relative path
             extentTest.get().fail("Screenshot attached : ", MediaEntityBuilder.createScreenCaptureFromPath(filePathDestination).build());
             
         } catch (Exception e) {
-        	extentTest.get().log(Status.ERROR, "An error occurred while attaching the screenshot to report : " + e.getMessage());
+        	extentTest.get().log(Status.WARNING, "An error occurred while attaching the screenshot to report : " + e.getMessage());
         }
     }
 
