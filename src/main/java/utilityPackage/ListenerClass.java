@@ -12,9 +12,6 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ListenerClass extends TestBase implements ITestListener {
-	
-    public static ExtentReports extent;
-    public static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
    
     public static void setDriver(WebDriver driverInstance) {
         driver = driverInstance;
@@ -29,7 +26,6 @@ public class ListenerClass extends TestBase implements ITestListener {
         htmlReporter.config().setDocumentTitle("Demo Automation Project");
         htmlReporter.config().setReportName("Demo Automation Report_"+DetailsDataProvider.getCurrentTimeStamp());
 
-        extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
         extent.setSystemInfo("Host Name", "AshishAnarase");
         extent.setSystemInfo("User Name", "ashish.anarase");

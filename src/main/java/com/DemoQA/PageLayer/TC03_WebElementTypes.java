@@ -6,11 +6,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.DemoQA.TestBase.TestBase;
 
-public class TC02_WebElementTypes extends TestBase {
+public class TC03_WebElementTypes extends TestBase {
 	
 	//Different Type of Xpath and Handling them
 	
-	public TC02_WebElementTypes () {
+	public TC03_WebElementTypes () {
 		PageFactory.initElements(driver, this);
 	}
 	

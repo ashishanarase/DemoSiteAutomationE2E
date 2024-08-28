@@ -1,21 +1,18 @@
 package com.DemoQA.TestBase;
 
 import java.time.Duration;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-
-import com.DemoQA.PageLayer.TC01_HomePage;
-import com.DemoQA.PageLayer.TC02_WebElementTypes;
-import com.DemoQA.PageLayer.TC03_WindowHandling;
+import com.DemoQA.PageLayer.TC02_HomePage;
+import com.DemoQA.PageLayer.TC03_WebElementTypes;
+import com.DemoQA.PageLayer.TC06_WindowHandling;
 import com.DemoQA.PageLayer.TC04_ClickOperationType;
 import com.DemoQA.PageLayer.TC05_DynamicTableStructure;
-import com.DemoQA.PageLayer.TC06_ExtentReportExample;
+import com.DemoQA.PageLayer.TC01_ActionOnBrowser;
 import com.DemoQA.PageLayer.TC07_IframeHandling;
 import com.DemoQA.PageLayer.TC08_SearchResultCount;
 import com.DemoQA.PageLayer.TC09_AlertHandling;
@@ -26,7 +23,8 @@ import com.DemoQA.PageLayer.TC13_MouseActionClass;
 import com.DemoQA.PageLayer.TC14_DataProviderInTestNg;
 import com.DemoQA.PageLayer.TC15_MultipleTabAndWindows;
 import com.DemoQA.PageLayer.TC16_SSLCertificate;
-
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utilityPackage.ConfigLoader;
 import utilityPackage.DetailsDataProvider;
@@ -34,6 +32,8 @@ import utilityPackage.DetailsDataProvider;
 public class TestBase {
 
 	public static WebDriver driver;
+	public static ExtentReports extent;
+	public static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
 
 	static String appUrl;
 	protected static String userDirectory;
@@ -53,13 +53,13 @@ public class TestBase {
 	protected String middleName;
 	protected String lastName;
 	protected String employeeID;
-	
-	public TC01_HomePage d1;
-	public TC02_WebElementTypes d2;
-	public TC03_WindowHandling d3;
+
+	public TC01_ActionOnBrowser d1;
+	public TC02_HomePage d2;
+	public TC03_WebElementTypes d3;	
 	public TC04_ClickOperationType d4;
 	public TC05_DynamicTableStructure d5;
-	public TC06_ExtentReportExample d6;
+	public TC06_WindowHandling d6;
 	public TC07_IframeHandling d7;
 	public TC08_SearchResultCount d8;
 	public TC09_AlertHandling d9;
@@ -76,6 +76,8 @@ public class TestBase {
 	public void dataGeneration() {
 		//Used to generate employee data randomly for each test run
 		DetailsDataProvider.getNameDetails();
+		
+		extent = new ExtentReports();
 
 		// Load environment-specific properties from ConfigLoader
 		String environment = System.getProperty("environment", "prod");    //prod //test
@@ -113,22 +115,22 @@ public class TestBase {
 		}
 
 		//obj references
-		d1 = new TC01_HomePage();
-		d2 = new TC02_WebElementTypes ();
-		d3 = new TC03_WindowHandling ();
-		d4 = new TC04_ClickOperationType ();
-		d5 = new TC05_DynamicTableStructure ();
-		d6 = new TC06_ExtentReportExample ();
-		d7 = new TC07_IframeHandling ();
-		d8 = new TC08_SearchResultCount ();
-		d9 = new TC09_AlertHandling ();
-		d10 = new TC10_DropdownHandling ();
+		d1 = new TC01_ActionOnBrowser();
+		d2 = new TC02_HomePage();
+		d3 = new TC03_WebElementTypes();		
+		d4 = new TC04_ClickOperationType();
+		d5 = new TC05_DynamicTableStructure();
+		d6 = new TC06_WindowHandling();		
+		d7 = new TC07_IframeHandling();
+		d8 = new TC08_SearchResultCount();
+		d9 = new TC09_AlertHandling();
+		d10 = new TC10_DropdownHandling();
 		d11 = new TC11_ExplicitAndFluentWaits();
-		d12 = new TC12_BrokenLinkValidation ();
-		d13 = new TC13_MouseActionClass ();
-		d14 = new TC14_DataProviderInTestNg ();
-		d15 = new TC15_MultipleTabAndWindows ();
-		d16 = new TC16_SSLCertificate ();
+		d12 = new TC12_BrokenLinkValidation();
+		d13 = new TC13_MouseActionClass();
+		d14 = new TC14_DataProviderInTestNg();
+		d15 = new TC15_MultipleTabAndWindows();
+		d16 = new TC16_SSLCertificate();
 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();

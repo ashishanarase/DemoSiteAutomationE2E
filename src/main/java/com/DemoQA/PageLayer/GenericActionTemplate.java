@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import com.DemoQA.TestBase.TestBase;
+import com.aventstack.extentreports.Status;
 
 public class GenericActionTemplate extends TestBase {
 
@@ -30,9 +31,9 @@ public class GenericActionTemplate extends TestBase {
 		try {	        	
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 			element.click();
-		//	extentTest.log(LogStatus.PASS, "Clicked on element : " + name +" button");
+			extentTest.get().log(Status.PASS, "Clicked on element : " + name +" button");
 		} catch (Exception e) {
-			//extentTest.log(LogStatus.FAIL, "Failed to click on element : " + name + " | Exception: " + e.getMessage());
+			extentTest.get().log(Status.FAIL, "Failed to click on element : " + name + " | Exception: " + e.getMessage());
 			throw e;
 		}
 	}

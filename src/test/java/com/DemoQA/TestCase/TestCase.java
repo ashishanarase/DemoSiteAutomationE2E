@@ -3,6 +3,8 @@ package com.DemoQA.TestCase;
 import java.io.IOException;
 import java.util.Set;
 
+import org.testng.ITestResult;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -13,50 +15,45 @@ import utilityPackage.ListenerClass;
 import utilityPackage.CommonMethods;
 
 @Listeners(ListenerClass.class)
-public class TestCase extends TestBase {
-	
-	@Test (priority=0, enabled=false, timeOut = 30000,
+public class TestCase extends TestBase{
+
+
+	@Test (priority=1, enabled=false, timeOut = 30000,
 			description = "Test to verify browser resizing and positioning operations")
-	public void TC00_ActionOnBrowser() throws InterruptedException {
+	public void TC01_ActionOnBrowser() throws InterruptedException {
 		//Dimension Class and Point Class usage
 		d1.actionOnBrowser();
 		CommonMethods.titleValidation("OrangeHRM");	
 	}
-	
-	@Test (priority=1, enabled=true, invocationCount = 2,
+
+	@Test (priority=2, enabled=true, invocationCount = 2,
 			description = "Test to verify the login and logout functionality of the application")
-	public void TC01_LoginLogOut() throws InterruptedException {
+	public void TC02_LoginLogOut() throws InterruptedException {
 		//Login and Logout on Demo Website
-		d1.login();
+		d2.login();
 		CommonMethods.titleValidation("OrangeHRM");
-		d1.logOut();
+		d2.logOut();
 	}
-	
-	@Test (priority=2, enabled=false, dependsOnMethods = {"loginLogOut"},
+
+	@Test (priority=3, enabled=false, dependsOnMethods = {"loginLogOut"},
 			description = "Test to verify interactions with various web elements such as buttons and text fields")
-	public void TC02_WebElementAction () {
+	public void TC03_WebElementAction () {
 		//Different Type of Xpath and Handling them
-		d1.login();
+		d2.login();
 		CommonMethods.titleValidation("OrangeHRM");
-		d2.actionOnElements();
-		d1.logOut();
+		d3.actionOnElements();
+		d2.logOut();
 	}
-	
-	@Test (priority=3, enabled=false,
-			description = "Test to verify window handling operations including switching between multiple windows")
-	public void TC03_WindowHandling() throws InterruptedException  {
-		//Difference between getWindowHandle & getWindowHandles 
-		//Window switch using Desired Index value and Title out of multiple windows
-		d3.WindowHandling();				
-	}
-	
+
+
+
 	@Test (priority=4,enabled=false,
 			description = "Test to verify different ways of performing click operations on a web element")
 	public void TC04_ClickOperationType() throws InterruptedException  {
 		//Different ways to perform click on webelement
 		d4.clickOperationType();			
 	}
-	
+
 	@Test (priority=5, enabled=false,
 			description = "Test to verify dynamic table handling by fetching the number of rows and columns")
 	public void TC05_DynamicTableStructure() throws InterruptedException  {
@@ -65,11 +62,11 @@ public class TestCase extends TestBase {
 	}
 	
 	@Test (priority=6, enabled=false,
-			description = "Test to generate and verify Extent Reports in the automation framework")
-	public void TC06_ExtentReportExample() throws InterruptedException  {
-		//Extent Report Example
-		d6.extentReportExample();
-		
+			description = "Test to verify window handling operations including switching between multiple windows")
+	public void TC06_WindowHandling() throws InterruptedException  {
+		//Difference between getWindowHandle & getWindowHandles 
+		//Window switch using Desired Index value and Title out of multiple windows
+		d6.WindowHandling();				
 	}
 	
 	@Test (priority=7, enabled=false,
@@ -77,9 +74,9 @@ public class TestCase extends TestBase {
 	public void TC07_IFrameHandling() throws InterruptedException  {
 		//Handled Iframe on Google.com 
 		d7.iframeHandling();
-		
+
 	}
-	
+
 	@Test (priority=8, enabled=false,
 			description = "Test to dynamically fetch and validate the count of search results")
 	public void TC08_FetchSearchResultCount() throws InterruptedException  {
@@ -87,14 +84,14 @@ public class TestCase extends TestBase {
 		//Assume here we can send any input in search box and code should work properly.
 		d8.fetchSearchResultCount();
 	}
-	
+
 	@Test (priority=9, enabled=false,
 			description = "Test to verify handling of different types of alert pop-ups in the browser")
 	public void TC09_AlertHandling() throws InterruptedException  {
 		//Different Type of Alert and Handling them
 		d9.alertHandling();
 	}
-	
+
 	@Test (priority=10, enabled=false,
 			description = "Test to verify the handling of dropdown menus and extracting options using the Select class")
 	public void TC10_DropdownHandling() throws InterruptedException  {
@@ -108,21 +105,21 @@ public class TestCase extends TestBase {
 		//Different ExplicitWait Conditions handling
 		d11.explicitWaitConditions();
 	}
-	
+
 	@Test (priority=12, enabled=false,
 			description = "Test to verify broken link validation by checking the status of URLs")
 	public void TC12_BrokenLinkValidation() throws InterruptedException, IOException  {
 		//Broken Link Validation 
 		d12.brokenLinkValidation("https://www.amazon.in");
 	}
-	
+
 	@Test (priority=13, enabled=false,
 			description = "Test to verify the usage of the Mouse Actions class for performing complex user interactions")
 	public void TC13_MouseActionClass() throws InterruptedException  {
 		//Mouse Action class usages 
 		d13.mouseActionClass();
 	}
-	
+
 	@Test (priority=14, enabled=false,
 			dataProvider= "loginCasesData", dataProviderClass = TC14_DataProviderInTestNg.class,
 			description = "Test to verify the login functionality using different data sets through a DataProvider")
@@ -130,7 +127,7 @@ public class TestCase extends TestBase {
 		//DataProvider Class
 		d14.dataProviderMethod(userName, passWord);
 	}
-	
+
 	@Test (priority=15, enabled=false,
 			description = "Test to verify handling of multiple browser tabs and windows")
 	public void TC15_MultipleTabAndWindows() throws InterruptedException  {
@@ -138,12 +135,12 @@ public class TestCase extends TestBase {
 		d15.multipleWindow();
 		d15.multipleTab();
 	}
-	
+
 	@Test (priority=16, enabled=false,
 			description = "Test to verify the acceptance and handling of SSL certificates in the browser")
 	public void TC16_sslCertificateMethod() throws InterruptedException  {
 		//Accepting SSL Certificate
 		d16.sslCertificateMethod();
 	}
-	
+
 }

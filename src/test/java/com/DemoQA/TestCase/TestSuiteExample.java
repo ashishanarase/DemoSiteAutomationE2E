@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import org.testng.TestNG;
 import org.testng.annotations.Test;
-import com.DemoQA.PageLayer.TC01_HomePage;
-import com.DemoQA.PageLayer.TC02_WebElementTypes;
+import com.DemoQA.PageLayer.TC02_HomePage;
+import com.DemoQA.PageLayer.TC03_WebElementTypes;
 
 
 public class TestSuiteExample {
@@ -18,8 +18,8 @@ public class TestSuiteExample {
 
 		// Create a list of test classes
 		List<Class<?>> testClasses = new ArrayList<>();
-        testClasses.add(TC01_HomePage.class); 
-        testClasses.add(TC02_WebElementTypes.class); 
+        testClasses.add(TC02_HomePage.class); 
+        testClasses.add(TC03_WebElementTypes.class); 
 		
         // Set the list of test classes
 		Class<?>[] classesArray = testClasses.toArray(new Class<?>[0]);
