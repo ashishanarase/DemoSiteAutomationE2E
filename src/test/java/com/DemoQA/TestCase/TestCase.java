@@ -26,7 +26,7 @@ public class TestCase extends TestBase{
 		CommonMethods.titleValidation("OrangeHRM");	
 	}
 
-	@Test (priority=2, enabled=true, invocationCount = 2,
+	@Test (priority=2, enabled=true, invocationCount = 1,
 			description = "Test to verify the login and logout functionality of the application")
 	public void TC02_LoginLogOut() throws InterruptedException {
 		//Login and Logout on Demo Website
@@ -142,5 +142,12 @@ public class TestCase extends TestBase{
 		//Accepting SSL Certificate
 		d16.sslCertificateMethod();
 	}
+	
+	@Test(priority = 17, enabled = true, 
+			description = "Test to verify that user should NOT be able to login with invalid credentials_TestShouldFail")
+		public void TC17_FailedTestCase()  {
+
+			d17.loginExpectedToFail(invalidUserName, invalidPassword);		
+		}	
 
 }

@@ -12,6 +12,7 @@ import com.DemoQA.PageLayer.TC03_WebElementTypes;
 import com.DemoQA.PageLayer.TC06_WindowHandling;
 import com.DemoQA.PageLayer.TC04_ClickOperationType;
 import com.DemoQA.PageLayer.TC05_DynamicTableStructure;
+import com.DemoQA.PageLayer.GenericActionTemplate;
 import com.DemoQA.PageLayer.TC01_ActionOnBrowser;
 import com.DemoQA.PageLayer.TC07_IframeHandling;
 import com.DemoQA.PageLayer.TC08_SearchResultCount;
@@ -23,6 +24,7 @@ import com.DemoQA.PageLayer.TC13_MouseActionClass;
 import com.DemoQA.PageLayer.TC14_DataProviderInTestNg;
 import com.DemoQA.PageLayer.TC15_MultipleTabAndWindows;
 import com.DemoQA.PageLayer.TC16_SSLCertificate;
+import com.DemoQA.PageLayer.TC17_FailedTestCase;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -54,6 +56,7 @@ public class TestBase {
 	protected String lastName;
 	protected String employeeID;
 
+	public static GenericActionTemplate action;
 	public TC01_ActionOnBrowser d1;
 	public TC02_HomePage d2;
 	public TC03_WebElementTypes d3;	
@@ -70,7 +73,7 @@ public class TestBase {
 	public TC14_DataProviderInTestNg d14;
 	public TC15_MultipleTabAndWindows d15;
 	public TC16_SSLCertificate d16;
-
+	public TC17_FailedTestCase d17;
 
 	@BeforeSuite
 	public void dataGeneration() {
@@ -115,6 +118,7 @@ public class TestBase {
 		}
 
 		//obj references
+		action = new GenericActionTemplate();
 		d1 = new TC01_ActionOnBrowser();
 		d2 = new TC02_HomePage();
 		d3 = new TC03_WebElementTypes();		
@@ -131,6 +135,7 @@ public class TestBase {
 		d14 = new TC14_DataProviderInTestNg();
 		d15 = new TC15_MultipleTabAndWindows();
 		d16 = new TC16_SSLCertificate();
+		d17 = new TC17_FailedTestCase();
 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();

@@ -14,6 +14,7 @@ import org.openqa.selenium.support.Color;
 import org.testng.Assert;
 
 import com.DemoQA.TestBase.TestBase;
+import com.aventstack.extentreports.Status;
 
 public class CommonMethods extends TestBase {
 
@@ -67,11 +68,11 @@ public class CommonMethods extends TestBase {
 		try {	// Copy file to destination
 			FileHandler.copy(srcFile, destFile);
 
-			//	System.out.println("Screenshot captured and saved at: " + destFile.getAbsolutePath());
-
+			extentTest.get().log(Status.PASS, "Screenshot captured and saved at : " + destFile.getAbsolutePath());
+	
 
 		} catch (Exception e) {
-			System.out.println("Failed to capture screenshot: " + e.getMessage());
+			extentTest.get().log(Status.ERROR,"Failed to capture screenshot : " + e.getMessage());
 		}
 
 		return filePathDestination;

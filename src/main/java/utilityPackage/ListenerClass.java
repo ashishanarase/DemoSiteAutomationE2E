@@ -1,5 +1,7 @@
 package utilityPackage;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -59,8 +61,12 @@ public class ListenerClass extends TestBase implements ITestListener {
         extentTest.get().log(Status.FAIL, "TestCase Failed : " + result.getThrowable());
 
         try {
-            String screenshotPath = CommonMethods.takeScreenShot(driver, result.getName());
-            extentTest.get().addScreenCaptureFromPath(screenshotPath);
+        	          
+        	// Use addScreenCaptureFromBase64String for more reliable embedding
+            String screenshotPath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+          //  String screenshotPath = CommonMethods.takeScreenShot(driver, result.getName());
+            extentTest.get().addScreenCaptureFromBase64String(screenshotPath, " : Screenshot of the failed test case");
+            
         } catch (Exception e) {
             e.printStackTrace();
         }
