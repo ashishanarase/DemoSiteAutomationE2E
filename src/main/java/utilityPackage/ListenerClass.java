@@ -9,6 +9,7 @@ import org.testng.ITestResult;
 import com.DemoQA.TestBase.TestBase;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
@@ -65,7 +66,11 @@ public class ListenerClass extends TestBase implements ITestListener {
         	// Use addScreenCaptureFromBase64String for more reliable embedding
             String screenshotPath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
           //  String screenshotPath = CommonMethods.takeScreenShot(driver, result.getName());
-            extentTest.get().addScreenCaptureFromBase64String(screenshotPath, " : Screenshot of the failed test case");
+         //   extentTest.get().addScreenCaptureFromBase64String(screenshotPath, " : Screenshot of the failed test case");
+         
+         // Capture screenshot and attach to report
+            String filePathDestination = CommonMethods.takeScreenShot(driver, result.getName()); // This should return the relative path
+            extentTest.get().fail("Screenshot attached : ", MediaEntityBuilder.createScreenCaptureFromPath(filePathDestination).build());
             
         } catch (Exception e) {
         	extentTest.get().log(Status.ERROR, "An error occurred while attaching the screenshot to report : " + e.getMessage());
