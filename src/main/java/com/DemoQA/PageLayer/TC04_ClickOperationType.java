@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.DemoQA.TestBase.TestBase;
+import com.aventstack.extentreports.Status;
 
 public class TC04_ClickOperationType extends TestBase {
 
@@ -35,23 +36,36 @@ public class TC04_ClickOperationType extends TestBase {
 	//------------ Action Methods -------------	
 	
 	public void clickOperationType() throws InterruptedException {
-		btn_handle1_homePage.click();
-		Thread.sleep(2000);
-		System.out.println("Click performed using conventional Click(); method");
+		
+		try {
+			
+		action.clickButton(btn_handle1_homePage);
+		
+		extentTest.get().log(Status.PASS, "Click performed using conventional Click(); method");
+		
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", btn_handle2_homePage);
-		Thread.sleep(2000);
-		System.out.println("Click performed using Javascript Executor class");
+		
+		extentTest.get().log(Status.PASS, "Click performed using Javascript Executor class");
 		
 		Actions actions = new Actions(driver);
 		actions.click(btn_handle3_homePage).perform();
-		Thread.sleep(2000);
-		System.out.println("Click performed using Actions class");
-		
+		extentTest.get().log(Status.PASS, "Click performed using Actions class");
+				
 		btn_handle4_homePage.sendKeys(Keys.ENTER);
-		Thread.sleep(2000);	
-		System.out.println("Click performed using Enter Key");
+		extentTest.get().log(Status.PASS, "Click performed using Enter Key");
+		
+		
+		boolean value = true;
+		if (value = true) {
+			extentTest.get().log(Status.PASS, "Click operation type successful");
+		} 
+	} 
+		catch(Exception e){
+			extentTest.get().log(Status.FAIL, "Click operation type failed!");
+			throw e;
+		}
 	}
 
 }

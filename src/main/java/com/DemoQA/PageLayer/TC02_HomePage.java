@@ -13,7 +13,6 @@ import com.aventstack.extentreports.Status;
 
 public class TC02_HomePage extends TestBase {
 	
-	//Dimension Class and Point Class usage
 	//Login and Logout on Demo Website
 	
 	public TC02_HomePage () {

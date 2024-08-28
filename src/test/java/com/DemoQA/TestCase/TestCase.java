@@ -36,19 +36,17 @@ public class TestCase extends TestBase{
 		d2.logOut();
 	}
 
-	@Test (priority=3, enabled=false, dependsOnMethods = {"loginLogOut"},
-			description = "Test to verify interactions with various web elements such as buttons and text fields")
+	@Test (priority=3, enabled=true,
+			description = "Test to verify interactions with various types web elements")
 	public void TC03_WebElementAction () {
-		//Different Type of Xpath and Handling them
+		//Different Type of element and Handling them
 		d2.login(userName,passWord);
 		CommonMethods.titleValidation("OrangeHRM");
 		d3.actionOnElements();
 		d2.logOut();
 	}
 
-
-
-	@Test (priority=4,enabled=false,
+	@Test (priority=4,enabled=true,
 			description = "Test to verify different ways of performing click operations on a web element")
 	public void TC04_ClickOperationType() throws InterruptedException  {
 		//Different ways to perform click on webelement
@@ -153,6 +151,9 @@ public class TestCase extends TestBase{
 	
 	
 //Upcoming test case work - data driven test for validation on login saucelab web site
+//dependsOnMethods = {"TC02_LoginLogOut"} annotation for Employeer Credentials creation for newly added emp	
+//Script update with generic method 	
+//	
 	
 	
 	
@@ -178,7 +179,7 @@ public class TestCase extends TestBase{
 
 	@Test(priority = 10, enabled = true, 
 			description = "This test will be marked as skipped in test report_TestShouldSkipped")
-	public void TC11_SkippedTestCase() {
+	public void TC49_SkippedTestCase() {
 
 		boolean condition = true; // You can set this condition dynamically -true always
 		if (condition) {
@@ -191,7 +192,7 @@ public class TestCase extends TestBase{
 	
 	@Test (priority = 11, enabled = true,
 			description = "Test test will be marked as with some Error_TestShouldPass")
-	public void TC12_ErrorTestCase() {
+	public void TC50_WarningTestCase() {
 
 		d2.login(userName,passWord);
 

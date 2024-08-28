@@ -38,6 +38,32 @@ public class GenericActionTemplate extends TestBase {
 		}
 	}
 
+	// Method to validate checkbox be click 
+	public void clickCheckBox(WebElement element) {
+		String name = element.getText();  
+
+		try {
+			wait.until(ExpectedConditions.visibilityOf(element));
+			if (element.isSelected()) {
+				extentTest.get().log(Status.WARNING, "CheckBox is selected already : " + name +" button");
+			}
+
+			else if (!element.isSelected()) {
+				extentTest.get().log(Status.PASS, "Checkbox is available to select : " + name +" button");
+				element.click();
+				extentTest.get().log(Status.PASS, "Clicked on checkbox : " + name +" field");
+			}
+			else {
+				extentTest.get().log(Status.WARNING, "CheckBox is selected neither selected nor available to select : " + name +" button");
+			}
+
+		} catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Failed to click on element : " + name + " | Exception: " + e.getMessage());
+			throw e;
+		}
+	} 
+
+
 	// Method to wait for an element to be visible and then send keys, with logging
 	public void enterText(WebElement element, String text) {
 		String name = element.getText();   
@@ -46,9 +72,9 @@ public class GenericActionTemplate extends TestBase {
 			wait.until(ExpectedConditions.visibilityOf(element));
 			element.clear();
 			element.sendKeys(text);
-		//	extentTest.log(LogStatus.PASS, "Entered text '" + text + "' into the : " + name + " field");
+			//	extentTest.log(LogStatus.PASS, "Entered text '" + text + "' into the : " + name + " field");
 		} catch (Exception e) {
-		//	extentTest.log(LogStatus.FAIL, "Failed to enter text '" + text + "' into the : " + name + " | Exception : " + e.getMessage());
+			//	extentTest.log(LogStatus.FAIL, "Failed to enter text '" + text + "' into the : " + name + " | Exception : " + e.getMessage());
 			throw e;
 		}
 	}
@@ -107,7 +133,7 @@ public class GenericActionTemplate extends TestBase {
 		catch(Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 
 }
