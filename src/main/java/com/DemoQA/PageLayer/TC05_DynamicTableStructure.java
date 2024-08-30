@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.DemoQA.TestBase.TestBase;
+import com.aventstack.extentreports.Status;
 
 public class TC05_DynamicTableStructure extends TestBase {
 
@@ -31,18 +32,22 @@ public class TC05_DynamicTableStructure extends TestBase {
 	//	WebElement element_table_homePage = driver.findElement(By.xpath("//table[@class='ds-w-full ds-table ds-table-xs ds-table-auto  ds-w-full ds-overflow-scroll ds-scrollbar-hide']"));
 
 		int rowCount = element_table_homePage.findElements(By.tagName("tr")).size();
-		System.out.println(rowCount);
+		
+		extentTest.get().log(Status.PASS, "Total number of rows : "+rowCount);
 
 		// Find the first row to determine the number of columns
 		int colCount = element_table_homePage.findElement(By.tagName("tr")).findElements(By.tagName("td")).size();
-		System.out.println(colCount);
+	
+		extentTest.get().log(Status.PASS, "Total number of column : "+colCount);
 
 		// Validate the number of rows and columns
 		if (rowCount == expectedRowCount && colCount == expectedColCount) {
-			System.out.println("Validation Passed: Correct number of rows and columns.");
+			extentTest.get().log(Status.PASS, "Validation Passed : Correct number of rows and columns");
 		} else {
-			System.out.println("Validation Failed: Incorrect number of rows and/or columns.");
+			extentTest.get().log(Status.FAIL, "Validation Failed : Incorrect number of rows and/or columns");
 		}
+		
+		
 	}
 }
 

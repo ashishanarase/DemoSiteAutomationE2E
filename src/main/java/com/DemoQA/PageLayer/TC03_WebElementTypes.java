@@ -118,11 +118,11 @@ public class TC03_WebElementTypes extends TestBase {
 
 			boolean value = true;
 			if (value = true) {
-				extentTest.get().log(Status.PASS, "Add candidate recruitment successful");
+				extentTest.get().log(Status.PASS, "Add Candidate Recruitment Successful");
 			} 
 		} 
 		catch (Exception e) {
-			extentTest.get().log(Status.FAIL, "Add candidate recruitment failed !");
+			extentTest.get().log(Status.FAIL, "Add Candidate Recruitment Failed !");
 			throw e; // Re-throw the exception to be caught globally
 		}
 	}

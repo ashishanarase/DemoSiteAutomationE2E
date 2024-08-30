@@ -47,7 +47,7 @@ public class TC04_ClickOperationType extends TestBase {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", btn_handle2_homePage);
 		
-		extentTest.get().log(Status.PASS, "Click performed using Javascript Executor class");
+		extentTest.get().log(Status.PASS, "Click performed using Javascript Executor interface");
 		
 		Actions actions = new Actions(driver);
 		actions.click(btn_handle3_homePage).perform();
@@ -59,11 +59,11 @@ public class TC04_ClickOperationType extends TestBase {
 		
 		boolean value = true;
 		if (value = true) {
-			extentTest.get().log(Status.PASS, "Click operation type successful");
+			extentTest.get().log(Status.PASS, "Click Operation Type Successful");
 		} 
 	} 
 		catch(Exception e){
-			extentTest.get().log(Status.FAIL, "Click operation type failed!");
+			extentTest.get().log(Status.FAIL, "Click Operation Type Failed !");
 			throw e;
 		}
 	}
