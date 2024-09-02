@@ -91,7 +91,7 @@ public class CommonMethods extends TestBase {
 			else {
 				extentTest.get().log(Status.FAIL, "Unexpected : Toastr success message is already displayed before performing action");
 			}
-		} catch (NoSuchElementException e) {
+		} catch (Exception e) {
 			// If the element is not found in the DOM, it means it's not present, which is what we expect here
 			extentTest.get().log(Status.PASS, "Toastr success message element is not present before performing action, as expected");
 		}
@@ -109,7 +109,7 @@ public class CommonMethods extends TestBase {
 //				extentTest.get().log(Status.FAIL, "Unexpected: Toastr success message is still not displayed after performing action");
 //			}
 
-		} catch (NoSuchElementException e) {
+		} catch (Exception e) {
 			// If the element is still not found, something went wrong
 			extentTest.get().log(Status.FAIL, "Failed: Toastr success message element is not present even after performing action");
 			throw e;

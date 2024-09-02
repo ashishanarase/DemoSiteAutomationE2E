@@ -46,13 +46,13 @@
 						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
-		<span class='report-name'>Demo Automation Report_28082024_195511</span>
+		<span class='report-name'>Demo Automation Report_02092024_205413</span>
 		<!-- report headline -->
 		<span class='report-headline'></span>
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Aug 28, 2024 07:55:11 pm</span>
+			<span class='label blue darken-3 suite-start-time'>Sept 2, 2024 08:54:13 pm</span>
 			</a>
 		</ul>
 	</div>
@@ -67,7 +67,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -110,10 +110,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> test(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
                 </div>
             </div>
         </div>
@@ -131,17 +131,17 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>TC03_WebElementAction</span>
-						<span class='test-time'>Aug 28, 2024 07:55:15 pm</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-name'>TC09_AlertHandling</span>
+						<span class='test-time'>Sept 2, 2024 08:54:24 pm</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Aug 28, 2024 07:55:15 pm</span>
-	<span class='label end-time'>Aug 28, 2024 07:55:30 pm</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+676ms</span>
+	<span class='label start-time'>Sept 2, 2024 08:54:24 pm</span>
+	<span class='label end-time'>Sept 2, 2024 08:54:34 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+462ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -155,23 +155,23 @@
 		<tbody>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>7:55:15 pm</td>
+				<td class='timestamp'>8:54:24 pm</td>
 				<td class='step-details'>
-						Test Started : TC03_WebElementAction
+						Test Started : TC09_AlertHandling
 					
 				</td>
 			</tr>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>7:55:15 pm</td>
+				<td class='timestamp'>8:54:24 pm</td>
 				<td class='step-details'>
-						Test Description : Test to verify interactions with various types web elements
+						Test Description : Test to verify handling of different types of alert pop-ups in the browser
 					
 				</td>
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>7:55:15 pm</td>
+				<td class='timestamp'>8:54:24 pm</td>
 				<td class='step-details'>
 						Navigated to the login page of WebApp
 					
@@ -179,90 +179,122 @@
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>7:55:16 pm</td>
+				<td class='timestamp'>8:54:34 pm</td>
 				<td class='step-details'>
-						Clicked on element : Login button
+						Navigated to SelectorsHub xPath page
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>8:54:34 pm</td>
+				<td class='step-details'>
+						Clicking on simple alert to do accept action
 					
 				</td>
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>7:55:16 pm</td>
+				<td class='timestamp'>8:54:34 pm</td>
 				<td class='step-details'>
-						Login successful
+						Clicked on element : Click To Open Window Alert button
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>8:54:34 pm</td>
+				<td class='step-details'>
+						Capturing the alert message
 					
 				</td>
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>7:55:17 pm</td>
+				<td class='timestamp'>8:54:34 pm</td>
 				<td class='step-details'>
-						Tab title validated successfully
+						Simple alert message captured successfully : Press a button!
 					
 				</td>
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>7:55:18 pm</td>
+				<td class='timestamp'>8:54:34 pm</td>
 				<td class='step-details'>
-						Clicked on element : Recruitment button
+						Simple Alert successfully closed with OK button
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>8:54:34 pm</td>
+				<td class='step-details'>
+						Clicking on simple alert to do dismiss action
 					
 				</td>
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>7:55:20 pm</td>
+				<td class='timestamp'>8:54:34 pm</td>
 				<td class='step-details'>
-						Clicked on element : Add button
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>7:55:30 pm</td>
-				<td class='step-details'>
-						Add candidate recruitment failed !
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>7:55:30 pm</td>
-				<td class='step-details'>
-						TestCase Failed : TC03_WebElementAction
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>7:55:30 pm</td>
-				<td class='step-details'>
-						TestCase Failed : org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='First Name']"}
-  (Session info: chrome=128.0.6613.85)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [28d9640fffb38bb5450edf21e402bc4c, findElement {using=xpath, value=//input[@placeholder='First Name']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.85, chrome: {chromedriverVersion: 128.0.6613.84 (606aa55c7d68..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63917}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63917/devtoo..., se:cdpVersion: 128.0.6613.85, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 28d9640fffb38bb5450edf21e402bc4c
+						Clicked on element : Click To Open Window Alert button
 					
 				</td>
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>7:55:30 pm</td>
+				<td class='timestamp'>8:54:34 pm</td>
 				<td class='step-details'>
-						Screenshot captured and saved at : C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC03_WebElementAction28082024_195530.jpg
+						Simple Alert successfully closed with Cancel button
 					
 				</td>
 			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>7:55:30 pm</td>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>8:54:34 pm</td>
 				<td class='step-details'>
-						Screenshot attached :
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC03_WebElementAction28082024_195530.jpg' src='C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC03_WebElementAction28082024_195530.jpg'>
+						Clicking on promt alert to do sendkeys action
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:54:34 pm</td>
+				<td class='step-details'>
+						Clicked on element : Click To Open Window Prompt Alert button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:54:34 pm</td>
+				<td class='step-details'>
+						Promt alert message captured successfully : Do you have Testing Daily Mobile App?
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>8:54:34 pm</td>
+				<td class='step-details'>
+						Prompt Alert successfully closed with OK button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:54:34 pm</td>
+				<td class='step-details'>
+						Alert handling successful
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>8:54:34 pm</td>
+				<td class='step-details'>
+						TestCase Passed : TC09_AlertHandling
+					
 				</td>
 			</tr>
 		</tbody>
@@ -310,19 +342,19 @@ Session ID: 28d9640fffb38bb5450edf21e402bc4c
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 28, 2024 07:55:11 pm</div>
+					<div class='panel-lead'>Sept 2, 2024 08:54:13 pm</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 28, 2024 07:55:32 pm</div>
+			 		<div class='panel-lead'>Sept 2, 2024 08:54:37 pm</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 21s+627ms</div>
+					<div class='panel-lead'>0h 0m 24s+250ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -358,13 +390,13 @@ Session ID: 28d9640fffb38bb5450edf21e402bc4c
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 0,
-				failParent: 1,
+				passParent: 1,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
+				exceptionsParent: 0,
 				childCount: 0,
 				passChild: 0,
 				failChild: 0,
@@ -389,7 +421,7 @@ Session ID: 28d9640fffb38bb5450edf21e402bc4c
 		</script>
 		<script>
 			var timeline = {
-			        "TC03_WebElementAction":14.676
+			        "TC09_AlertHandling":10.462
 			};
 		</script>
 	

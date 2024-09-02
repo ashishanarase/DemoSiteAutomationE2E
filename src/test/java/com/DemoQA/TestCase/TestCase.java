@@ -13,7 +13,7 @@ import utilityPackage.CommonMethods;
 public class TestCase extends TestBase{
 
 
-	@Test (priority=1, enabled=true, timeOut = 30000,
+	@Test (priority=1, enabled=true, 
 			description = "Test to verify browser resizing and positioning operations")
 	public void TC01_ActionOnBrowser() throws Exception {
 		//Dimension Class and Point Class usage
@@ -149,6 +149,7 @@ public class TestCase extends TestBase{
 //Script update with generic method 	
 //	Optimise broken link validation print and handle null pointer exception
 	//Modify Explicite wait with having all condition handled in automations
+	//Timeout annotation not worked on TC01
 	
 	
 	

@@ -10,34 +10,44 @@ import com.aventstack.extentreports.Status;
 
 public class TC01_ActionOnBrowser extends TestBase {
 
-	//Extent Report Example
-
 	public TC01_ActionOnBrowser() {
 		PageFactory.initElements(driver, this);
 	}
 	//------------ Xpath Repository -------------
 
-	@FindBy (xpath = " ")
-	private WebElement txtbox_userName_homePage;
+
 
 	//------------ Action Methods -------------	
 
+
 	public void actionOnBrowser() throws Exception {
+
 		try {
+
 			Dimension size = driver.manage().window().getSize();
+
 			extentTest.get().log(Status.PASS, "Current size of browser : "+size);
+
 			Dimension d = new Dimension(222, 989);
+
 			driver.manage().window().setSize(d);
+
 			Dimension sizeSet = driver.manage().window().getSize();
+
 			extentTest.get().log(Status.PASS, "Set size of browser : "+sizeSet);
-			
+
 			Thread.sleep(3000);
 
 			Point positon = driver.manage().window().getPosition();
+
 			extentTest.get().log(Status.PASS, "Current position of browser : "+positon);
+
 			Point p = new Point (0,0);
+
 			driver.manage().window().setPosition(p);
+
 			Point positonSet = driver.manage().window().getPosition();
+
 			extentTest.get().log(Status.PASS, "Set position of browser : "+positonSet);
 
 			Thread.sleep(3000);
@@ -50,10 +60,9 @@ public class TC01_ActionOnBrowser extends TestBase {
 			} 
 		} 
 		catch (Exception e) {
-			extentTest.get().log(Status.FAIL, "Action on browser failed !");	
+			extentTest.get().log(Status.FAIL, "Action on browser failed !");
 			throw e; // Re-throw the exception to be caught globally
 		}
 
 	}
-} 
-
+}
