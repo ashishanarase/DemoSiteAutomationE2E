@@ -6,8 +6,13 @@
       <class name="com.DemoQA.TestCase.TestCase">
         <methods>
           <include name="dataGeneration"/>
+          <include name="TC13_MouseActionClass"/>
           <include name="closeBrowser"/>
+          <include name="TC49_SkippedTestCase"/>
+          <include name="TC11_ExplicitWaitConditions"/>
           <include name="startBrowser"/>
+          <include name="TC01_ActionOnBrowser"/>
+          <include name="TC17_FailedTestCase"/>
           <include name="TC03_WebElementAction"/>
         </methods>
       </class> <!-- com.DemoQA.TestCase.TestCase -->

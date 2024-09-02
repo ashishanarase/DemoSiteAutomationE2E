@@ -5,16 +5,18 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.DemoQA.TestBase.TestBase;
+import com.aventstack.extentreports.Status;
 
 public class TC08_SearchResultCount extends TestBase {
 
 	//Fetch the search result count dynamically in run time. 
 	//Assume here we can send any input in search box and code should work properly.
-	
+
 	public TC08_SearchResultCount () {
 		PageFactory.initElements(driver, this);
 	}
-	
+
+	private String currentUrl = "https://www.amazon.in";
 
 	//------------ Xpath Repository -------------
 
@@ -24,46 +26,54 @@ public class TC08_SearchResultCount extends TestBase {
 	@FindBy (xpath = "//input[@id='nav-search-submit-button']")
 	private WebElement btn_search_homePage;
 
-	@FindBy (xpath = "//h1[@class='a-size-base s-desktop-toolbar a-text-normal']")
+	@FindBy (xpath = "//span[contains(text(),'results for')]")
 	private WebElement txt_searchResult_homePage;
 
 	//------------ Action Methods -------------	
 
-	public void fetchSearchResultCount() throws InterruptedException {
+	public void fetchSearchResultCount() {
 
-		driver.get("https://amazon.in");
+		try {
+			driver.get(currentUrl);
+			
+			extentTest.get().log(Status.PASS, "Navigated to Amazon home page");
 
-		String desiredSearchText = "Motorola Mobiles";
+			String desiredSearchText = "Motorola Mobiles";
 
-		//WebElement txtBox_searchBox_homePage = driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
+			action.enterText(txtBox_searchBox_homePage, desiredSearchText);
 
-		txtBox_searchBox_homePage.sendKeys(desiredSearchText);
+			action.clickButton(btn_search_homePage);
+		
+			String resultText = txt_searchResult_homePage.getText();
+			
+			extentTest.get().log(Status.INFO, "Result text : "+resultText);
 
-		//WebElement btn_search_homePage = driver.findElement(By.xpath("//input[@id='nav-search-submit-button']"));
+			// Split the search result string by whitespace
+			String[] parts = resultText.split(" ");
 
-		btn_search_homePage.click();
+			// Extract the count from the splitted parts
+			String countStr = parts[2]; // Assuming count is at index 3
 
-		//WebElement txt_searchResult_homePage = driver.findElement(By.xpath("//h1[@class='a-size-base s-desktop-toolbar a-text-normal']"));
+			extentTest.get().log(Status.INFO, "Extracting the count from text");
+			
+			// Remove non-numeric characters from the count string
+			countStr = countStr.replaceAll("[^\\d]", "");
 
-		String resultText = txt_searchResult_homePage.getText();
+			// Convert the count string to an integer
+			int resultCount = Integer.parseInt(countStr);
 
-		// Split the search result string by whitespace
-		String[] parts = resultText.split(" ");
+			// Print the count			
+			extentTest.get().log(Status.PASS, "Number of results: " + resultCount);
 
-		// Extract the count from the splitted parts
-		String countStr = parts[2]; // Assuming count is at index 3
+			boolean value = true;
+			if (value = true) {
+				extentTest.get().log(Status.PASS, "Window handling successful");
+			}  
 
-		// Remove non-numeric characters from the count string
-		countStr = countStr.replaceAll("[^\\d]", "");
-
-		System.out.println(countStr);
-
-		// Convert the count string to an integer
-		int resultCount = Integer.parseInt(countStr);
-
-		// Print the count
-		System.out.println("Number of results: " + resultCount);
-
+		}
+		catch(Exception e) {
+			extentTest.get().log(Status.FAIL, "Window handling failed !");
+			throw e;
+		}		
 	} 
-
 }

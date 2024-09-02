@@ -20,9 +20,9 @@ import com.DemoQA.PageLayer.TC09_AlertHandling;
 import com.DemoQA.PageLayer.TC10_DropdownHandling;
 import com.DemoQA.PageLayer.TC11_ExplicitAndFluentWaits;
 import com.DemoQA.PageLayer.TC12_BrokenLinkValidation;
-import com.DemoQA.PageLayer.TC13_MouseActionClass;
+import com.DemoQA.PageLayer.TC13_MouseAction;
 import com.DemoQA.PageLayer.TC14_DataProviderInTestNg;
-import com.DemoQA.PageLayer.TC15_MultipleTabAndWindows;
+import com.DemoQA.PageLayer.TC15_MultipleWindowsAndTabHandling;
 import com.DemoQA.PageLayer.TC16_SSLCertificate;
 import com.DemoQA.PageLayer.TC17_FailedTestCase;
 import com.aventstack.extentreports.ExtentReports;
@@ -71,9 +71,9 @@ public class TestBase {
 	public TC10_DropdownHandling d10;
 	public TC11_ExplicitAndFluentWaits d11;
 	public TC12_BrokenLinkValidation d12;
-	public TC13_MouseActionClass d13;
+	public TC13_MouseAction d13;
 	public TC14_DataProviderInTestNg d14;
-	public TC15_MultipleTabAndWindows d15;
+	public TC15_MultipleWindowsAndTabHandling d15;
 	public TC16_SSLCertificate d16;
 	public TC17_FailedTestCase d17;
 
@@ -105,11 +105,10 @@ public class TestBase {
 		employeeID = nameDetails[3];  
 	}
 	@BeforeMethod
-	public void startBrowser () {		
-
+	public void startBrowser () {	
 
 		if (desiredBrowser.equalsIgnoreCase("chrome")) {
-			WebDriverManager.chromedriver().browserVersion(browserVersion).setup(); //.browserVersion(browserVersion)
+			WebDriverManager.chromedriver().setup(); //.browserVersion(browserVersion)
 			driver = new ChromeDriver();
 
 		}
@@ -133,9 +132,9 @@ public class TestBase {
 		d10 = new TC10_DropdownHandling();
 		d11 = new TC11_ExplicitAndFluentWaits();
 		d12 = new TC12_BrokenLinkValidation();
-		d13 = new TC13_MouseActionClass();
+		d13 = new TC13_MouseAction();
 		d14 = new TC14_DataProviderInTestNg();
-		d15 = new TC15_MultipleTabAndWindows();
+		d15 = new TC15_MultipleWindowsAndTabHandling();
 		d16 = new TC16_SSLCertificate();
 		d17 = new TC17_FailedTestCase();
 

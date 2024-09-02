@@ -14,6 +14,8 @@ public class TC05_DynamicTableStructure extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
+	private String currentUrl = "https://www.espncricinfo.com/records/trophy/team-highest-innings-totals/indian-premier-league-117";
+	
 	//------------ Xpath Repository -------------
 
 	@FindBy (xpath = "//table[@class='ds-w-full ds-table ds-table-xs ds-table-auto  ds-w-full ds-overflow-scroll ds-scrollbar-hide']")
@@ -27,10 +29,12 @@ public class TC05_DynamicTableStructure extends TestBase {
 		int expectedRowCount = 101;
 		int expectedColCount = 9;
 
-		driver.get("https://www.espncricinfo.com/records/trophy/team-highest-innings-totals/indian-premier-league-117");
+		driver.get(currentUrl);
 
 	//	WebElement element_table_homePage = driver.findElement(By.xpath("//table[@class='ds-w-full ds-table ds-table-xs ds-table-auto  ds-w-full ds-overflow-scroll ds-scrollbar-hide']"));
 
+		extentTest.get().log(Status.PASS, "Navigated to ESPN page which contains table");
+		
 		int rowCount = element_table_homePage.findElements(By.tagName("tr")).size();
 		
 		extentTest.get().log(Status.PASS, "Total number of rows : "+rowCount);
@@ -42,12 +46,10 @@ public class TC05_DynamicTableStructure extends TestBase {
 
 		// Validate the number of rows and columns
 		if (rowCount == expectedRowCount && colCount == expectedColCount) {
-			extentTest.get().log(Status.PASS, "Validation Passed : Correct number of rows and columns");
+			extentTest.get().log(Status.PASS, "Validation passed : Correct number of rows and columns");
 		} else {
-			extentTest.get().log(Status.FAIL, "Validation Failed : Incorrect number of rows and/or columns");
-		}
-		
-		
+			extentTest.get().log(Status.FAIL, "Validation failed : Incorrect number of rows and/or columns");
+		}		
 	}
 }
 

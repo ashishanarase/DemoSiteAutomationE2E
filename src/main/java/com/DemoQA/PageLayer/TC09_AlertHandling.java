@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.DemoQA.TestBase.TestBase;
+import com.aventstack.extentreports.Status;
 
 public class TC09_AlertHandling extends TestBase {
 	
@@ -27,48 +28,61 @@ public class TC09_AlertHandling extends TestBase {
 		
 		//------------ Action Methods -------------	
 		
-		public void alertHandling() throws InterruptedException {
+		public void alertHandling() {
 			
+			try {
+				
 			driver.get("https://selectorshub.com/xpath-practice-page/");
 			
-			btn_simpleAlert_homePage.click();
+			extentTest.get().log(Status.PASS, "Navigated to SelectorsHub xPath page");
 			
-			Thread.sleep(2000);
+			extentTest.get().log(Status.INFO, "Clicking on simple alert to do accept action");
 			
+			action.clickButton(btn_simpleAlert_homePage);
+			
+			extentTest.get().log(Status.INFO, "Capturing the alert message");
 			//To capture the alert message
 			String alertMessage1 = driver.switchTo().alert().getText();
-			System.out.println(alertMessage1);
+			
+			extentTest.get().log(Status.PASS, "Simple alert message captured successfully : "+alertMessage1);
 			
 			//To click on the OK button of alert popup
 			driver.switchTo().alert().accept();
-			System.out.println("Simple Alert successfully closed with OK button");
 			
-			Thread.sleep(2000);
+			extentTest.get().log(Status.PASS, "Simple Alert successfully closed with OK button");
 			
-			btn_simpleAlert_homePage.click();
+			extentTest.get().log(Status.INFO, "Clicking on simple alert to do dismiss action");
 			
-			Thread.sleep(2000);
+			action.clickButton(btn_simpleAlert_homePage);
 			
-			//To click on the Cancel button of alert popup
 			driver.switchTo().alert().dismiss();
-			System.out.println("Simple Alert successfully closed with Cancel button");
 			
-			btn_promtAlert_homePage.click();
+			extentTest.get().log(Status.PASS, "Simple Alert successfully closed with Cancel button");			
 			
-			Thread.sleep(2000);
+			extentTest.get().log(Status.INFO, "Clicking on promt alert to do sendkeys action");
+			
+			action.clickButton(btn_promtAlert_homePage);
 			
 			String alertMessage2 = driver.switchTo().alert().getText();
-			System.out.println(alertMessage2);
+			
+			extentTest.get().log(Status.PASS, "Promt alert message captured successfully : "+alertMessage2);
 			
 			//To send some text inputs in textBox present on prompt alert 
 			driver.switchTo().alert().sendKeys("Automation Entered Text");
 			
-			Thread.sleep(2000);
-			
 			driver.switchTo().alert().accept();
-			System.out.println("Prompt Alert successfully closed with OK button");
-					
 			
-		}
+			extentTest.get().log(Status.INFO, "Prompt Alert successfully closed with OK button");
+					
+			boolean value = true;
+			if (value = true) {
+				extentTest.get().log(Status.PASS, "Alert handling successful");
+			}  
 
-	}
+		}
+		catch(Exception e) {
+			extentTest.get().log(Status.FAIL, "Alert handling failed !");
+			throw e;
+		}		
+	} 
+}

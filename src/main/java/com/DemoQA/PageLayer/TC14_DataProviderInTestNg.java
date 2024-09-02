@@ -1,16 +1,11 @@
 package com.DemoQA.PageLayer;
 
-import java.time.Duration;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindBys;
-import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
-
 import com.DemoQA.TestBase.TestBase;
+import com.aventstack.extentreports.Status;
 
 public class TC14_DataProviderInTestNg extends TestBase {
 
@@ -19,6 +14,8 @@ public class TC14_DataProviderInTestNg extends TestBase {
 	public TC14_DataProviderInTestNg () {
 		PageFactory.initElements(driver, this);
 	}
+
+	private String currentUrl = "https://www.saucedemo.com";
 
 	//------------ Xpath Repository -------------
 
@@ -38,7 +35,7 @@ public class TC14_DataProviderInTestNg extends TestBase {
 	public Object [][] loginCasesData() {
 
 		Object [][] data = new Object[3][2];
-		
+
 		data[0][0] = "standard_user";
 		data[0][1] = "secret_sauce";
 
@@ -55,19 +52,28 @@ public class TC14_DataProviderInTestNg extends TestBase {
 		return data;		
 	}
 
-	public void dataProviderMethod(String userName, String passWord) throws InterruptedException {
+	public void dataProviderMethod(String userName, String passWord) {
 
-		driver.get("https://www.saucedemo.com");
+		try {
 
-		txtBox_userName_homePage.sendKeys(userName);
+			driver.get(currentUrl);
 
-		Thread.sleep(2000);
+			action.enterText(txtBox_userName_homePage, userName);
 
-		txtBox_passWord_homePage.sendKeys(passWord);
+			action.enterText(txtBox_passWord_homePage, passWord);
 
-		Thread.sleep(2000);
+			action.clickButton(btn_login_homePage);
 
-		btn_login_homePage.click();
+			boolean value = true;
+			if (value = true) {
+				extentTest.get().log(Status.PASS, "Data provider successful");
+			}  
+
+		}
+		catch(Exception e) {
+			extentTest.get().log(Status.FAIL, "Data provider failed !");
+			throw e;
+		}	
 
 	}
 

@@ -12,6 +12,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.DemoQA.TestBase.TestBase;
+import com.aventstack.extentreports.Status;
 
 public class TC12_BrokenLinkValidation extends TestBase {
 
@@ -30,28 +31,41 @@ public class TC12_BrokenLinkValidation extends TestBase {
 
 	public void brokenLinkValidation(String desiredUrl) throws InterruptedException, IOException {
 
-		driver.get(desiredUrl);
+		try {
 
-		List <WebElement> elementLinks = driver.findElements(By.tagName("a"));
+			driver.get(desiredUrl);
 
-		System.out.println("Total Number of Links = "+elementLinks.size());
+			List <WebElement> elementLinks = driver.findElements(By.tagName("a"));
 
-		List <String> linkList = new ArrayList <String>();
+			extentTest.get().log(Status.INFO, "Total Number of Links = "+elementLinks.size());
 
-		for (WebElement element : elementLinks) {
-			String url = element.getAttribute("href");
-			linkList.add(url);
+			List <String> linkList = new ArrayList <String>();
+
+			for (WebElement element : elementLinks) {
+				String url = element.getAttribute("href");
+				linkList.add(url);
+			}
+
+			long stTime = System.currentTimeMillis();
+			linkList.parallelStream().forEach(element -> checkBrokenLink(element));
+			long endTime = System.currentTimeMillis();
+
+
+			boolean value = true;
+			if (value = true) {
+				extentTest.get().log(Status.PASS, "Broken link validation successful");
+			}  
+
 		}
-
-		long stTime = System.currentTimeMillis();
-		linkList.parallelStream().forEach(element -> checkBrokenLink(element));
-		long endTime = System.currentTimeMillis();
-
-		System.out.print("Total time taken = "+(endTime-stTime));
+		catch(Exception e) {
+			extentTest.get().log(Status.FAIL, "Broken link validation failed !");
+			throw e;
+		}		
 
 	}
 
 	public static void checkBrokenLink(String linkUrl) {
+		
 		try {
 			URL link = new URL(linkUrl);
 
@@ -64,15 +78,17 @@ public class TC12_BrokenLinkValidation extends TestBase {
 			int responseCode = httpCon.getResponseCode();
 
 			if (responseCode >= 400) {
-				System.out.println("Broken Link URL with message = " +httpCon.getResponseMessage() +" " + linkUrl);
+				extentTest.get().log(Status.INFO, "Broken Link URL with message = " +httpCon.getResponseMessage() +" " + linkUrl);
 			}
 			else {
-				System.out.println("Valid Link URL with message = "+httpCon.getResponseMessage());
+				extentTest.get().log(Status.PASS, "Valid Link URL with message = "+httpCon.getResponseMessage());
 			}
 		}
 		catch (IOException e) {
-			
 			e.printStackTrace();
+		}
+		catch (NullPointerException eNull) {
+			eNull.printStackTrace();
 		}
 	}
 }

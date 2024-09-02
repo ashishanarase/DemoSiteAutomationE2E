@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.DemoQA.TestBase.TestBase;
+import com.aventstack.extentreports.Status;
 
 public class TC16_SSLCertificate extends TestBase {
 
@@ -17,31 +18,45 @@ public class TC16_SSLCertificate extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
+	private String currentUrl = "https://expired.badssl.com";
+
 	//------------ Xpath Repository -------------
 
-	
+
 	//------------ Action Methods -------------	
 
 	public void sslCertificateMethod() throws InterruptedException {
+		try {
+			//Create instance of ChromeOptions Class
+			ChromeOptions handlingSSL = new ChromeOptions();
 
-		//Create instance of ChromeOptions Class
-		ChromeOptions handlingSSL = new ChromeOptions();
+			//Using the accept insecure cert method with true as parameter to accept the untrusted certificate
+			handlingSSL.setAcceptInsecureCerts(true);
 
-		//Using the accept insecure cert method with true as parameter to accept the untrusted certificate
-		handlingSSL.setAcceptInsecureCerts(true);
+			//Creating instance of Chrome driver by passing reference of ChromeOptions object
+			WebDriver driver1 = new ChromeDriver(handlingSSL);
 
-		//Creating instance of Chrome driver by passing reference of ChromeOptions object
-		WebDriver driver1 = new ChromeDriver(handlingSSL);
+			//Launching the URL
+			driver1.get(currentUrl);
 
-		//Launching the URL
-		driver1.get("https://expired.badssl.com/");
-		
-		Thread.sleep(3000);
-		
-		System.out.println("The page title is : " +driver.getTitle());
-		
+			Thread.sleep(3000);
+
+			System.out.println("The page title is : " +driver.getTitle());
+
+			boolean value = true;
+			if (value = true) {
+				extentTest.get().log(Status.PASS, "Mouse action successful");
+			} 
+
+			driver1.quit();
+
+		}
+		catch(Exception e) {
+			extentTest.get().log(Status.FAIL, "Mouse action failed !");
+			throw e;
+		}		
+
 	}
-
 }
 
 

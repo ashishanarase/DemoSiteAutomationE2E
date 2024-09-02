@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.DemoQA.TestBase.TestBase;
+import com.aventstack.extentreports.Status;
 
 public class TC10_DropdownHandling extends TestBase {
 
@@ -17,6 +18,7 @@ public class TC10_DropdownHandling extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
+	private String currentUrl = "https://www.amazon.in";
 
 	//------------ Xpath Repository -------------
 
@@ -26,45 +28,68 @@ public class TC10_DropdownHandling extends TestBase {
 	//------------ Action Methods -------------	
 
 	public void dropdownHandling() throws InterruptedException {
-		driver.get("https://www.amazon.in/");
 
-		Select sObject = new Select(btn_allOption_homePage);
+		try {
 
-		List<WebElement> list = sObject.getOptions();
+			driver.get(currentUrl);
 
-		int count = list.size();
+			extentTest.get().log(Status.PASS, "Navigated to Amazon home page");
 
-		System.out.println(count);
+			Select sObject = new Select(btn_allOption_homePage);
 
-		for (int i = 0; i<count ; i++) {
-			String dropdownList = list.get(i).getText();
-			System.out.println(dropdownList);
+			List<WebElement> list = sObject.getOptions();
+
+			int count = list.size();
+
+			System.out.println(count);
+
+			extentTest.get().log(Status.INFO, "Total option available in dropdown : "+count);
+
+			for (int i = 0; i<count ; i++) {
+				String dropdownList = list.get(i).getText();
+				extentTest.get().log(Status.INFO, "Option "+i+" : "+dropdownList);
+			}
+
+			action.clickButton(btn_allOption_homePage);
+
+			sObject.selectByIndex(5);
+
+			String dropdownOption1 = list.get(5).getText();
+
+			extentTest.get().log(Status.INFO, "Dropdown option with 'selectByIndex' method selected : "+dropdownOption1);
+
+			driver.navigate().refresh(); 
+
+			driver.get(currentUrl);
+
+			action.clickButton(btn_allOption_homePage);
+
+			sObject.selectByValue("search-alias=software");
+
+			extentTest.get().log(Status.INFO, "Dropdown option with 'selectByValue' method selected : Software");
+
+			driver.navigate().refresh(); 
+
+			driver.get(currentUrl);
+
+			action.clickButton(btn_allOption_homePage);
+
+			sObject.selectByVisibleText("Music");
+
+			extentTest.get().log(Status.INFO, "Dropdown option with 'selectByVisibleText' method selected : Music");
+
+
+			boolean value = true;
+			if (value = true) {
+				extentTest.get().log(Status.PASS, "Dropdown handling successful");
+			}  
+
 		}
+		catch(Exception e) {
+			extentTest.get().log(Status.FAIL, "Dropdown handling failed !");
+			throw e;
+		}		
 
-		btn_allOption_homePage.click();
-
-		sObject.selectByIndex(5);
-		Thread.sleep(2000);
-		String dropdownOption1 = list.get(5).getText();
-		System.out.println("Dropdown Option with Index method selected = "+dropdownOption1);
-
-		driver.navigate().refresh(); 
-		driver.get("https://www.amazon.in/");
-
-		btn_allOption_homePage.click();
-
-		sObject.selectByValue("search-alias=software");
-		Thread.sleep(2000);
-		System.out.println("Dropdown Option with Text Value selected = Software");
-
-		driver.navigate().refresh(); 
-		driver.get("https://www.amazon.in/");
-
-		btn_allOption_homePage.click();
-
-		sObject.selectByVisibleText("Music");
-		Thread.sleep(2000);
-		System.out.println("Dropdown Option with Visible text selected = Music");
 	}
 
 }
