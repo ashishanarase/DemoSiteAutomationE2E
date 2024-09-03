@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-02T20:54:13 IST" name="Default suite" finished-at="2024-09-02T20:54:37 IST" duration-ms="24185">
+  <suite started-at="2024-09-03T19:53:10 IST" name="Default suite" finished-at="2024-09-03T19:53:23 IST" duration-ms="13101">
     <groups>
     </groups>
-    <test started-at="2024-09-02T20:54:13 IST" name="Default test" finished-at="2024-09-02T20:54:37 IST" duration-ms="24185">
+    <test started-at="2024-09-03T19:53:10 IST" name="Default test" finished-at="2024-09-03T19:53:23 IST" duration-ms="13101">
       <class name="com.DemoQA.TestCase.TestCase">
-        <test-method is-config="true" signature="dataGeneration()[pri:0, instance:com.DemoQA.TestCase.TestCase@623a8092]" started-at="2024-09-02T20:54:13 IST" name="dataGeneration" finished-at="2024-09-02T20:54:13 IST" duration-ms="49" status="PASS">
+        <test-method is-config="true" signature="dataGeneration()[pri:0, instance:com.DemoQA.TestCase.TestCase@76ed1b7c]" started-at="2024-09-03T19:53:10 IST" name="dataGeneration" finished-at="2024-09-03T19:53:10 IST" duration-ms="39" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataGeneration -->
-        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@623a8092]" started-at="2024-09-02T20:54:13 IST" name="startBrowser" finished-at="2024-09-02T20:54:24 IST" duration-ms="11073" status="PASS">
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@76ed1b7c]" started-at="2024-09-03T19:53:10 IST" name="startBrowser" finished-at="2024-09-03T19:53:14 IST" duration-ms="3979" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method signature="TC09_AlertHandling()[pri:9, instance:com.DemoQA.TestCase.TestCase@623a8092]" started-at="2024-09-02T20:54:24 IST" name="TC09_AlertHandling" description="Test to verify handling of different types of alert pop-ups in the browser" finished-at="2024-09-02T20:54:34 IST" duration-ms="10466" status="PASS">
+        <test-method signature="TC18_ImageComparison()[pri:18, instance:com.DemoQA.TestCase.TestCase@76ed1b7c]" started-at="2024-09-03T19:53:14 IST" name="TC18_ImageComparison" description="Test to verify that actual image is matches with the expected image using pixel to pixel mapping" finished-at="2024-09-03T19:53:21 IST" duration-ms="6690" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC09_AlertHandling -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@623a8092]" started-at="2024-09-02T20:54:34 IST" name="closeBrowser" finished-at="2024-09-02T20:54:37 IST" duration-ms="2490" status="PASS">
+        </test-method> <!-- TC18_ImageComparison -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@76ed1b7c]" started-at="2024-09-03T19:53:21 IST" name="closeBrowser" finished-at="2024-09-03T19:53:23 IST" duration-ms="2292" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

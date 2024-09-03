@@ -67,6 +67,21 @@
     <version>5.0.0</version> <!-- Use the latest version available -->
 </dependency>
 
+<!-- For Image Comparision-->
+<!-- https://mvnrepository.com/artifact/ru.yandex.qatools.ashot/ashot -->
+<dependency>
+    <groupId>ru.yandex.qatools.ashot</groupId>
+    <artifactId>ashot</artifactId>
+    <version>1.5.3</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+<dependency>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+    <version>2.10.1</version>
+</dependency>
+
   </dependencies>
 
   <build>

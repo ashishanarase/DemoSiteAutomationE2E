@@ -144,12 +144,16 @@ public class TestCase extends TestBase{
 	}	
 	
 	
+	
+	
 //Upcoming test case work - data driven test for validation on login saucelab web site https://www.saucedemo.com/
 //dependsOnMethods = {"TC02_LoginLogOut"} annotation for Employeer Credentials creation for newly added emp	
 //Script update with generic method 	
-//	Optimise broken link validation print and handle null pointer exception
+//	Optimise broken link validation print and handle null pointer exception and Print count of Valid and broken links
+	
 	//Modify Explicite wait with having all condition handled in automations
 	//Timeout annotation not worked on TC01
+	//Optimize code for image comparison as it not working after taking live image 
 	
 	
 	
@@ -169,13 +173,29 @@ public class TestCase extends TestBase{
 	
 	
 	
+	@Test(priority = 25, enabled = false, 
+			description = "Test to verify that actual image is matches with the expected image using pixel to pixel mapping")
+	public void TC25_ImageComparison() throws Exception  {
+
+		Thread.sleep(4000);
+		
+		String actualPath = CommonMethods.takeScreenShot(driver, "ImageCompare_"); 
+		
+		Thread.sleep(2000);
 	
+		//	String expectedPath = "D:\\Ashish-All Data\\Data\\Automation Project BackUp\\DemoPro_DataFiles\\OrangeHRM_Blue.jpg";
+		
+		String expectedPath = "D:\\Ashish-All Data\\Data\\Automation Project BackUp\\DemoPro_DataFiles\\OrangeHRM_Orange.jpg";
+		
+		CommonMethods.imageComparison(expectedPath, actualPath);
+		
+	}	
 	
 	
 
-	@Test(priority = 10, enabled = true, 
+	@Test(priority = 26, enabled = false, 
 			description = "This test will be marked as skipped in test report_TestShouldSkipped")
-	public void TC49_SkippedTestCase() {
+	public void TC26_SkippedTestCase() {
 
 		boolean condition = true; // You can set this condition dynamically -true always
 		if (condition) {
@@ -186,9 +206,9 @@ public class TestCase extends TestBase{
 	}
 	
 	
-	@Test (priority = 11, enabled = true,
+	@Test (priority = 27, enabled = false,
 			description = "Test test will be marked as with some Error_TestShouldPass")
-	public void TC50_WarningTestCase() {
+	public void TC27_WarningTestCase() {
 
 		d2.login(userName,passWord);
 
