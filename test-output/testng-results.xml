@@ -2,24 +2,28 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-04T12:47:06 IST" name="Default suite" finished-at="2024-09-04T12:47:10 IST" duration-ms="4140">
+  <suite started-at="2024-09-04T13:32:08 IST" name="Default suite" finished-at="2024-09-04T13:35:52 IST" duration-ms="224329">
     <groups>
     </groups>
-    <test started-at="2024-09-04T12:47:06 IST" name="Default test" finished-at="2024-09-04T12:47:10 IST" duration-ms="4140">
-      <class name="com.DemoQA.TestCase.PixelToPixelMappingTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.DemoQA.TestCase.PixelToPixelMappingTest@394df057]" started-at="2024-09-04T12:47:06 IST" name="setUp" finished-at="2024-09-04T12:47:08 IST" duration-ms="1790" status="PASS">
+    <test started-at="2024-09-04T13:32:08 IST" name="Default test" finished-at="2024-09-04T13:35:52 IST" duration-ms="224329">
+      <class name="com.DemoQA.TestCase.TestCase">
+        <test-method is-config="true" signature="dataGeneration()[pri:0, instance:com.DemoQA.TestCase.TestCase@17a7f733]" started-at="2024-09-04T13:32:08 IST" name="dataGeneration" finished-at="2024-09-04T13:32:08 IST" duration-ms="49" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="imageComparision2()[pri:0, instance:com.DemoQA.TestCase.PixelToPixelMappingTest@394df057]" started-at="2024-09-04T12:47:08 IST" name="imageComparision2" finished-at="2024-09-04T12:47:08 IST" duration-ms="294" status="PASS">
+        </test-method> <!-- dataGeneration -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@17a7f733]" started-at="2024-09-04T13:32:08 IST" name="startBrowser" finished-at="2024-09-04T13:32:13 IST" duration-ms="5324" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- imageComparision2 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.DemoQA.TestCase.PixelToPixelMappingTest@394df057]" started-at="2024-09-04T12:47:08 IST" name="tearDown" finished-at="2024-09-04T12:47:10 IST" duration-ms="2016" status="PASS">
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC12_BrokenLinkValidation()[pri:12, instance:com.DemoQA.TestCase.TestCase@17a7f733]" started-at="2024-09-04T13:32:13 IST" name="TC12_BrokenLinkValidation" description="Test to verify broken link validation by checking the status of URLs" finished-at="2024-09-04T13:35:50 IST" duration-ms="216516" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.DemoQA.TestCase.PixelToPixelMappingTest -->
+        </test-method> <!-- TC12_BrokenLinkValidation -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestCase.TestCase@17a7f733]" started-at="2024-09-04T13:35:50 IST" name="closeBrowser" finished-at="2024-09-04T13:35:52 IST" duration-ms="2349" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.DemoQA.TestCase.TestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
