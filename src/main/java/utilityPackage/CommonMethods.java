@@ -4,6 +4,8 @@ import static org.testng.Assert.assertFalse;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -11,6 +13,9 @@ import java.util.NoSuchElementException;
 
 import javax.imageio.ImageIO;
 
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -137,7 +142,7 @@ public class CommonMethods extends TestBase {
 
 			ImageDiff difference = imgDiffer.makeDiff(expectedFile, actualFile);
 
-					
+
 			if (difference.hasDiff()==false) {
 
 				extentTest.get().log(Status.PASS, "Image Comparison : Actual image matches with expected");
@@ -151,7 +156,76 @@ public class CommonMethods extends TestBase {
 
 			extentTest.get().log(Status.WARNING, "An error occurred during image comparison : " + e.getMessage());
 
-			 throw new RuntimeException("Image comparison failed due to an IOException : ", e);
+			throw new RuntimeException("Image comparison failed due to an IOException : ", e);
 		}
 	}
+
+	public static String readExcelData (String sheetPath, int rowNum, int cellNum) {
+		
+		try {
+			//Create object file to set file
+			File exfile = new File(sheetPath);
+			
+			//Create object file input stream
+			FileInputStream infile = new FileInputStream(exfile);
+
+			//Create object of XSSFWorkBook
+			XSSFWorkbook new_book = new XSSFWorkbook(infile);
+			
+			//Create object for sheet
+			XSSFSheet exsheet = new_book.getSheetAt(0);	//Sheet index should set as 0 
+
+			//Row1
+			XSSFRow exrow = exsheet.getRow(rowNum);			//Row index starts from 0
+
+			//Column
+			String cellValue = exrow.getCell(cellNum).getStringCellValue();
+			
+			extentTest.get().log(Status.PASS, "Successfully taken inputs from excel file");
+		
+			return cellValue;
+		}
+		catch(IOException e){
+
+			extentTest.get().log(Status.WARNING, "An error occurred during reading excel data : " + e.getMessage());
+
+			throw new RuntimeException("Read excel data failed due to an IOException : ", e);
+		}
+	}
+	
+public static void writeExcelData (String sheetPath, int rowNum, int cellNum, String desiredInput) {
+		
+		try {
+			//Create object file to set file
+			File exfile = new File(sheetPath);
+			
+			//Create object file input stream
+			FileInputStream infile = new FileInputStream(exfile);
+
+			//Create object of XSSFWorkBook
+			XSSFWorkbook new_book = new XSSFWorkbook(infile);
+			
+			//Create object for sheet
+			XSSFSheet exsheet = new_book.getSheetAt(0);	//Sheet index should set as 0 
+
+			//To set the data in excel file
+			exsheet.getRow(rowNum).createCell(cellNum).setCellValue(desiredInput);
+			
+			FileOutputStream fos = new FileOutputStream(exfile);
+			
+			new_book.write(fos);
+			
+			new_book.close();
+		}
+		catch(IOException e){
+
+			extentTest.get().log(Status.WARNING, "An error occurred during writing excel data : " + e.getMessage());
+
+			throw new RuntimeException("Write excel data failed due to an IOException : ", e);
+		}
+	}
+
+
+//Class brace	
 }
+
