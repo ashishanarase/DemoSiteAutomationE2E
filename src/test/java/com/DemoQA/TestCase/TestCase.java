@@ -147,8 +147,7 @@ public class TestCase extends TestBase{
 	
 	
 //Upcoming test case work - data driven test for validation on login saucelab web site https://www.saucedemo.com/
-//dependsOnMethods = {"TC02_LoginLogOut"} annotation for Employeer Credentials creation for newly added emp	
-//Script update with generic method 	
+//dependsOnMethods = {"TC02_LoginLogOut"} annotation for Employeer Credentials creation for newly added emp 	
 //	Optimise broken link validation print and handle null pointer exception and Print count of Valid and broken links
 	
 	//Modify Explicite wait with having all condition handled in automations

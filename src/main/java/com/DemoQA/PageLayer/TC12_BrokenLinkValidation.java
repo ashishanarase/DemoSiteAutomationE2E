@@ -2,6 +2,7 @@ package com.DemoQA.PageLayer;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -37,9 +38,11 @@ public class TC12_BrokenLinkValidation extends TestBase {
 
 			List <WebElement> elementLinks = driver.findElements(By.tagName("a"));
 
-			extentTest.get().log(Status.INFO, "Total Number of Links = "+elementLinks.size());
+			extentTest.get().log(Status.INFO, "Total number of links : "+elementLinks.size());
 
-			List <String> linkList = new ArrayList <String>();
+			List<String> linkList = new ArrayList<String>();
+			List<String> brokenLinks = new ArrayList<String>();
+			List<String> validLinks = new ArrayList<String>();
 
 			for (WebElement element : elementLinks) {
 				String url = element.getAttribute("href");
@@ -47,15 +50,23 @@ public class TC12_BrokenLinkValidation extends TestBase {
 			}
 
 			long stTime = System.currentTimeMillis();
-			
-			 // Traditional for loop instead of parallelStream()
-	        for (String linkUrl : linkList) {
-	            checkBrokenLink(linkUrl);
-	        }
-//			linkList.parallelStream().forEach(element -> checkBrokenLink(element));			
-			
+
+			// Traditional for loop instead of parallelStream()
+			for (String linkUrl : linkList) {
+				if (checkBrokenLink(linkUrl)) {
+					brokenLinks.add(linkUrl);
+				} else {
+					validLinks.add(linkUrl);
+				}
+			}
+			//			linkList.parallelStream().forEach(element -> checkBrokenLink(element));			
+
 			long endTime = System.currentTimeMillis();
 
+			// Log the counts of valid and broken links
+			extentTest.get().log(Status.INFO, "Total number valid links : " + validLinks.size());
+
+			extentTest.get().log(Status.INFO, "Total number of broken links : " + brokenLinks.size());
 
 			boolean value = true;
 			if (value = true) {
@@ -70,8 +81,8 @@ public class TC12_BrokenLinkValidation extends TestBase {
 
 	}
 
-	public static void checkBrokenLink(String linkUrl) {
-		
+	public static boolean checkBrokenLink(String linkUrl) {
+
 		try {
 			URL link = new URL(linkUrl);
 
@@ -84,17 +95,24 @@ public class TC12_BrokenLinkValidation extends TestBase {
 			int responseCode = httpCon.getResponseCode();
 
 			if (responseCode >= 400) {
-				extentTest.get().log(Status.INFO, "Broken Link URL with message = " +httpCon.getResponseMessage() +" " + linkUrl);
+				return true;  // Broken link
 			}
 			else {
-				extentTest.get().log(Status.PASS, "Valid Link URL with message = "+httpCon.getResponseMessage());
+				return false; // Valid link
 			}
 		}
-		catch (IOException e) {
-			e.printStackTrace();
-		}
-		catch (NullPointerException eNull) {
-			eNull.printStackTrace();
+		catch (MalformedURLException e) {
+			// Handle MalformedURLException
+		//	System.err.println("Malformed URL : " + linkUrl);
+			return true; // Consider malformed URLs as broken
+		} catch (IOException eIO) {
+			// Handle IOException
+		//	System.err.println("IOException : " + e.getMessage());
+			return true; // Consider IO issues as broken
+		} catch (NullPointerException eNull) {
+			// Handle NullPointerException
+		//	System.err.println("NullPointerException : " + eNull.getMessage());
+			return true; // Consider null URLs as broken
 		}
 	}
 }
