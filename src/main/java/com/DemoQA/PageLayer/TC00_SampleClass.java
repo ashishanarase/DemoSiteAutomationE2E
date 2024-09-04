@@ -1,10 +1,11 @@
 package com.DemoQA.PageLayer;
 
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.FindBys;
-import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.FindAll;
+import org.openqa.selenium.support.FindBys;
 
 import com.DemoQA.TestBase.TestBase;
 
@@ -22,21 +23,21 @@ public class TC00_SampleClass extends TestBase {
     @FindBy(xpath = " ")
     private WebElement prefix_name_page;
 
-    // Using @FindBys to locate an element with multiple criteria (AND)
-    //where it uses a logical AND between the conditions (All xpath need to bo correct).
-    @FindBys({
-        @FindBy(id = " "),
-        @FindBy(tagName = " ")
-    })
-    private WebElement prefix_name_page2;
-
-    // Using @FindAll to locate an element with multiple criteria (OR)
-    //where it uses a logical OR between the conditions.
-    @FindAll({
-        @FindBy(id = " "),
-        @FindBy(className = " ")
-    })
-    WebElement prefix_name_page3;
+//    // Using @FindBys to locate an element with multiple criteria (AND)
+//    //where it uses a logical AND between the conditions (All xpath need to bo correct).
+//    @FindBys({
+//        @FindBy(id = " "),
+//        @FindBy(tagName = " ")
+//    })
+//    private WebElement prefix_name_page2;
+//
+//    // Using @FindAll to locate an element with multiple criteria (OR)
+//    //where it uses a logical OR between the conditions.
+//    @FindAll({
+//        @FindBy(id = " "),
+//        @FindBy(className = " ")
+//    })
+//    WebElement prefix_name_page3;
     
     
 	//------------ Action Methods -------------	

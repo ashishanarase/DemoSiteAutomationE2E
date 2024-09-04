@@ -1,5 +1,8 @@
 package com.DemoQA.TestCase;
 
+import static org.testng.Assert.assertFalse;
+import static org.testng.Assert.assertTrue;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.imageio.ImageIO;
@@ -88,6 +91,8 @@ public class PixelToPixelMappingTest {
 		ImageDiffer imgDiffer = new ImageDiffer();
 		
 		ImageDiff difference = imgDiffer.makeDiff(expectedImage, actualImage);
+		
+		assertFalse(difference.hasDiff(), "Ekdam Same");
 		
 		if (difference.hasDiff()==true) {
 			System.out.println("Not Same");

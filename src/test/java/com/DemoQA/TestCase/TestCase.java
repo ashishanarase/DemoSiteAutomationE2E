@@ -173,7 +173,7 @@ public class TestCase extends TestBase{
 	
 	
 	
-	@Test(priority = 25, enabled = false, 
+	@Test(priority = 25, enabled = true, 
 			description = "Test to verify that actual image is matches with the expected image using pixel to pixel mapping")
 	public void TC25_ImageComparison() throws Exception  {
 

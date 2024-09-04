@@ -1,5 +1,7 @@
 package utilityPackage;
 
+import static org.testng.Assert.assertFalse;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -135,6 +137,7 @@ public class CommonMethods extends TestBase {
 
 			ImageDiff difference = imgDiffer.makeDiff(expectedFile, actualFile);
 
+					
 			if (difference.hasDiff()==false) {
 
 				extentTest.get().log(Status.PASS, "Image Comparison : Actual image matches with expected");
@@ -148,6 +151,7 @@ public class CommonMethods extends TestBase {
 
 			extentTest.get().log(Status.WARNING, "An error occurred during image comparison : " + e.getMessage());
 
+			 throw new RuntimeException("Image comparison failed due to an IOException : ", e);
 		}
 	}
 }

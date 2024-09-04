@@ -47,7 +47,13 @@ public class TC12_BrokenLinkValidation extends TestBase {
 			}
 
 			long stTime = System.currentTimeMillis();
-			linkList.parallelStream().forEach(element -> checkBrokenLink(element));
+			
+			 // Traditional for loop instead of parallelStream()
+	        for (String linkUrl : linkList) {
+	            checkBrokenLink(linkUrl);
+	        }
+//			linkList.parallelStream().forEach(element -> checkBrokenLink(element));			
+			
 			long endTime = System.currentTimeMillis();
 
 
