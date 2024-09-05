@@ -26,7 +26,7 @@ public class TestCase extends TestBase{
 	public void TC02_LoginLogOut() {
 		//Login and Logout on Demo Website
 		d2.login(userName,passWord);
-		CommonMethods.titleValidation("OrangeHRM");
+		
 		d2.logOut();
 	}
 
@@ -35,8 +35,9 @@ public class TestCase extends TestBase{
 	public void TC03_WebElementAction () {
 		//Different Type of element and Handling them
 		d2.login(userName,passWord);
-		CommonMethods.titleValidation("OrangeHRM");
+		
 		d3.actionOnElements();
+		
 		d2.logOut();
 	}
 
@@ -154,6 +155,8 @@ public class TestCase extends TestBase{
 	//Timeout annotation not worked on TC01
 	//Optimize code for image comparison as it not working after taking live image 
 	
+	//Add title of tab in config file
+	//Check for how to allow popup permission
 	
 	
 	

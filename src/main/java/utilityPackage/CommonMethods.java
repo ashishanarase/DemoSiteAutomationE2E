@@ -23,6 +23,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.Color;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import com.DemoQA.TestBase.TestBase;
 import com.aventstack.extentreports.Status;
@@ -33,6 +34,9 @@ import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 public class CommonMethods extends TestBase {
 
 	public static void titleValidation (String expectedTitle) {
+		
+		wait.until(ExpectedConditions.titleIs(expectedTitle));
+		
 		String actualTitle = driver.getTitle();
 
 		//	Assert.assertEquals(actualTitle, expectedTitle);

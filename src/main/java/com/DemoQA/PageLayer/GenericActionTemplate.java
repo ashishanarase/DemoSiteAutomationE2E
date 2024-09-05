@@ -17,12 +17,27 @@ import com.aventstack.extentreports.Status;
 public class GenericActionTemplate extends TestBase {
 
 	public static final int maxWaitTime = 15;
-	public static WebDriverWait wait;
 
 	// Constructor to initialize WebDriver, WebDriverWait, and ExtentTest
 	public GenericActionTemplate() {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(maxWaitTime)); // You can adjust the timeout duration   
 	}
+
+	// Method to wait for an element to be visible only
+	public void visibilityCheck(WebElement element) {
+
+		String name = element.getText();  
+
+		try {	        	
+			wait.until(ExpectedConditions.visibilityOf(element));
+			element.click();
+			extentTest.get().log(Status.PASS, "Desired element visible : " + name +" ");
+		} catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Desired element not visible : " + name + " | Exception: " + e.getMessage());
+			throw e;
+		}
+	}
+
 
 	// Method to wait for an element to be clickable and then click
 	public void clickButton(WebElement element) {
@@ -37,6 +52,8 @@ public class GenericActionTemplate extends TestBase {
 			throw e;
 		}
 	}
+
+
 
 	// Method to validate checkbox be click 
 	public void clickCheckBox(WebElement element) {

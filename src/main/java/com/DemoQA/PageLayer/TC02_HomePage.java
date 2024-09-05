@@ -10,6 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 import com.DemoQA.TestBase.TestBase;
 import com.aventstack.extentreports.Status;
 
+import utilityPackage.CommonMethods;
+
 
 public class TC02_HomePage extends TestBase {
 	
@@ -43,6 +45,8 @@ public class TC02_HomePage extends TestBase {
 
 		try {
 			
+			CommonMethods.titleValidation("OrangeHRM");
+			
 			action.enterText(txtBox_userName_loginPage, userName);
 			
 			action.enterText(txtBox_passWord_loginPage, passWord);
@@ -65,6 +69,8 @@ public class TC02_HomePage extends TestBase {
 
 		try {
 
+			Thread.sleep(2000);
+			
 			action.clickButton(dd_logOut_dashboard);
 		
 			action.clickButton(btn_logOut_dashboard);
@@ -76,7 +82,7 @@ public class TC02_HomePage extends TestBase {
 		} 
 		catch (Exception e) {
 			extentTest.get().log(Status.FAIL, "LogOut failed !");	
-			  throw e; // Re-throw the exception to be caught globally
+			throw new RuntimeException("LogOut failed due to an Exception : ", e); // Re-throw the exception to be caught globally
 		}
 	}
 }
