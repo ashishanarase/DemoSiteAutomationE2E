@@ -33,10 +33,15 @@ import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 
 public class CommonMethods extends TestBase {
 
+	public static void setDriver(WebDriver driverInstance) {
+		driver = driverInstance;
+	}
+
+
 	public static void titleValidation (String expectedTitle) {
-		
+
 		wait.until(ExpectedConditions.titleIs(expectedTitle));
-		
+
 		String actualTitle = driver.getTitle();
 
 		//	Assert.assertEquals(actualTitle, expectedTitle);
@@ -49,6 +54,7 @@ public class CommonMethods extends TestBase {
 		}
 	}
 
+	
 	public static String takeScreenShot(WebDriver driver, String screenshotName)  {
 
 		// Cast WebDriver to TakesScreenshot
@@ -79,10 +85,7 @@ public class CommonMethods extends TestBase {
 		return filePathDestination;
 	}
 
-	public static void setDriver(WebDriver driverInstance) {
-		driver = driverInstance;
-	}
-
+	
 	public static void beforeActionSuccessMessage(WebElement txt_toasterSuccessMessage_employeePage) {
 
 		try {
@@ -99,6 +102,7 @@ public class CommonMethods extends TestBase {
 
 	}
 
+	
 	public static void afterActionSuccessMessage(WebElement txt_toasterSuccessMessage_employeePage) {
 
 		try {
@@ -117,6 +121,7 @@ public class CommonMethods extends TestBase {
 		}
 	}
 
+	
 	public static void colorValidation(WebElement desiredElement, String expectedColor ) {
 
 		System.out.println("Expected Color Code =" + expectedColor);
@@ -135,6 +140,7 @@ public class CommonMethods extends TestBase {
 		}
 	}
 
+	
 	public static void imageComparison(String expectedImage, String actualImage) {
 		try {
 
@@ -164,18 +170,19 @@ public class CommonMethods extends TestBase {
 		}
 	}
 
+	
 	public static String readExcelData (String sheetPath, int rowNum, int cellNum) {
-		
+
 		try {
 			//Create object file to set file
 			File exfile = new File(sheetPath);
-			
+
 			//Create object file input stream
 			FileInputStream infile = new FileInputStream(exfile);
 
 			//Create object of XSSFWorkBook
 			XSSFWorkbook new_book = new XSSFWorkbook(infile);
-			
+
 			//Create object for sheet
 			XSSFSheet exsheet = new_book.getSheetAt(0);	//Sheet index should set as 0 
 
@@ -184,9 +191,9 @@ public class CommonMethods extends TestBase {
 
 			//Column
 			String cellValue = exrow.getCell(cellNum).getStringCellValue();
-			
+
 			extentTest.get().log(Status.PASS, "Successfully taken inputs from excel file");
-		
+
 			return cellValue;
 		}
 		catch(IOException e){
@@ -196,29 +203,30 @@ public class CommonMethods extends TestBase {
 			throw new RuntimeException("Read excel data failed due to an IOException : ", e);
 		}
 	}
+
 	
-public static void writeExcelData (String sheetPath, int rowNum, int cellNum, String desiredInput) {
-		
+	public static void writeExcelData (String sheetPath, int rowNum, int cellNum, String desiredInput) {
+
 		try {
 			//Create object file to set file
 			File exfile = new File(sheetPath);
-			
+
 			//Create object file input stream
 			FileInputStream infile = new FileInputStream(exfile);
 
 			//Create object of XSSFWorkBook
 			XSSFWorkbook new_book = new XSSFWorkbook(infile);
-			
+
 			//Create object for sheet
 			XSSFSheet exsheet = new_book.getSheetAt(0);	//Sheet index should set as 0 
 
 			//To set the data in excel file
 			exsheet.getRow(rowNum).createCell(cellNum).setCellValue(desiredInput);
-			
+
 			FileOutputStream fos = new FileOutputStream(exfile);
-			
+
 			new_book.write(fos);
-			
+
 			new_book.close();
 		}
 		catch(IOException e){
@@ -230,6 +238,6 @@ public static void writeExcelData (String sheetPath, int rowNum, int cellNum, St
 	}
 
 
-//Class brace	
+	//Class brace closing	
 }
 

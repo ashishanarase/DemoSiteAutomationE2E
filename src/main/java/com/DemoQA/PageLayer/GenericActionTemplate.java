@@ -11,6 +11,8 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
 import com.DemoQA.TestBase.TestBase;
 import com.aventstack.extentreports.Status;
 
@@ -38,6 +40,37 @@ public class GenericActionTemplate extends TestBase {
 		}
 	}
 
+	
+	// Method to wait for an element to be visible only
+		public void urlValidation( String expectedURL) {
+			try {	
+
+				wait.until(ExpectedConditions.urlToBe(expectedURL));
+
+				String currentURL = driver.getCurrentUrl();
+
+				Assert.assertEquals(currentURL, expectedURL, "Navigation after clicking the URL failed");
+
+				extentTest.get().log(Status.PASS, "Navigation after clicking the URL successful : " + expectedURL);
+			} catch (Exception e) {
+				extentTest.get().log(Status.FAIL, "Navigation after clicking the URL failed : " + expectedURL + " | Exception: " + e.getMessage());
+				throw e;
+			}
+		}
+
+		// Method to wait for an element to be clickable
+		public void clickCheck(WebElement element) {
+			String name = element.getText();  
+
+			try {	        	
+				wait.until(ExpectedConditions.elementToBeClickable(element));
+
+				extentTest.get().log(Status.PASS, "Clicked on element : " + name +" button");
+			} catch (Exception e) {
+				extentTest.get().log(Status.FAIL, "Failed to click on element : " + name + " | Exception: " + e.getMessage());
+				throw e;
+			}
+		}
 
 	// Method to wait for an element to be clickable and then click
 	public void clickButton(WebElement element) {
