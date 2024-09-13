@@ -157,6 +157,8 @@ public class TestCase extends TestBase{
 	
 	//Add title of tab in config file
 	//Check for how to allow popup permission
+	//remove boolean value parameter from every method
+	
 	
 	
 	
