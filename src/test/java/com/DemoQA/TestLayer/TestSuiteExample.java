@@ -1,4 +1,4 @@
-package com.DemoQA.TestCase;
+package com.DemoQA.TestLayer;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.DemoQA.TestCase;
+package com.DemoQA.TestLayer;
 
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;

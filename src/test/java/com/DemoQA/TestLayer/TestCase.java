@@ -1,4 +1,4 @@
-package com.DemoQA.TestCase;
+package com.DemoQA.TestLayer;
 
 import java.io.IOException;
 import org.testng.SkipException;
