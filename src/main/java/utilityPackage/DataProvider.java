@@ -76,22 +76,12 @@ public class DataProvider {
 		return randomNumber;
 	}
 
-	public static int extractValue(String priceString) {
-		// Remove all non-numeric characters except for the decimal point and commas
-		String numericString = priceString.replaceAll("[^\\d.,]", "");
-
-		// Remove the comma
-		numericString = numericString.replace(",", "");
-
-		// Check if there is a decimal and only take the part before the decimal
-		if (numericString.contains(".")) {
-			numericString = numericString.substring(0, numericString.indexOf("."));
-		}
-
-		int numericInt = Integer.parseInt(numericString);
-
-		return numericInt;
-	}
+//	public static int extractValue(String priceString) {
+//		// Remove all non-numeric characters except for the decimal point and commas
+//		
+//
+//		//return numericInt;
+//	}
 
 }
 
