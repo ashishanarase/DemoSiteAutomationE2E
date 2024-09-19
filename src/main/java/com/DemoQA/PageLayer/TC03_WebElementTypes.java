@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.DemoQA.TestBase.TestBase;
 import com.aventstack.extentreports.Status;
 import utilityPackage.CommonMethods;
-import utilityPackage.DetailsDataProvider;
+import utilityPackage.DataProvider;
 
 public class TC03_WebElementTypes extends TestBase {
 
@@ -72,7 +72,7 @@ public class TC03_WebElementTypes extends TestBase {
 
 	//------------ Action Methods -------------	
 
-	String[] nameDetails = DetailsDataProvider.getNameDetails();
+	String[] nameDetails = DataProvider.getNameDetails();
 
 	String firstName = nameDetails[0];
 	String middleName = nameDetails[1];

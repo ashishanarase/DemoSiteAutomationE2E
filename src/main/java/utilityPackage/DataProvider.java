@@ -4,14 +4,14 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
-public class DetailsDataProvider {
+public class DataProvider {
 
 	private static String[] nameDetails;
 
-	private DetailsDataProvider() {
+	private DataProvider() {
 		// Prevent instantiation
 	}
-	
+
 	// Made the method static to call easily anywhere in the package
 	public static String[] generateEmployeeDetails() {
 		String[] firstNames = {"Virat", "Rohit", "Shivam", "Shubhaman", "Suryakumar", "Pavan", "Ashwin", "Ishaan", "Shardul", "Yuzvendra"};
@@ -52,15 +52,47 @@ public class DetailsDataProvider {
 		nameDetails = null;
 	}
 
-	public static String getCurrentTimeStamp() {
+	public static String getCurrentTimeStamp(String desiredFormat) {
+
+		//Sample Format as Argument
+		//ddMMyyyy_HHmmss = 16042024_080537
+		//ddMMMuuuu = 16Apr2024
+		//MM/dd/yyyy = 04/16/2024
+
 		// Get the current date and time for Dynamic File Name 
 		LocalDateTime currentDateTime = LocalDateTime.now();
 
 		// Define the date-time format
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("ddMMyyyy_HHmmss");
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(desiredFormat);
 		String currentTimeStamp = currentDateTime.format(formatter);
 		return currentTimeStamp;
 	}
+
+	public static int getIntValue(int min, int max) {
+
+		// Generate random number between min and max (inclusive)
+		int randomNumber = (int)(Math.random() * (max - min + 1)) + min;
+
+		return randomNumber;
+	}
+
+	public static int extractValue(String priceString) {
+		// Remove all non-numeric characters except for the decimal point and commas
+		String numericString = priceString.replaceAll("[^\\d.,]", "");
+
+		// Remove the comma
+		numericString = numericString.replace(",", "");
+
+		// Check if there is a decimal and only take the part before the decimal
+		if (numericString.contains(".")) {
+			numericString = numericString.substring(0, numericString.indexOf("."));
+		}
+
+		int numericInt = Integer.parseInt(numericString);
+
+		return numericInt;
+	}
+
 }
 
 

@@ -32,7 +32,7 @@ import com.aventstack.extentreports.Status;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utilityPackage.ConfigLoader;
-import utilityPackage.DetailsDataProvider;
+import utilityPackage.DataProvider;
 
 public class TestBase {
 
@@ -82,7 +82,7 @@ public class TestBase {
 	@BeforeSuite
 	public void dataGeneration() {
 		//Used to generate employee data randomly for each test run
-		DetailsDataProvider.getNameDetails();
+		DataProvider.getNameDetails();
 		
 		extent = new ExtentReports();
 
@@ -100,7 +100,7 @@ public class TestBase {
 		resetUserName = ConfigLoader.getProperty("resetUserName");
 
 		// Fetch employee details from dataprovider class
-		nameDetails = DetailsDataProvider.getNameDetails();
+		nameDetails = DataProvider.getNameDetails();
 		firstName = nameDetails[0];
 		middleName = nameDetails[1];
 		lastName = nameDetails[2];

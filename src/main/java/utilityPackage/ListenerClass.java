@@ -24,10 +24,10 @@ public class ListenerClass extends TestBase implements ITestListener {
     @Override
     public void onStart(ITestContext context) {
         // Initialize ExtentReports before any test starts
-        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(userDirectory+"Report\\ExtentReport_"+DetailsDataProvider.getCurrentTimeStamp()+".html");
+        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(userDirectory+"Report\\ExtentReport_"+DataProvider.getCurrentTimeStamp("ddMMyyyy_HHmmss")+".html");
         htmlReporter.config().setTheme(Theme.STANDARD);
         htmlReporter.config().setDocumentTitle("Demo Automation Project");
-        htmlReporter.config().setReportName("Demo Automation Report_"+DetailsDataProvider.getCurrentTimeStamp());
+        htmlReporter.config().setReportName("Demo Automation Report_"+DataProvider.getCurrentTimeStamp("ddMMyyyy_HHmmss"));
 
         extent.attachReporter(htmlReporter);
         extent.setSystemInfo("Host Name", "AshishAnarase");

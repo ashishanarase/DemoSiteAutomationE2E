@@ -64,7 +64,7 @@ public class CommonMethods extends TestBase {
 		File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
 
 		// Format the current date and time as a string using the defined format
-		String dynamicFileName = screenshotName+DetailsDataProvider.getCurrentTimeStamp();
+		String dynamicFileName = screenshotName+DataProvider.getCurrentTimeStamp("ddMMyyyy_HHmmss");
 
 		// Specify the destination directory and file name
 		String directoryPath = userDirectory+"Screenshots\\";
