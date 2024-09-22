@@ -55,7 +55,7 @@ public class TC06_WindowHandling extends TestBase {
 				String title = driver.switchTo().window(desiredHandle).getTitle();
 				System.out.println(title);
 				if (title.contains("Facebook")) {
-					extentTest.get().log(Status.PASS, "Switched to Desired Window");
+					extentTest.get().log(Status.PASS, "Switched to fesired tab");
 					Thread.sleep(3000);		
 				}
 			}
