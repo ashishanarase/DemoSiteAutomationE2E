@@ -10,6 +10,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -23,6 +24,8 @@ public class GenericActionTemplate extends TestBase {
 	public static final int maxWaitTime = 30;
 
 	JavascriptExecutor jScript = (JavascriptExecutor) driver;
+	
+	Actions performAction = new Actions(driver);
 
 	// Constructor to initialize WebDriver, WebDriverWait, and ExtentTest
 	public GenericActionTemplate() {
@@ -48,6 +51,7 @@ public class GenericActionTemplate extends TestBase {
 	15. readExcelData
 	16. writeExcelData
 	17. selectDropdownValue
+	18. mouseActions
 
 
 	 */
@@ -342,6 +346,24 @@ public class GenericActionTemplate extends TestBase {
 			throw e;
 		}
 	}
+	
+	
+	public void mouseOverOnElement(WebElement element) {	
+		
+		String name = element.getText();
+		try {	        	
+			wait.until(ExpectedConditions.visibilityOf(element));
+			
+			performAction.moveToElement(element).build().perform();
+			
+			extentTest.get().log(Status.PASS, "Mouse over on element : " + name +" button");
+		} catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Failed to perform mouse over action on element : : " + name + " | Exception: " + e.getMessage());
+			throw e;
+		}
+	}
+		
+	
 
 }
 
