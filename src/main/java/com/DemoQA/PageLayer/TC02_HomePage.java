@@ -1,16 +1,10 @@
 package com.DemoQA.PageLayer;
 
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.DemoQA.TestBase.TestBase;
 import com.aventstack.extentreports.Status;
-
-import utilityPackage.CommonMethods;
 
 
 public class TC02_HomePage extends TestBase {
@@ -45,7 +39,7 @@ public class TC02_HomePage extends TestBase {
 
 		try {
 			
-			CommonMethods.titleValidation("OrangeHRM");
+			action.titleValidation("OrangeHRM");
 			
 			action.enterText(txtBox_userName_loginPage, userName);
 			

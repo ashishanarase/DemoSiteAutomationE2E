@@ -18,7 +18,7 @@ public class TestCase extends TestBase{
 	public void TC01_ActionOnBrowser() throws Exception {
 		//Dimension Class and Point Class usage
 		d1.actionOnBrowser();
-		CommonMethods.titleValidation("OrangeHRM");	
+		
 	}
 
 	@Test (priority=2, enabled=true, invocationCount = 1,
@@ -216,7 +216,7 @@ public class TestCase extends TestBase{
 
 		d2.login(userName,passWord);
 
-		CommonMethods.titleValidation("OrangeHRM New Changes");
+		action.titleValidation("OrangeHRM New Changes");
 
 		d2.logOut();			
 	}

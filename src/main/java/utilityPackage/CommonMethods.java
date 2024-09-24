@@ -38,23 +38,6 @@ public class CommonMethods extends TestBase {
 	}
 
 
-	public static void titleValidation (String expectedTitle) {
-
-		wait.until(ExpectedConditions.titleIs(expectedTitle));
-
-		String actualTitle = driver.getTitle();
-
-		//	Assert.assertEquals(actualTitle, expectedTitle);
-
-		if (actualTitle.equals(expectedTitle)) {
-			extentTest.get().log(Status.PASS, "Tab title validated successfully");
-		}
-		else {
-			extentTest.get().log(Status.WARNING, "Tab title validation failed : Not matching with expected title");
-		}
-	}
-
-	
 	public static String takeScreenShot(WebDriver driver, String screenshotName)  {
 
 		// Cast WebDriver to TakesScreenshot

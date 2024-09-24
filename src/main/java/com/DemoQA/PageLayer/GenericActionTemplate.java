@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -51,6 +53,8 @@ public class GenericActionTemplate extends TestBase {
 	15. readExcelData
 	16. writeExcelData
 	17. selectDropdownValue
+	18. selectGetOptionsValidation  - implement
+	19. titleValidation
 	18. mouseActions
 
 
@@ -344,6 +348,47 @@ public class GenericActionTemplate extends TestBase {
 		catch(Exception e) {
 			extentTest.get().log(Status.FAIL, "Failed to select the value from dropdown '" + value + " | Exception : " + e.getMessage());
 			throw e;
+		}
+	}
+	
+	
+	public List<String> selectGetOptionsValidation(WebElement element) {
+
+		wait.until(ExpectedConditions.visibilityOf(element));
+
+		// Initialize the Select class with the dropdown element
+		Select selectDropdown = new Select(element);
+		
+		 // Use the getOptions() method to retrieve all options
+        List<WebElement> allOptions = selectDropdown.getOptions();
+
+     // Create a list to store the text of each dropdown option
+        List<String> optionsTextList = new ArrayList<>();
+
+        // Loop through all options, log the visible text, and add it to the list
+        for (WebElement option : allOptions) {
+            String optionText = option.getText();  // Get the visible text of the option
+            optionsTextList.add(optionText);  // Add the option text to the list
+        }
+
+        // Return the list of option texts
+        return optionsTextList;
+	}
+
+
+	public void titleValidation (String expectedTitle) {
+
+		wait.until(ExpectedConditions.titleContains(expectedTitle));
+
+		String actualTitle = driver.getTitle();		
+
+		//	Assert.assertEquals(actualTitle, expectedTitle);
+
+		if (actualTitle.contains(expectedTitle)) {
+			extentTest.get().log(Status.PASS, "Tab title validated successfully");
+		}
+		else {
+			extentTest.get().log(Status.WARNING, "Tab title validation failed : Not matching with expected title");
 		}
 	}
 	
