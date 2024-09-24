@@ -72,11 +72,13 @@ public class TestCase extends TestBase{
 	}
 
 	@Test (priority=8, enabled=true,
-			description = "Test to dynamically fetch and validate the count of search results")
-	public void TC08_FetchSearchResultCount() throws InterruptedException  {
+			description = "Test to dynamically fetch the count of search results and cart value validation")
+	public void TC08_SearchResultAndCartValidation() throws InterruptedException  {
 		//Fetch the search result count dynamically in run time. 
 		//Assume here we can send any input in search box and code should work properly.
-		d8.fetchSearchResultCount();
+		d8.searchResultCount();
+		
+		d8.cartValue();
 	}
 
 	@Test (priority=9, enabled=true,

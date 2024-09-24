@@ -3,18 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.DemoQA.TestCase.TestCase">
+      <class name="com.DemoQA.TestLayer.TestCase">
         <methods>
           <include name="dataGeneration"/>
-          <include name="TC09_AlertHandling"/>
+          <include name="TC08_SearchResultAndCartValidation"/>
           <include name="closeBrowser"/>
           <include name="startBrowser"/>
-          <include name="TC17_FailedTestCase"/>
-          <include name="TC07_IFrameHandling"/>
-          <include name="TC10_DropdownHandling"/>
-          <include name="TC13_MouseAction"/>
         </methods>
-      </class> <!-- com.DemoQA.TestCase.TestCase -->
+      </class> <!-- com.DemoQA.TestLayer.TestCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

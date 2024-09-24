@@ -16,7 +16,7 @@ import com.DemoQA.PageLayer.TC05_DynamicTableStructure;
 import com.DemoQA.PageLayer.GenericActionTemplate;
 import com.DemoQA.PageLayer.TC01_ActionOnBrowser;
 import com.DemoQA.PageLayer.TC07_IframeHandling;
-import com.DemoQA.PageLayer.TC08_SearchResultCount;
+import com.DemoQA.PageLayer.TC08_SearchResultAndCartValidation;
 import com.DemoQA.PageLayer.TC09_AlertHandling;
 import com.DemoQA.PageLayer.TC10_DropdownHandling;
 import com.DemoQA.PageLayer.TC11_ExplicitAndFluentWaits;
@@ -68,7 +68,7 @@ public class TestBase {
 	public TC05_DynamicTableStructure d5;
 	public TC06_WindowHandling d6;
 	public TC07_IframeHandling d7;
-	public TC08_SearchResultCount d8;
+	public TC08_SearchResultAndCartValidation d8;
 	public TC09_AlertHandling d9;
 	public TC10_DropdownHandling d10;
 	public TC11_ExplicitAndFluentWaits d11;
@@ -129,7 +129,7 @@ public class TestBase {
 		d5  = new TC05_DynamicTableStructure();
 		d6  = new TC06_WindowHandling();		
 		d7  = new TC07_IframeHandling();
-		d8  = new TC08_SearchResultCount();
+		d8  = new TC08_SearchResultAndCartValidation();
 		d9  = new TC09_AlertHandling();
 		d10 = new TC10_DropdownHandling();
 		d11 = new TC11_ExplicitAndFluentWaits();

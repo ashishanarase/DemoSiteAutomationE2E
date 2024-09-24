@@ -142,7 +142,6 @@ public class GenericActionTemplate extends TestBase {
 
 		try {	        	
 			wait.until(ExpectedConditions.visibilityOf(element));
-			element.click();
 			extentTest.get().log(Status.PASS, "Desired element visible : " + name +" ");
 		} catch (Exception e) {
 			extentTest.get().log(Status.FAIL, "Desired element not visible : " + name + " | Exception: " + e.getMessage());
@@ -186,7 +185,8 @@ public class GenericActionTemplate extends TestBase {
 	public void clickButton(WebElement element) {
 		String name = element.getText();  
 
-		try {	        	
+		try {	   
+			wait.until(ExpectedConditions.visibilityOf(element));
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 			element.click();
 			extentTest.get().log(Status.PASS, "Clicked on element : " + name +" button");
