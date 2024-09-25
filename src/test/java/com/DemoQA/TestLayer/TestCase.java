@@ -15,7 +15,7 @@ public class TestCase extends TestBase{
 
 	@Test (priority=1, enabled=true, 
 			description = "Test to verify browser resizing and positioning operations")
-	public void TC01_ActionOnBrowser() throws Exception {
+	public void TC01_ActionOnBrowser() {
 		//Dimension Class and Point Class usage
 		d1.actionOnBrowser();
 		
@@ -43,7 +43,7 @@ public class TestCase extends TestBase{
 
 	@Test (priority=4,enabled=true,
 			description = "Test to verify different ways of performing click operations on a web element")
-	public void TC04_ClickOperationType() throws Exception {
+	public void TC04_ClickOperationType(){
 		//Different ways to perform click on webelement
 		d4.clickOperationType();			
 	}
@@ -57,15 +57,15 @@ public class TestCase extends TestBase{
 
 	@Test (priority=6, enabled=true,
 			description = "Test to verify window handling operations including switching between multiple windows")
-	public void TC06_WindowHandling() throws Exception  {
+	public void TC06_WindowHandling() {
 		//Difference between getWindowHandle & getWindowHandles 
 		//Window switch using Desired Index value and Title out of multiple windows
-		d6.WindowHandling();				
+		d6.windowHandling();				
 	}
 
 	@Test (priority=7, enabled=true,
 			description = "Test to handle and interact with an iFrame element within a webpage")
-	public void TC07_IFrameHandling() throws InterruptedException  {
+	public void TC07_IFrameHandling(){
 		//Handled Iframe on Google.com 
 		d7.iframeHandling();
 
@@ -73,7 +73,7 @@ public class TestCase extends TestBase{
 
 	@Test (priority=8, enabled=true,
 			description = "Test to dynamically fetch the count of search results and cart value validation")
-	public void TC08_SearchResultAndCartValidation() throws InterruptedException  {
+	public void TC08_SearchResultAndCartValidation(){
 		//Fetch the search result count dynamically in run time. 
 		//Assume here we can send any input in search box and code should work properly.
 		d8.searchResultCount();
@@ -83,28 +83,28 @@ public class TestCase extends TestBase{
 
 	@Test (priority=9, enabled=true,
 			description = "Test to verify handling of different types of alert pop-ups in the browser")
-	public void TC09_AlertHandling() throws InterruptedException  {
+	public void TC09_AlertHandling() {
 		//Different Type of Alert and Handling them
 		d9.alertHandling();
 	}
 
 	@Test (priority=10, enabled=true,
 			description = "Test to verify the handling of dropdown menus and extracting options using the Select class")
-	public void TC10_DropdownHandling() throws InterruptedException  {
+	public void TC10_DropdownHandling(){
 		//DropdownHandling and Get Dropdown Options Using Select Class 
 		d10.dropdownHandling();
 	}
 
 	@Test (priority=11, enabled=true,
 			description = "Test to verify the use of different explicit wait conditions in Selenium")
-	public void TC11_ExplicitWaitConditions() throws InterruptedException  {
+	public void TC11_ExplicitWaitConditions() {
 		//Different ExplicitWait Conditions handling
 		d11.explicitWaitConditions();
 	}
 
 	@Test (priority=12, enabled=true,
 			description = "Test to verify broken link validation by checking the status of URLs")
-	public void TC12_BrokenLinkValidation() throws InterruptedException, IOException  {
+	public void TC12_BrokenLinkValidation() {
 		//Broken Link Validation 
 		d12.brokenLinkValidation("https://www.cricbuzz.com");
 	}
@@ -119,14 +119,14 @@ public class TestCase extends TestBase{
 	@Test (priority=14, enabled=true,
 			dataProvider= "loginCasesData", dataProviderClass = TC14_DataProviderInTestNg.class,
 			description = "Test to verify the login functionality using different data sets through a DataProvider")
-	public void TC14_DataProviderMethod(String userName, String passWord) throws InterruptedException {
+	public void TC14_DataProviderMethod(String userName, String passWord) {
 		//DataProvider Class
 		d14.dataProviderMethod(userName, passWord);
 	}
 
 	@Test (priority=15, enabled=true,
 			description = "Test to verify handling of multiple browser tabs and windows")
-	public void TC15_MultipleTabAndWindows() throws Exception  {
+	public void TC15_MultipleTabAndWindows(){
 		//Handling multiple Tab and Windows
 		d15.multipleWindow();
 		d15.multipleTab();
@@ -134,7 +134,7 @@ public class TestCase extends TestBase{
 
 	@Test (priority=16, enabled=true,
 			description = "Test to verify the acceptance and handling of SSL certificates in the browser")
-	public void TC16_sslCertificateMethod() throws InterruptedException  {
+	public void TC16_sslCertificateMethod() {
 		//Accepting SSL Certificate
 		d16.sslCertificateMethod();
 	}

@@ -25,7 +25,7 @@ public class TC16_SSLCertificate extends TestBase {
 
 	//------------ Action Methods -------------	
 
-	public void sslCertificateMethod() throws InterruptedException {
+	public void sslCertificateMethod() {
 		try {
 			//Create instance of ChromeOptions Class
 			ChromeOptions handlingSSL = new ChromeOptions();
@@ -41,20 +41,17 @@ public class TC16_SSLCertificate extends TestBase {
 
 			Thread.sleep(3000);
 
-			System.out.println("The page title is : " +driver.getTitle());
+			extentTest.get().log(Status.INFO, "The page title is : " + driver.getTitle());
 
-			boolean value = true;
-			if (value = true) {
-				extentTest.get().log(Status.PASS, "Mouse action successful");
-			} 
+			extentTest.get().log(Status.PASS, "Method executed successfully : sslCertificateMethod();");
 
 			driver1.quit();
-
+		} 
+		catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Method failed : sslCertificateMethod();");
+			throw new RuntimeException("Method failed : sslCertificateMethod(); due to an Exception : ", e); // Re-throw the exception to be caught globally
+			
 		}
-		catch(Exception e) {
-			extentTest.get().log(Status.FAIL, "Mouse action failed !");
-			throw e;
-		}		
 
 	}
 }

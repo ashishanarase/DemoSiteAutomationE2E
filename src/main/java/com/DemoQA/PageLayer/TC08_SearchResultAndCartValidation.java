@@ -33,39 +33,39 @@ public class TC08_SearchResultAndCartValidation extends TestBase {
 
 	@FindBy (xpath = "//span[contains(text(),'results for')]")
 	private WebElement txt_searchResult_homePage;
-	
+
 	@FindBy(id = "twotabsearchtextbox")
-    WebElement txtBox_search_homePage;
+	WebElement txtBox_search_homePage;
 
-    @FindBy(id = "nav-search-submit-button")
-    WebElement btn_search_homePage;
+	@FindBy(id = "nav-search-submit-button")
+	WebElement btn_search_homePage;
 
-    @FindBy(xpath = "(//span[@data-component-type='s-product-image'])[1]")
-    WebElement img_product1_searchResultPage;
+	@FindBy(xpath = "(//span[@data-component-type='s-product-image'])[1]")
+	WebElement img_product1_searchResultPage;
 
-    @FindBy(xpath = "(//span[@class='a-price-whole'])[4]")
-    WebElement txt_priceProduct1_searchResultPage;
+	@FindBy(xpath = "(//span[@class='a-price-whole'])[4]")
+	WebElement txt_priceProduct1_searchResultPage;
 
-    @FindBy(xpath = "(//span[@data-component-type='s-product-image'])[1]/following::i[1]")
-    WebElement txt_ratingStar1_searchResultPage;
+	@FindBy(xpath = "(//span[@data-component-type='s-product-image'])[1]/following::i[1]")
+	WebElement txt_ratingStar1_searchResultPage;
 
-    @FindBy(id = "acr-popover-title")
-    WebElement txt_ratingStarCount1_searchResultPage;
+	@FindBy(id = "acr-popover-title")
+	WebElement txt_ratingStarCount1_searchResultPage;
 
-    @FindBy(xpath = "//span[contains(text(),'global ratings')]")
-    WebElement txt_globalRatingCount1_searchResultPage;
+	@FindBy(xpath = "//span[contains(text(),'global ratings')]")
+	WebElement txt_globalRatingCount1_searchResultPage;
 
-    @FindBy(id = "productTitle")
-    WebElement txt_productTitle_productPage;
+	@FindBy(id = "productTitle")
+	WebElement txt_productTitle_productPage;
 
-    @FindBy(xpath = "//span[@id='productTitle']/following::span[19]")
-    WebElement txt_productPrice_productPage;
+	@FindBy(xpath = "//span[@id='productTitle']/following::span[19]")
+	WebElement txt_productPrice_productPage;
 
-    @FindBy(xpath = "(//input[@id='add-to-cart-button'])[2]")
-    WebElement btn_addToCart_productPage;
+	@FindBy(xpath = "(//input[@id='add-to-cart-button'])[2]")
+	WebElement btn_addToCart_productPage;
 
-    @FindBy(id = "attach-accessory-cart-subtotal")
-    WebElement txt_productPrice_cartPage;
+	@FindBy(id = "attach-accessory-cart-subtotal")
+	WebElement txt_productPrice_cartPage;
 
 
 	//------------ Action Methods -------------	
@@ -102,20 +102,17 @@ public class TC08_SearchResultAndCartValidation extends TestBase {
 			// Print the count			
 			extentTest.get().log(Status.INFO, "Number of results: " + resultCount);
 
-			boolean value = true;
-			if (value = true) {
-				extentTest.get().log(Status.PASS, "Search result count successful");
-			}  
+			extentTest.get().log(Status.PASS, "Method executed successfully : searchResultCount();");
 
+		} 
+		catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Method failed : searchResultCount();");
+			throw e; // Re-throw the exception to be caught globally
 		}
-		catch(Exception e) {
-			extentTest.get().log(Status.FAIL, "Search result count failed !");
-			throw e;
-		}	
 
 	}
-	
-	
+
+
 	public void cartValue() {
 
 		try {
@@ -123,14 +120,14 @@ public class TC08_SearchResultAndCartValidation extends TestBase {
 			action.enterText(txtBox_search_homePage, searchKey);
 
 			action.clickButton(btn_search_homePage);
-			
+
 			action.visibilityCheck(img_product1_searchResultPage);
-			
+
 			action.visibilityCheck(txt_priceProduct1_searchResultPage);
-			
+
 			String priceProduct1 = txt_priceProduct1_searchResultPage.getText();
 
-			System.out.println("Price of the first product on search result = "+priceProduct1);
+			extentTest.get().log(Status.INFO, "Price of the first product on search result : "+priceProduct1);
 
 			action.jScrollToView(txt_ratingStar1_searchResultPage);
 			//	action.moveToElement(txt_ratingStar1_searchResultPage).build().perform();
@@ -139,14 +136,16 @@ public class TC08_SearchResultAndCartValidation extends TestBase {
 			action.clickButton(txt_ratingStar1_searchResultPage);
 
 			action.visibilityCheck(txt_ratingStarCount1_searchResultPage);
-			
+
 			action.visibilityCheck(txt_globalRatingCount1_searchResultPage);
 
 			String ratingCount = txt_ratingStarCount1_searchResultPage.getText();
 
 			String globalRatingCount = txt_globalRatingCount1_searchResultPage.getText();
 
-			System.out.println("Ratings "+ratingCount + " with total "+ globalRatingCount);
+			extentTest.get().log(Status.INFO, "Ratings '"+ratingCount + "' with total '"+ globalRatingCount+"'");
+
+			String currentHandle = driver.getWindowHandle();
 
 			action.clickButton(img_product1_searchResultPage);
 
@@ -154,50 +153,56 @@ public class TC08_SearchResultAndCartValidation extends TestBase {
 			List <String> handlesList = new ArrayList<String>(handles);
 
 			for (String desiredHandle : handlesList) {
+
 				String title = driver.switchTo().window(desiredHandle).getTitle();
 
-				if (title.contains("Amazon.in: Electronics")) {
-					System.out.println("Switched to desired tab");
+				if (!desiredHandle.equals(currentHandle)) {
+					extentTest.get().log(Status.INFO, "Switched to desired tab : "+title);					
 				}
 			}
 
 			action.visibilityCheck(txt_productTitle_productPage);
-			
+
 			String productTitle = txt_productTitle_productPage.getText();
 
-			System.out.println("Title of the product on product page = "+productTitle);
+			extentTest.get().log(Status.INFO, "Title of the product on product page : "+productTitle);
 
 			action.visibilityCheck(txt_productPrice_productPage);
-		
+
 			String productPrice = txt_productPrice_productPage.getText();
 
-			System.out.println("Price of the product on product page = "+productPrice);
+			extentTest.get().log(Status.INFO, "Price of the product on product page = "+productPrice);
 
 			action.clickButton(btn_addToCart_productPage);
 
 			action.visibilityCheck(txt_productPrice_cartPage);
-			
+
 			String cartPrice = txt_productPrice_cartPage.getText();
 
-			System.out.println("Price of the product on cart page = "+cartPrice);
+			extentTest.get().log(Status.INFO, "Price of the product on cart page = "+cartPrice);
+
 
 			if (cartPrice.contains(priceProduct1)) {
-				System.out.println("Cart price has been validated with price on search results page");
+				extentTest.get().log(Status.PASS, "Cart price against the search result page price validated successfully");
 			}
 			else {
-				System.out.println("Cart price validation failed with price on search results page");
+				extentTest.get().log(Status.FAIL, "Failed to validate the cart price against the search result page price");
 			}
-			if (cartPrice.contains(productPrice)) {
-				System.out.println("Cart price has been validated with price on product page");
-			}
-			else {
-				System.out.println("Cart price validation failed with price on product page");
-			}
-		} 
 
-		catch(Exception e) {
-			extentTest.get().log(Status.FAIL, "Search Result and Card Value Validation handling failed !");
-			throw e;
-		}	
+			if (cartPrice.contains(productPrice)) {
+				extentTest.get().log(Status.PASS, "Cart price against the product page price validated successfully");
+			}
+			else {
+				extentTest.get().log(Status.FAIL, "Failed to validate the cart price against the product page price");
+			}
+
+			extentTest.get().log(Status.PASS, "Method executed successfully : cartValue();");
+
+		} 
+		catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Method failed : cartValue();");
+			throw e; // Re-throw the exception to be caught globally
+		}
+
 	}
 }

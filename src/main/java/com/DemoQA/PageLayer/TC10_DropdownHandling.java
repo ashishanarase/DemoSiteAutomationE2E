@@ -19,15 +19,19 @@ public class TC10_DropdownHandling extends TestBase {
 	}
 
 	private String currentUrl = "https://www.amazon.in";
+	private String optionCount = "5";
+	private String optionValue = "search-alias=software";
+	private String optionText = "Music";
 
 	//------------ Xpath Repository -------------
 
+	//@FindBy (xpath="//div[@id='nav-search-dropdown-card']/descendant::select")
 	@FindBy (xpath = "//select[@id='searchDropdownBox']")
 	private WebElement btn_allOption_homePage;
 
 	//------------ Action Methods -------------	
 
-	public void dropdownHandling() throws InterruptedException {
+	public void dropdownHandling() {
 
 		try {
 
@@ -35,60 +39,38 @@ public class TC10_DropdownHandling extends TestBase {
 
 			extentTest.get().log(Status.PASS, "Navigated to Amazon home page");
 
-			Select sObject = new Select(btn_allOption_homePage);
+			List<String> optionList = action.selectGetOptions(btn_allOption_homePage);
 
-			List<WebElement> list = sObject.getOptions();
-
-			int count = list.size();
-
-			System.out.println(count);
+			int count = optionList.size();
 
 			extentTest.get().log(Status.INFO, "Total option available in dropdown : "+count);
 
 			for (int i = 0; i<count ; i++) {
-				String dropdownList = list.get(i).getText();
-				extentTest.get().log(Status.INFO, "Option "+i+" : "+dropdownList);
+				String option = optionList.get(i);
+				extentTest.get().log(Status.INFO, "Option "+i+" : "+option);
 			}
 
-			action.clickButton(btn_allOption_homePage);
-
-			sObject.selectByIndex(5);
-
-			String dropdownOption1 = list.get(5).getText();
-
-			extentTest.get().log(Status.INFO, "Dropdown option with 'selectByIndex' method selected : "+dropdownOption1);
+			action.selectDropdown(btn_allOption_homePage, optionCount);
 
 			driver.navigate().refresh(); 
 
 			driver.get(currentUrl);
 
-			action.clickButton(btn_allOption_homePage);
-
-			sObject.selectByValue("search-alias=software");
-
-			extentTest.get().log(Status.INFO, "Dropdown option with 'selectByValue' method selected : Software");
+			action.selectDropdown(btn_allOption_homePage, optionValue);
 
 			driver.navigate().refresh(); 
 
 			driver.get(currentUrl);
 
-			action.clickButton(btn_allOption_homePage);
+			action.selectDropdown(btn_allOption_homePage, optionText);
 
-			sObject.selectByVisibleText("Music");
+			extentTest.get().log(Status.PASS, "Method executed successfully : dropdownHandling();");
 
-			extentTest.get().log(Status.INFO, "Dropdown option with 'selectByVisibleText' method selected : Music");
-
-
-			boolean value = true;
-			if (value = true) {
-				extentTest.get().log(Status.PASS, "Dropdown handling successful");
-			}  
-
+		} 
+		catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Method failed : dropdownHandling();");
+			throw e; // Re-throw the exception to be caught globally
 		}
-		catch(Exception e) {
-			extentTest.get().log(Status.FAIL, "Dropdown handling failed !");
-			throw e;
-		}		
 
 	}
 

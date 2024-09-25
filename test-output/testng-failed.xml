@@ -5,8 +5,8 @@
     <classes>
       <class name="com.DemoQA.TestLayer.TestCase">
         <methods>
+          <include name="TC13_MouseAction"/>
           <include name="dataGeneration"/>
-          <include name="TC08_SearchResultAndCartValidation"/>
           <include name="closeBrowser"/>
           <include name="startBrowser"/>
         </methods>

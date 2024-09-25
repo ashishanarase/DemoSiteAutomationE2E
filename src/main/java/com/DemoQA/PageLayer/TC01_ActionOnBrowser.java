@@ -20,7 +20,7 @@ public class TC01_ActionOnBrowser extends TestBase {
 	//------------ Action Methods -------------	
 
 
-	public void actionOnBrowser() throws Exception {
+	public void actionOnBrowser() {
 
 		try {
 
@@ -54,14 +54,13 @@ public class TC01_ActionOnBrowser extends TestBase {
 
 			driver.manage().window().maximize();
 
-			boolean value = true;
-			if (value = true) {
-				extentTest.get().log(Status.PASS, "Action on browser successful");
-			} 
+			extentTest.get().log(Status.PASS, "Method executed successfully : actionOnBrowser();");
+		
 		} 
 		catch (Exception e) {
-			extentTest.get().log(Status.FAIL, "Action on browser failed !");
-			throw e; // Re-throw the exception to be caught globally
+			extentTest.get().log(Status.FAIL, "Method failed : actionOnBrowser();");
+			throw new RuntimeException("Method failed : actionOnBrowser(); due to an Exception : ", e); // Re-throw the exception to be caught globally
+			
 		}
 
 	}

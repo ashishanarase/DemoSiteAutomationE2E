@@ -30,7 +30,7 @@ public class TC12_BrokenLinkValidation extends TestBase {
 
 	//------------ Action Methods -------------	
 
-	public void brokenLinkValidation(String desiredUrl) throws InterruptedException, IOException {
+	public void brokenLinkValidation(String desiredUrl) {
 
 		try {
 
@@ -68,17 +68,13 @@ public class TC12_BrokenLinkValidation extends TestBase {
 
 			extentTest.get().log(Status.INFO, "Total number of broken links : " + brokenLinks.size());
 
-			boolean value = true;
-			if (value = true) {
-				extentTest.get().log(Status.PASS, "Broken link validation successful");
-			}  
+			extentTest.get().log(Status.PASS, "Method executed successfully : brokenLinkValidation();");
 
+		} 
+		catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Method failed : brokenLinkValidation();");
+			throw e; // Re-throw the exception to be caught globally
 		}
-		catch(Exception e) {
-			extentTest.get().log(Status.FAIL, "Broken link validation failed !");
-			throw e;
-		}		
-
 	}
 
 	public static boolean checkBrokenLink(String linkUrl) {
@@ -103,15 +99,15 @@ public class TC12_BrokenLinkValidation extends TestBase {
 		}
 		catch (MalformedURLException e) {
 			// Handle MalformedURLException
-		//	System.err.println("Malformed URL : " + linkUrl);
+			//	System.err.println("Malformed URL : " + linkUrl);
 			return true; // Consider malformed URLs as broken
 		} catch (IOException eIO) {
 			// Handle IOException
-		//	System.err.println("IOException : " + e.getMessage());
+			//	System.err.println("IOException : " + e.getMessage());
 			return true; // Consider IO issues as broken
 		} catch (NullPointerException eNull) {
 			// Handle NullPointerException
-		//	System.err.println("NullPointerException : " + eNull.getMessage());
+			//	System.err.println("NullPointerException : " + eNull.getMessage());
 			return true; // Consider null URLs as broken
 		}
 	}

@@ -64,16 +64,13 @@ public class TC14_DataProviderInTestNg extends TestBase {
 
 			action.clickButton(btn_login_homePage);
 
-			boolean value = true;
-			if (value = true) {
-				extentTest.get().log(Status.PASS, "Data provider successful");
-			}  
+			extentTest.get().log(Status.PASS, "Method executed successfully : dataProviderMethod();");
 
+		} 
+		catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Method failed : dataProviderMethod();");
+			throw e; // Re-throw the exception to be caught globally
 		}
-		catch(Exception e) {
-			extentTest.get().log(Status.FAIL, "Data provider failed !");
-			throw e;
-		}	
 
 	}
 

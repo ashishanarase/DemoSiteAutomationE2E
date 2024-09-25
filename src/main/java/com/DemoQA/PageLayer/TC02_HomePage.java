@@ -8,9 +8,9 @@ import com.aventstack.extentreports.Status;
 
 
 public class TC02_HomePage extends TestBase {
-	
+
 	//Login and Logout on Demo Website
-	
+
 	public TC02_HomePage () {
 		PageFactory.initElements(driver, this);
 	}
@@ -33,28 +33,26 @@ public class TC02_HomePage extends TestBase {
 	@FindBy(xpath = "(//a[@role='menuitem'])[4]")
 	private WebElement btn_logOut_dashboard;
 
-	
+
 	//---------------------Methods-----------------
 	public void login(String userName, String passWord) {
 
 		try {
-			
+
 			action.titleValidation("OrangeHRM");
-			
+
 			action.enterText(txtBox_userName_loginPage, userName);
-			
+
 			action.enterText(txtBox_passWord_loginPage, passWord);
-			
+
 			action.clickButton(btn_login_loginPage);
+
+			extentTest.get().log(Status.PASS, "Method executed successfully : login();");
 			
-			boolean value = true;
-			if (value = true) {
-				extentTest.get().log(Status.PASS, "Login successful");
-			} 
 		} 
 		catch (Exception e) {
-			extentTest.get().log(Status.FAIL, "Login failed !");
-			  throw e; // Re-throw the exception to be caught globally
+			extentTest.get().log(Status.FAIL, "Method failed : login();");
+			throw e; // Re-throw the exception to be caught globally
 		}
 
 	}
@@ -64,19 +62,17 @@ public class TC02_HomePage extends TestBase {
 		try {
 
 			Thread.sleep(2000);
-			
+
 			action.clickButton(dd_logOut_dashboard);
-		
+
 			action.clickButton(btn_logOut_dashboard);
+
+			extentTest.get().log(Status.PASS, "Method executed successfully : logOut();");
 			
-			boolean value = true;
-			if (value = true) {
-				extentTest.get().log(Status.PASS, "LogOut successful");
-			} 
 		} 
 		catch (Exception e) {
-			extentTest.get().log(Status.FAIL, "LogOut failed !");	
-			throw new RuntimeException("LogOut failed due to an Exception : ", e); // Re-throw the exception to be caught globally
+			extentTest.get().log(Status.FAIL, "Method failed : logOut();");
+			throw new RuntimeException("Method failed : logOut(); due to an Exception : ", e); // Re-throw the exception to be caught globally
 		}
 	}
 }

@@ -27,7 +27,7 @@ public class TC15_MultipleWindowsAndTabHandling extends TestBase {
 
 	//------------ Action Methods -------------	
 
-	public void multipleWindow() throws Exception {
+	public void multipleWindow() {
 
 		try{
 
@@ -55,20 +55,17 @@ public class TC15_MultipleWindowsAndTabHandling extends TestBase {
 
 			extentTest.get().log(Status.PASS, "List of window handles : "+ list);
 
-			boolean value = true;
-			if (value = true) {
-				extentTest.get().log(Status.PASS, "Multiple window handling successful");
-			}  
+			extentTest.get().log(Status.PASS, "Method executed successfully : multipleWindow();");
 
+		} 
+		catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Method failed : multipleWindow();");
+			throw new RuntimeException("Method failed : multipleWindow(); due to an Exception : ", e); // Re-throw the exception to be caught globally
 		}
-		catch(Exception e) {
-			extentTest.get().log(Status.FAIL, "Multiple window handling failed !");
-			throw e;
-		}	
 
 	}
 
-	public void multipleTab() throws Exception {
+	public void multipleTab() {
 		try {
 			
 			driver.get(currentUrl3);
@@ -76,9 +73,7 @@ public class TC15_MultipleWindowsAndTabHandling extends TestBase {
 			// Opens a new window and switches to new window
 			String title1 = driver.getTitle();
 
-			extentTest.get().log(Status.PASS, "Script focus on : "+ title1);
-			
-			Thread.sleep(2000);
+			extentTest.get().log(Status.INFO, "Script focus on : "+ title1);
 
 			driver.switchTo().newWindow(WindowType.TAB);
 
@@ -87,24 +82,19 @@ public class TC15_MultipleWindowsAndTabHandling extends TestBase {
 
 			String title2 = driver.getTitle();
 
-			extentTest.get().log(Status.PASS, "Script focus on : "+ title2);
+			extentTest.get().log(Status.INFO, "Script focus on : "+ title2);
 			
-			Thread.sleep(2000);
-
 			Set <String> list = driver.getWindowHandles();
 
-			extentTest.get().log(Status.PASS, "List of tab handles : "+ list);
+			extentTest.get().log(Status.INFO, "List of tab handles : "+ list);
 
-			boolean value = true;
-			if (value = true) {
-				extentTest.get().log(Status.PASS, "Multiple tab handling successful");
-			}  
+			extentTest.get().log(Status.PASS, "Method executed successfully : multipleTab();");
 
+		} 
+		catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Method failed : multipleTab();");
+			throw e; // Re-throw the exception to be caught globally
 		}
-		catch(Exception e) {
-			extentTest.get().log(Status.FAIL, "Multiple tab handling failed !");
-			throw e;
-		}	
 
 	}
 

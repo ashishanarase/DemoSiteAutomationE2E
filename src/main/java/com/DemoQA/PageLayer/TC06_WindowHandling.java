@@ -34,10 +34,10 @@ public class TC06_WindowHandling extends TestBase {
 
 	//------------ Action Methods ------------
 
-	public void WindowHandling () throws Exception {
+	public void windowHandling (){
 
 		try {
-			
+
 			String parentHandle = driver.getWindowHandle();
 
 			action.clickButton(btn_handle1_homePage);
@@ -64,16 +64,13 @@ public class TC06_WindowHandling extends TestBase {
 
 			driver.close();
 
-			boolean value = true;
-			if (value = true) {
-				extentTest.get().log(Status.PASS, "Window handling successful");
-			}  
+			extentTest.get().log(Status.PASS, "Method executed successfully : windowHandling();");
 
+		} 
+		catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Method failed : windowHandling();");
+			throw new RuntimeException("Method failed : windowHandling(); due to an Exception : ", e); // Re-throw the exception to be caught globally
 		}
-		catch(Exception e) {
-			extentTest.get().log(Status.FAIL, "Window handling failed !");
-			throw e;
-		}		
 
 	}
 

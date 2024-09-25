@@ -107,7 +107,7 @@ public class TC03_WebElementTypes extends TestBase {
 			action.clickButton(btn_today_recruitmentPage);
 
 			action.enterText(txtBox_notes_recruitmentPage, "This is Sample Note of Added Candidate");
-			
+
 			action.clickCheckBox(cb_consentData_recruitmentPage);
 
 			CommonMethods.beforeActionSuccessMessage(txt_toasterSuccessMessage_employeePage);
@@ -116,15 +116,14 @@ public class TC03_WebElementTypes extends TestBase {
 
 			CommonMethods.afterActionSuccessMessage(txt_toasterSuccessMessage_employeePage);
 
-			boolean value = true;
-			if (value = true) {
-				extentTest.get().log(Status.PASS, "Add candidate recruitment successful");
-			} 
+			extentTest.get().log(Status.PASS, "Method executed successfully : actionOnElements();");
+
 		} 
 		catch (Exception e) {
-			extentTest.get().log(Status.FAIL, "Add candidate recruitment failed !");
+			extentTest.get().log(Status.FAIL, "Method failed : actionOnElements();");
 			throw e; // Re-throw the exception to be caught globally
 		}
+
 	}
 
 }

@@ -58,13 +58,11 @@ public class TC17_FailedTestCase extends TestBase {
 
 			Assert.assertTrue(txt_invalidCredentials_loginPage.isSelected());
 
-			boolean value = true;
-			if (value = true) {
-				extentTest.get().log(Status.PASS, "Login expectedToFail_PassedUnexpected");
-			} 
+			extentTest.get().log(Status.PASS, "Method executed successfully : loginExpectedToFail();");
+
 		} 
 		catch (Exception e) {
-			extentTest.get().log(Status.FAIL, "Login expectedToFail_Failed Successfully");
+			extentTest.get().log(Status.FAIL, "Method failed : loginExpectedToFail();");
 			throw e; // Re-throw the exception to be caught globally
 		}
 	}

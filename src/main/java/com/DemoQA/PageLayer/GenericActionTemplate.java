@@ -26,7 +26,7 @@ public class GenericActionTemplate extends TestBase {
 	public static final int maxWaitTime = 30;
 
 	JavascriptExecutor jScript = (JavascriptExecutor) driver;
-	
+
 	Actions performAction = new Actions(driver);
 
 	// Constructor to initialize WebDriver, WebDriverWait, and ExtentTest
@@ -36,7 +36,12 @@ public class GenericActionTemplate extends TestBase {
 
 
 	/*All method Sequence
-	 1. alertCheck
+	 1. actionClick
+	 2. actionMouseOver
+	 1. alertAccept
+	 2. alertDismiss
+	 3. alertSendkeysAccept
+
 	 2. jClickButton
 	 3. jScrollToCoordinate
 	 4. jScrollToView
@@ -55,13 +60,63 @@ public class GenericActionTemplate extends TestBase {
 	17. selectDropdownValue
 	18. selectGetOptionsValidation  - implement
 	19. titleValidation
-	18. mouseActions
-
+	
 
 	 */
+	
+	
+	//Method to perform mouse over action on desired webelement
+		public void actionClick(WebElement element) {	
 
-	//Method to wait for an alert presence and print alert message in report logs
-	public String alertCheck() {		
+			String name = element.getText();
+			try {	        	
+				wait.until(ExpectedConditions.visibilityOf(element));
+
+				performAction.click(element).build().perform();
+
+				extentTest.get().log(Status.PASS, "Clicked on element using Mouse (Actions Class) : " + name +" button");
+			} catch (Exception e) {
+				extentTest.get().log(Status.FAIL, "Failed to perform click action using Mouse (Actions Class) on element : : " + name + " | Exception: " + e.getMessage());
+				throw e;
+			}
+		}
+	
+
+	//Method to perform mouse over action on desired webelement
+	public void actionMouseOver(WebElement element) {	
+
+		String name = element.getText();
+		try {	        	
+			wait.until(ExpectedConditions.visibilityOf(element));
+
+			performAction.moveToElement(element).build().perform();
+
+			extentTest.get().log(Status.INFO, "Mouse over on element using Mouse (Actions Class) : " + name +" button");
+		} catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Failed to perform mouse over action on element : : " + name + " | Exception: " + e.getMessage());
+			throw e;
+		}
+	}
+	
+	
+	//Method to perform mouse over action on desired webelement
+		public void actionRightClick(WebElement element) {	
+
+			String name = element.getText();
+			try {	        	
+				wait.until(ExpectedConditions.visibilityOf(element));
+
+				performAction.contextClick(element).build().perform();
+
+				extentTest.get().log(Status.PASS, "Right clicked on element using Mouse (Actions Class) : " + name +" button");
+			} catch (Exception e) {
+				extentTest.get().log(Status.FAIL, "Failed to perform right click action on element : : " + name + " | Exception: " + e.getMessage());
+				throw e;
+			}
+		}
+	
+	//Method to wait for an alert presence and print alert message in report logs and Accept
+	public String alertAccept() {		
 		String alertMessage;
 		try {
 
@@ -73,6 +128,27 @@ public class GenericActionTemplate extends TestBase {
 
 			extentTest.get().log(Status.PASS, "Alert with message '" + alertMessage+ "' accepted successfully");
 
+		}
+		catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Failed to validate Alert | Exception: " + e.getMessage());
+			throw e;
+		}
+		return alertMessage;
+	}
+
+
+	//Method to wait for an alert presence and print alert message in report logs and Dismiss
+	public String alertDismiss() {		
+		String alertMessage;
+		try {
+
+			wait.until(ExpectedConditions.alertIsPresent());
+
+			alertMessage = driver.switchTo().alert().getText();
+
+			driver.switchTo().alert().dismiss();
+
+			extentTest.get().log(Status.PASS, "Alert with message '" + alertMessage+ "' rejected successfully");
 
 		}
 		catch (Exception e) {
@@ -81,6 +157,30 @@ public class GenericActionTemplate extends TestBase {
 		}
 		return alertMessage;
 	}
+
+
+	public String alertSendkeysAccept(String message) {		
+		String alertMessage;
+		try {
+
+			wait.until(ExpectedConditions.alertIsPresent());
+
+			alertMessage = driver.switchTo().alert().getText();
+
+			driver.switchTo().alert().sendKeys(message);
+
+			driver.switchTo().alert().accept();
+
+			extentTest.get().log(Status.PASS, "Promt alert with message '" + alertMessage+ "' accepted successfully");
+
+		}
+		catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Failed to validate Promt alert | Exception: " + e.getMessage());
+			throw e;
+		}
+		return alertMessage;
+	}
+
 
 	// Method to wait for an element to be clickable and then click using JS
 	public void jClickButton(WebElement element) {
@@ -313,66 +413,73 @@ public class GenericActionTemplate extends TestBase {
 	}
 
 	//Method to select the value from dropdown using select Class 
-	public void selectDropdownValue (WebElement element, String value) {
+	public void selectDropdown(WebElement element, String value) {
+
+		wait.until(ExpectedConditions.visibilityOf(element));
 
 		// Initialize the Select class with the dropdown element
-		Select selectDropdown = new Select(element);
+		Select selObject = new Select(element);
+
+		element.click();
+
+		List<WebElement> optionsList = selObject.getOptions();
 
 		try {				
 			// Check if the input value is numeric or not
 			// Try to parse the value to check if it's numeric
 			int index = Integer.parseInt(value);
 			// If value is numeric, select by index
-			selectDropdown.selectByIndex(index);
-			extentTest.get().log(Status.PASS, "Dropdown option selected by index at : " + index);
+			selObject.selectByIndex(index);
+			String selectedOptionText = optionsList.get(index).getText();
+			extentTest.get().log(Status.PASS, "Dropdown option selected using 'selectByIndex' method at index : "+ index +" | Option Text: " + selectedOptionText);
 		}
 
 		catch(NumberFormatException e) {	            
 			boolean isValueMatched = false;
-			for (WebElement option : selectDropdown.getOptions()) {
+			for (WebElement option : optionsList) {
 				if (option.getAttribute("value").equals(value)) {
-					selectDropdown.selectByValue(value);
+					selObject.selectByValue(value);
 					isValueMatched = true;
-					extentTest.get().log(Status.PASS, "Dropdown option selected by value : " + value);
+					extentTest.get().log(Status.PASS, "Dropdown option selected using 'selectByValue' method for value : " + value);
 					break;
 				}
 			}
 
 			// If the value attribute didn't match, fall back to selecting by visible text
 			if (!isValueMatched) {
-				selectDropdown.selectByVisibleText(value);
-				extentTest.get().log(Status.PASS, "Dropdown option selected by visible text : " + value);
+				selObject.selectByVisibleText(value);
+				extentTest.get().log(Status.PASS, "Dropdown option selected using 'selectByVisibleText' method for text : "+ value);
 			}
 
 		}
 		catch(Exception e) {
-			extentTest.get().log(Status.FAIL, "Failed to select the value from dropdown '" + value + " | Exception : " + e.getMessage());
+			extentTest.get().log(Status.FAIL, "Failed to select dropdown option '" + value + " | Exception : " + e.getMessage());
 			throw e;
 		}
 	}
-	
-	
-	public List<String> selectGetOptionsValidation(WebElement element) {
+
+
+	public List<String> selectGetOptions(WebElement element) {
 
 		wait.until(ExpectedConditions.visibilityOf(element));
 
 		// Initialize the Select class with the dropdown element
-		Select selectDropdown = new Select(element);
-		
-		 // Use the getOptions() method to retrieve all options
-        List<WebElement> allOptions = selectDropdown.getOptions();
+		Select selObject = new Select(element);
 
-     // Create a list to store the text of each dropdown option
-        List<String> optionsTextList = new ArrayList<>();
+		// Use the getOptions() method to retrieve all options
+		List<WebElement> allOptions = selObject.getOptions();
 
-        // Loop through all options, log the visible text, and add it to the list
-        for (WebElement option : allOptions) {
-            String optionText = option.getText();  // Get the visible text of the option
-            optionsTextList.add(optionText);  // Add the option text to the list
-        }
+		// Create a list to store the text of each dropdown option
+		List<String> optionsTextList = new ArrayList<>();
 
-        // Return the list of option texts
-        return optionsTextList;
+		// Loop through all options, log the visible text, and add it to the list
+		for (WebElement option : allOptions) {
+			String optionText = option.getText();  // Get the visible text of the option
+			optionsTextList.add(optionText);  // Add the option text to the list
+		}
+
+		// Return the list of option texts
+		return optionsTextList;
 	}
 
 
@@ -391,24 +498,11 @@ public class GenericActionTemplate extends TestBase {
 			extentTest.get().log(Status.WARNING, "Tab title validation failed : Not matching with expected title");
 		}
 	}
+
+
 	
-	
-	public void mouseOverOnElement(WebElement element) {	
-		
-		String name = element.getText();
-		try {	        	
-			wait.until(ExpectedConditions.visibilityOf(element));
-			
-			performAction.moveToElement(element).build().perform();
-			
-			extentTest.get().log(Status.PASS, "Mouse over on element : " + name +" button");
-		} catch (Exception e) {
-			extentTest.get().log(Status.FAIL, "Failed to perform mouse over action on element : : " + name + " | Exception: " + e.getMessage());
-			throw e;
-		}
-	}
-		
-	
+
+
 
 }
 

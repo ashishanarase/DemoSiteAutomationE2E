@@ -13,7 +13,7 @@ public class TC07_IframeHandling extends TestBase {
 	public TC07_IframeHandling () {
 		PageFactory.initElements(driver, this);
 	}
-	
+
 	private String currentUrl = "https://google.com";
 
 	//------------ Xpath Repository -------------
@@ -26,30 +26,28 @@ public class TC07_IframeHandling extends TestBase {
 
 	//------------ Action Methods -------------	
 
-	public void iframeHandling() throws InterruptedException {
+	public void iframeHandling() {
 
 		try {
 
 			driver.get(currentUrl);
-			
+
 			extentTest.get().log(Status.PASS, "Navigated to Google home page");
 
 			driver.switchTo().frame(ele_frameElement_iframe);
-			
+
 			extentTest.get().log(Status.PASS, "Switched on iFrame of Google home page");
-			
+
 			action.clickButton(btn_signout_homePage);
 
 			extentTest.get().log(Status.PASS, "Clicked on sign out button on iFrame of Google home page");
-			
-			boolean value = true;
-			if (value = true) {
-				extentTest.get().log(Status.PASS, "Window handling successful");
-			}  
-		}
+
+			extentTest.get().log(Status.PASS, "Method executed successfully : iframeHandling();");
+
+		} 
 		catch (Exception e) {
-			extentTest.get().log(Status.FAIL, "Iframe handeling failed !");
-			throw e;
+			extentTest.get().log(Status.FAIL, "Method failed : iframeHandling();");
+			throw e; // Re-throw the exception to be caught globally
 		}
 	}
 }

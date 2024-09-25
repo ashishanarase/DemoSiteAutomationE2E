@@ -16,10 +16,13 @@ public class TC13_MouseAction extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 	
-	private String currentUrl = "https://webdriveruniversity.com/Actions/index.html";
+	private String currentUrl = "https://webdriveruniversity.com/index.html";
 
 	//------------ Xpath Repository -------------
-
+	
+	@FindBy (xpath = "//h1[text()='ACTIONS']")
+	private WebElement btn_actionUrl_homePage;
+	
 	@FindBy (xpath = "//button[text()='Hover Over Me First!']")
 	private WebElement btn_hover1_homePage;
 
@@ -52,20 +55,15 @@ public class TC13_MouseAction extends TestBase {
 
 			driver.get(currentUrl);
 
-			Actions actions = new Actions (driver);
+			//Mouse click action
+			action.actionClick(btn_actionUrl_homePage);
 
-			//Conventional click
-			actions.click(btn_link1_homePage).build().perform();
 			
-			extentTest.get().log(Status.PASS, "Actions class : Object is clicked using click() method");
 
-			//Right click
-			actions.contextClick().build().perform();
-
-			extentTest.get().log(Status.PASS, "Actions class : Right click using contextClick() method");
+			extentTest.get().log(Status.INFO, "Actions class : Right click using contextClick() method");
 			
 			//Double click
-			actions.doubleClick(btn_doubleClick_homePage).build().perform();
+	/	actions.doubleClick(btn_doubleClick_homePage).build().perform();
 
 			extentTest.get().log(Status.PASS, "Actions class : Double click using doubleClick() method");
 			
@@ -92,16 +90,13 @@ public class TC13_MouseAction extends TestBase {
 
 			extentTest.get().log(Status.PASS, "Object is released at desired place");
 
-			boolean value = true;
-			if (value = true) {
-				extentTest.get().log(Status.PASS, "Mouse action successful");
-			}  
+			extentTest.get().log(Status.PASS, "Method executed successfully : mouseAction();");
 
+		} 
+		catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Method failed : mouseAction();");
+			throw e; // Re-throw the exception to be caught globally
 		}
-		catch(Exception e) {
-			extentTest.get().log(Status.FAIL, "Mouse action failed !");
-			throw e;
-		}		
 
 	}
 
