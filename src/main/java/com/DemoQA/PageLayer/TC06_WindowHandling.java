@@ -18,6 +18,8 @@ public class TC06_WindowHandling extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
+	private String txt_desiredTitle = "Facebook";
+	
 	//------------ Xpath Repository ------------
 	@FindBy (xpath = "(//a[@target='_blank'])[1]")
 	private WebElement btn_handle1_homePage;
@@ -54,13 +56,17 @@ public class TC06_WindowHandling extends TestBase {
 			for (String desiredHandle : handlesList) {
 				String title = driver.switchTo().window(desiredHandle).getTitle();
 				System.out.println(title);
-				if (title.contains("Facebook")) {
-					extentTest.get().log(Status.PASS, "Switched to fesired tab");
+				if (title.contains(txt_desiredTitle)) {
+					extentTest.get().log(Status.PASS, "Switched to tab : "+ title);
 					Thread.sleep(3000);		
 				}
 			}
 
 			driver.switchTo().window(parentHandle);
+			
+			String parentTitle = driver.getTitle();
+			
+			extentTest.get().log(Status.PASS, "Switched to tab : "+ parentTitle);
 
 			driver.close();
 

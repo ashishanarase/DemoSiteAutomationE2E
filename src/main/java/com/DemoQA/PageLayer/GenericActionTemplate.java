@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -38,22 +39,32 @@ public class GenericActionTemplate extends TestBase {
 	/*All method Sequence
 	 1. actionClick
 	 2. actionMouseOver
-	 1. alertAccept
-	 2. alertDismiss
-	 3. alertSendkeysAccept
+	 3. actionRightClick
+	 4. actionDoubleClick
+	 5. actionDragDrop
+	 6. actionHold
+	 7. actionRelease
+
+	 8. alertAccept
+	 9. alertDismiss
+	10. alertSendkeysAccept
+
+ 	11. clickCheck
+	12. clickButton
+	13. clickCheckBox
+	14. checkBoxEnabled
+	15. enterText
 
 	 2. jClickButton
 	 3. jScrollToCoordinate
 	 4. jScrollToView
+
+
 	 5. visibilityCheck
 	 6. internalUrlValidation    -- Add and Implement If Required
 	 7. externalUrlValidation    -- Add and Implement If Required
 	 8. urlValidation   
-	 9. clickCheck
-	10. clickButton
-	11. clickCheckBox
-	12. checkBoxEnabled
-	13. enterText
+
 	14. textValidation  -- implement
 	15. readExcelData
 	16. writeExcelData
@@ -61,28 +72,31 @@ public class GenericActionTemplate extends TestBase {
 	18. selectGetOptionsValidation  - implement
 	19. titleValidation
 	
+	20. switchToNextTab
+
 
 	 */
-	
-	
-	//Method to perform mouse over action on desired webelement
-		public void actionClick(WebElement element) {	
 
-			String name = element.getText();
-			try {	        	
-				wait.until(ExpectedConditions.visibilityOf(element));
 
-				performAction.click(element).build().perform();
+	//Method to perform Click action on desired WebElement
+	public void actionClick(WebElement element) {	
 
-				extentTest.get().log(Status.PASS, "Clicked on element using Mouse (Actions Class) : " + name +" button");
-			} catch (Exception e) {
-				extentTest.get().log(Status.FAIL, "Failed to perform click action using Mouse (Actions Class) on element : : " + name + " | Exception: " + e.getMessage());
-				throw e;
-			}
+		String name = element.getText();
+		try {	        	
+			wait.until(ExpectedConditions.visibilityOf(element));
+
+			performAction.click(element).build().perform();
+
+			extentTest.get().log(Status.PASS, "Clicked on the '" + name + "' button using the Actions class_click() method");
+
+		} catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Failed to click on the '" + name + "' button using the Actions class_click() method | Exception: " + e.getMessage());
+			throw e;
 		}
-	
+	}
 
-	//Method to perform mouse over action on desired webelement
+
+	//Method to perform mouse over action on desired WebElement
 	public void actionMouseOver(WebElement element) {	
 
 		String name = element.getText();
@@ -91,30 +105,125 @@ public class GenericActionTemplate extends TestBase {
 
 			performAction.moveToElement(element).build().perform();
 
-			extentTest.get().log(Status.INFO, "Mouse over on element using Mouse (Actions Class) : " + name +" button");
+			extentTest.get().log(Status.PASS, "Mouse-over on the '" + name + "' button using the Actions class_moveToElement() method");
+
 		} catch (Exception e) {
-			extentTest.get().log(Status.FAIL, "Failed to perform mouse over action on element : : " + name + " | Exception: " + e.getMessage());
+			extentTest.get().log(Status.FAIL, "Failed to mouse-over on the '" + name + "' button using the Actions class_moveToElement() method | Exception: " + e.getMessage());
 			throw e;
 		}
 	}
-	
-	
-	//Method to perform mouse over action on desired webelement
-		public void actionRightClick(WebElement element) {	
 
-			String name = element.getText();
-			try {	        	
-				wait.until(ExpectedConditions.visibilityOf(element));
 
-				performAction.contextClick(element).build().perform();
+	//Method to perform mouse over action on desired WebElement
+	public void actionMoveToCoordinate(int x, int y) {	
 
-				extentTest.get().log(Status.PASS, "Right clicked on element using Mouse (Actions Class) : " + name +" button");
-			} catch (Exception e) {
-				extentTest.get().log(Status.FAIL, "Failed to perform right click action on element : : " + name + " | Exception: " + e.getMessage());
-				throw e;
-			}
+		try {	        	
+
+			performAction.moveToLocation(x,y).build().perform();
+
+			extentTest.get().log(Status.PASS, "Mouse-over on the '(" + x +", " + y + ")' co-ordinate using the Actions class_moveToLocation() method");
+
+		} catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Failed to mouse-over on the co-ordinate'(" + x +", " + y + ")' button using the Actions class_moveToLocation() method | Exception: " + e.getMessage());
+			throw e;
 		}
-	
+	}
+
+
+	//Method to perform Right Click on desired WebElement
+	public void actionRightClick(WebElement element) {	
+
+		String name = element.getText();
+		try {	        	
+			wait.until(ExpectedConditions.visibilityOf(element));
+
+			performAction.contextClick(element).build().perform();
+
+			extentTest.get().log(Status.PASS, "Right-clicked on the '" + name + "' button using the Actions class_contextClick() method");
+
+		} catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Failed to right-click on the '" + name + "' button using the Actions class_contextClick() method | Exception: " + e.getMessage());
+			throw e;
+		}
+	}
+
+
+	//Method to perform Double Click action on desired WebElement
+	public void actionDoubleClick(WebElement element) {	
+
+		String name = element.getText();
+		try {	        	
+			wait.until(ExpectedConditions.visibilityOf(element));
+
+			performAction.doubleClick(element).build().perform();
+
+			extentTest.get().log(Status.PASS, "Double-clicked on the '" + name + "' button using the Actions class_doubleClick() method");
+
+		} catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Failed to double-click on the '" + name + "' button using the Actions class_doubleClick() method | Exception: " + e.getMessage());
+			throw e;
+		}
+	}
+
+
+	//Method to perform Drag and Drop action on desired WebElement
+	public void actionDragDrop(WebElement sourceElement, WebElement targetElement) {	
+
+		String name1 = sourceElement.getText();
+
+		String name2 = targetElement.getText();
+
+		try {	        	
+			wait.until(ExpectedConditions.visibilityOf(sourceElement));
+
+			wait.until(ExpectedConditions.visibilityOf(targetElement));
+
+			performAction.dragAndDrop(sourceElement, targetElement).build().perform();
+
+			extentTest.get().log(Status.PASS, "Dragged element '" + name1 + "' and Dropped to element '" +name2 +"' using the Actions class_dragAndDrop() method");
+
+		} catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Failed to Drag and Drop on the '" + name1 +"' and '" + name2 + "' using the Actions class_dragAndDrop() method | Exception: " + e.getMessage());
+			throw e;
+		}
+	}
+
+
+	//Method to perform Click and Hold action on desired WebElement
+	public void actionHold(WebElement element) {	
+
+		String name = element.getText();
+		try {	        	
+			wait.until(ExpectedConditions.visibilityOf(element));
+
+			performAction.clickAndHold(element).build().perform();
+
+			extentTest.get().log(Status.PASS, "Clicked and hold the '" + name + "' button using the Actions class_clickAndHold() method");
+
+		} catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Failed to clicked and hold on the '" + name + "' button using the Actions class_clickAndHold() method | Exception: " + e.getMessage());
+			throw e;
+		}
+	}
+
+
+	//Method to perform Click and Hold action on desired WebElement
+	public void actionRelease(WebElement element) {	
+
+		String name = element.getText();
+		try {	        	
+
+			performAction.release().build().perform();
+
+			extentTest.get().log(Status.PASS, "Released the mouse hold on '" + name + "' button using the Actions class_release() method");
+
+		} catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Failed to release hold on the '" + name + "' button using the Actions class_release() method | Exception: " + e.getMessage());
+			throw e;
+		}
+	}
+
+
 	//Method to wait for an alert presence and print alert message in report logs and Accept
 	public String alertAccept() {		
 		String alertMessage;
@@ -180,6 +289,81 @@ public class GenericActionTemplate extends TestBase {
 		}
 		return alertMessage;
 	}
+
+
+	// Method to wait for an element to be clickable
+	public void clickCheck(WebElement element) {
+		String name = element.getText();  
+
+		try {	        	
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+
+			extentTest.get().log(Status.PASS, "Clicked on element : " + name +" button");
+		} catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Failed to click on element : " + name + " | Exception: " + e.getMessage());
+			throw e;
+		}
+	}
+
+	// Method to wait for an element to be clickable and then click
+	public void clickButton(WebElement element) {
+		String name = element.getText();  
+
+		try {	   
+			wait.until(ExpectedConditions.visibilityOf(element));
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+			element.click();
+			extentTest.get().log(Status.PASS, "Clicked on element : " + name +" button");
+		} catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Failed to click on element : " + name + " | Exception: " + e.getMessage());
+			throw e;
+		}
+	}
+
+
+
+	// Method to validate checkbox be click 
+	public void clickCheckBox(WebElement element) {
+		String name = element.getText();  
+
+		try {
+			wait.until(ExpectedConditions.visibilityOf(element));
+			if (element.isSelected()) {
+				extentTest.get().log(Status.WARNING, "CheckBox is selected already : " + name +" button");
+			}
+
+			else if (!element.isSelected()) {
+				extentTest.get().log(Status.PASS, "Checkbox is available to select : " + name +" button");
+				element.click();
+				extentTest.get().log(Status.PASS, "Clicked on checkbox : " + name +" field");
+			}
+			else {
+				extentTest.get().log(Status.WARNING, "CheckBox is selected neither selected nor available to select : " + name +" button");
+			}
+
+		} catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Failed to click on element : " + name + " | Exception: " + e.getMessage());
+			throw e;
+		}
+	} 
+
+
+	// Method to wait for an element to be visible and then send keys, with logging
+	public void enterText(WebElement element, String text) {
+		String name = element.getText();   
+
+		try {
+			wait.until(ExpectedConditions.visibilityOf(element));
+			element.clear();
+			element.sendKeys(text);
+			//	extentTest.log(LogStatus.PASS, "Entered text '" + text + "' into the : " + name + " field");
+		} catch (Exception e) {
+			//	extentTest.log(LogStatus.FAIL, "Failed to enter text '" + text + "' into the : " + name + " | Exception : " + e.getMessage());
+			throw e;
+		}
+	}
+
+
 
 
 	// Method to wait for an element to be clickable and then click using JS
@@ -251,7 +435,7 @@ public class GenericActionTemplate extends TestBase {
 
 
 	// Method to wait for an element to be visible only
-	public void urlValidation( String expectedURL) {
+	public void urlValidation(String expectedURL) {
 		try {	
 
 			wait.until(ExpectedConditions.urlToBe(expectedURL));
@@ -263,78 +447,6 @@ public class GenericActionTemplate extends TestBase {
 			extentTest.get().log(Status.PASS, "Navigation after clicking the URL successful : " + expectedURL);
 		} catch (Exception e) {
 			extentTest.get().log(Status.FAIL, "Navigation after clicking the URL failed : " + expectedURL + " | Exception: " + e.getMessage());
-			throw e;
-		}
-	}
-
-	// Method to wait for an element to be clickable
-	public void clickCheck(WebElement element) {
-		String name = element.getText();  
-
-		try {	        	
-			wait.until(ExpectedConditions.elementToBeClickable(element));
-
-			extentTest.get().log(Status.PASS, "Clicked on element : " + name +" button");
-		} catch (Exception e) {
-			extentTest.get().log(Status.FAIL, "Failed to click on element : " + name + " | Exception: " + e.getMessage());
-			throw e;
-		}
-	}
-
-	// Method to wait for an element to be clickable and then click
-	public void clickButton(WebElement element) {
-		String name = element.getText();  
-
-		try {	   
-			wait.until(ExpectedConditions.visibilityOf(element));
-			wait.until(ExpectedConditions.elementToBeClickable(element));
-			element.click();
-			extentTest.get().log(Status.PASS, "Clicked on element : " + name +" button");
-		} catch (Exception e) {
-			extentTest.get().log(Status.FAIL, "Failed to click on element : " + name + " | Exception: " + e.getMessage());
-			throw e;
-		}
-	}
-
-
-
-	// Method to validate checkbox be click 
-	public void clickCheckBox(WebElement element) {
-		String name = element.getText();  
-
-		try {
-			wait.until(ExpectedConditions.visibilityOf(element));
-			if (element.isSelected()) {
-				extentTest.get().log(Status.WARNING, "CheckBox is selected already : " + name +" button");
-			}
-
-			else if (!element.isSelected()) {
-				extentTest.get().log(Status.PASS, "Checkbox is available to select : " + name +" button");
-				element.click();
-				extentTest.get().log(Status.PASS, "Clicked on checkbox : " + name +" field");
-			}
-			else {
-				extentTest.get().log(Status.WARNING, "CheckBox is selected neither selected nor available to select : " + name +" button");
-			}
-
-		} catch (Exception e) {
-			extentTest.get().log(Status.FAIL, "Failed to click on element : " + name + " | Exception: " + e.getMessage());
-			throw e;
-		}
-	} 
-
-
-	// Method to wait for an element to be visible and then send keys, with logging
-	public void enterText(WebElement element, String text) {
-		String name = element.getText();   
-
-		try {
-			wait.until(ExpectedConditions.visibilityOf(element));
-			element.clear();
-			element.sendKeys(text);
-			//	extentTest.log(LogStatus.PASS, "Entered text '" + text + "' into the : " + name + " field");
-		} catch (Exception e) {
-			//	extentTest.log(LogStatus.FAIL, "Failed to enter text '" + text + "' into the : " + name + " | Exception : " + e.getMessage());
 			throw e;
 		}
 	}
@@ -500,9 +612,33 @@ public class GenericActionTemplate extends TestBase {
 	}
 
 
+	public void switchToNextTab() {
+
+		String currentHandle = driver.getWindowHandle();		
+		
+		String currentTitle = driver.getTitle(); 
+		
+		extentTest.get().log(Status.INFO, "Script is currently focused on the tab : "+ currentTitle);	
+
+		extentTest.get().log(Status.INFO, "Switching to the next browser tab");
+		
+		Set <String> handles = driver.getWindowHandles();
+		List <String> handlesList = new ArrayList<String>(handles);
+
+		for (String desiredHandle : handlesList) {
+
+			 driver.switchTo().window(desiredHandle);
+
+			if (!desiredHandle.equals(currentHandle)) {
+				String title = driver.getTitle();
+				extentTest.get().log(Status.PASS, "Switched to a different browser tab : "+title);					
+			}
+		}
+	}
+
+
 	
-
-
-
+	
+//Class Brace	
 }
 

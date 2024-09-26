@@ -24,7 +24,7 @@ public class TC08_SearchResultAndCartValidation extends TestBase {
 
 	private String currentUrl = "https://www.amazon.in";
 
-	private static String searchKey = "One Plus Mobiles";
+	private static String searchKey = "One Plus";
 
 	//------------ Xpath Repository -------------
 
@@ -117,10 +117,6 @@ public class TC08_SearchResultAndCartValidation extends TestBase {
 
 		try {
 
-			action.enterText(txtBox_search_homePage, searchKey);
-
-			action.clickButton(btn_search_homePage);
-
 			action.visibilityCheck(img_product1_searchResultPage);
 
 			action.visibilityCheck(txt_priceProduct1_searchResultPage);
@@ -145,22 +141,10 @@ public class TC08_SearchResultAndCartValidation extends TestBase {
 
 			extentTest.get().log(Status.INFO, "Ratings '"+ratingCount + "' with total '"+ globalRatingCount+"'");
 
-			String currentHandle = driver.getWindowHandle();
-
 			action.clickButton(img_product1_searchResultPage);
 
-			Set <String> handles = driver.getWindowHandles();
-			List <String> handlesList = new ArrayList<String>(handles);
-
-			for (String desiredHandle : handlesList) {
-
-				String title = driver.switchTo().window(desiredHandle).getTitle();
-
-				if (!desiredHandle.equals(currentHandle)) {
-					extentTest.get().log(Status.INFO, "Switched to desired tab : "+title);					
-				}
-			}
-
+			action.switchToNextTab();
+			
 			action.visibilityCheck(txt_productTitle_productPage);
 
 			String productTitle = txt_productTitle_productPage.getText();

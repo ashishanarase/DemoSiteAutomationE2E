@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\ashish.anarase\AppData\Local\Temp\testng-eclipse-1063031478\testng-customsuite.xml</span>
+                    <span>C:\Users\ashish.anarase\AppData\Local\Temp\testng-eclipse--78566789\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.DemoQA.TestLayer.TestCase" class="method navigator-link" hash-for-method="TC13_MouseAction">TC13_MouseAction</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.DemoQA.TestLayer.TestCase" class="method navigator-link" hash-for-method="TC08_SearchResultAndCartValidation">TC08_SearchResultAndCartValidation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -126,31 +126,20 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC13_MouseAction">
-                  </a> <!-- TC13_MouseAction -->
-                  <span class="method-name">TC13_MouseAction</span>
-                  <div class="stack-trace">org.openqa.selenium.JavascriptException: javascript error: {&quot;status&quot;:60,&quot;value&quot;:&quot;https://webdriveruniversity.com/Actions/index.html# has no size and location&quot;}
-  (Session info: chrome=128.0.6613.138)
+                  <a name="TC08_SearchResultAndCartValidation">
+                  </a> <!-- TC08_SearchResultAndCartValidation -->
+                  <span class="method-name">TC08_SearchResultAndCartValidation</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (506133f3ef265364d7281345aee9c4ae)] -&gt; xpath: //span[@id=&apos;productTitle&apos;]/following::span[19]] (tried for 30 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.18.0&apos;, revision: &apos;b6bf9de7cc*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1e9a67618e1a20d55512ab150bddd4aa, actions {actions=[org.openqa.selenium.interactions.Sequence@782168b7]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53267}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53267/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1e9a67618e1a20d55512ab150bddd4aa
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:605)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:603)
-	at com.DemoQA.PageLayer.TC13_MouseAction.mouseAction(TC13_MouseAction.java:58)
-	at com.DemoQA.TestLayer.TestCase.TC13_MouseAction(TestCase.java:116)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.70, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57828}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57828/devtoo..., se:cdpVersion: 129.0.6668.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 506133f3ef265364d7281345aee9c4ae
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.DemoQA.PageLayer.GenericActionTemplate.visibilityCheck(GenericActionTemplate.java:428)
+	at com.DemoQA.PageLayer.TC08_SearchResultAndCartValidation.cartValue(TC08_SearchResultAndCartValidation.java:154)
+	at com.DemoQA.TestLayer.TestCase.TC08_SearchResultAndCartValidation(TestCase.java:81)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -180,7 +169,7 @@ Session ID: 1e9a67618e1a20d55512ab150bddd4aa
 
 </div> <!-- stack-trace -->
                   <em>
-(Test to verify the usage of the Mouse Actions class for performing complex user interactions)                  </em>
+(Test to dynamically fetch the count of search results and cart value validation)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -188,7 +177,7 @@ Session ID: 1e9a67618e1a20d55512ab150bddd4aa
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\ashish.anarase\AppData\Local\Temp\testng-eclipse-1063031478\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\ashish.anarase\AppData\Local\Temp\testng-eclipse--78566789\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -199,7 +188,7 @@ Session ID: 1e9a67618e1a20d55512ab150bddd4aa
     &lt;classes&gt;
       &lt;class name=&quot;com.DemoQA.TestLayer.TestCase&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;TC13_MouseAction&quot;/&gt;
+          &lt;include name=&quot;TC08_SearchResultAndCartValidation&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.DemoQA.TestLayer.TestCase --&gt;
     &lt;/classes&gt;
@@ -243,14 +232,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC13_MouseAction')
+data.setCell(0, 1, 'TC08_SearchResultAndCartValidation')
 data.setCell(0, 2, 'com.DemoQA.TestLayer.TestCase')
-data.setCell(0, 3, 2215);
+data.setCell(0, 3, 42836);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 42 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -271,9 +260,9 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.DemoQA.TestLayer.TestCase</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TC26_SkippedTestCase</span>
-                <br/>
                 <span class="ignored-method-name">TC15_MultipleTabAndWindows</span>
+                <br/>
+                <span class="ignored-method-name">TC26_SkippedTestCase</span>
                 <br/>
                 <span class="ignored-method-name">TC11_ExplicitWaitConditions</span>
                 <br/>
@@ -291,6 +280,8 @@ return data;
                 <br/>
                 <span class="ignored-method-name">TC16_sslCertificateMethod</span>
                 <br/>
+                <span class="ignored-method-name">TC13_MouseAction</span>
+                <br/>
                 <span class="ignored-method-name">TC01_ActionOnBrowser</span>
                 <br/>
                 <span class="ignored-method-name">TC04_ClickOperationType</span>
@@ -300,8 +291,6 @@ return data;
                 <span class="ignored-method-name">TC06_WindowHandling</span>
                 <br/>
                 <span class="ignored-method-name">TC25_ImageComparison</span>
-                <br/>
-                <span class="ignored-method-name">TC08_SearchResultAndCartValidation</span>
                 <br/>
                 <span class="ignored-method-name">TC10_DropdownHandling</span>
                 <br/>
@@ -326,17 +315,17 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startBrowser</span>
-                <span class="method-start">202 ms</span>
+                <span class="method-start">170 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">TC13_MouseAction</span>
-                <span class="method-start">4680 ms</span>
+                <span class="method-name">TC08_SearchResultAndCartValidation</span>
+                <span class="method-start">5927 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">7010 ms</span>
+                <span class="method-start">49008 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

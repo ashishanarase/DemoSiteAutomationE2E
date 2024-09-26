@@ -1,5 +1,9 @@
 package com.DemoQA.PageLayer;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -15,14 +19,22 @@ public class TC13_MouseAction extends TestBase {
 	public TC13_MouseAction() {
 		PageFactory.initElements(driver, this);
 	}
-	
+
 	private String currentUrl = "https://webdriveruniversity.com/index.html";
+	
+	private String expectedTxt_holdElement = "Well done! keep holding that click now.....";
+	
+	private String txt_desiredTitle = "Actions";
+	
+	private int value1 = 100; 
+	
+	private int value2 = 200;
 
 	//------------ Xpath Repository -------------
-	
+
 	@FindBy (xpath = "//h1[text()='ACTIONS']")
 	private WebElement btn_actionUrl_homePage;
-	
+
 	@FindBy (xpath = "//button[text()='Hover Over Me First!']")
 	private WebElement btn_hover1_homePage;
 
@@ -38,13 +50,16 @@ public class TC13_MouseAction extends TestBase {
 	@FindBy (id = "double-click")
 	private WebElement btn_doubleClick_homePage;
 
+	@FindBy (id="click-box")
+	private WebElement text_holdClick_homePage;
+
 	@FindBy (xpath = "//b[text()='DRAG ME TO MY TARGET!']")
 	private WebElement btn_dragFrom_homePage;
 
-	@FindBy (xpath = "//b[text()='DROP HERE!")
+	@FindBy (xpath = "//b[text()='DROP HERE!']")
 	private WebElement btn_dragTo_homePage;
 
-	@FindBy (xpath = "Click and Hold!")
+	@FindBy (xpath = "//p[text()='Click and Hold!']")
 	private WebElement btn_clickAndHold_homePage;
 
 	//------------ Action Methods -------------	
@@ -54,41 +69,39 @@ public class TC13_MouseAction extends TestBase {
 		try {
 
 			driver.get(currentUrl);
-
-			//Mouse click action
-			action.actionClick(btn_actionUrl_homePage);
-
 			
-
-			extentTest.get().log(Status.INFO, "Actions class : Right click using contextClick() method");
+			action.actionClick(btn_actionUrl_homePage);			
 			
-			//Double click
-	/	actions.doubleClick(btn_doubleClick_homePage).build().perform();
+			Set <String> handles = driver.getWindowHandles();
+			List <String> handlesList = new ArrayList<String>(handles);
 
-			extentTest.get().log(Status.PASS, "Actions class : Double click using doubleClick() method");
+			for (String desiredHandle : handlesList) {
+				String title = driver.switchTo().window(desiredHandle).getTitle();
+				
+				if (title.contains(txt_desiredTitle)) {
+	
+				}
+			}
+
+			action.actionDoubleClick(btn_doubleClick_homePage);
+
+			action.actionMouseOver(btn_hover1_homePage);	
 			
-			//Mouse over 
-			actions.moveToElement(btn_hover1_homePage).build().perform();
+			action.actionMouseOver(btn_hover2_homePage);	
 			
-			extentTest.get().log(Status.PASS, "Actions class : Moved to element using moveToElement() method");
+			action.actionMouseOver(btn_hover3_homePage);	
 
-			//Drag and Drop
-			actions.dragAndDrop(btn_dragFrom_homePage, btn_dragTo_homePage).build().perform();
+			action.actionDragDrop(btn_dragFrom_homePage, btn_dragTo_homePage);
 
-			extentTest.get().log(Status.PASS, "Actions class : Drag and drop using dragAndDrop() method");
+			action.jScrollToView(btn_clickAndHold_homePage);
 			
-			//Click and Hold
-			actions.clickAndHold(btn_clickAndHold_homePage).build().perform();
+			action.actionHold(btn_clickAndHold_homePage);		
+
+			action.textValidation(text_holdClick_homePage, expectedTxt_holdElement);
+
+			action.actionRelease(text_holdClick_homePage);
 			
-			extentTest.get().log(Status.PASS, "Actions class : Hold on element using clickAndHold() method");
-
-
-			extentTest.get().log(Status.PASS, "Object is clicked and Hold");
-
-			//Releases the left click (which is in the pressed state)
-			actions.release().build().perform();
-
-			extentTest.get().log(Status.PASS, "Object is released at desired place");
+			action.actionMoveToCoordinate(value1, value2);
 
 			extentTest.get().log(Status.PASS, "Method executed successfully : mouseAction();");
 
