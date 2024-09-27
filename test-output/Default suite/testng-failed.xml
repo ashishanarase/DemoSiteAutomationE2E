@@ -6,9 +6,9 @@
       <class name="com.DemoQA.TestLayer.TestCase">
         <methods>
           <include name="dataGeneration"/>
-          <include name="TC08_SearchResultAndCartValidation"/>
           <include name="closeBrowser"/>
           <include name="startBrowser"/>
+          <include name="TC04_ClickOperationType"/>
         </methods>
       </class> <!-- com.DemoQA.TestLayer.TestCase -->
     </classes>

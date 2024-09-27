@@ -1,75 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-26T15:06:34 IST" name="Default suite" finished-at="2024-09-26T15:07:25 IST" duration-ms="51484">
+  <suite started-at="2024-09-27T19:50:53 IST" name="Default suite" finished-at="2024-09-27T19:51:15 IST" duration-ms="22338">
     <groups>
     </groups>
-    <test started-at="2024-09-26T15:06:34 IST" name="Default test" finished-at="2024-09-26T15:07:25 IST" duration-ms="51484">
+    <test started-at="2024-09-27T19:50:53 IST" name="Default test" finished-at="2024-09-27T19:51:15 IST" duration-ms="22338">
       <class name="com.DemoQA.TestLayer.TestCase">
-        <test-method is-config="true" signature="dataGeneration()[pri:0, instance:com.DemoQA.TestLayer.TestCase@17a7f733]" started-at="2024-09-26T15:06:34 IST" name="dataGeneration" finished-at="2024-09-26T15:06:34 IST" duration-ms="45" status="PASS">
+        <test-method is-config="true" signature="dataGeneration()[pri:0, instance:com.DemoQA.TestLayer.TestCase@ed7f8b4]" started-at="2024-09-27T19:50:53 IST" name="dataGeneration" finished-at="2024-09-27T19:50:53 IST" duration-ms="94" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataGeneration -->
-        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@17a7f733]" started-at="2024-09-26T15:06:34 IST" name="startBrowser" finished-at="2024-09-26T15:06:40 IST" duration-ms="5756" status="PASS">
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@ed7f8b4]" started-at="2024-09-27T19:50:53 IST" name="startBrowser" finished-at="2024-09-27T19:51:06 IST" duration-ms="12490" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method signature="TC08_SearchResultAndCartValidation()[pri:8, instance:com.DemoQA.TestLayer.TestCase@17a7f733]" started-at="2024-09-26T15:06:40 IST" name="TC08_SearchResultAndCartValidation" description="Test to dynamically fetch the count of search results and cart value validation" finished-at="2024-09-26T15:07:22 IST" duration-ms="42836" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (506133f3ef265364d7281345aee9c4ae)] -> xpath: //span[@id='productTitle']/following::span[19]] (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.70, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57828}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57828/devtoo..., se:cdpVersion: 129.0.6668.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 506133f3ef265364d7281345aee9c4ae]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (506133f3ef265364d7281345aee9c4ae)] -> xpath: //span[@id='productTitle']/following::span[19]] (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.70, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57828}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57828/devtoo..., se:cdpVersion: 129.0.6668.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 506133f3ef265364d7281345aee9c4ae
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at com.DemoQA.PageLayer.GenericActionTemplate.visibilityCheck(GenericActionTemplate.java:428)
-at com.DemoQA.PageLayer.TC08_SearchResultAndCartValidation.cartValue(TC08_SearchResultAndCartValidation.java:154)
-at com.DemoQA.TestLayer.TestCase.TC08_SearchResultAndCartValidation(TestCase.java:81)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="TC04_ClickOperationType()[pri:4, instance:com.DemoQA.TestLayer.TestCase@ed7f8b4]" started-at="2024-09-27T19:51:06 IST" name="TC04_ClickOperationType" description="Test to verify different ways of performing click operations on a web element" finished-at="2024-09-27T19:51:13 IST" duration-ms="7238" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC08_SearchResultAndCartValidation -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@17a7f733]" started-at="2024-09-26T15:07:23 IST" name="closeBrowser" finished-at="2024-09-26T15:07:25 IST" duration-ms="2522" status="PASS">
+        </test-method> <!-- TC04_ClickOperationType -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@ed7f8b4]" started-at="2024-09-27T19:51:13 IST" name="closeBrowser" finished-at="2024-09-27T19:51:15 IST" duration-ms="2303" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
