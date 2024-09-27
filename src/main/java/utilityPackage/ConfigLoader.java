@@ -8,9 +8,9 @@ public class ConfigLoader {
 
 	private static Properties properties = new Properties();
 
-	static String userDirectory ="C:\\Users\\ashish.anarase\\git\\DemoSiteAutomationE2E\\";
+	//static String userDirectory ="C:\\Users\\ashish.anarase\\git\\DemoSiteAutomationE2E\\";
 	
-	//static String userDirectory = "C:\\Users\\ASHISH\\eclipse-workspace\\DemoSiteAutomationE2E\\";
+	static String userDirectory = "C:\\Users\\ASHISH\\eclipse-workspace\\DemoSiteAutomationE2E\\";
 		
 	public static void loadConfig(String environment) {
 		try (FileInputStream input = new FileInputStream(userDirectory+"\\DataFiles\\config_" + environment + ".properties")) {

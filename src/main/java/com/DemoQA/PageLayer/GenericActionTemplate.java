@@ -12,6 +12,7 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -71,7 +72,7 @@ public class GenericActionTemplate extends TestBase {
 	17. selectDropdownValue
 	18. selectGetOptionsValidation  - implement
 	19. titleValidation
-	
+
 	20. switchToNextTab
 
 
@@ -87,10 +88,10 @@ public class GenericActionTemplate extends TestBase {
 
 			performAction.click(element).build().perform();
 
-			extentTest.get().log(Status.PASS, "Clicked on the '" + name + "' button using the Actions class_click() method");
+			extentTest.get().log(Status.PASS, "Clicked on element :" + name + " button using the Actions class_click() method");
 
 		} catch (Exception e) {
-			extentTest.get().log(Status.FAIL, "Failed to click on the '" + name + "' button using the Actions class_click() method | Exception: " + e.getMessage());
+			extentTest.get().log(Status.FAIL, "Failed to click on the " + name + " button using the Actions class_click() method | Exception: " + e.getMessage());
 			throw e;
 		}
 	}
@@ -139,10 +140,10 @@ public class GenericActionTemplate extends TestBase {
 
 			performAction.contextClick(element).build().perform();
 
-			extentTest.get().log(Status.PASS, "Right-clicked on the '" + name + "' button using the Actions class_contextClick() method");
+			extentTest.get().log(Status.PASS, "Right-clicked on element : " + name + "' button using the Actions class_contextClick() method");
 
 		} catch (Exception e) {
-			extentTest.get().log(Status.FAIL, "Failed to right-click on the '" + name + "' button using the Actions class_contextClick() method | Exception: " + e.getMessage());
+			extentTest.get().log(Status.FAIL, "Failed to right-click on element '" + name + "' button using the Actions class_contextClick() method | Exception: " + e.getMessage());
 			throw e;
 		}
 	}
@@ -157,10 +158,10 @@ public class GenericActionTemplate extends TestBase {
 
 			performAction.doubleClick(element).build().perform();
 
-			extentTest.get().log(Status.PASS, "Double-clicked on the '" + name + "' button using the Actions class_doubleClick() method");
+			extentTest.get().log(Status.PASS, "Double-clicked on element : " + name + " button using the Actions class_doubleClick() method");
 
 		} catch (Exception e) {
-			extentTest.get().log(Status.FAIL, "Failed to double-click on the '" + name + "' button using the Actions class_doubleClick() method | Exception: " + e.getMessage());
+			extentTest.get().log(Status.FAIL, "Failed to double-click on element " + name + " button using the Actions class_doubleClick() method | Exception: " + e.getMessage());
 			throw e;
 		}
 	}
@@ -313,9 +314,9 @@ public class GenericActionTemplate extends TestBase {
 			wait.until(ExpectedConditions.visibilityOf(element));
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 			element.click();
-			extentTest.get().log(Status.PASS, "Clicked on element : " + name +" button");
+			extentTest.get().log(Status.PASS, "Clicked on element : " + name +" button using click(); method");
 		} catch (Exception e) {
-			extentTest.get().log(Status.FAIL, "Failed to click on element : " + name + " | Exception: " + e.getMessage());
+			extentTest.get().log(Status.FAIL, "Failed to click on element using click(); method : " + name + " | Exception: " + e.getMessage());
 			throw e;
 		}
 	}
@@ -356,9 +357,25 @@ public class GenericActionTemplate extends TestBase {
 			wait.until(ExpectedConditions.visibilityOf(element));
 			element.clear();
 			element.sendKeys(text);
-			//	extentTest.log(LogStatus.PASS, "Entered text '" + text + "' into the : " + name + " field");
+			extentTest.get().log(Status.PASS, "Entered text '" + text + "' into the : " + name + " field");
+		} catch (Exception e) {				
+			extentTest.get().log(Status.FAIL, "Failed to enter text '" + text + "' into the : " + name + " | Exception : " + e.getMessage());
+			throw e;
+		}
+	}
+
+
+
+	// Method to wait for an element to be visible and then send keys, with logging
+	public void enterKeys(WebElement element, Keys keyValue) {
+		String name = element.getText();   
+
+		try {
+			wait.until(ExpectedConditions.visibilityOf(element));
+			element.sendKeys(keyValue);
+			extentTest.get().log(Status.PASS, "Entered key '" + keyValue + "' into the '" + name + "' field");
 		} catch (Exception e) {
-			//	extentTest.log(LogStatus.FAIL, "Failed to enter text '" + text + "' into the : " + name + " | Exception : " + e.getMessage());
+			extentTest.get().log(Status.FAIL, "Failed to enter keys '" + keyValue + "' into the '" + name + "' | Exception : " + e.getMessage());
 			throw e;
 		}
 	}
@@ -615,19 +632,19 @@ public class GenericActionTemplate extends TestBase {
 	public void switchToNextTab() {
 
 		String currentHandle = driver.getWindowHandle();		
-		
+
 		String currentTitle = driver.getTitle(); 
-		
+
 		extentTest.get().log(Status.INFO, "Script is currently focused on the tab : "+ currentTitle);	
 
 		extentTest.get().log(Status.INFO, "Switching to the next browser tab");
-		
+
 		Set <String> handles = driver.getWindowHandles();
 		List <String> handlesList = new ArrayList<String>(handles);
 
 		for (String desiredHandle : handlesList) {
 
-			 driver.switchTo().window(desiredHandle);
+			driver.switchTo().window(desiredHandle);
 
 			if (!desiredHandle.equals(currentHandle)) {
 				String title = driver.getTitle();
@@ -637,8 +654,8 @@ public class GenericActionTemplate extends TestBase {
 	}
 
 
-	
-	
-//Class Brace	
+
+
+	//Class Brace	
 }
 
