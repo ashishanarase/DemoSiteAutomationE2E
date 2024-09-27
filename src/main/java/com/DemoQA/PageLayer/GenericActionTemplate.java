@@ -373,9 +373,9 @@ public class GenericActionTemplate extends TestBase {
 		try {	        	
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 			jScript.executeScript("arguments[0].click();", element);
-			extentTest.get().log(Status.PASS, "Clicked on element : " + name +" button");
+			extentTest.get().log(Status.PASS, "Clicked on element : " + name +" button using Javascript executor interface");
 		} catch (Exception e) {
-			extentTest.get().log(Status.FAIL, "Failed to click on element : " + name + " | Exception: " + e.getMessage());
+			extentTest.get().log(Status.FAIL, "Failed to click on element using Javascript executor interface : " + name + " | Exception: " + e.getMessage());
 			throw e;
 		}
 	}

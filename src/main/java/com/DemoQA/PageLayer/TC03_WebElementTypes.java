@@ -16,6 +16,11 @@ public class TC03_WebElementTypes extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
+	private String domainName = "@orange.com";	
+	private String contactNumber = "9876543210";	
+	private String sampleKeywords = "Java, Selenium WebDriver, API";	
+	private String sampleNotes = "This is Sample Note of Added Candidate";
+	
 	//------------ Xpath Repository -------------
 
 	@FindBy(xpath = "//span[text()='Recruitment']") 	//tagname[text()='text_value']
@@ -96,17 +101,17 @@ public class TC03_WebElementTypes extends TestBase {
 
 			action.clickButton(dd_option4_recruitmentPage);
 
-			action.enterText(txtBox_email_recruitmentPage, firstName+lastName+"@orange.com");
+			action.enterText(txtBox_email_recruitmentPage, firstName+lastName+domainName);
 
-			action.enterText(txtBox_contactNumber_recruitmentPage, "9876543210");			
+			action.enterText(txtBox_contactNumber_recruitmentPage, contactNumber);			
 
-			action.enterText(txtBox_keyWords_recruitmentPage, "Java, Selenium WebDriver, API");
+			action.enterText(txtBox_keyWords_recruitmentPage, sampleKeywords);
 
 			action.clickButton(btn_fromDate_recruitmentPage);
 
 			action.clickButton(btn_today_recruitmentPage);
 
-			action.enterText(txtBox_notes_recruitmentPage, "This is Sample Note of Added Candidate");
+			action.enterText(txtBox_notes_recruitmentPage, sampleNotes);
 
 			action.clickCheckBox(cb_consentData_recruitmentPage);
 

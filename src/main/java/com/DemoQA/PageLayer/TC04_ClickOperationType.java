@@ -42,13 +42,12 @@ public class TC04_ClickOperationType extends TestBase {
 
 			extentTest.get().log(Status.INFO, "Click performed using conventional click(); method");		
 
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].click();", btn_handle2_homePage);
-
+			action.jClickButton(btn_handle2_homePage);
+			
 			extentTest.get().log(Status.INFO, "Click performed using Javascript executor interface");
-
-			Actions actions = new Actions(driver);
-			actions.click(btn_handle3_homePage).perform();
+			
+			action.actionClick(btn_handle3_homePage);
+			
 			extentTest.get().log(Status.INFO, "Click performed using Actions class");
 
 			btn_handle4_homePage.sendKeys(Keys.ENTER);

@@ -42,6 +42,7 @@ public class TestBase {
 	public static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
 
 	static String appUrl;
+	public String defaultTitle;
 	protected static String userDirectory;
 	static String desiredBrowser = "chrome";       // firefox
 	static String browserVersion = "127.0.6533.122";
@@ -91,6 +92,7 @@ public class TestBase {
 		ConfigLoader.loadConfig(environment);
 		userDirectory = ConfigLoader.getProperty("userDirectory");
 		appUrl = ConfigLoader.getProperty("appUrl");
+		defaultTitle = ConfigLoader.getProperty("defaultTitle");
 
 		// Fetch login credentials from configuration file
 		userName = ConfigLoader.getProperty("username");

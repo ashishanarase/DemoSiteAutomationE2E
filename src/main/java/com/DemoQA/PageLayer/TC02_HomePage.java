@@ -39,7 +39,7 @@ public class TC02_HomePage extends TestBase {
 
 		try {
 
-			action.titleValidation("OrangeHRM");
+			action.titleValidation(defaultTitle);
 
 			action.enterText(txtBox_userName_loginPage, userName);
 
