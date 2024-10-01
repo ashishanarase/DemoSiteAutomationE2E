@@ -1,16 +1,16 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Automation Test Suite" parallel="false">
+<suite name="DemoSiteAutomation-RegressionSuite" parallel="false">
     
     <listeners>
 		<listener class-name = "utilityPackage.ListenerClass"/>
 	</listeners>
     <!-- Test Tag: Defines a Test -->
-    <test name="Test Cases">
+    <test name="Regression_TestCases">
         
         <!-- Class Tag: Specifies the Class containing the TestNG methods -->
         <classes>
-            <class name="com.DemoQA.TestCase.TestCase"/>
+            <class name="com.DemoQA.TestLayer.TestCase"/>
         </classes>
         
     </test>
