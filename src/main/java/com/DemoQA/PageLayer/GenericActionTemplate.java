@@ -468,7 +468,6 @@ public class GenericActionTemplate extends TestBase {
 		}
 	}
 
-
 	// Method to validate text from element
 	public void textValidation(WebElement element, String expectedText) {
 		String actualText = element.getText();

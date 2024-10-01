@@ -1,8 +1,11 @@
 package com.DemoQA.TestBase;
 
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
@@ -26,10 +29,9 @@ import com.DemoQA.PageLayer.TC14_DataProviderInTestNg;
 import com.DemoQA.PageLayer.TC15_MultipleWindowsAndTabHandling;
 import com.DemoQA.PageLayer.TC16_SSLCertificate;
 import com.DemoQA.PageLayer.TC17_FailedTestCase;
+import com.DemoQA.PageLayer.TC18_PdfDownloadAndValidation;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utilityPackage.ConfigLoader;
 import utilityPackage.DataProvider;
@@ -53,6 +55,7 @@ public class TestBase {
 	protected String invalidUserName;
 	protected String invalidPassword;
 	protected String resetUserName;
+	protected String downloadDirPath;
 
 	// Fetch employee details from dataprovider class
 	String[] nameDetails;
@@ -79,12 +82,13 @@ public class TestBase {
 	public TC15_MultipleWindowsAndTabHandling d15;
 	public TC16_SSLCertificate d16;
 	public TC17_FailedTestCase d17;
+	public TC18_PdfDownloadAndValidation d18;
 
 	@BeforeSuite
 	public void dataGeneration() {
 		//Used to generate employee data randomly for each test run
 		DataProvider.getNameDetails();
-		
+
 		extent = new ExtentReports();
 
 		// Load environment-specific properties from ConfigLoader
@@ -100,6 +104,7 @@ public class TestBase {
 		invalidUserName = ConfigLoader.getProperty("invalidUserName");
 		invalidPassword = ConfigLoader.getProperty("invalidPassword");
 		resetUserName = ConfigLoader.getProperty("resetUserName");
+		downloadDirPath = userDirectory + "Downloads";
 
 		// Fetch employee details from dataprovider class
 		nameDetails = DataProvider.getNameDetails();
@@ -112,8 +117,19 @@ public class TestBase {
 	public void startBrowser () {	
 
 		if (desiredBrowser.equalsIgnoreCase("chrome")) {
+			
 			WebDriverManager.chromedriver().setup(); //.browserVersion(browserVersion)
-			driver = new ChromeDriver();
+
+			// Configure Chrome Options
+			Map<String, Object> prefs = new HashMap<String, Object>();
+			prefs.put("download.default_directory", downloadDirPath);
+			prefs.put("download.prompt_for_download", false); // Disable download prompt
+			prefs.put("plugins.always_open_pdf_externally", true); // Automatically open PDFs externally
+
+			ChromeOptions options = new ChromeOptions();
+			options.setExperimentalOption("prefs", prefs);
+
+			driver = new ChromeDriver(options);
 
 		}
 
@@ -141,6 +157,7 @@ public class TestBase {
 		d15 = new TC15_MultipleWindowsAndTabHandling();
 		d16 = new TC16_SSLCertificate();
 		d17 = new TC17_FailedTestCase();
+		d18 = new TC18_PdfDownloadAndValidation();
 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();

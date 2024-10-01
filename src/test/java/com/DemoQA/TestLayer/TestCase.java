@@ -147,6 +147,19 @@ public class TestCase extends TestBase{
 	}	
 	
 	
+	@Test(priority = 18, enabled = true, 
+			description = "Test to ensure that the user can download PDF and validate data")	
+	public void TC18_PdfDownloadAndValidation()  {
+
+		d18.navigateToProduct();
+		
+		d18.productDetails();
+		
+		d18.downloadTearsheet();
+		
+	}	
+	
+	
 	
 	
 //Upcoming test case work - data driven test for validation on login saucelab web site https://www.saucedemo.com/
