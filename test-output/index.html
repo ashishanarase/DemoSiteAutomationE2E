@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\ashish.anarase\AppData\Local\Temp\testng-eclipse--1052087504\testng-customsuite.xml</span>
+                    <span>C:\Users\ASHISH\AppData\Local\Temp\testng-eclipse--614052255\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.DemoQA.TestLayer.TestCase" class="method navigator-link" hash-for-method="TC18_PdfDownloadAndValidation">TC18_PdfDownloadAndValidation</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.DemoQA.TestLayer.TestCase" class="method navigator-link" hash-for-method="TC07_IFrameHandling">TC07_IFrameHandling</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -126,49 +126,73 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="TC18_PdfDownloadAndValidation">
-                  </a> <!-- TC18_PdfDownloadAndValidation -->
-                  <span class="method-name">TC18_PdfDownloadAndValidation</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (2a79fed935296d02bd3b48efb3f52bda)] -&gt; xpath: (//img[@class=&apos;product-image&apos;])[16]] (tried for 30 second(s) with 500 milliseconds interval)
+                  <a name="TC07_IFrameHandling">
+                  </a> <!-- TC07_IFrameHandling -->
+                  <span class="method-name">TC07_IFrameHandling</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//iframe[@frameborder=&apos;0&apos;])[1]&quot;}
+  (Session info: chrome=129.0.6668.70)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.18.0&apos;, revision: &apos;b6bf9de7cc*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.70, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57123}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57123/devtoo..., se:cdpVersion: 129.0.6668.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2a79fed935296d02bd3b48efb3f52bda
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.DemoQA.PageLayer.TC18_PdfDownloadAndValidation.navigateToProduct(TC18_PdfDownloadAndValidation.java:75)
-	at com.DemoQA.TestLayer.TestCase.TC18_PdfDownloadAndValidation(TestCase.java:154)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+Command: [a21b72684ee86ad6edce3566b4f6a7bb, findElement {using=xpath, value=(//iframe[@frameborder=&apos;0&apos;])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.70, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\ASHISH\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55790}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55790/devtoo..., se:cdpVersion: 129.0.6668.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a21b72684ee86ad6edce3566b4f6a7bb
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:1105)
+	at com.DemoQA.PageLayer.TC07_IframeHandling.iframeHandling(TC07_IframeHandling.java:37)
+	at com.DemoQA.TestLayer.TestCase.TC07_IFrameHandling(TestCase.java:70)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
 	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:819)
+	at org.testng.TestRunner.run(TestRunner.java:619)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
 	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
 	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+	at org.testng.TestNG.runSuites(TestNG.java:1134)
+	at org.testng.TestNG.run(TestNG.java:1101)
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 
 </div> <!-- stack-trace -->
                   <em>
-(Test to ensure that the user can download PDF and validate data)                  </em>
+(Test to handle and interact with an iFrame element within a webpage)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -176,7 +200,7 @@ Session ID: 2a79fed935296d02bd3b48efb3f52bda
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\ashish.anarase\AppData\Local\Temp\testng-eclipse--1052087504\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\ASHISH\AppData\Local\Temp\testng-eclipse--614052255\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -185,11 +209,7 @@ Session ID: 2a79fed935296d02bd3b48efb3f52bda
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.DemoQA.TestLayer.TestCase&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;TC18_PdfDownloadAndValidation&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.DemoQA.TestLayer.TestCase --&gt;
+      &lt;class name=&quot;com.DemoQA.TestLayer.TestCase&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -231,14 +251,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'TC18_PdfDownloadAndValidation')
+data.setCell(0, 1, 'TC07_IFrameHandling')
 data.setCell(0, 2, 'com.DemoQA.TestLayer.TestCase')
-data.setCell(0, 3, 45829);
+data.setCell(0, 3, 11946);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 45 seconds</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -259,45 +279,45 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.DemoQA.TestLayer.TestCase</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TC15_MultipleTabAndWindows</span>
-                <br/>
-                <span class="ignored-method-name">TC11_ExplicitWaitConditions</span>
-                <br/>
                 <span class="ignored-method-name">TC03_WebElementAction</span>
-                <br/>
-                <span class="ignored-method-name">TC02_LoginLogOut</span>
-                <br/>
-                <span class="ignored-method-name">TC12_BrokenLinkValidation</span>
-                <br/>
-                <span class="ignored-method-name">TC10_DropdownHandling</span>
-                <br/>
-                <span class="ignored-method-name">TC16_sslCertificateMethod</span>
-                <br/>
-                <span class="ignored-method-name">TC05_DynamicTableStructure</span>
-                <br/>
-                <span class="ignored-method-name">TC09_AlertHandling</span>
-                <br/>
-                <span class="ignored-method-name">TC13_MouseAction</span>
-                <br/>
-                <span class="ignored-method-name">TC14_DataProviderMethod</span>
                 <br/>
                 <span class="ignored-method-name">TC26_SkippedTestCase</span>
                 <br/>
-                <span class="ignored-method-name">TC17_FailedTestCase</span>
+                <span class="ignored-method-name">TC15_MultipleTabAndWindows</span>
+                <br/>
+                <span class="ignored-method-name">TC02_LoginLogOut</span>
+                <br/>
+                <span class="ignored-method-name">TC10_DropdownHandling</span>
+                <br/>
+                <span class="ignored-method-name">TC12_BrokenLinkValidation</span>
+                <br/>
+                <span class="ignored-method-name">TC16_sslCertificateMethod</span>
+                <br/>
+                <span class="ignored-method-name">TC09_AlertHandling</span>
                 <br/>
                 <span class="ignored-method-name">TC08_SearchResultAndCartValidation</span>
+                <br/>
+                <span class="ignored-method-name">TC18_PdfDownloadAndValidation</span>
+                <br/>
+                <span class="ignored-method-name">TC05_DynamicTableStructure</span>
+                <br/>
+                <span class="ignored-method-name">TC14_DataProviderMethod</span>
+                <br/>
+                <span class="ignored-method-name">TC13_MouseAction</span>
+                <br/>
+                <span class="ignored-method-name">TC01_ActionOnBrowser</span>
                 <br/>
                 <span class="ignored-method-name">TC27_WarningTestCase</span>
                 <br/>
                 <span class="ignored-method-name">TC06_WindowHandling</span>
                 <br/>
-                <span class="ignored-method-name">TC07_IFrameHandling</span>
-                <br/>
                 <span class="ignored-method-name">TC25_ImageComparison</span>
                 <br/>
-                <span class="ignored-method-name">TC04_ClickOperationType</span>
+                <span class="ignored-method-name">TC17_FailedTestCase</span>
                 <br/>
-                <span class="ignored-method-name">TC01_ActionOnBrowser</span>
+                <span class="ignored-method-name">TC11_ExplicitWaitConditions</span>
+                <br/>
+                <span class="ignored-method-name">TC04_ClickOperationType</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -316,17 +336,17 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startBrowser</span>
-                <span class="method-start">167 ms</span>
+                <span class="method-start">485 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">TC18_PdfDownloadAndValidation</span>
-                <span class="method-start">5096 ms</span>
+                <span class="method-name">TC07_IFrameHandling</span>
+                <span class="method-start">7298 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">51115 ms</span>
+                <span class="method-start">19534 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
