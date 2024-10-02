@@ -95,7 +95,8 @@ public class TestBase {
 		String environment = System.getProperty("environment", "prod");    //prod //test
 		ConfigLoader.loadConfig(environment);
 		userDirectory = ConfigLoader.getProperty("userDirectory");
-		appUrl = ConfigLoader.getProperty("appUrl");
+	//	appUrl = ConfigLoader.getProperty("appUrl");
+		appUrl = "https://www.google.com/";
 		defaultTitle = ConfigLoader.getProperty("defaultTitle");
 
 		// Fetch login credentials from configuration file
