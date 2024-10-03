@@ -7,8 +7,8 @@
         <methods>
           <include name="dataGeneration"/>
           <include name="closeBrowser"/>
-          <include name="TC07_IFrameHandling"/>
           <include name="startBrowser"/>
+          <include name="TC07_IFrameHandling"/>
         </methods>
       </class> <!-- com.DemoQA.TestLayer.TestCase -->
     </classes>

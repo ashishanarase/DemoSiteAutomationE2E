@@ -33,6 +33,8 @@ public class TC07_IframeHandling extends TestBase {
 			driver.get(currentUrl);
 
 			extentTest.get().log(Status.PASS, "Navigated to Google home page");
+			
+			action.visibilityCheck(ele_frameElement_iframe);
 
 			driver.switchTo().frame(ele_frameElement_iframe);
 
