@@ -221,6 +221,6 @@ public class CommonMethods extends TestBase {
 	}
 
 
-	//Class brace closing	
+//Class Brace	
 }
 

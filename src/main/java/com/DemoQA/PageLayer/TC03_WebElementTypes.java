@@ -20,7 +20,7 @@ public class TC03_WebElementTypes extends TestBase {
 	private String contactNumber = "9876543210";	
 	private String sampleKeywords = "Java, Selenium WebDriver, API";	
 	private String sampleNotes = "This is Sample Note of Added Candidate";
-	
+
 	//------------ Xpath Repository -------------
 
 	@FindBy(xpath = "//span[text()='Recruitment']") 	//tagname[text()='text_value']
@@ -131,5 +131,7 @@ public class TC03_WebElementTypes extends TestBase {
 
 	}
 
+
+//Class Brace
 }
 

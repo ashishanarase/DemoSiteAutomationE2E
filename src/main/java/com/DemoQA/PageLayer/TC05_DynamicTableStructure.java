@@ -59,5 +59,8 @@ public class TC05_DynamicTableStructure extends TestBase {
 			throw e; // Re-throw the exception to be caught globally
 		}
 	}
+	
+	
+//Class Brace	
 }
 

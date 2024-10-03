@@ -63,13 +63,13 @@ public class TC18_PdfDownloadAndValidation extends TestBase {
 	public void navigateToProduct() {
 
 		try {
-			
+
 			driver.get(newelUrl);
 
 			action.clickButton(btn_newArrivals_HomePage);
 
 			cardNumber = DataProvider.getIntValue(1, 48);
-			
+
 			action.urlValidation(expectedUrl);
 
 			WebElement productImage = wait.until(ExpectedConditions.visibilityOf
@@ -132,7 +132,7 @@ public class TC18_PdfDownloadAndValidation extends TestBase {
 			String actualId = txt_productId_productPage.getText();
 
 			String actualDimensions = txt_productDimensions_productPage.getText();
-			
+
 			System.out.println("1="+actualTitle+" /1="+expectedTitle);
 			System.out.println("2="+actualPrice+" /2="+expectedPrice);
 			System.out.println("3="+actualQty+" /3="+expectedQty);
@@ -148,24 +148,26 @@ public class TC18_PdfDownloadAndValidation extends TestBase {
 		}
 	}
 
-		public void downloadTearsheet() {
+	public void downloadTearsheet() {
 
-			try {
+		try {
 
-				action.jScrollToView(btn_downloadTearSheet1_productPage);
+			action.jScrollToView(btn_downloadTearSheet1_productPage);
 
-				action.clickButton(btn_downloadTearSheet1_productPage);
+			action.clickButton(btn_downloadTearSheet1_productPage);
 
-				action.clickButton(btn_downloadTearSheet2_productPage);
+			action.clickButton(btn_downloadTearSheet2_productPage);
 
-				extentTest.get().log(Status.PASS, "Method executed successfully : downloadTearsheet();");
+			extentTest.get().log(Status.PASS, "Method executed successfully : downloadTearsheet();");
 
-			} 
-			catch (Exception e) {
-				extentTest.get().log(Status.FAIL, "Method failed : downloadTearsheet();");
-				throw e; // Re-throw the exception to be caught globally
-			}
-
+		} 
+		catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Method failed : downloadTearsheet();");
+			throw e; // Re-throw the exception to be caught globally
 		}
+
 	}
 
+	
+//Class Brace	
+}

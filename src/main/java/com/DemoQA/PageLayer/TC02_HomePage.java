@@ -75,4 +75,6 @@ public class TC02_HomePage extends TestBase {
 			throw new RuntimeException("Method failed : logOut(); due to an Exception : ", e); // Re-throw the exception to be caught globally
 		}
 	}
+	
+//Class Brace	
 }

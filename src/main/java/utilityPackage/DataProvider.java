@@ -77,17 +77,18 @@ public class DataProvider {
 	}
 
 	public static int extractNumericValue(String input) {
-        // Use regular expression to replace all non-numeric characters with an empty string
-        String numericString = input.replaceAll("[^0-9]", ""); 
+		// Use regular expression to replace all non-numeric characters with an empty string
+		String numericString = input.replaceAll("[^0-9]", ""); 
 
-        // Convert the cleaned numeric string to an integer
-        int numericValue = Integer.parseInt(numericString);
+		// Convert the cleaned numeric string to an integer
+		int numericValue = Integer.parseInt(numericString);
 
-        return numericValue;
-      
+		return numericValue;
+
 	}
 
-}
 
+//Class Brace	
+}
 
 

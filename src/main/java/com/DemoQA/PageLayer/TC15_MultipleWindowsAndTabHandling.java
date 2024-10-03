@@ -37,7 +37,7 @@ public class TC15_MultipleWindowsAndTabHandling extends TestBase {
 			String title1 = driver.getTitle();
 
 			extentTest.get().log(Status.PASS, "Script focus on : "+ title1);
-			
+
 			Thread.sleep(2000);
 
 			driver.switchTo().newWindow(WindowType.WINDOW);
@@ -48,7 +48,7 @@ public class TC15_MultipleWindowsAndTabHandling extends TestBase {
 			String title2 = driver.getTitle();
 
 			extentTest.get().log(Status.PASS, "Script focus on : "+ title2);
-			
+
 			Thread.sleep(2000);
 
 			Set <String> list = driver.getWindowHandles();
@@ -67,9 +67,9 @@ public class TC15_MultipleWindowsAndTabHandling extends TestBase {
 
 	public void multipleTab() {
 		try {
-			
+
 			driver.get(currentUrl3);
-			
+
 			// Opens a new window and switches to new window
 			String title1 = driver.getTitle();
 
@@ -83,7 +83,7 @@ public class TC15_MultipleWindowsAndTabHandling extends TestBase {
 			String title2 = driver.getTitle();
 
 			extentTest.get().log(Status.INFO, "Script focus on : "+ title2);
-			
+
 			Set <String> list = driver.getWindowHandles();
 
 			extentTest.get().log(Status.INFO, "List of tab handles : "+ list);
@@ -98,4 +98,6 @@ public class TC15_MultipleWindowsAndTabHandling extends TestBase {
 
 	}
 
+
+//Class Brace	
 }

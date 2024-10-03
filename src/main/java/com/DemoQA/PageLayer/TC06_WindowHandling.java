@@ -80,4 +80,7 @@ public class TC06_WindowHandling extends TestBase {
 
 	}
 
-}
+
+//Class Brace	
+}	
+

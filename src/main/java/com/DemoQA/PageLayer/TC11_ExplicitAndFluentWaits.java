@@ -40,8 +40,8 @@ public class TC11_ExplicitAndFluentWaits extends TestBase {
 		try {
 
 			driver.get(currentUrl);
-			
-		//	https://webdriveruniversity.com/Ajax-Loader/index.html
+
+			//	https://webdriveruniversity.com/Ajax-Loader/index.html
 
 			if (cb_checkBox_homePage.isSelected()) {
 				extentTest.get().log(Status.INFO, "CheckBox is selected successfully before select action");
@@ -108,4 +108,6 @@ public class TC11_ExplicitAndFluentWaits extends TestBase {
 		}
 	}
 
+	
+//Class Brace	
 }

@@ -10,10 +10,10 @@ public class ConfigLoader {
 
 	//OFF
 	//static String userDirectory ="C:\\Users\\ashish.anarase\\git\\DemoSiteAutomationE2E\\";
-	
+
 	//ON
 	static String userDirectory = "C:\\Users\\ASHISH\\eclipse-workspace\\DemoSiteAutomationE2E\\";
-		
+
 	public static void loadConfig(String environment) {
 		try (FileInputStream input = new FileInputStream(userDirectory+"\\DataFiles\\config_" + environment + ".properties")) {
 			properties.load(input);
@@ -26,4 +26,7 @@ public class ConfigLoader {
 	public static String getProperty(String key) {
 		return properties.getProperty(key);
 	}
+
+
+//Class Brace	
 }

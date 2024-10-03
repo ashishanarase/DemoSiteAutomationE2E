@@ -48,4 +48,6 @@ public class TC00_SampleClass extends TestBase {
 		
 	}
 
+	
+//Class Brace
 }

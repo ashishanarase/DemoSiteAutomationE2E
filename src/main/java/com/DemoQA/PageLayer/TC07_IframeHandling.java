@@ -50,4 +50,6 @@ public class TC07_IframeHandling extends TestBase {
 			throw e; // Re-throw the exception to be caught globally
 		}
 	}
-}
+
+//Class Brace	
+}	

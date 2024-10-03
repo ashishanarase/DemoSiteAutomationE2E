@@ -21,13 +21,13 @@ public class TC13_MouseAction extends TestBase {
 	}
 
 	private String currentUrl = "https://webdriveruniversity.com/index.html";
-	
+
 	private String expectedTxt_holdElement = "Well done! keep holding that click now.....";
-	
+
 	private String txt_desiredTitle = "Actions";
-	
+
 	private int value1 = 100; 
-	
+
 	private int value2 = 200;
 
 	//------------ Xpath Repository -------------
@@ -69,38 +69,38 @@ public class TC13_MouseAction extends TestBase {
 		try {
 
 			driver.get(currentUrl);
-			
+
 			action.actionClick(btn_actionUrl_homePage);			
-			
+
 			Set <String> handles = driver.getWindowHandles();
 			List <String> handlesList = new ArrayList<String>(handles);
 
 			for (String desiredHandle : handlesList) {
 				String title = driver.switchTo().window(desiredHandle).getTitle();
-				
+
 				if (title.contains(txt_desiredTitle)) {
-	
+
 				}
 			}
 
 			action.actionDoubleClick(btn_doubleClick_homePage);
 
 			action.actionMouseOver(btn_hover1_homePage);	
-			
+
 			action.actionMouseOver(btn_hover2_homePage);	
-			
+
 			action.actionMouseOver(btn_hover3_homePage);	
 
 			action.actionDragDrop(btn_dragFrom_homePage, btn_dragTo_homePage);
 
 			action.jScrollToView(btn_clickAndHold_homePage);
-			
+
 			action.actionHold(btn_clickAndHold_homePage);		
 
 			action.textValidation(text_holdClick_homePage, expectedTxt_holdElement);
 
 			action.actionRelease(text_holdClick_homePage);
-			
+
 			action.actionMoveToCoordinate(value1, value2);
 
 			extentTest.get().log(Status.PASS, "Method executed successfully : mouseAction();");
@@ -113,4 +113,6 @@ public class TC13_MouseAction extends TestBase {
 
 	}
 
+
+//Class Brace	
 }

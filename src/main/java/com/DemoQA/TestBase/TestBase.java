@@ -95,7 +95,7 @@ public class TestBase {
 		String environment = System.getProperty("environment", "prod");    //prod //test
 		ConfigLoader.loadConfig(environment);
 		userDirectory = ConfigLoader.getProperty("userDirectory");
-	//	appUrl = ConfigLoader.getProperty("appUrl");
+		//	appUrl = ConfigLoader.getProperty("appUrl");
 		appUrl = "https://www.google.com/";
 		defaultTitle = ConfigLoader.getProperty("defaultTitle");
 
@@ -118,7 +118,7 @@ public class TestBase {
 	public void startBrowser () {	
 
 		if (desiredBrowser.equalsIgnoreCase("chrome")) {
-			
+
 			WebDriverManager.chromedriver().setup(); //.browserVersion(browserVersion)
 
 			// Configure Chrome Options
@@ -175,4 +175,5 @@ public class TestBase {
 	}
 
 
+//Class Brace	
 }

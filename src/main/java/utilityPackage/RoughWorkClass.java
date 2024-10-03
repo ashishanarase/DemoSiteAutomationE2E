@@ -49,9 +49,9 @@ public class RoughWorkClass {
 
 		WebElement element2 = wait.until(ExpectedConditions.visibilityOf
 				(driver.findElement(By.id("nav-search-dropdown-card"))));		
-		
+
 		element2.click();
-		
+
 		WebElement element3 = wait.until(ExpectedConditions.visibilityOf
 				(driver.findElement(By.xpath("//select[@aria-describedby='searchDropdownDescription']"))));
 
@@ -74,4 +74,7 @@ public class RoughWorkClass {
 		System.out.println(true);
 
 	}
+
+
+//Class Brace	
 }

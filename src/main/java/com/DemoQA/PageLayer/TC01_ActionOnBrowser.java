@@ -64,4 +64,6 @@ public class TC01_ActionOnBrowser extends TestBase {
 		}
 
 	}
+	
+//Class Brace	
 }

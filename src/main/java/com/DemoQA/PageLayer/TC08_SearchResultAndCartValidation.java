@@ -189,4 +189,7 @@ public class TC08_SearchResultAndCartValidation extends TestBase {
 		}
 
 	}
-}
+
+
+//Class Brace	
+}	

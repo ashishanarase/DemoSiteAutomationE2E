@@ -50,10 +50,14 @@ public class TC16_SSLCertificate extends TestBase {
 		catch (Exception e) {
 			extentTest.get().log(Status.FAIL, "Method failed : sslCertificateMethod();");
 			throw new RuntimeException("Method failed : sslCertificateMethod(); due to an Exception : ", e); // Re-throw the exception to be caught globally
-			
+
 		}
 
 	}
+
+
+
+//Class Brace	
 }
 
 

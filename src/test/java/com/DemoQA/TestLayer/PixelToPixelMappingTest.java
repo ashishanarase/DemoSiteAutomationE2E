@@ -24,15 +24,15 @@ import ru.yandex.qatools.ashot.coordinates.WebDriverCoordsProvider;
 public class PixelToPixelMappingTest {
 
 	WebDriver driver;
-	
+
 	String fileName = "ohrm_logo.png";	
-	
+
 	@FindBy (xpath="//img[@title='int-qus-home']")
 	private WebElement element;
-		
+
 	public String path = "D:\\Ashish-All Data\\Data\\Automation Project BackUp\\DemoPro_DataFiles\\"+fileName;
-	
-	
+
+
 	@BeforeMethod
 	public void setUp() {
 		WebDriverManager.chromedriver().setup();
@@ -42,65 +42,65 @@ public class PixelToPixelMappingTest {
 
 	@Test
 	public void imageComparision() throws Exception {
-		
+
 		//driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-		
-//		driver.get("https://automationtesting.in/");
-//		
-//		Thread.sleep(4000);
-//			
-		
+
+		//		driver.get("https://automationtesting.in/");
+		//		
+		//		Thread.sleep(4000);
+		//			
+
 		BufferedImage expectedImage = ImageIO.read(new File(path));
-		
+
 		//Screenshot logoImage = new AShot().takeScreenshot(driver, element);
-		
-		 Screenshot logoImage = new AShot()
-	                .coordsProvider(new WebDriverCoordsProvider())
-	                .takeScreenshot(driver, element);
-		
+
+		Screenshot logoImage = new AShot()
+				.coordsProvider(new WebDriverCoordsProvider())
+				.takeScreenshot(driver, element);
+
 		BufferedImage actualImage = logoImage.getImage();
-		
+
 		//System.out.println(actualPath);
-		
+
 		ImageDiffer imgDiffer = new ImageDiffer();
-		
+
 		ImageDiff difference = imgDiffer.makeDiff(expectedImage, actualImage);
-		
+
 		if (difference.hasDiff()==true) {
 			System.out.println(true);
 		}
 		else {
 			System.out.println(false);
 		}
-		
+
 	}
 
-	
+
 	@Test
 	public void imageComparision2() throws Exception {
-		
+
 		String exPath = "D:\\Ashish-All Data\\Data\\Automation Project BackUp\\DemoPro_DataFiles\\OrangeHRM_Orange.jpg";
-		
+
 		String acPath = "D:\\Ashish-All Data\\Data\\Automation Project BackUp\\DemoPro_DataFiles\\OrangeHRM_Orange - Copy.jpg";
-		
-			
+
+
 		BufferedImage expectedImage = ImageIO.read(new File(exPath));		
-		
+
 		BufferedImage actualImage = ImageIO.read(new File(acPath));
-		
+
 		ImageDiffer imgDiffer = new ImageDiffer();
-		
+
 		ImageDiff difference = imgDiffer.makeDiff(expectedImage, actualImage);
-		
+
 		assertFalse(difference.hasDiff(), "Ekdam Same");
-		
+
 		if (difference.hasDiff()==true) {
 			System.out.println("Not Same");
 		}
 		else {
 			System.out.println("Ekdam Same");
 		}
-		
+
 		driver.quit();
 	}
 
@@ -110,5 +110,7 @@ public class PixelToPixelMappingTest {
 		driver.quit();
 	}
 
+
+//Class Brace	
 }
 

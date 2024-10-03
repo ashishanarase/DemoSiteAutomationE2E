@@ -111,6 +111,9 @@ public class TC12_BrokenLinkValidation extends TestBase {
 			return true; // Consider null URLs as broken
 		}
 	}
+
+
+//Class Brace	
 }
 
 

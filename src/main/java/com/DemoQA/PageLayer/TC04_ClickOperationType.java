@@ -55,4 +55,5 @@ public class TC04_ClickOperationType extends TestBase {
 		}
 	}
 
+//Class Brace	
 }

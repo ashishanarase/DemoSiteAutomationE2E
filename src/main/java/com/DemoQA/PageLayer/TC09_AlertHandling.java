@@ -72,4 +72,6 @@ public class TC09_AlertHandling extends TestBase {
 			throw e; // Re-throw the exception to be caught globally
 		}
 	} 
+
+//Class Brace	
 }
