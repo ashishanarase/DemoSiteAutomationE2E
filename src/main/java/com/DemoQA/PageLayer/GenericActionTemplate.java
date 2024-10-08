@@ -69,8 +69,8 @@ public class GenericActionTemplate extends TestBase {
 	14. textValidation  -- implement
 	15. readExcelData
 	16. writeExcelData
-	17. selectDropdownValue
-	18. selectGetOptionsValidation  - implement
+	17. selectDropdown
+	18. selectGetOptions  - implement
 	19. titleValidation
 
 	20. switchToNextTab
@@ -543,7 +543,7 @@ public class GenericActionTemplate extends TestBase {
 	//Method to select the value from dropdown using select Class 
 	public void selectDropdown(WebElement element, String value) {
 
-		wait.until(ExpectedConditions.visibilityOf(element));
+	//	wait.until(ExpectedConditions.visibilityOf(element));
 
 		// Initialize the Select class with the dropdown element
 		Select selObject = new Select(element);
@@ -589,7 +589,7 @@ public class GenericActionTemplate extends TestBase {
 
 	public List<String> selectGetOptions(WebElement element) {
 
-		wait.until(ExpectedConditions.visibilityOf(element));
+	//	wait.until(ExpectedConditions.visibilityOf(element));
 
 		// Initialize the Select class with the dropdown element
 		Select selObject = new Select(element);

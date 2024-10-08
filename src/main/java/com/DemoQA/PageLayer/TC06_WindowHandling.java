@@ -55,7 +55,7 @@ public class TC06_WindowHandling extends TestBase {
 
 			for (String desiredHandle : handlesList) {
 				String title = driver.switchTo().window(desiredHandle).getTitle();
-				System.out.println(title);
+			//	System.out.println(title);
 				if (title.contains(txt_desiredTitle)) {
 					extentTest.get().log(Status.PASS, "Switched to tab : "+ title);
 					Thread.sleep(3000);		

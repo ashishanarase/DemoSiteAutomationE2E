@@ -25,8 +25,14 @@ public class TC10_DropdownHandling extends TestBase {
 
 	//------------ Xpath Repository -------------
 
+	@FindBy (xpath = "	//header[@id='navbar-main']")
+	private WebElement element_header_homePage;
+	
+	@FindBy (xpath = "//div[@id='nav-search-dropdown-card']")
+	private WebElement btn_allOption1_homePage;
+	
 	//@FindBy (xpath="//div[@id='nav-search-dropdown-card']/descendant::select")
-	@FindBy (xpath = "//select[@id='searchDropdownBox']")
+	@FindBy (xpath = "//div[@id='nav-search-dropdown-card']/descendant::select")
 	private WebElement btn_allOption_homePage;
 
 	//------------ Action Methods -------------	
@@ -38,7 +44,7 @@ public class TC10_DropdownHandling extends TestBase {
 			driver.get(currentUrl);
 
 			extentTest.get().log(Status.PASS, "Navigated to Amazon home page");
-
+			
 			List<String> optionList = action.selectGetOptions(btn_allOption_homePage);
 
 			int count = optionList.size();

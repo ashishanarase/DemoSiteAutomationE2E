@@ -35,11 +35,11 @@ public class TC02_HomePage extends TestBase {
 
 
 	//---------------------Methods-----------------
-	public void login(String userName, String passWord) {
+	public void login(String title, String userName, String passWord) {
 
 		try {
 
-			action.titleValidation(defaultTitle);
+			action.titleValidation(title);
 
 			action.enterText(txtBox_userName_loginPage, userName);
 

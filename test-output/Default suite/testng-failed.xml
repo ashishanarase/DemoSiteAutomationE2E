@@ -8,7 +8,7 @@
           <include name="dataGeneration"/>
           <include name="closeBrowser"/>
           <include name="startBrowser"/>
-          <include name="TC07_IFrameHandling"/>
+          <include name="TC26_SkippedTestCase"/>
         </methods>
       </class> <!-- com.DemoQA.TestLayer.TestCase -->
     </classes>
