@@ -5,10 +5,10 @@
     <classes>
       <class name="com.DemoQA.TestLayer.TestCase">
         <methods>
+          <include name="TC18_PdfDownloadAndValidation"/>
           <include name="dataGeneration"/>
           <include name="closeBrowser"/>
           <include name="startBrowser"/>
-          <include name="TC26_SkippedTestCase"/>
         </methods>
       </class> <!-- com.DemoQA.TestLayer.TestCase -->
     </classes>
