@@ -31,13 +31,16 @@ public class TC18_PdfDownloadAndValidation extends TestBase {
 
 	//------------ Xpath Repository -------------
 	// Using @FindBy to locate a single element by ID, Xpath etc
-	@FindBy(xpath = "(//a[text()='New at Newel'])[1]")
-	private WebElement btn_newArrivals_HomePage;
+	@FindBy(xpath = "(//a[contains(text(),'Furniture')])[1]")
+	private WebElement btn_furniture_HomePage;	
+	
+	@FindBy(xpath = "//p[text()=' results']")
+	private WebElement txt_resultCount_productPage;
 
 	@FindBy(xpath = "//div[@class='product_name']")
 	private WebElement txt_productTitle_productPage;
 
-	@FindBy(xpath = "//div[@class='product_name']/following::h5")
+	@FindBy(xpath = "//div[@class='product_price']/h5")
 	private WebElement txt_productPrice_productPage;	
 
 	@FindBy(xpath = "//span[contains(text(),'Available Qty:')]")
@@ -66,11 +69,11 @@ public class TC18_PdfDownloadAndValidation extends TestBase {
 
 			driver.get(newelUrl);
 
-			action.clickButton(btn_newArrivals_HomePage);
+			action.clickButton(btn_furniture_HomePage);
 
 			cardNumber = DataProvider.getIntValue(1, 48);
 
-			action.urlValidation(expectedUrl);
+			action.jScrollToView(txt_resultCount_productPage);
 
 			WebElement productImage = wait.until(ExpectedConditions.visibilityOf
 					(driver.findElement(By.xpath(staticPath+cardNumber+"]"))));			
@@ -123,6 +126,8 @@ public class TC18_PdfDownloadAndValidation extends TestBase {
 
 			//	driver.get("https://www.newel.com/product/pair-of-art-deco-mid-century-burl-circular-end-side-tables-with-mahogany-veneered-bases");
 
+			action.jScrollToView(txt_productTitle_productPage);
+			
 			String actualTitle = txt_productTitle_productPage.getText();
 
 			String actualPrice = txt_productPrice_productPage.getText();

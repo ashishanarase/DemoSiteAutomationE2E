@@ -42,6 +42,7 @@ public class GenericActionTemplate extends TestBase {
 	 2. actionMouseOver
 	 3. actionRightClick
 	 4. actionDoubleClick
+	 5. actionClickCoordinate
 	 5. actionDragDrop
 	 6. actionHold
 	 7. actionRelease
@@ -115,17 +116,19 @@ public class GenericActionTemplate extends TestBase {
 	}
 
 
-	//Method to perform mouse over action on desired WebElement
-	public void actionMoveToCoordinate(int x, int y) {	
+	//Method to perform click action with specific coordinate
+	public void actionClickCoordinate(int x, int y) {	
 
 		try {	        	
 
 			performAction.moveToLocation(x,y).build().perform();
+			
+			performAction.moveByOffset(x,y).click().build().perform();
 
-			extentTest.get().log(Status.PASS, "Mouse-over on the '(" + x +", " + y + ")' co-ordinate using the Actions class_moveToLocation() method");
+			extentTest.get().log(Status.PASS, "Clicked on the '(" + x +", " + y + ")' co-ordinate using the Actions class_moveToLocation() method");
 
 		} catch (Exception e) {
-			extentTest.get().log(Status.FAIL, "Failed to mouse-over on the co-ordinate'(" + x +", " + y + ")' button using the Actions class_moveToLocation() method | Exception: " + e.getMessage());
+			extentTest.get().log(Status.FAIL, "Failed to click on the co-ordinate'(" + x +", " + y + ")' button using the Actions class_moveToLocation() method | Exception: " + e.getMessage());
 			throw e;
 		}
 	}
@@ -167,6 +170,21 @@ public class GenericActionTemplate extends TestBase {
 	}
 
 
+	
+	//Method to perform mouse over action on desired WebElement
+		public void actionMoveToCoordinate(int x, int y) {	
+
+			try {	        	
+
+				performAction.moveToLocation(x,y).build().perform();
+
+				extentTest.get().log(Status.PASS, "Mouse-over on the '(" + x +", " + y + ")' co-ordinate using the Actions class_moveToLocation() method");
+
+			} catch (Exception e) {
+				extentTest.get().log(Status.FAIL, "Failed to mouse-over on the co-ordinate'(" + x +", " + y + ")' button using the Actions class_moveToLocation() method | Exception: " + e.getMessage());
+				throw e;
+			}
+		}
 	//Method to perform Drag and Drop action on desired WebElement
 	public void actionDragDrop(WebElement sourceElement, WebElement targetElement) {	
 
