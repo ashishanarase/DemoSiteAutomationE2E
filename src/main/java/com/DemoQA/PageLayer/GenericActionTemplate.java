@@ -40,41 +40,41 @@ public class GenericActionTemplate extends TestBase {
 	/*All method Sequence
 	 1. actionClick
 	 2. actionMouseOver
-	 3. actionRightClick
-	 4. actionDoubleClick
-	 5. actionClickCoordinate
-	 5. actionDragDrop
-	 6. actionHold
-	 7. actionRelease
+	 3. actionClickCoordinate
+	 4. actionRightClick
+	 5. actionDoubleClick
+	 6. actionDragDrop
+	 7. actionHold
+	 8. actionRelease
 
-	 8. alertAccept
-	 9. alertDismiss
-	10. alertSendkeysAccept
+	 9. alertAccept
+	10. alertDismiss
+	11. alertSendkeysAccept
 
- 	11. clickCheck
-	12. clickButton
-	13. clickCheckBox
-	14. checkBoxEnabled
-	15. enterText
+ 	12. clickCheck
+	13. clickButton
+	14. clickCheckBox
+	15. checkBoxEnabled
+	16. enterText
+	
+	17. jClickButton
+	18. jScrollToCoordinate
+	19. jScrollToView
 
-	 2. jClickButton
-	 3. jScrollToCoordinate
-	 4. jScrollToView
 
+	20. visibilityCheck
+	21. internalUrlValidation    -- Add and Implement If Required
+	22. externalUrlValidation    -- Add and Implement If Required
+	23. urlValidation   
 
-	 5. visibilityCheck
-	 6. internalUrlValidation    -- Add and Implement If Required
-	 7. externalUrlValidation    -- Add and Implement If Required
-	 8. urlValidation   
+	24. textValidation 
+	25. readExcelData
+	26. writeExcelData
+	27. selectDropdown
+	28. selectGetOptions 
+	29. titleValidation
 
-	14. textValidation  -- implement
-	15. readExcelData
-	16. writeExcelData
-	17. selectDropdown
-	18. selectGetOptions  - implement
-	19. titleValidation
-
-	20. switchToNextTab
+	30. switchToNextTab
 
 
 	 */

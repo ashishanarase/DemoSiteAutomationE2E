@@ -13,14 +13,14 @@ public class TestCase extends TestBase{
 
 	//Dynamic data which can change any time
 	String searchkey = "One Plus Nord";
-	
+
 
 	@Test (priority=1, enabled=true, 
 			description = "Test to verify browser resizing and positioning operations")
 	public void TC01_ActionOnBrowser() {
 		//Dimension Class and Point Class usage
 		d1.actionOnBrowser();
-		
+
 	}
 
 	@Test (priority=2, enabled=true, invocationCount = 1,
@@ -28,7 +28,7 @@ public class TestCase extends TestBase{
 	public void TC02_LoginLogOut() {
 		//Login and Logout on Demo Website
 		d2.login(defaultTitle, userName,passWord);
-		
+
 		d2.logOut();
 	}
 
@@ -37,9 +37,9 @@ public class TestCase extends TestBase{
 	public void TC03_WebElementAction () {
 		//Different Type of element and Handling them
 		d2.login(defaultTitle, userName,passWord);
-		
+
 		d3.actionOnElements();
-		
+
 		d2.logOut();
 	}
 
@@ -70,9 +70,9 @@ public class TestCase extends TestBase{
 	public void TC07_IFrameHandling(){
 		//Handled Iframe on Google.com 
 		d7.iframeHandling();
-		
+
 	}
-	
+
 
 	@Test (priority=8, enabled=true,
 			description = "Test to dynamically validate the search results, count and cart value validation")
@@ -80,9 +80,9 @@ public class TestCase extends TestBase{
 		//Fetch the search result count dynamically in run time. 
 		//Assume here we can send any input in search box and code should work properly.
 		d8.searchResultValidation();
-		
+
 		d8.searchResultCount(searchkey);
-		
+
 		d8.cartValue();
 	}
 
@@ -150,63 +150,77 @@ public class TestCase extends TestBase{
 
 		d17.loginExpectedToFail(invalidUserName, invalidPassword);		
 	}	
-	
-	
+
+
 	@Test(priority = 18, enabled = true, 
 			description = "Test to ensure that the user can download PDF and store at desired repository")	
 	public void TC18_PdfDownloadAndValidation()  {
 
 		d18.navigateToProduct();
-		
+
 		d18.productDetails();
-		
+
 		d18.downloadTearsheet();
-		
+
 	}	
-	
+
 	
 	@Test(priority = 19, enabled = true, 
-			description = "Test to verify that actual image is matches with the expected image using pixel to pixel mapping")
-	public void TC19_ImageComparison() throws Exception  {
+			description = "Test to verify the login and logout functionality of the application using multiple set of data")
+	public void TC19_LoginLogoutDataDriven() {
 
-		Thread.sleep(4000);
 		
-		String actualPath = CommonMethods.takeScreenShot(driver, "ImageCompare_"); 
 		
-		Thread.sleep(2000);
-	
-		//	String expectedPath = "D:\\Ashish-All Data\\Data\\Automation Project BackUp\\DemoPro_DataFiles\\OrangeHRM_Blue.jpg";
-		
-		String expectedPath = "D:\\Ashish-All Data\\Data\\Automation Project BackUp\\DemoPro_DataFiles\\OrangeHRM_Orange.jpg";
-		
-		CommonMethods.imageComparison(expectedPath, actualPath);
-		
-	}	
-	
+
+	}
 	
 
 	@Test(priority = 20, enabled = true, 
-			description = "This test will be marked as skipped in test report_TestShouldSkipped")
-	public void TC20_SkippedTestCase() {
+			description = "Test to verify that actual image is matches with the expected image using pixel to pixel mapping")
+	public void TC20_ImageComparison() throws Exception  {
+
+		Thread.sleep(4000);
+
+		String actualPath = CommonMethods.takeScreenShot(driver, "ImageCompare_"); 
+
+		Thread.sleep(2000);
+
+		//	String expectedPath = "D:\\Ashish-All Data\\Data\\Automation Project BackUp\\DemoPro_DataFiles\\OrangeHRM_Blue.jpg";
+
+		String expectedPath = "D:\\Ashish-All Data\\Data\\Automation Project BackUp\\DemoPro_DataFiles\\OrangeHRM_Orange.jpg";
+
+		CommonMethods.imageComparison(expectedPath, actualPath);
+
+	}	
+
+
+
+	@Test(priority = 21, enabled = true, 
+			description = "Test to verify login ata driven test for validation on login saucelab_TestShouldSkipped")
+	public void TC21_SkippedTestCase() {
 
 		boolean condition = true; // You can set this condition dynamically -true always
 		if (condition) {
 			throw new SkipException("Skipping this test because the condition is true");
 		}
 	}
+
+
 	
-//Upcoming test case work - data driven test for validation on login saucelab web site https://www.saucedemo.com/
-//dependsOnMethods = {"TC02_LoginLogOut"} annotation for Employeer Credentials creation for newly added emp 	
-//	Optimise broken link validation print and handle null pointer exception and Print count of Valid and broken links
+
+
+	//Upcoming test case work - data driven test for validation on login saucelab web site https://www.saucedemo.com/
+	//dependsOnMethods = {"TC02_LoginLogOut"} annotation for Employeer Credentials creation for newly added emp 	
+	//	Optimise broken link validation print and handle null pointer exception and Print count of Valid and broken links
 	//Handle excel file of test cases as per the results like newel
-	
+
 	//Modify Explicite wait with having all condition handled in automations
 	//Timeout annotation not worked on TC01
 	//Optimize code for image comparison as it not working after taking live image 
-	
+
 	//Add title of tab in config file
 	//Check for how to allow popup permission
-	
 
-//Class Brace
+
+	//Class Brace
 }
