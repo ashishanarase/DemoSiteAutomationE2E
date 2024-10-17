@@ -15,6 +15,7 @@ public class TC14_DataProviderInTestNg extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
+	//Required variables
 	private String currentUrl = "https://www.saucedemo.com";
 
 	//------------ Xpath Repository -------------
@@ -27,14 +28,18 @@ public class TC14_DataProviderInTestNg extends TestBase {
 	private WebElement txtBox_passWord_homePage;
 
 	@FindBy(id="login-button")
-	private WebElement btn_login_homePage;
-
+	private WebElement btn_login_homePage;	
+	
+	@FindBy(xpath="//span[@class='title']")
+	private WebElement txt_product_dashboard;
+	
+	
 	//------------ Action Methods -------------	
 
 	@DataProvider (name = "loginCasesData")
 	public Object [][] loginCasesData() {
 
-		Object [][] data = new Object[3][2];
+		Object [][] data = new Object[5][2];
 
 		data[0][0] = "standard_user";
 		data[0][1] = "secret_sauce";
@@ -44,7 +49,15 @@ public class TC14_DataProviderInTestNg extends TestBase {
 
 		data[2][0] = "problem_user";
 		data[2][1] = "secret_sauce";
-
+		
+		data[3][0] = "performance_glitch_user";
+		data[3][1] = "secret_sauce";
+		
+		data[4][0] = "error_user";
+		data[4][1] = "secret_sauce";
+	
+		data[5][0] = "visual_user";
+		data[5][1] = "secret_sauce";
 
 		// Another Way to pass data
 		//	Object [][] data = {{"standard_user","secret_sauce"},{"locked_out_user","secret_sauce"},{"problem_user","secret_sauce"}};

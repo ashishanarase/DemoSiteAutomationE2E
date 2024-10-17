@@ -15,7 +15,7 @@ public class ConfigLoader {
 	//static String userDirectory = "C:\\Users\\ASHISH\\eclipse-workspace\\DemoSiteAutomationE2E\\";
 
 	public static void loadConfig(String environment) {
-		try (FileInputStream input = new FileInputStream(userDirectory+"\\DataFiles\\config_" + environment + ".properties")) {
+		try (FileInputStream input = new FileInputStream(userDirectory+"\\ConfigFiles\\config_" + environment + ".properties")) {
 			properties.load(input);
 		} catch (IOException e) {
 			e.printStackTrace();
