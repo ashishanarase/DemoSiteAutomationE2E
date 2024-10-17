@@ -27,7 +27,7 @@ public class TestCase extends TestBase{
 			description = "Test to verify the login and logout functionality of the application")
 	public void TC02_LoginLogOut() {
 		//Login and Logout on Demo Website
-		d2.login(defaultTitle, userName,passWord);
+		d2.login(defaultTitle, userName, passWord);
 
 		d2.logOut();
 	}
