@@ -169,7 +169,7 @@ public class TestCase extends TestBase{
 			description = "Test to verify the login and logout functionality of the application using multiple set of data")
 	public void TC19_LoginLogoutDataDriven() {
 
-		
+		d19.loginDataDriven();
 		
 
 	}

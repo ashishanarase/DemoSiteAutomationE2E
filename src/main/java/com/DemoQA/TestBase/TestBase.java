@@ -30,6 +30,7 @@ import com.DemoQA.PageLayer.TC15_MultipleWindowsAndTabHandling;
 import com.DemoQA.PageLayer.TC16_SSLCertificate;
 import com.DemoQA.PageLayer.TC17_FailedTestCase;
 import com.DemoQA.PageLayer.TC18_PdfDownloadAndValidation;
+import com.DemoQA.PageLayer.TC19_LoginLogoutDataDriven;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -45,7 +46,7 @@ public class TestBase {
 
 	static String appUrl;
 	public String defaultTitle;
-	protected static String userDirectory;
+	public static String userDirectory;
 	static String desiredBrowser = "chrome";       // firefox
 	static String browserVersion = "127.0.6533.122";
 
@@ -83,6 +84,7 @@ public class TestBase {
 	public TC16_SSLCertificate d16;
 	public TC17_FailedTestCase d17;
 	public TC18_PdfDownloadAndValidation d18;
+	public TC19_LoginLogoutDataDriven d19;
 
 	@BeforeSuite
 	public void dataGeneration() {
@@ -159,6 +161,7 @@ public class TestBase {
 		d16 = new TC16_SSLCertificate();
 		d17 = new TC17_FailedTestCase();
 		d18 = new TC18_PdfDownloadAndValidation();
+		d19 = new TC19_LoginLogoutDataDriven();
 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
