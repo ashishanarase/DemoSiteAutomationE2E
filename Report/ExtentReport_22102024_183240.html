@@ -46,13 +46,13 @@
 						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
-		<span class='report-name'>Demo Automation Report_27092024_194902</span>
+		<span class='report-name'>Demo Automation Report_22102024_183240</span>
 		<!-- report headline -->
 		<span class='report-headline'></span>
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Sep 27, 2024 07:49:01 pm</span>
+			<span class='label blue darken-3 suite-start-time'>Oct 22, 2024 06:32:40 pm</span>
 			</a>
 		</ul>
 	</div>
@@ -133,15 +133,15 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>TC04_ClickOperationType</span>
-						<span class='test-time'>Sep 27, 2024 07:50:04 pm</span>
+						<span class='test-name'>TC19_LoginLogoutDataDriven</span>
+						<span class='test-time'>Oct 22, 2024 06:32:46 pm</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Sep 27, 2024 07:50:04 pm</span>
-	<span class='label end-time'>Sep 27, 2024 07:50:12 pm</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+45ms</span>
+	<span class='label start-time'>Oct 22, 2024 06:32:46 pm</span>
+	<span class='label end-time'>Oct 22, 2024 06:32:59 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 12s+950ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -155,23 +155,23 @@
 		<tbody>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>7:50:04 pm</td>
+				<td class='timestamp'>6:32:46 pm</td>
 				<td class='step-details'>
-						Test Started : TC04_ClickOperationType
+						Test Started : TC19_LoginLogoutDataDriven
 					
 				</td>
 			</tr>
 			<tr class='log' status='info'>
 				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-				<td class='timestamp'>7:50:04 pm</td>
+				<td class='timestamp'>6:32:46 pm</td>
 				<td class='step-details'>
-						Test Description : Test to verify different ways of performing click operations on a web element
+						Test Description : Test to verify the login and logout functionality of the application using multiple set of data
 					
 				</td>
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>7:50:04 pm</td>
+				<td class='timestamp'>6:32:46 pm</td>
 				<td class='step-details'>
 						Navigated to the login page of WebApp
 					
@@ -179,7 +179,23 @@
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>7:50:05 pm</td>
+				<td class='timestamp'>6:32:47 pm</td>
+				<td class='step-details'>
+						Entered text 'standard_user' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:32:47 pm</td>
+				<td class='step-details'>
+						Entered text 'secret_sauce' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:32:47 pm</td>
 				<td class='step-details'>
 						Clicked on element :  button using click(); method
 					
@@ -187,82 +203,90 @@
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>7:50:06 pm</td>
+				<td class='timestamp'>6:32:47 pm</td>
 				<td class='step-details'>
-						Clicked on element :  button using Javascript executor interface
+						Clicked on element : Open Menu button using click(); method
 					
 				</td>
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>7:50:11 pm</td>
+				<td class='timestamp'>6:32:48 pm</td>
 				<td class='step-details'>
-						Clicked on the '' button using the Actions class_click() method
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>7:50:12 pm</td>
-				<td class='step-details'>
-						Failed to enter keys '?' into the '' | Exception : invalid element state
-  (Session info: chrome=129.0.6668.70)
-Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [07eed78569de42fe5018170c7675c22a, clearElement {id=f.EFDB4350B0F7CC50EC34EB36983BF9B7.d.39216BBA498A6C9F4C2A7299B58C051E.e.25}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.70, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\ASHISH\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58347}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58347/devtoo..., se:cdpVersion: 129.0.6668.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (07eed78569de42fe5018170c7675c22a)] -> xpath: (//a[@target='_blank'])[4]]
-Session ID: 07eed78569de42fe5018170c7675c22a
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>7:50:12 pm</td>
-				<td class='step-details'>
-						Method failed : clickOperationType();
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>7:50:12 pm</td>
-				<td class='step-details'>
-						TestCase Failed : TC04_ClickOperationType
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>7:50:12 pm</td>
-				<td class='step-details'>
-						TestCase Failed : org.openqa.selenium.InvalidElementStateException: invalid element state
-  (Session info: chrome=129.0.6668.70)
-Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [07eed78569de42fe5018170c7675c22a, clearElement {id=f.EFDB4350B0F7CC50EC34EB36983BF9B7.d.39216BBA498A6C9F4C2A7299B58C051E.e.25}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.70, chrome: {chromedriverVersion: 129.0.6668.70 (df87d5cf12b1..., userDataDir: C:\Users\ASHISH\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58347}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58347/devtoo..., se:cdpVersion: 129.0.6668.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (07eed78569de42fe5018170c7675c22a)] -> xpath: (//a[@target='_blank'])[4]]
-Session ID: 07eed78569de42fe5018170c7675c22a
+						Clicked on element :  button using click(); method
 					
 				</td>
 			</tr>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>7:50:12 pm</td>
+				<td class='timestamp'>6:32:48 pm</td>
 				<td class='step-details'>
-						Screenshot captured and saved at : C:\Users\ASHISH\eclipse-workspace\DemoSiteAutomationE2E\Screenshots\TC04_ClickOperationType27092024_195012.jpg
+						Entered text 'locked_out_user' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:32:48 pm</td>
+				<td class='step-details'>
+						Entered text 'secret_sauce' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:32:48 pm</td>
+				<td class='step-details'>
+						Clicked on element :  button using click(); method
 					
 				</td>
 			</tr>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>7:50:12 pm</td>
+				<td class='timestamp'>6:32:59 pm</td>
+				<td class='step-details'>
+						Method failed : navigateToProduct();
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:32:59 pm</td>
+				<td class='step-details'>
+						TestCase Failed : TC19_LoginLogoutDataDriven
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:32:59 pm</td>
+				<td class='step-details'>
+						TestCase Failed : org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='title']"}
+  (Session info: chrome=130.0.6723.58)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3ce22b0506000ab57f4d97852101fd19, findElement {using=xpath, value=//span[@class='title']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.58, chrome: {chromedriverVersion: 130.0.6723.58 (3a50e012e4c9..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54738}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54738/devtoo..., se:cdpVersion: 130.0.6723.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3ce22b0506000ab57f4d97852101fd19
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:32:59 pm</td>
+				<td class='step-details'>
+						Screenshot captured and saved at : C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC19_LoginLogoutDataDriven22102024_183259.jpg
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:32:59 pm</td>
 				<td class='step-details'>
 						Screenshot attached :
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\ASHISH\eclipse-workspace\DemoSiteAutomationE2E\Screenshots\TC04_ClickOperationType27092024_195012.jpg' src='C:\Users\ASHISH\eclipse-workspace\DemoSiteAutomationE2E\Screenshots\TC04_ClickOperationType27092024_195012.jpg'>
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC19_LoginLogoutDataDriven22102024_183259.jpg' src='C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC19_LoginLogoutDataDriven22102024_183259.jpg'>
 				</td>
 			</tr>
 		</tbody>
@@ -310,19 +334,19 @@ Session ID: 07eed78569de42fe5018170c7675c22a
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Sep 27, 2024 07:49:01 pm</div>
+					<div class='panel-lead'>Oct 22, 2024 06:32:40 pm</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Sep 27, 2024 07:50:14 pm</div>
+			 		<div class='panel-lead'>Oct 22, 2024 06:33:01 pm</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 1m 12s+819ms</div>
+					<div class='panel-lead'>0h 0m 21s+482ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -389,7 +413,7 @@ Session ID: 07eed78569de42fe5018170c7675c22a
 		</script>
 		<script>
 			var timeline = {
-			        "TC04_ClickOperationType":8.045
+			        "TC19_LoginLogoutDataDriven":12.95
 			};
 		</script>
 	

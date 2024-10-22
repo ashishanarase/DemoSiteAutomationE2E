@@ -35,11 +35,16 @@ public class TC19_LoginLogoutDataDriven extends TestBase{
 	private WebElement txtBox_passWord_homePage;
 
 	@FindBy(id="login-button")
-	private WebElement btn_login_homePage;
-	
+	private WebElement btn_login_homePage;	
 	
 	@FindBy(xpath="//span[@class='title']")
 	private WebElement txt_product_dashboard;
+	
+	@FindBy(id="react-burger-menu-btn")
+	private WebElement btn_menuButton_dashboard;
+	
+	@FindBy(id="logout_sidebar_link")
+	private WebElement btn_logOut_dashboard;
 
 
 
@@ -66,6 +71,8 @@ public class TC19_LoginLogoutDataDriven extends TestBase{
 				results.add(result);
 			}
 
+			List<String> actualResults = new ArrayList<>();
+			
 			// Iterate through all three lists using the index
 	        for (int i = 0; i < usernames.size(); i++) {
 	            String username = usernames.get(i);
@@ -78,7 +85,16 @@ public class TC19_LoginLogoutDataDriven extends TestBase{
 	            
 	            action.clickButton(btn_login_homePage);
 	            
-	            action.visibilityCheck(txt_product_dashboard);
+	           if (txt_product_dashboard.isDisplayed()) {
+	        	   actualResults.add("Passed");
+	        	   
+	        	   action.clickButton(btn_menuButton_dashboard);
+	        	   
+	        	   action.clickButton(btn_logOut_dashboard);
+	           }
+	           else {
+	        	   actualResults.add("Failed");
+	           }
 	            
 	        }
 
