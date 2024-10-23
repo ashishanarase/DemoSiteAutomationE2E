@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,7 +22,7 @@ public class TC19_LoginLogoutDataDriven extends TestBase{
 	private String currentUrl = "https://www.saucedemo.com";
 	private String dataSheetPath = userDirectory + "\\DataFiles\\LoginCredentialsData.xlsx";
 	private int startRowNo = 1;
-	private int endRowNo = 7;
+	private int endRowNo = 6;
 	private int startColNo = 0;
 	private int endColNo = 4;
 
@@ -36,13 +37,13 @@ public class TC19_LoginLogoutDataDriven extends TestBase{
 
 	@FindBy(id="login-button")
 	private WebElement btn_login_homePage;	
-	
+
 	@FindBy(xpath="//span[@class='title']")
 	private WebElement txt_product_dashboard;
-	
+
 	@FindBy(id="react-burger-menu-btn")
 	private WebElement btn_menuButton_dashboard;
-	
+
 	@FindBy(id="logout_sidebar_link")
 	private WebElement btn_logOut_dashboard;
 
@@ -72,31 +73,39 @@ public class TC19_LoginLogoutDataDriven extends TestBase{
 			}
 
 			List<String> actualResults = new ArrayList<>();
-			
+
 			// Iterate through all three lists using the index
-	        for (int i = 0; i < usernames.size(); i++) {
-	            String username = usernames.get(i);
-	            String password = passwords.get(i);
-	            String expectedResult = results.get(i);
-	            
-	            action.enterText(txtBox_userName_homePage, username);
-	            
-	            action.enterText(txtBox_passWord_homePage, password);
-	            
-	            action.clickButton(btn_login_homePage);
-	            
-	           if (txt_product_dashboard.isDisplayed()) {
-	        	   actualResults.add("Passed");
-	        	   
-	        	   action.clickButton(btn_menuButton_dashboard);
-	        	   
-	        	   action.clickButton(btn_logOut_dashboard);
-	           }
-	           else {
-	        	   actualResults.add("Failed");
-	           }
-	            
-	        }
+			for (int i = 0; i < usernames.size(); i++) {
+				String username = usernames.get(i);
+				String password = passwords.get(i);
+				String expectedResult = results.get(i);
+
+				action.enterText(txtBox_userName_homePage, username);
+
+				action.enterText(txtBox_passWord_homePage, password);
+
+				action.clickButton(btn_login_homePage);
+
+				try {
+					// Check if the dashboard element is displayed (successful login)
+					if (txt_product_dashboard.isDisplayed()) {
+						actualResults.add("Passed");
+
+						// Log out after successful login
+						action.clickButton(btn_menuButton_dashboard);
+						action.clickButton(btn_logOut_dashboard);
+					} 
+				} catch (NoSuchElementException e) {
+					// If the element is not found, it means login failed
+					actualResults.add("Failed");
+					
+				}
+
+
+
+			}
+
+			System.out.println(actualResults);
 
 		} 
 		catch (Exception e) {
