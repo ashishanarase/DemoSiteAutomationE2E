@@ -8,7 +8,7 @@
           <include name="dataGeneration"/>
           <include name="closeBrowser"/>
           <include name="startBrowser"/>
-          <include name="TC19_LoginLogoutDataDriven"/>
+          <include name="TC02_LoginLogOut"/>
         </methods>
       </class> <!-- com.DemoQA.TestLayer.TestCase -->
     </classes>
