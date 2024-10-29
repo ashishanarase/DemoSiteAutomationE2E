@@ -1,4 +1,4 @@
-package com.DemoQA.TestLayer;
+package com.DemoQA.PageLayer;
 
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
@@ -21,7 +21,7 @@ import ru.yandex.qatools.ashot.comparison.ImageDiff;
 import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 import ru.yandex.qatools.ashot.coordinates.WebDriverCoordsProvider;
 
-public class PixelToPixelMappingTest {
+public class TC20_PixelToPixelMapping {
 
 	WebDriver driver;
 
