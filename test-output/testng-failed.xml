@@ -8,7 +8,7 @@
           <include name="dataGeneration"/>
           <include name="closeBrowser"/>
           <include name="startBrowser"/>
-          <include name="TC02_LoginLogOut"/>
+          <include name="TC21_MutualFundAnalysis"/>
         </methods>
       </class> <!-- com.DemoQA.TestLayer.TestCase -->
     </classes>

@@ -31,6 +31,7 @@ import com.DemoQA.PageLayer.TC16_SSLCertificate;
 import com.DemoQA.PageLayer.TC17_FailedTestCase;
 import com.DemoQA.PageLayer.TC18_PdfDownloadAndValidation;
 import com.DemoQA.PageLayer.TC19_LoginLogoutDataDriven;
+import com.DemoQA.PageLayer.TC21_MutualFundAnalysis;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -85,6 +86,9 @@ public class TestBase {
 	public TC17_FailedTestCase d17;
 	public TC18_PdfDownloadAndValidation d18;
 	public TC19_LoginLogoutDataDriven d19;
+	
+	
+	public TC21_MutualFundAnalysis d21;
 
 	@BeforeSuite
 	public void dataGeneration() {
@@ -162,6 +166,9 @@ public class TestBase {
 		d17 = new TC17_FailedTestCase();
 		d18 = new TC18_PdfDownloadAndValidation();
 		d19 = new TC19_LoginLogoutDataDriven();
+		
+		
+		d21 = new TC21_MutualFundAnalysis();
 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();

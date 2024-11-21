@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -56,7 +58,7 @@ public class GenericActionTemplate extends TestBase {
 	14. clickCheckBox
 	15. checkBoxEnabled
 	16. enterText
-	
+
 	17. jClickButton
 	18. jScrollToCoordinate
 	19. jScrollToView
@@ -122,7 +124,7 @@ public class GenericActionTemplate extends TestBase {
 		try {	        	
 
 			performAction.moveToLocation(x,y).build().perform();
-			
+
 			performAction.moveByOffset(x,y).click().build().perform();
 
 			extentTest.get().log(Status.PASS, "Clicked on the '(" + x +", " + y + ")' co-ordinate using the Actions class_moveToLocation() method");
@@ -170,21 +172,21 @@ public class GenericActionTemplate extends TestBase {
 	}
 
 
-	
+
 	//Method to perform mouse over action on desired WebElement
-		public void actionMoveToCoordinate(int x, int y) {	
+	public void actionMoveToCoordinate(int x, int y) {	
 
-			try {	        	
+		try {	        	
 
-				performAction.moveToLocation(x,y).build().perform();
+			performAction.moveToLocation(x,y).build().perform();
 
-				extentTest.get().log(Status.PASS, "Mouse-over on the '(" + x +", " + y + ")' co-ordinate using the Actions class_moveToLocation() method");
+			extentTest.get().log(Status.PASS, "Mouse-over on the '(" + x +", " + y + ")' co-ordinate using the Actions class_moveToLocation() method");
 
-			} catch (Exception e) {
-				extentTest.get().log(Status.FAIL, "Failed to mouse-over on the co-ordinate'(" + x +", " + y + ")' button using the Actions class_moveToLocation() method | Exception: " + e.getMessage());
-				throw e;
-			}
+		} catch (Exception e) {
+			extentTest.get().log(Status.FAIL, "Failed to mouse-over on the co-ordinate'(" + x +", " + y + ")' button using the Actions class_moveToLocation() method | Exception: " + e.getMessage());
+			throw e;
 		}
+	}
 	//Method to perform Drag and Drop action on desired WebElement
 	public void actionDragDrop(WebElement sourceElement, WebElement targetElement) {	
 
@@ -502,7 +504,7 @@ public class GenericActionTemplate extends TestBase {
 	}
 
 	//Method to read excel file
-	public String readExcel(String path, int rowIndex, int cellIndex) {
+	public String readExcel(String path, int cellIndex, int rowIndex) {
 
 		String cellInput = "";  // Initialize the variable
 		try {
@@ -520,8 +522,18 @@ public class GenericActionTemplate extends TestBase {
 			//Row1
 			XSSFRow exrow = exsheet.getRow(rowIndex);			//Row index starts from 0
 
-			//Column1
-			cellInput = exrow.getCell(cellIndex).getStringCellValue();
+			Cell cell = exrow.getCell(cellIndex);
+
+			// Check if the cell is not null
+			if (cell != null) {
+				DataFormatter formatter = new DataFormatter(); // Format cell value as a string
+
+				// Determine cell type and get value accordingly
+				cellInput = formatter.formatCellValue(cell);
+			} else {
+				cellInput = ""; // Default if cell is empty
+			}
+
 		}
 
 		catch(Exception e) {
@@ -531,7 +543,7 @@ public class GenericActionTemplate extends TestBase {
 	}
 
 	//Method to fetch excel file
-	public void writeExcel(String path, int rowIndex, int cellIndex, String input) {
+	public void writeExcel(String path, int cellIndex, int rowIndex, String input) {
 
 		try {
 			//Create a object of file class
@@ -561,7 +573,7 @@ public class GenericActionTemplate extends TestBase {
 	//Method to select the value from dropdown using select Class 
 	public void selectDropdown(WebElement element, String value) {
 
-	//	wait.until(ExpectedConditions.visibilityOf(element));
+		//	wait.until(ExpectedConditions.visibilityOf(element));
 
 		// Initialize the Select class with the dropdown element
 		Select selObject = new Select(element);
@@ -607,7 +619,7 @@ public class GenericActionTemplate extends TestBase {
 
 	public List<String> selectGetOptions(WebElement element) {
 
-	//	wait.until(ExpectedConditions.visibilityOf(element));
+		//	wait.until(ExpectedConditions.visibilityOf(element));
 
 		// Initialize the Select class with the dropdown element
 		Select selObject = new Select(element);

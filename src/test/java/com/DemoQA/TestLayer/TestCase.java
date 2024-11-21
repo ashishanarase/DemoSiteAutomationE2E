@@ -23,7 +23,7 @@ public class TestCase extends TestBase{
 
 	}
 
-	@Test (priority=2, enabled=true, invocationCount = 1,
+	@Test (priority=2, enabled=false, invocationCount = 1,
 			description = "Test to verify the login and logout functionality of the application")
 	public void TC02_LoginLogOut() {
 		//Login and Logout on Demo Website
@@ -194,10 +194,19 @@ public class TestCase extends TestBase{
 	}	
 
 
+	
+	@Test(priority = 21, enabled = true, 
+			description = "Test to verify mutual fund values")
+	public void TC21_MutualFundAnalysis() {
 
-	@Test(priority = 21, enabled = false, 
+		d21.analysisOne();
+		
+		
+	}
+
+	@Test(priority = 22, enabled = false, 
 			description = "Test to verify login ata driven test for validation on login saucelab_TestShouldSkipped")
-	public void TC21_SkippedTestCase() {
+	public void TC22_SkippedTestCase() {
 
 		boolean condition = false; // You can set this condition dynamically -false always
 		if (condition) {
