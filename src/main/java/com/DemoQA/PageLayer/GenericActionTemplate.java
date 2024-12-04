@@ -7,7 +7,6 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -21,7 +20,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
 import com.DemoQA.TestBase.TestBase;
 import com.aventstack.extentreports.Status;
 
@@ -62,7 +60,6 @@ public class GenericActionTemplate extends TestBase {
 	17. jClickButton
 	18. jScrollToCoordinate
 	19. jScrollToView
-
 
 	20. visibilityCheck
 	21. internalUrlValidation    -- Add and Implement If Required
