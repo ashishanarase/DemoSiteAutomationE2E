@@ -23,7 +23,7 @@ public class TestCase extends TestBase{
 
 	}
 
-	@Test (priority=2, enabled=false, invocationCount = 1,
+	@Test (priority=2, enabled=true, invocationCount = 1,
 			description = "Test to verify the login and logout functionality of the application")
 	public void TC02_LoginLogOut() {
 		//Login and Logout on Demo Website
@@ -195,7 +195,7 @@ public class TestCase extends TestBase{
 
 
 	
-	@Test(priority = 21, enabled = true, 
+	@Test(priority = 21, enabled = false, 
 			description = "Test to verify mutual fund values")
 	public void TC21_MutualFundAnalysis() {
 
