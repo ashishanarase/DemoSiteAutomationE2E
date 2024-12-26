@@ -539,8 +539,8 @@ public class GenericActionTemplate extends TestBase {
 		return cellInput;
 	}
 
-	//Method to fetch excel file
-	public void writeExcel(String path, int cellIndex, int rowIndex, String input) {
+	//Method to write excel file
+	public void writeExcelString(String path, int cellIndex, int rowIndex, String input) {
 
 		try {
 			//Create a object of file class
@@ -566,6 +566,65 @@ public class GenericActionTemplate extends TestBase {
 		}
 
 	}
+
+
+	//Method to write excel file
+	public void writeExcelInt(String path, int cellIndex, int rowIndex, int input) {
+
+		try {
+			//Create a object of file class
+			File exfile = new File(path);
+
+			//Create object file input stream
+			FileInputStream infile = new FileInputStream(exfile);
+
+			//Create object of XSSFWorkBook
+			XSSFWorkbook new_book = new XSSFWorkbook(infile);
+			//Create object for sheet
+			XSSFSheet exsheet = new_book.getSheetAt(0);	//Sheet index starts from 0
+
+			///To set the data in excel file
+			exsheet.getRow(rowIndex).createCell(cellIndex).setCellValue(input);
+			FileOutputStream fos = new FileOutputStream(exfile);
+			new_book.write(fos);
+			new_book.close();
+		}
+
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+
+	//Method to write excel file
+	public void writeExcelDouble(String path, int cellIndex, int rowIndex, double input) {
+
+		try {
+			//Create a object of file class
+			File exfile = new File(path);
+
+			//Create object file input stream
+			FileInputStream infile = new FileInputStream(exfile);
+
+			//Create object of XSSFWorkBook
+			XSSFWorkbook new_book = new XSSFWorkbook(infile);
+			//Create object for sheet
+			XSSFSheet exsheet = new_book.getSheetAt(0);	//Sheet index starts from 0
+
+			///To set the data in excel file
+			exsheet.getRow(rowIndex).createCell(cellIndex).setCellValue(input);
+			FileOutputStream fos = new FileOutputStream(exfile);
+			new_book.write(fos);
+			new_book.close();
+		}
+
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
 
 	//Method to select the value from dropdown using select Class 
 	public void selectDropdown(WebElement element, String value) {

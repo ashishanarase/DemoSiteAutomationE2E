@@ -1,5 +1,6 @@
 package utilityPackage;
 
+import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Random;
@@ -88,7 +89,20 @@ public class DataProvider {
 	}
 
 
-//Class Brace	
+	public static double extractTwoDecimalValue(double input) {
+
+		input = input * 100;
+
+		DecimalFormat df = new DecimalFormat("#.00");
+		String formattedValue = df.format(input);
+
+		double outputValue = Double.parseDouble(formattedValue);
+
+		return outputValue;
+	}
+
+
+	//Class Brace	
 }
 
 

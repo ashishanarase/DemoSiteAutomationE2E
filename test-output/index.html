@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\ASHISH\AppData\Local\Temp\testng-eclipse--1558365603\testng-customsuite.xml</span>
+                    <span>C:\Users\ashish.anarase\AppData\Local\Temp\testng-eclipse-1712488495\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
                     </span>
-                    <div class="method-list-content failed suite-Default_suite">
+                    <div class="method-list-content passed suite-Default_suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="com.DemoQA.TestLayer.TestCase" class="method navigator-link" hash-for-method="TC21_MutualFundAnalysis">TC21_MutualFundAnalysis</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,9 +118,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
+          <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">com.DemoQA.TestLayer.TestCase</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -129,55 +129,16 @@
                   <a name="TC21_MutualFundAnalysis">
                   </a> <!-- TC21_MutualFundAnalysis -->
                   <span class="method-name">TC21_MutualFundAnalysis</span>
-                  <div class="stack-trace">java.lang.RuntimeException: Method failed : logOut(); due to an Exception : 
-	at com.DemoQA.PageLayer.TC21_MutualFundAnalysis.analysisOne(TC21_MutualFundAnalysis.java:132)
-	at com.DemoQA.TestLayer.TestCase.TC21_MutualFundAnalysis(TestCase.java:202)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:819)
-	at org.testng.TestRunner.run(TestRunner.java:619)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-	at org.testng.TestNG.runSuites(TestNG.java:1134)
-	at org.testng.TestNG.run(TestNG.java:1101)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NumberFormatException: For input string: &quot;s of 07 Nov 2024&quot;
-	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
-	at java.base/java.lang.Integer.parseInt(Integer.java:668)
-	at java.base/java.lang.Integer.parseInt(Integer.java:786)
-	at com.DemoQA.PageLayer.TC21_MutualFundAnalysis.analysisOne(TC21_MutualFundAnalysis.java:122)
-	... 29 more
-
-</div> <!-- stack-trace -->
                   <em>
 (Test to verify mutual fund values)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\ASHISH\AppData\Local\Temp\testng-eclipse--1558365603\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\ashish.anarase\AppData\Local\Temp\testng-eclipse-1712488495\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -234,12 +195,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TC21_MutualFundAnalysis')
 data.setCell(0, 2, 'com.DemoQA.TestLayer.TestCase')
-data.setCell(0, 3, 10551);
+data.setCell(0, 3, 22514);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 22 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -260,47 +221,47 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.DemoQA.TestLayer.TestCase</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TC22_SkippedTestCase</span>
-                <br/>
                 <span class="ignored-method-name">TC10_DropdownHandling</span>
                 <br/>
                 <span class="ignored-method-name">TC12_BrokenLinkValidation</span>
                 <br/>
-                <span class="ignored-method-name">TC18_PdfDownloadAndValidation</span>
-                <br/>
-                <span class="ignored-method-name">TC03_WebElementAction</span>
-                <br/>
-                <span class="ignored-method-name">TC15_MultipleTabAndWindows</span>
-                <br/>
-                <span class="ignored-method-name">TC13_MouseAction</span>
-                <br/>
-                <span class="ignored-method-name">TC05_DynamicTableStructure</span>
-                <br/>
-                <span class="ignored-method-name">TC08_SearchResultAndCartValidation</span>
-                <br/>
-                <span class="ignored-method-name">TC09_AlertHandling</span>
-                <br/>
-                <span class="ignored-method-name">TC16_sslCertificateMethod</span>
-                <br/>
-                <span class="ignored-method-name">TC14_DataProviderMethod</span>
-                <br/>
-                <span class="ignored-method-name">TC01_ActionOnBrowser</span>
-                <br/>
-                <span class="ignored-method-name">TC02_LoginLogOut</span>
-                <br/>
-                <span class="ignored-method-name">TC06_WindowHandling</span>
-                <br/>
-                <span class="ignored-method-name">TC04_ClickOperationType</span>
-                <br/>
-                <span class="ignored-method-name">TC20_ImageComparison</span>
-                <br/>
-                <span class="ignored-method-name">TC07_IFrameHandling</span>
-                <br/>
-                <span class="ignored-method-name">TC17_FailedTestCase</span>
+                <span class="ignored-method-name">TC22_SkippedTestCase</span>
                 <br/>
                 <span class="ignored-method-name">TC11_ExplicitWaitConditions</span>
                 <br/>
+                <span class="ignored-method-name">TC17_FailedTestCase</span>
+                <br/>
+                <span class="ignored-method-name">TC08_SearchResultAndCartValidation</span>
+                <br/>
+                <span class="ignored-method-name">TC03_WebElementAction</span>
+                <br/>
+                <span class="ignored-method-name">TC01_ActionOnBrowser</span>
+                <br/>
+                <span class="ignored-method-name">TC06_WindowHandling</span>
+                <br/>
+                <span class="ignored-method-name">TC09_AlertHandling</span>
+                <br/>
+                <span class="ignored-method-name">TC04_ClickOperationType</span>
+                <br/>
+                <span class="ignored-method-name">TC13_MouseAction</span>
+                <br/>
+                <span class="ignored-method-name">TC07_IFrameHandling</span>
+                <br/>
+                <span class="ignored-method-name">TC20_ImageComparison</span>
+                <br/>
                 <span class="ignored-method-name">TC19_LoginLogoutDataDriven</span>
+                <br/>
+                <span class="ignored-method-name">TC02_LoginLogOut</span>
+                <br/>
+                <span class="ignored-method-name">TC18_PdfDownloadAndValidation</span>
+                <br/>
+                <span class="ignored-method-name">TC05_DynamicTableStructure</span>
+                <br/>
+                <span class="ignored-method-name">TC14_DataProviderMethod</span>
+                <br/>
+                <span class="ignored-method-name">TC15_MultipleTabAndWindows</span>
+                <br/>
+                <span class="ignored-method-name">TC16_sslCertificateMethod</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -319,17 +280,15 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">startBrowser</span>
-                <span class="method-start">401 ms</span>
+                <span class="method-start">178 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">TC21_MutualFundAnalysis</span>
-                <span class="method-start">7939 ms</span>
+                <span class="method-start">4694 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">18833 ms</span>
+                <span class="method-start">27208 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
