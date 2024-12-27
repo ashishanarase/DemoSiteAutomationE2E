@@ -195,11 +195,13 @@ public class TestCase extends TestBase{
 
 
 	
-	@Test(priority = 21, enabled = false, 
+	@Test(priority = 21, enabled = true, 
 			description = "Test to verify mutual fund values")
 	public void TC21_MutualFundAnalysis() throws Exception {
 
-		d21.analysisOne();
+	//	d21.analysisOne();
+		
+		d21.analyzeFunds();
 		
 		
 	}
