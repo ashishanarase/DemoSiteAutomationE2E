@@ -199,8 +199,6 @@ public class TestCase extends TestBase{
 			description = "Test to verify mutual fund values")
 	public void TC21_MutualFundAnalysis() throws Exception {
 
-	//	d21.analysisOne();
-		
 		d21.analyzeFunds();
 		
 		
