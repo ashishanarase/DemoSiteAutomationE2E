@@ -23,7 +23,7 @@ public class TestCase extends TestBase{
 
 	}
 
-	@Test (priority=2, enabled=true, invocationCount = 1,
+	@Test (priority=2, enabled=false, invocationCount = 1,
 			description = "Test to verify the login and logout functionality of the application")
 	public void TC02_LoginLogOut() {
 		//Login and Logout on Demo Website

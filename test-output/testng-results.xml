@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-14T10:30:57 IST" name="Default suite" finished-at="2025-01-14T10:33:21 IST" duration-ms="143552">
+  <suite started-at="2025-01-15T01:27:09 IST" name="Default suite" finished-at="2025-01-15T01:27:56 IST" duration-ms="47312">
     <groups>
     </groups>
-    <test started-at="2025-01-14T10:30:57 IST" name="Default test" finished-at="2025-01-14T10:33:21 IST" duration-ms="143552">
+    <test started-at="2025-01-15T01:27:09 IST" name="Default test" finished-at="2025-01-15T01:27:56 IST" duration-ms="47312">
       <class name="com.DemoQA.TestLayer.TestCase">
-        <test-method is-config="true" signature="dataGeneration()[pri:0, instance:com.DemoQA.TestLayer.TestCase@38102d01]" started-at="2025-01-14T10:30:56 IST" name="dataGeneration" finished-at="2025-01-14T10:30:57 IST" duration-ms="971" status="PASS">
+        <test-method is-config="true" signature="dataGeneration()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-15T01:27:09 IST" name="dataGeneration" finished-at="2025-01-15T01:27:09 IST" duration-ms="58" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataGeneration -->
-        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@38102d01]" started-at="2025-01-14T10:31:00 IST" name="startBrowser" finished-at="2025-01-14T10:31:16 IST" duration-ms="16509" status="PASS">
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-15T01:27:09 IST" name="startBrowser" finished-at="2025-01-15T01:27:16 IST" duration-ms="7651" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method signature="TC21_MutualFundAnalysis()[pri:21, instance:com.DemoQA.TestLayer.TestCase@38102d01]" started-at="2025-01-14T10:31:16 IST" name="TC21_MutualFundAnalysis" description="Test to verify mutual fund values" finished-at="2025-01-14T10:33:18 IST" duration-ms="122078" status="PASS">
+        <test-method signature="TC02_LoginLogOut()[pri:2, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-15T01:27:16 IST" name="TC02_LoginLogOut" description="Test to verify the login and logout functionality of the application" finished-at="2025-01-15T01:27:21 IST" duration-ms="4366" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC02_LoginLogOut -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-15T01:27:21 IST" name="closeBrowser" finished-at="2025-01-15T01:27:23 IST" duration-ms="2316" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-15T01:27:23 IST" name="startBrowser" finished-at="2025-01-15T01:27:27 IST" duration-ms="4236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC21_MutualFundAnalysis()[pri:21, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-15T01:27:27 IST" name="TC21_MutualFundAnalysis" description="Test to verify mutual fund values" finished-at="2025-01-15T01:27:54 IST" duration-ms="26246" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC21_MutualFundAnalysis -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@38102d01]" started-at="2025-01-14T10:33:18 IST" name="closeBrowser" finished-at="2025-01-14T10:33:21 IST" duration-ms="2468" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-15T01:27:54 IST" name="closeBrowser" finished-at="2025-01-15T01:27:56 IST" duration-ms="2329" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
