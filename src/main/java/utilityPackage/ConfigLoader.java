@@ -16,7 +16,7 @@ public class ConfigLoader {
 	        String hostName = InetAddress.getLocalHost().getHostName();
 	        if ("ASHISHANMUMLAP".equalsIgnoreCase(hostName)) {
 	            userDirectory = "C:\\Users\\ashish.anarase\\git\\DemoSiteAutomationE2E\\";
-	        } else if ("ASHISH".equalsIgnoreCase(hostName)) {
+	        } else if ("A-SQUARE".equalsIgnoreCase(hostName)) {
 	            userDirectory = "C:\\Users\\ASHISH\\eclipse-workspace\\DemoSiteAutomationE2E\\";
 	        } else {
 	            throw new RuntimeException("Unknown host: " + hostName);
@@ -26,12 +26,6 @@ public class ConfigLoader {
 	    }
 	}
 	
-	//OFF
-	//static String userDirectory ="C:\\Users\\ashish.anarase\\git\\DemoSiteAutomationE2E\\";
-
-	//ON
-	//static String userDirectory = "C:\\Users\\ASHISH\\eclipse-workspace\\DemoSiteAutomationE2E\\";
-
 	public static void loadConfig(String environment) {
 		try (FileInputStream input = new FileInputStream(userDirectory+"\\ConfigFiles\\config_" + environment + ".properties")) {
 			properties.load(input);
