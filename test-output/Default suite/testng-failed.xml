@@ -5,9 +5,18 @@
     <classes>
       <class name="com.DemoQA.TestLayer.TestCase">
         <methods>
+          <include name="TC18_PdfDownloadAndValidation"/>
+          <include name="TC20_ImageComparison"/>
           <include name="dataGeneration"/>
+          <include name="TC14_DataProviderMethod"/>
+          <include name="TC08_SearchResultAndCartValidation"/>
+          <include name="TC03_WebElementAction"/>
           <include name="closeBrowser"/>
+          <include name="TC17_FailedTestCase"/>
+          <include name="TC22_SkippedTestCase"/>
           <include name="startBrowser"/>
+          <include name="TC19_LoginLogoutDataDriven"/>
+          <include name="TC09_AlertHandling"/>
           <include name="TC21_MutualFundAnalysis"/>
         </methods>
       </class> <!-- com.DemoQA.TestLayer.TestCase -->

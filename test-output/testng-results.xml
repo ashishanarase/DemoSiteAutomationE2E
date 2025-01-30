@@ -1,25 +1,814 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="22" passed="12" failed="9" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-29T17:33:38 IST" name="Default suite" finished-at="2025-01-29T17:34:22 IST" duration-ms="43741">
+  <suite started-at="2025-01-30T18:10:32 IST" name="Default suite" finished-at="2025-01-30T18:26:36 IST" duration-ms="964699">
     <groups>
     </groups>
-    <test started-at="2025-01-29T17:33:38 IST" name="Default test" finished-at="2025-01-29T17:34:22 IST" duration-ms="43741">
+    <test started-at="2025-01-30T18:10:32 IST" name="Default test" finished-at="2025-01-30T18:26:36 IST" duration-ms="964699">
       <class name="com.DemoQA.TestLayer.TestCase">
-        <test-method is-config="true" signature="dataGeneration()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-29T17:33:38 IST" name="dataGeneration" finished-at="2025-01-29T17:33:38 IST" duration-ms="67" status="PASS">
+        <test-method is-config="true" signature="dataGeneration()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:10:32 IST" name="dataGeneration" finished-at="2025-01-30T18:10:32 IST" duration-ms="56" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataGeneration -->
-        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-29T17:33:38 IST" name="startBrowser" finished-at="2025-01-29T17:33:52 IST" duration-ms="13807" status="PASS">
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:10:32 IST" name="startBrowser" finished-at="2025-01-30T18:10:39 IST" duration-ms="7401" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method signature="TC21_MutualFundAnalysis()[pri:21, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-29T17:33:52 IST" name="TC21_MutualFundAnalysis" description="Test to verify mutual fund values" finished-at="2025-01-29T17:34:19 IST" duration-ms="27244" status="PASS">
+        <test-method signature="TC01_ActionOnBrowser()[pri:1, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:10:39 IST" name="TC01_ActionOnBrowser" description="Test to verify browser resizing and positioning operations" finished-at="2025-01-30T18:10:46 IST" duration-ms="6509" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC01_ActionOnBrowser -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:10:46 IST" name="closeBrowser" finished-at="2025-01-30T18:10:48 IST" duration-ms="2386" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:10:48 IST" name="startBrowser" finished-at="2025-01-30T18:10:53 IST" duration-ms="5087" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC02_LoginLogOut()[pri:2, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:10:53 IST" name="TC02_LoginLogOut" description="Test to verify the login and logout functionality of the application" finished-at="2025-01-30T18:10:58 IST" duration-ms="4791" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC02_LoginLogOut -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:10:58 IST" name="closeBrowser" finished-at="2025-01-30T18:11:00 IST" duration-ms="2315" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:11:00 IST" name="startBrowser" finished-at="2025-01-30T18:11:07 IST" duration-ms="7028" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC03_WebElementAction()[pri:3, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:11:07 IST" name="TC03_WebElementAction" description="Test to verify interactions with various types web elements" finished-at="2025-01-30T18:12:11 IST" duration-ms="63240" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Method failed : logOut(); due to an Exception : ]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Method failed : logOut(); due to an Exception : 
+at com.DemoQA.PageLayer.TC02_HomePage.logOut(TC02_HomePage.java:75)
+at com.DemoQA.TestLayer.TestCase.TC03_WebElementAction(TestCase.java:43)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: (//a[@role='menuitem'])[4]' (tried for 30 second(s) with 500 milliseconds interval)
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.DemoQA.PageLayer.GenericActionTemplate.clickButton(GenericActionTemplate.java:331)
+at com.DemoQA.PageLayer.TC02_HomePage.logOut(TC02_HomePage.java:68)
+... 27 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//a[@role='menuitem'])[4]"}
+  (Session info: chrome=132.0.6834.111)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [767124ae050053f4898692a0eb92dd07, findElement {using=xpath, value=(//a[@role='menuitem'])[4]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54223}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54223/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 767124ae050053f4898692a0eb92dd07
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+... 29 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC03_WebElementAction -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:12:11 IST" name="closeBrowser" finished-at="2025-01-30T18:12:13 IST" duration-ms="2307" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:12:13 IST" name="startBrowser" finished-at="2025-01-30T18:12:17 IST" duration-ms="4110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC04_ClickOperationType()[pri:4, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:12:17 IST" name="TC04_ClickOperationType" description="Test to verify different ways of performing click operations on a web element" finished-at="2025-01-30T18:12:23 IST" duration-ms="6304" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC04_ClickOperationType -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:12:23 IST" name="closeBrowser" finished-at="2025-01-30T18:12:26 IST" duration-ms="2547" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:12:26 IST" name="startBrowser" finished-at="2025-01-30T18:12:31 IST" duration-ms="5303" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC05_DynamicTableStructure()[pri:5, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:12:31 IST" name="TC05_DynamicTableStructure" description="Test to verify dynamic table handling by fetching the number of rows and columns" finished-at="2025-01-30T18:12:40 IST" duration-ms="8923" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC05_DynamicTableStructure -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:12:40 IST" name="closeBrowser" finished-at="2025-01-30T18:12:43 IST" duration-ms="2635" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:12:43 IST" name="startBrowser" finished-at="2025-01-30T18:12:47 IST" duration-ms="3774" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC06_WindowHandling()[pri:6, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:12:47 IST" name="TC06_WindowHandling" description="Test to verify window handling operations including switching between multiple windows" finished-at="2025-01-30T18:12:56 IST" duration-ms="9630" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC06_WindowHandling -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:12:56 IST" name="closeBrowser" finished-at="2025-01-30T18:13:01 IST" duration-ms="4273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:13:01 IST" name="startBrowser" finished-at="2025-01-30T18:13:04 IST" duration-ms="3753" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC07_IFrameHandling()[pri:7, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:13:04 IST" name="TC07_IFrameHandling" description="Test to handle and interact with an iFrame element within a webpage" finished-at="2025-01-30T18:13:06 IST" duration-ms="2105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC07_IFrameHandling -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:13:06 IST" name="closeBrowser" finished-at="2025-01-30T18:13:09 IST" duration-ms="2273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:13:09 IST" name="startBrowser" finished-at="2025-01-30T18:13:13 IST" duration-ms="4811" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC08_SearchResultAndCartValidation()[pri:8, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:13:13 IST" name="TC08_SearchResultAndCartValidation" description="Test to dynamically validate the search results, count and cart value validation" finished-at="2025-01-30T18:18:18 IST" duration-ms="304848" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of all [] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54582}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54582/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f574209e2bed1910900f356c332b8b0d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54582}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54582/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f574209e2bed1910900f356c332b8b0d
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.DemoQA.PageLayer.TC08_SearchResultAndCartValidation.searchResultValidation(TC08_SearchResultAndCartValidation.java:100)
+at com.DemoQA.TestLayer.TestCase.TC08_SearchResultAndCartValidation(TestCase.java:82)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC08_SearchResultAndCartValidation -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:18:18 IST" name="closeBrowser" finished-at="2025-01-30T18:18:21 IST" duration-ms="2420" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:18:21 IST" name="startBrowser" finished-at="2025-01-30T18:18:43 IST" duration-ms="22359" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC09_AlertHandling()[pri:9, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:18:43 IST" name="TC09_AlertHandling" description="Test to verify handling of different types of alert pop-ups in the browser" finished-at="2025-01-30T18:18:49 IST" duration-ms="5396" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element is not clickable at point (793, 1751)
+  (Session info: chrome=132.0.6834.111)
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [21418efc6c92228721a1c56d3e26931d, clickElement {id=f.D94994D24FDFB8A0D440F94703B3A28C.d.D3944AA145C17728EAA38F4B96DF8452.e.147}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54776}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54776/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (21418efc6c92228721a1c56d3e26931d)] -> xpath: //button[@onclick='windowAlertFunction()']]
+Session ID: 21418efc6c92228721a1c56d3e26931d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (793, 1751)
+  (Session info: chrome=132.0.6834.111)
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [21418efc6c92228721a1c56d3e26931d, clickElement {id=f.D94994D24FDFB8A0D440F94703B3A28C.d.D3944AA145C17728EAA38F4B96DF8452.e.147}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54776}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54776/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (21418efc6c92228721a1c56d3e26931d)] -> xpath: //button[@onclick='windowAlertFunction()']]
+Session ID: 21418efc6c92228721a1c56d3e26931d
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+at com.DemoQA.PageLayer.GenericActionTemplate.clickButton(GenericActionTemplate.java:333)
+at com.DemoQA.PageLayer.TC09_AlertHandling.alertHandling(TC09_AlertHandling.java:45)
+at com.DemoQA.TestLayer.TestCase.TC09_AlertHandling(TestCase.java:93)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC09_AlertHandling -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:18:49 IST" name="closeBrowser" finished-at="2025-01-30T18:18:51 IST" duration-ms="2268" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:18:51 IST" name="startBrowser" finished-at="2025-01-30T18:18:56 IST" duration-ms="4539" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC10_DropdownHandling()[pri:10, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:18:56 IST" name="TC10_DropdownHandling" description="Test to verify the handling of dropdown menus and extracting options using the Select class" finished-at="2025-01-30T18:19:13 IST" duration-ms="17873" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC10_DropdownHandling -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:19:13 IST" name="closeBrowser" finished-at="2025-01-30T18:19:16 IST" duration-ms="2394" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:19:16 IST" name="startBrowser" finished-at="2025-01-30T18:19:28 IST" duration-ms="12569" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC11_ExplicitWaitConditions()[pri:11, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:19:28 IST" name="TC11_ExplicitWaitConditions" description="Test to verify the use of different explicit wait conditions in Selenium" finished-at="2025-01-30T18:19:33 IST" duration-ms="4146" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC11_ExplicitWaitConditions -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:19:33 IST" name="closeBrowser" finished-at="2025-01-30T18:19:35 IST" duration-ms="2250" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:19:35 IST" name="startBrowser" finished-at="2025-01-30T18:19:40 IST" duration-ms="4742" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC12_BrokenLinkValidation()[pri:12, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:19:40 IST" name="TC12_BrokenLinkValidation" description="Test to verify broken link validation by checking the status of URLs" finished-at="2025-01-30T18:20:47 IST" duration-ms="67265" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC12_BrokenLinkValidation -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:20:47 IST" name="closeBrowser" finished-at="2025-01-30T18:20:49 IST" duration-ms="2317" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:20:49 IST" name="startBrowser" finished-at="2025-01-30T18:20:54 IST" duration-ms="5025" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC13_MouseAction()[pri:13, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:20:54 IST" name="TC13_MouseAction" description="Test to verify the usage of the Mouse Actions class for performing complex user interactions" finished-at="2025-01-30T18:21:03 IST" duration-ms="8675" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC13_MouseAction -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:21:03 IST" name="closeBrowser" finished-at="2025-01-30T18:21:05 IST" duration-ms="2282" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method signature="TC14_DataProviderMethod(java.lang.String,java.lang.String)[pri:14, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:21:05 IST" name="TC14_DataProviderMethod" description="Test to verify the login functionality using different data sets through a DataProvider" data-provider="loginCasesData" finished-at="2025-01-30T18:21:05 IST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:809)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:946)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5
+at com.DemoQA.PageLayer.TC14_DataProviderInTestNg.loginCasesData(TC14_DataProviderInTestNg.java:59)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54)
+... 25 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC14_DataProviderMethod -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:21:05 IST" name="startBrowser" finished-at="2025-01-30T18:21:19 IST" duration-ms="14283" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC15_MultipleTabAndWindows()[pri:15, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:21:19 IST" name="TC15_MultipleTabAndWindows" description="Test to verify handling of multiple browser tabs and windows" finished-at="2025-01-30T18:21:36 IST" duration-ms="16799" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC15_MultipleTabAndWindows -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:21:36 IST" name="closeBrowser" finished-at="2025-01-30T18:21:39 IST" duration-ms="2519" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:21:39 IST" name="startBrowser" finished-at="2025-01-30T18:21:43 IST" duration-ms="4201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC16_sslCertificateMethod()[pri:16, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:21:43 IST" name="TC16_sslCertificateMethod" description="Test to verify the acceptance and handling of SSL certificates in the browser" finished-at="2025-01-30T18:21:51 IST" duration-ms="7731" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC16_sslCertificateMethod -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:21:51 IST" name="closeBrowser" finished-at="2025-01-30T18:21:53 IST" duration-ms="2282" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:21:53 IST" name="startBrowser" finished-at="2025-01-30T18:21:57 IST" duration-ms="3734" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC17_FailedTestCase()[pri:17, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:21:57 IST" name="TC17_FailedTestCase" description="Test to verify that user should NOT be able to login with invalid credentials_TestShouldFail" finished-at="2025-01-30T18:21:59 IST" duration-ms="1948" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at com.DemoQA.PageLayer.TC17_FailedTestCase.loginExpectedToFail(TC17_FailedTestCase.java:59)
+at com.DemoQA.TestLayer.TestCase.TC17_FailedTestCase(TestCase.java:151)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC17_FailedTestCase -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:21:59 IST" name="closeBrowser" finished-at="2025-01-30T18:22:01 IST" duration-ms="2289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:22:01 IST" name="startBrowser" finished-at="2025-01-30T18:22:11 IST" duration-ms="9533" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC18_PdfDownloadAndValidation()[pri:18, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:22:11 IST" name="TC18_PdfDownloadAndValidation" description="Test to ensure that the user can download PDF and store at desired repository" finished-at="2025-01-30T18:25:30 IST" duration-ms="198938" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (fe3321da10735bfdabc77fb97e83868f)] -> xpath: (//img[@class='product-image'])[30]] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55436}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55436/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fe3321da10735bfdabc77fb97e83868f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (fe3321da10735bfdabc77fb97e83868f)] -> xpath: (//img[@class='product-image'])[30]] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55436}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55436/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fe3321da10735bfdabc77fb97e83868f
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at com.DemoQA.PageLayer.TC18_PdfDownloadAndValidation.navigateToProduct(TC18_PdfDownloadAndValidation.java:78)
+at com.DemoQA.TestLayer.TestCase.TC18_PdfDownloadAndValidation(TestCase.java:159)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC18_PdfDownloadAndValidation -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:25:30 IST" name="closeBrowser" finished-at="2025-01-30T18:25:32 IST" duration-ms="2358" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:25:32 IST" name="startBrowser" finished-at="2025-01-30T18:25:39 IST" duration-ms="7054" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC19_LoginLogoutDataDriven()[pri:19, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:25:39 IST" name="TC19_LoginLogoutDataDriven" description="Test to verify the login and logout functionality of the application using multiple set of data" finished-at="2025-01-30T18:25:51 IST" duration-ms="12378" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='title']"}
+  (Session info: chrome=132.0.6834.111)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [874b90fc9f4941798af4bbda727090ff, findElement {using=xpath, value=//span[@class='title']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55559}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55559/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 874b90fc9f4941798af4bbda727090ff]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='title']"}
+  (Session info: chrome=132.0.6834.111)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [874b90fc9f4941798af4bbda727090ff, findElement {using=xpath, value=//span[@class='title']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55559}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55559/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 874b90fc9f4941798af4bbda727090ff
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+at com.DemoQA.PageLayer.TC19_LoginLogoutDataDriven.loginDataDriven(TC19_LoginLogoutDataDriven.java:91)
+at com.DemoQA.TestLayer.TestCase.TC19_LoginLogoutDataDriven(TestCase.java:172)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC19_LoginLogoutDataDriven -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:25:52 IST" name="closeBrowser" finished-at="2025-01-30T18:25:54 IST" duration-ms="2285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:25:54 IST" name="startBrowser" finished-at="2025-01-30T18:25:57 IST" duration-ms="3594" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC20_ImageComparison()[pri:20, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:25:57 IST" name="TC20_ImageComparison" description="Test to verify that actual image is matches with the expected image using pixel to pixel mapping" finished-at="2025-01-30T18:26:04 IST" duration-ms="6227" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Image comparison failed due to an IOException : ]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Image comparison failed due to an IOException : 
+at utilityPackage.CommonMethods.imageComparison(CommonMethods.java:152)
+at com.DemoQA.TestLayer.TestCase.TC20_ImageComparison(TestCase.java:192)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: javax.imageio.IIOException: Can't read input file!
+at java.desktop/javax.imageio.ImageIO.read(ImageIO.java:1308)
+at utilityPackage.CommonMethods.imageComparison(CommonMethods.java:130)
+... 27 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC20_ImageComparison -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:26:04 IST" name="closeBrowser" finished-at="2025-01-30T18:26:08 IST" duration-ms="3836" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:26:08 IST" name="startBrowser" finished-at="2025-01-30T18:26:12 IST" duration-ms="4349" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC21_MutualFundAnalysis()[pri:21, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:26:12 IST" name="TC21_MutualFundAnalysis" description="Test to verify mutual fund values" finished-at="2025-01-30T18:26:26 IST" duration-ms="14263" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//h2[text()='Fund Info']"}
+  (Session info: chrome=132.0.6834.111)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c2109ac373268cce047e8c034267b384, findElement {using=xpath, value=//h2[text()='Fund Info']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55625}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55625/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c2109ac373268cce047e8c034267b384]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h2[text()='Fund Info']"}
+  (Session info: chrome=132.0.6834.111)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c2109ac373268cce047e8c034267b384, findElement {using=xpath, value=//h2[text()='Fund Info']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55625}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55625/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c2109ac373268cce047e8c034267b384
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy16.getText(Unknown Source)
+at com.DemoQA.PageLayer.GenericActionTemplate.jScrollToView(GenericActionTemplate.java:433)
+at com.DemoQA.PageLayer.TC21_MutualFundAnalysis.analyzeSingleFund(TC21_MutualFundAnalysis.java:103)
+at com.DemoQA.PageLayer.TC21_MutualFundAnalysis.analyzeFunds(TC21_MutualFundAnalysis.java:84)
+at com.DemoQA.TestLayer.TestCase.TC21_MutualFundAnalysis(TestCase.java:202)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC21_MutualFundAnalysis -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-29T17:34:19 IST" name="closeBrowser" finished-at="2025-01-29T17:34:22 IST" duration-ms="2516" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:26:26 IST" name="closeBrowser" finished-at="2025-01-30T18:26:29 IST" duration-ms="2336" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:26:29 IST" name="startBrowser" finished-at="2025-01-30T18:26:34 IST" duration-ms="5401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="TC22_SkippedTestCase()[pri:22, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:26:34 IST" name="TC22_SkippedTestCase" description="Test to verify login ata driven test for validation on login saucelab_TestShouldSkipped" finished-at="2025-01-30T18:26:34 IST" duration-ms="1" status="SKIP">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping this test because the condition is true]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping this test because the condition is true
+at com.DemoQA.TestLayer.TestCase.TC22_SkippedTestCase(TestCase.java:213)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC22_SkippedTestCase -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-01-30T18:26:34 IST" name="closeBrowser" finished-at="2025-01-30T18:26:36 IST" duration-ms="2288" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

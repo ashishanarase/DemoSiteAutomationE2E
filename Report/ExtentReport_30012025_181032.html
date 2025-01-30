@@ -1,0 +1,3846 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Demo Automation Project</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>Demo Automation Report_30012025_181032</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Jan 30, 2025 06:10:32 pm</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='47.619%'><span class='strong'>10</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='47.619%'>10</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='4.762%'>1</span> skipped
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>TC01_ActionOnBrowser</span>
+						<span class='test-time'>Jan 30, 2025 06:10:39 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 30, 2025 06:10:39 pm</span>
+	<span class='label end-time'>Jan 30, 2025 06:10:46 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+510ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:10:39 pm</td>
+				<td class='step-details'>
+						Test Started : TC01_ActionOnBrowser
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:10:39 pm</td>
+				<td class='step-details'>
+						Test Description : Test to verify browser resizing and positioning operations
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:10:39 pm</td>
+				<td class='step-details'>
+						Navigated to the login page of WebApp
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:10:39 pm</td>
+				<td class='step-details'>
+						Current size of browser : (1382, 736)
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:10:40 pm</td>
+				<td class='step-details'>
+						Set size of browser : (516, 788)
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:10:43 pm</td>
+				<td class='step-details'>
+						Current position of browser : (10, 10)
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:10:43 pm</td>
+				<td class='step-details'>
+						Set position of browser : (0, 0)
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:10:46 pm</td>
+				<td class='step-details'>
+						Method executed successfully : actionOnBrowser();
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:10:46 pm</td>
+				<td class='step-details'>
+						TestCase Passed : TC01_ActionOnBrowser
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>TC02_LoginLogOut</span>
+						<span class='test-time'>Jan 30, 2025 06:10:53 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 30, 2025 06:10:53 pm</span>
+	<span class='label end-time'>Jan 30, 2025 06:10:58 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+792ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:10:53 pm</td>
+				<td class='step-details'>
+						Test Started : TC02_LoginLogOut
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:10:53 pm</td>
+				<td class='step-details'>
+						Test Description : Test to verify the login and logout functionality of the application
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:10:53 pm</td>
+				<td class='step-details'>
+						Navigated to the login page of WebApp
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:10:53 pm</td>
+				<td class='step-details'>
+						Tab title validated successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:10:54 pm</td>
+				<td class='step-details'>
+						Entered text 'Admin' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:10:54 pm</td>
+				<td class='step-details'>
+						Entered text 'admin123' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:10:54 pm</td>
+				<td class='step-details'>
+						Clicked on element : Login button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:10:54 pm</td>
+				<td class='step-details'>
+						Method executed successfully : login();
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:10:57 pm</td>
+				<td class='step-details'>
+						Clicked on element :  button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:10:58 pm</td>
+				<td class='step-details'>
+						Clicked on element :  button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:10:58 pm</td>
+				<td class='step-details'>
+						Method executed successfully : logOut();
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:10:58 pm</td>
+				<td class='step-details'>
+						TestCase Passed : TC02_LoginLogOut
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>TC03_WebElementAction</span>
+						<span class='test-time'>Jan 30, 2025 06:11:07 pm</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 30, 2025 06:11:07 pm</span>
+	<span class='label end-time'>Jan 30, 2025 06:12:11 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 3s+351ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:11:07 pm</td>
+				<td class='step-details'>
+						Test Started : TC03_WebElementAction
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:11:07 pm</td>
+				<td class='step-details'>
+						Test Description : Test to verify interactions with various types web elements
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:07 pm</td>
+				<td class='step-details'>
+						Navigated to the login page of WebApp
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:07 pm</td>
+				<td class='step-details'>
+						Tab title validated successfully
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:10 pm</td>
+				<td class='step-details'>
+						Entered text 'Admin' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:10 pm</td>
+				<td class='step-details'>
+						Entered text 'admin123' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:11 pm</td>
+				<td class='step-details'>
+						Clicked on element : Login button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:11 pm</td>
+				<td class='step-details'>
+						Method executed successfully : login();
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:13 pm</td>
+				<td class='step-details'>
+						Clicked on element : Recruitment button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:14 pm</td>
+				<td class='step-details'>
+						Clicked on element : Add button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:14 pm</td>
+				<td class='step-details'>
+						Entered text 'Shardul' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:15 pm</td>
+				<td class='step-details'>
+						Entered text 'G.' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:15 pm</td>
+				<td class='step-details'>
+						Entered text 'Garcia' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:15 pm</td>
+				<td class='step-details'>
+						Clicked on element : -- Select -- button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:15 pm</td>
+				<td class='step-details'>
+						Clicked on element : pepito button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:15 pm</td>
+				<td class='step-details'>
+						Entered text 'ShardulGarcia@orange.com' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:15 pm</td>
+				<td class='step-details'>
+						Entered text '9876543210' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:15 pm</td>
+				<td class='step-details'>
+						Entered text 'Java, Selenium WebDriver, API' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:16 pm</td>
+				<td class='step-details'>
+						Clicked on element :  button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:16 pm</td>
+				<td class='step-details'>
+						Clicked on element :  button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:16 pm</td>
+				<td class='step-details'>
+						Entered text 'This is Sample Note of Added Candidate' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:16 pm</td>
+				<td class='step-details'>
+						Checkbox is available to select :  button
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:16 pm</td>
+				<td class='step-details'>
+						Clicked on checkbox :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:26 pm</td>
+				<td class='step-details'>
+						Toastr success message element is not present before performing action, as expected
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:26 pm</td>
+				<td class='step-details'>
+						Clicked on element : Save button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:27 pm</td>
+				<td class='step-details'>
+						Toastr success message is now displayed after performing action
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:27 pm</td>
+				<td class='step-details'>
+						Method executed successfully : actionOnElements();
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:11:29 pm</td>
+				<td class='step-details'>
+						Clicked on element :  button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:12:11 pm</td>
+				<td class='step-details'>
+						Failed to click on element using click(); method :  | Exception: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: (//a[@role='menuitem'])[4]' (tried for 30 second(s) with 500 milliseconds interval)
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:12:11 pm</td>
+				<td class='step-details'>
+						Method failed : logOut();
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:12:11 pm</td>
+				<td class='step-details'>
+						TestCase Failed : TC03_WebElementAction
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:12:11 pm</td>
+				<td class='step-details'>
+						TestCase Failed : java.lang.RuntimeException: Method failed : logOut(); due to an Exception :
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:11 pm</td>
+				<td class='step-details'>
+						Screenshot captured and saved at : C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC03_WebElementAction30012025_181211.jpg
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:12:11 pm</td>
+				<td class='step-details'>
+						Screenshot attached :
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC03_WebElementAction30012025_181211.jpg' src='C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC03_WebElementAction30012025_181211.jpg'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>TC04_ClickOperationType</span>
+						<span class='test-time'>Jan 30, 2025 06:12:17 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 30, 2025 06:12:17 pm</span>
+	<span class='label end-time'>Jan 30, 2025 06:12:23 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+306ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:12:17 pm</td>
+				<td class='step-details'>
+						Test Started : TC04_ClickOperationType
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:12:17 pm</td>
+				<td class='step-details'>
+						Test Description : Test to verify different ways of performing click operations on a web element
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:17 pm</td>
+				<td class='step-details'>
+						Navigated to the login page of WebApp
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:18 pm</td>
+				<td class='step-details'>
+						Clicked on element :  button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:18 pm</td>
+				<td class='step-details'>
+						Clicked on element :  button using Javascript executor interface
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:23 pm</td>
+				<td class='step-details'>
+						Clicked on element : button using the Actions class_click() method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:23 pm</td>
+				<td class='step-details'>
+						Entered key '' into the '' field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:23 pm</td>
+				<td class='step-details'>
+						Method executed successfully : clickOperationType();
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:23 pm</td>
+				<td class='step-details'>
+						TestCase Passed : TC04_ClickOperationType
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>TC05_DynamicTableStructure</span>
+						<span class='test-time'>Jan 30, 2025 06:12:31 pm</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 30, 2025 06:12:31 pm</span>
+	<span class='label end-time'>Jan 30, 2025 06:12:40 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+925ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:12:31 pm</td>
+				<td class='step-details'>
+						Test Started : TC05_DynamicTableStructure
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:12:31 pm</td>
+				<td class='step-details'>
+						Test Description : Test to verify dynamic table handling by fetching the number of rows and columns
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:31 pm</td>
+				<td class='step-details'>
+						Navigated to the login page of WebApp
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:40 pm</td>
+				<td class='step-details'>
+						Navigated to ESPN page which contains table
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:40 pm</td>
+				<td class='step-details'>
+						Desired element visible : Team
+Score
+Overs
+RR
+Inns
+Opposition
+Ground
+Result
+Match Date
+Scorecard
+SRH
+287/3 20.0 14.35 1
+v RCB
+Bengaluru
+won 15 Apr 2024
+Twenty20
+SRH
+277/3 20.0 13.85 1
+v MI
+Hyderabad
+won 27 Mar 2024
+Twenty20
+KKR
+272/7 20.0 13.60 1
+v DC
+Visakhapatnam
+won 3 Apr 2024
+Twenty20
+SRH
+266/7 20.0 13.30 1
+v DC
+Delhi
+won 20 Apr 2024
+Twenty20
+RCB
+263/5 20.0 13.15 1
+v Warriors
+Bengaluru
+won 23 Apr 2013
+Twenty20
+Punjab Kings
+262/2 18.4 14.03 2
+v KKR
+Eden Gardens
+won 26 Apr 2024
+Twenty20
+RCB
+262/7 20.0 13.10 2
+v SRH
+Bengaluru
+lost 15 Apr 2024
+Twenty20
+KKR
+261/6 20.0 13.05 1
+v Punjab Kings
+Eden Gardens
+lost 26 Apr 2024
+Twenty20
+DC
+257/4 20.0 12.85 1
+v MI
+Delhi
+won 27 Apr 2024
+Twenty20
+LSG
+257/5 20.0 12.85 1
+v Punjab Kings
+Mohali
+won 28 Apr 2023
+Twenty20
+RCB
+248/3 20.0 12.40 1
+v Guj Lions
+Bengaluru
+won 14 May 2016
+Twenty20
+MI
+247/9 20.0 12.35 2
+v DC
+Delhi
+lost 27 Apr 2024
+Twenty20
+CSK
+246/5 20.0 12.30 1
+v RR
+Chennai
+won 3 Apr 2010
+Twenty20
+MI
+246/5 20.0 12.30 2
+v SRH
+Hyderabad
+lost 27 Mar 2024
+Twenty20
+KKR
+245/6 20.0 12.25 1
+v Kings XI
+Indore
+won 12 May 2018
+Twenty20
+RCB
+241/7 20.0 12.05 1
+v Punjab Kings
+Dharamsala
+won 9 May 2024
+Twenty20
+CSK
+240/5 20.0 12.00 1
+v Kings XI
+Mohali
+won 19 Apr 2008
+Twenty20
+CSK
+235/4 20.0 11.75 1
+v KKR
+Eden Gardens
+won 23 Apr 2023
+Twenty20
+RCB
+235/1 20.0 11.75 1
+v MI
+Wankhede
+won 10 May 2015
+Twenty20
+MI
+235/9 20.0 11.75 1
+v SRH
+Abu Dhabi
+won 8 Oct 2021
+Twenty20
+KKR
+235/6 20.0 11.75 1
+v LSG
+Lucknow
+won 5 May 2024
+Twenty20
+MI
+234/5 20.0 11.70 1
+v DC
+Wankhede
+won 7 Apr 2024
+Twenty20
+GT
+233/3 20.0 11.65 1
+v MI
+Ahmedabad
+won 26 May 2023
+Twenty20
+KKR
+232/2 20.0 11.60 1
+v MI
+Eden Gardens
+won 28 Apr 2019
+Twenty20
+Kings XI
+232/2 20.0 11.60 1
+v RCB
+Dharamsala
+won 17 May 2011
+Twenty20
+Daredevils
+231/4 20.0 11.55 1
+v Kings XI
+Delhi
+won 23 Apr 2011
+Twenty20
+Kings XI
+231/4 20.0 11.55 1
+v CSK
+Cuttack
+won 7 May 2014
+Twenty20
+GT
+231/3 20.0 11.55 1
+v CSK
+Ahmedabad
+won 10 May 2024
+Twenty20
+SRH
+231/2 20.0 11.55 1
+v RCB
+Hyderabad
+won 31 Mar 2019
+Twenty20
+Kings XI
+230/3 20.0 11.50 1
+v MI
+Wankhede
+won 11 May 2017
+Twenty20
+SRH
+228/4 20.0 11.40 1
+v KKR
+Eden Gardens
+won 14 Apr 2023
+Twenty20
+DC
+228/4 20.0 11.40 1
+v KKR
+Sharjah
+won 3 Oct 2020
+Twenty20
+RCB
+227/4 20.0 11.35 1
+v SRH
+Bengaluru
+won 12 Apr 2016
+Twenty20
+GT
+227/2 20.0 11.35 1
+v LSG
+Ahmedabad
+won 7 May 2023
+Twenty20
+RR
+226/6 19.3 11.58 2
+v Kings XI
+Sharjah
+won 27 Sep 2020
+Twenty20
+RCB
+226/3 20.0 11.30 1
+v Kings XI
+Bengaluru
+won 6 May 2015
+Twenty20
+CSK
+226/6 20.0 11.30 1
+v RCB
+Bengaluru
+won 17 Apr 2023
+Twenty20
+Kings XI
+226/6 20.0 11.30 1
+v CSK
+Wankhede
+won 30 May 2014
+Twenty20
+RR
+224/8 20.0 11.20 2
+v KKR
+Eden Gardens
+won 16 Apr 2024
+Twenty20
+DC
+224/4 20.0 11.20 1
+v GT
+Delhi
+won 24 Apr 2024
+Twenty20
+RR
+223/5 20.0 11.15 2
+v CSK
+Chennai
+lost 3 Apr 2010
+Twenty20
+KKR
+223/6 20.0 11.15 1
+v RR
+Eden Gardens
+lost 16 Apr 2024
+Twenty20
+CSK
+223/3 20.0 11.15 1
+v DC
+Delhi
+won 20 May 2023
+Twenty20
+MI
+223/6 20.0 11.15 2
+v Kings XI
+Wankhede
+lost 11 May 2017
+Twenty20
+Kings XI
+223/2 20.0 11.15 1
+v RR
+Sharjah
+lost 27 Sep 2020
+Twenty20
+CSK
+223/3 20.0 11.15 1
+v SRH
+Hyderabad
+won 8 May 2013
+Twenty20
+CSK
+222/5 20.0 11.10 1
+v Daredevils
+Chennai
+won 25 May 2012
+Twenty20
+KKR
+222/6 20.0 11.10 1
+v RCB
+Eden Gardens
+won 21 Apr 2024
+Twenty20
+KKR
+222/3 20.0 11.10 1
+v RCB
+Bengaluru
+won 18 Apr 2008
+Twenty20
+RR
+222/2 20.0 11.10 1
+v DC
+Wankhede
+won 22 Apr 2022
+Twenty20
+RCB
+221 20.0 11.05 2
+v KKR
+Eden Gardens
+lost 21 Apr 2024
+Twenty20
+DC
+221/8 20.0 11.05 1
+v RR
+Delhi
+won 7 May 2024
+Twenty20
+Punjab Kings
+221/6 20.0 11.05 1
+v RR
+Wankhede
+won 12 Apr 2021
+Twenty20
+Kings XI
+221/3 20.0 11.05 1
+v RR
+Mohali
+won 28 May 2008
+Twenty20
+RR
+220/3 20.0 11.00 1
+v SRH
+Delhi
+won 2 May 2021
+Twenty20
+GT
+220/8 20.0 11.00 2
+v DC
+Delhi
+lost 24 Apr 2024
+Twenty20
+CSK
+220/3 20.0 11.00 1
+v KKR
+Wankhede
+won 21 Apr 2021
+Twenty20
+Daredevils
+219/4 20.0 10.95 1
+v KKR
+Delhi
+won 27 Apr 2018
+Twenty20
+MI
+219/6 20.0 10.95 2
+v CSK
+Delhi
+won 1 May 2021
+Twenty20
+SRH
+219/2 20.0 10.95 1
+v DC
+Dubai (DICS)
+won 27 Oct 2020
+Twenty20
+KKR
+218/4 20.0 10.90 1
+v Kings XI
+Eden Gardens
+won 27 Mar 2019
+Twenty20
+MI
+218/7 20.0 10.90 1
+v Daredevils
+Delhi
+won 17 Mar 2010
+Twenty20
+CSK
+218/4 20.0 10.90 1
+v MI
+Delhi
+lost 1 May 2021
+Twenty20
+RCB
+218/6 20.0 10.90 1
+v SRH
+Bengaluru
+won 17 May 2018
+Twenty20
+RCB
+218/8 20.0 10.90 2
+v CSK
+Bengaluru
+lost 17 Apr 2023
+Twenty20
+RCB
+218/5 20.0 10.90 1
+v CSK
+Bengaluru
+won 18 May 2024
+Twenty20
+MI
+218/5 20.0 10.90 1
+v GT
+Wankhede
+won 12 May 2023
+Twenty20
+RR
+217/7 19.5 10.94 2
+v Chargers
+Hyderabad
+won 24 Apr 2008
+Twenty20
+CSK
+217/7 20.0 10.85 1
+v LSG
+Chennai
+won 3 Apr 2023
+Twenty20
+RR
+217/5 20.0 10.85 1
+v KKR
+Brabourne
+won 18 Apr 2022
+Twenty20
+SRH
+217/6 20.0 10.85 2
+v RR
+Jaipur
+won 7 May 2023
+Twenty20
+RR
+217/4 20.0 10.85 1
+v RCB
+Bengaluru
+won 15 Apr 2018
+Twenty20
+RR
+217/7 20.0 10.85 2
+v Punjab Kings
+Wankhede
+lost 12 Apr 2021
+Twenty20
+MI
+216/4 18.5 11.46 2
+v Punjab Kings
+Mohali
+won 3 May 2023
+Twenty20
+RR
+216/7 20.0 10.80 1
+v CSK
+Sharjah
+won 22 Sep 2020
+Twenty20
+CSK
+216/4 20.0 10.80 1
+v RCB
+DY Patil
+won 12 Apr 2022
+Twenty20
+SRH
+215/6 19.1 11.21 2
+v Punjab Kings
+Hyderabad
+won 19 May 2024
+Twenty20
+RCB
+215/1 20.0 10.75 1
+v Daredevils
+Delhi
+won 17 May 2012
+Twenty20
+DC
+215/5 20.0 10.75 1
+v KKR
+Brabourne
+won 10 Apr 2022
+Twenty20
+Daredevils
+214/3 17.3 12.22 2
+v Guj Lions
+Delhi
+won 4 May 2017
+Twenty20
+MI
+214/4 19.3 10.97 2
+v RR
+Wankhede
+won 30 Apr 2023
+Twenty20
+RR
+214/2 20.0 10.70 1
+v SRH
+Jaipur
+lost 7 May 2023
+Twenty20
+Punjab Kings
+214/8 20.0 10.70 1
+v MI
+Wankhede
+won 22 Apr 2023
+Twenty20
+LSG
+214/6 20.0 10.70 1
+v MI
+Wankhede
+won 17 May 2024
+Twenty20
+GT
+214/4 20.0 10.70 1
+v CSK
+Ahmedabad
+lost 28 May 2023
+Twenty20
+Punjab Kings
+214/3 20.0 10.70 1
+v MI
+Mohali
+lost 3 May 2023
+Twenty20
+Kings XI
+214/8 20.0 10.70 2
+v KKR
+Indore
+lost 12 May 2018
+Twenty20
+Chargers
+214/5 20.0 10.70 1
+v RR
+Hyderabad
+lost 24 Apr 2008
+Twenty20
+Punjab Kings
+214/5 20.0 10.70 1
+v SRH
+Hyderabad
+lost 19 May 2024
+Twenty20
+LSG
+213/4 19.3 10.92 2
+v CSK
+Chennai
+won 23 Apr 2024
+Twenty20
+RCB
+213/4 20.0 10.65 1
+v KKR
+Eden Gardens
+won 19 Apr 2019
+Twenty20
+LSG
+213/9 20.0 10.65 2
+v RCB
+Bengaluru
+won 10 Apr 2023
+Twenty20
+MI
+213/6 20.0 10.65 1
+v RCB
+Wankhede
+won 17 Apr 2018
+Twenty20
+DC
+213/6 20.0 10.65 1
+v MI
+Wankhede
+won 24 Mar 2019
+Twenty20
+DC
+213/2 20.0 10.65 1
+v Punjab Kings
+Dharamsala
+won 17 May 2023
+Twenty20
+RCB
+213/2 20.0 10.65 1
+v Guj Lions
+Rajkot
+won 18 Apr 2017
+Twenty20
+CSK
+212/3 20.0 10.60 1
+v SRH
+Chennai
+won 28 Apr 2024
+Twenty20
+MI
+212/3 20.0 10.60 1
+v Daredevils
+Delhi
+won 6 May 2017
+Twenty20
+MI
+212/6 20.0 10.60 1
+v RR
+Brabourne
+won 13 Mar 2010
+Twenty20
+RCB
+212/2 20.0 10.60 1
+v LSG
+Bengaluru
+lost 10 Apr 2023
+Twenty20
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:12:40 pm</td>
+				<td class='step-details'>
+						Total number of rows : 101
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:12:40 pm</td>
+				<td class='step-details'>
+						Total number of column : 10
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:12:40 pm</td>
+				<td class='step-details'>
+						Validation failed : Incorrect number of rows and/or columns
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:40 pm</td>
+				<td class='step-details'>
+						Method executed successfully : dynamicTableStructure();
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:40 pm</td>
+				<td class='step-details'>
+						TestCase Passed : TC05_DynamicTableStructure
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>TC06_WindowHandling</span>
+						<span class='test-time'>Jan 30, 2025 06:12:47 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 30, 2025 06:12:47 pm</span>
+	<span class='label end-time'>Jan 30, 2025 06:12:56 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+631ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:12:47 pm</td>
+				<td class='step-details'>
+						Test Started : TC06_WindowHandling
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:12:47 pm</td>
+				<td class='step-details'>
+						Test Description : Test to verify window handling operations including switching between multiple windows
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:47 pm</td>
+				<td class='step-details'>
+						Navigated to the login page of WebApp
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:47 pm</td>
+				<td class='step-details'>
+						Clicked on element :  button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:47 pm</td>
+				<td class='step-details'>
+						Clicked on element :  button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:48 pm</td>
+				<td class='step-details'>
+						Clicked on element :  button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:48 pm</td>
+				<td class='step-details'>
+						Clicked on element :  button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:52 pm</td>
+				<td class='step-details'>
+						Switched to tab : OrangeHRM - World's Most Popular Opensource HRIS | Secaucus NJ | Facebook
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:56 pm</td>
+				<td class='step-details'>
+						Switched to tab : OrangeHRM
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:56 pm</td>
+				<td class='step-details'>
+						Method executed successfully : windowHandling();
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:12:56 pm</td>
+				<td class='step-details'>
+						TestCase Passed : TC06_WindowHandling
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>TC07_IFrameHandling</span>
+						<span class='test-time'>Jan 30, 2025 06:13:04 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 30, 2025 06:13:04 pm</span>
+	<span class='label end-time'>Jan 30, 2025 06:13:06 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+106ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:13:04 pm</td>
+				<td class='step-details'>
+						Test Started : TC07_IFrameHandling
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:13:04 pm</td>
+				<td class='step-details'>
+						Test Description : Test to handle and interact with an iFrame element within a webpage
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:13:04 pm</td>
+				<td class='step-details'>
+						Navigated to the login page of WebApp
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:13:06 pm</td>
+				<td class='step-details'>
+						Navigated to Google home page
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:13:06 pm</td>
+				<td class='step-details'>
+						Desired element visible :
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:13:06 pm</td>
+				<td class='step-details'>
+						Switched on iFrame of Google home page
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:13:06 pm</td>
+				<td class='step-details'>
+						Clicked on element : Stay signed out button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:13:06 pm</td>
+				<td class='step-details'>
+						Clicked on sign out button on iFrame of Google home page
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:13:06 pm</td>
+				<td class='step-details'>
+						Method executed successfully : iframeHandling();
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:13:06 pm</td>
+				<td class='step-details'>
+						TestCase Passed : TC07_IFrameHandling
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>TC08_SearchResultAndCartValidation</span>
+						<span class='test-time'>Jan 30, 2025 06:13:13 pm</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 30, 2025 06:13:13 pm</span>
+	<span class='label end-time'>Jan 30, 2025 06:18:18 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 5m 4s+967ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:13:13 pm</td>
+				<td class='step-details'>
+						Test Started : TC08_SearchResultAndCartValidation
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:13:13 pm</td>
+				<td class='step-details'>
+						Test Description : Test to dynamically validate the search results, count and cart value validation
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:13:13 pm</td>
+				<td class='step-details'>
+						Navigated to the login page of WebApp
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:15:15 pm</td>
+				<td class='step-details'>
+						Entered text 'Table' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:15:17 pm</td>
+				<td class='step-details'>
+						Scrolled upto desired element : SEE 2655 RESULTS FOR "TABLE"
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:16:35 pm</td>
+				<td class='step-details'>
+						Clicked on element : SEE 2655 RESULTS FOR "TABLE" button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:16:37 pm</td>
+				<td class='step-details'>
+						search results for the keyword 'Table' found in '45' product titles
+					
+				</td>
+			</tr>
+			<tr class='log' status='warning'>
+				<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+				<td class='timestamp'>6:16:37 pm</td>
+				<td class='step-details'>
+						search results for the keyword 'Table' NOT found in '3' product titles
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:16:37 pm</td>
+				<td class='step-details'>
+						Entered text 'Bed' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:16:39 pm</td>
+				<td class='step-details'>
+						Scrolled upto desired element : SEE 134 RESULTS FOR "BED"
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:16:57 pm</td>
+				<td class='step-details'>
+						Clicked on element : SEE 134 RESULTS FOR "BED" button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:16:58 pm</td>
+				<td class='step-details'>
+						search results for the keyword 'Bed' found in '48' product titles
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:16:58 pm</td>
+				<td class='step-details'>
+						Entered text 'Chair' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:17:01 pm</td>
+				<td class='step-details'>
+						Scrolled upto desired element : SEE 1064 RESULTS FOR "CHAIR"
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:17:21 pm</td>
+				<td class='step-details'>
+						Clicked on element : SEE 1064 RESULTS FOR "CHAIR" button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:17:24 pm</td>
+				<td class='step-details'>
+						search results for the keyword 'Chair' found in '48' product titles
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:17:25 pm</td>
+				<td class='step-details'>
+						Entered text 'Mirror' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:17:27 pm</td>
+				<td class='step-details'>
+						Scrolled upto desired element : SEE 482 RESULTS FOR "MIRROR"
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:17:34 pm</td>
+				<td class='step-details'>
+						Clicked on element : SEE 482 RESULTS FOR "MIRROR" button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:18:18 pm</td>
+				<td class='step-details'>
+						Method failed : searchResultValidation();
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:18:18 pm</td>
+				<td class='step-details'>
+						TestCase Failed : TC08_SearchResultAndCartValidation
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:18:18 pm</td>
+				<td class='step-details'>
+						TestCase Failed : org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all [] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54582}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54582/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f574209e2bed1910900f356c332b8b0d
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:18:18 pm</td>
+				<td class='step-details'>
+						Screenshot captured and saved at : C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC08_SearchResultAndCartValidation30012025_181818.jpg
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:18:18 pm</td>
+				<td class='step-details'>
+						Screenshot attached :
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC08_SearchResultAndCartValidation30012025_181818.jpg' src='C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC08_SearchResultAndCartValidation30012025_181818.jpg'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>TC09_AlertHandling</span>
+						<span class='test-time'>Jan 30, 2025 06:18:43 pm</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 30, 2025 06:18:43 pm</span>
+	<span class='label end-time'>Jan 30, 2025 06:18:49 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+520ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:43 pm</td>
+				<td class='step-details'>
+						Test Started : TC09_AlertHandling
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:43 pm</td>
+				<td class='step-details'>
+						Test Description : Test to verify handling of different types of alert pop-ups in the browser
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:18:43 pm</td>
+				<td class='step-details'>
+						Navigated to the login page of WebApp
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:18:47 pm</td>
+				<td class='step-details'>
+						Navigated to SelectorsHub xPath page
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:47 pm</td>
+				<td class='step-details'>
+						Clicking on element to get simple alert
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:18:49 pm</td>
+				<td class='step-details'>
+						Failed to click on element using click(); method : Click To Open Window Alert | Exception: element click intercepted: Element is not clickable at point (793, 1751)
+  (Session info: chrome=132.0.6834.111)
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [21418efc6c92228721a1c56d3e26931d, clickElement {id=f.D94994D24FDFB8A0D440F94703B3A28C.d.D3944AA145C17728EAA38F4B96DF8452.e.147}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54776}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54776/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (21418efc6c92228721a1c56d3e26931d)] -> xpath: //button[@onclick='windowAlertFunction()']]
+Session ID: 21418efc6c92228721a1c56d3e26931d
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:18:49 pm</td>
+				<td class='step-details'>
+						Method failed : alertHandling();
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:18:49 pm</td>
+				<td class='step-details'>
+						TestCase Failed : TC09_AlertHandling
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:18:49 pm</td>
+				<td class='step-details'>
+						TestCase Failed : org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (793, 1751)
+  (Session info: chrome=132.0.6834.111)
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [21418efc6c92228721a1c56d3e26931d, clickElement {id=f.D94994D24FDFB8A0D440F94703B3A28C.d.D3944AA145C17728EAA38F4B96DF8452.e.147}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54776}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54776/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (21418efc6c92228721a1c56d3e26931d)] -> xpath: //button[@onclick='windowAlertFunction()']]
+Session ID: 21418efc6c92228721a1c56d3e26931d
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:18:49 pm</td>
+				<td class='step-details'>
+						Screenshot captured and saved at : C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC09_AlertHandling30012025_181849.jpg
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:18:49 pm</td>
+				<td class='step-details'>
+						Screenshot attached :
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC09_AlertHandling30012025_181849.jpg' src='C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC09_AlertHandling30012025_181849.jpg'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>TC10_DropdownHandling</span>
+						<span class='test-time'>Jan 30, 2025 06:18:56 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 30, 2025 06:18:56 pm</span>
+	<span class='label end-time'>Jan 30, 2025 06:19:13 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+874ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:56 pm</td>
+				<td class='step-details'>
+						Test Started : TC10_DropdownHandling
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:18:56 pm</td>
+				<td class='step-details'>
+						Test Description : Test to verify the handling of dropdown menus and extracting options using the Select class
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:18:56 pm</td>
+				<td class='step-details'>
+						Navigated to the login page of WebApp
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:18:56 pm</td>
+				<td class='step-details'>
+						Navigated to Amazon home page
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Total option available in dropdown : 46
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 0 : All Categories
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 1 : Alexa Skills
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 2 : Amazon Devices
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 3 : Amazon Fashion
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 4 : Amazon Fresh
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 5 : Amazon Fresh Meat
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 6 : Amazon Pharmacy
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 7 : Appliances
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 8 : Apps & Games
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 9 : Audible Audiobooks
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 10 : Baby
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 11 : Beauty
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 12 : Books
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 13 : Car & Motorbike
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 14 : Clothing & Accessories
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 15 : Collectibles
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 16 : Computers & Accessories
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 17 : Deals
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 18 : Electronics
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 19 : Furniture
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 20 : Garden & Outdoors
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 21 : Gift Cards
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 22 : Grocery & Gourmet Foods
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 23 : Health & Personal Care
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 24 : Home & Kitchen
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 25 : Industrial & Scientific
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 26 : Jewellery
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 27 : Kindle Store
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 28 : Luggage & Bags
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 29 : Luxury Beauty
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 30 : Movies & TV Shows
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 31 : MP3 Music
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 32 : Music
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 33 : Musical Instruments
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 34 : Office Products
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 35 : Pet Supplies
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 36 : Prime Video
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 37 : Shoes & Handbags
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 38 : Software
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 39 : Sports, Fitness & Outdoors
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 40 : Subscribe & Save
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 41 : Tools & Home Improvement
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 42 : Toys & Games
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 43 : Under ₹500
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 44 : Video Games
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Option 45 : Watches
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:19:07 pm</td>
+				<td class='step-details'>
+						Dropdown option selected using 'selectByIndex' method at index : 5 | Option Text: Amazon Fresh Meat
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:19:11 pm</td>
+				<td class='step-details'>
+						Dropdown option selected using 'selectByValue' method for value : search-alias=software
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:19:13 pm</td>
+				<td class='step-details'>
+						Dropdown option selected using 'selectByVisibleText' method for text : Music
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:19:13 pm</td>
+				<td class='step-details'>
+						Method executed successfully : dropdownHandling();
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:19:13 pm</td>
+				<td class='step-details'>
+						TestCase Passed : TC10_DropdownHandling
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>TC11_ExplicitWaitConditions</span>
+						<span class='test-time'>Jan 30, 2025 06:19:28 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 30, 2025 06:19:28 pm</span>
+	<span class='label end-time'>Jan 30, 2025 06:19:33 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+146ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:28 pm</td>
+				<td class='step-details'>
+						Test Started : TC11_ExplicitWaitConditions
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:28 pm</td>
+				<td class='step-details'>
+						Test Description : Test to verify the use of different explicit wait conditions in Selenium
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:19:28 pm</td>
+				<td class='step-details'>
+						Navigated to the login page of WebApp
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:19:32 pm</td>
+				<td class='step-details'>
+						CheckBox is not selected yet
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:19:32 pm</td>
+				<td class='step-details'>
+						Clicked on element :  button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:19:32 pm</td>
+				<td class='step-details'>
+						CheckBox is selected successfully after select action
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:19:33 pm</td>
+				<td class='step-details'>
+						Clicked on element : Remove button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:19:33 pm</td>
+				<td class='step-details'>
+						Method executed successfully : explicitWaitConditions();
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:19:33 pm</td>
+				<td class='step-details'>
+						TestCase Passed : TC11_ExplicitWaitConditions
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>TC12_BrokenLinkValidation</span>
+						<span class='test-time'>Jan 30, 2025 06:19:40 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 30, 2025 06:19:40 pm</span>
+	<span class='label end-time'>Jan 30, 2025 06:20:47 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 7s+266ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:40 pm</td>
+				<td class='step-details'>
+						Test Started : TC12_BrokenLinkValidation
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:40 pm</td>
+				<td class='step-details'>
+						Test Description : Test to verify broken link validation by checking the status of URLs
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:19:40 pm</td>
+				<td class='step-details'>
+						Navigated to the login page of WebApp
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:19:43 pm</td>
+				<td class='step-details'>
+						Total number of links : 232
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:20:47 pm</td>
+				<td class='step-details'>
+						Total number valid links : 223
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:20:47 pm</td>
+				<td class='step-details'>
+						Total number of broken links : 9
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:20:47 pm</td>
+				<td class='step-details'>
+						Method executed successfully : brokenLinkValidation();
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:20:47 pm</td>
+				<td class='step-details'>
+						TestCase Passed : TC12_BrokenLinkValidation
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>TC13_MouseAction</span>
+						<span class='test-time'>Jan 30, 2025 06:20:54 pm</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 30, 2025 06:20:54 pm</span>
+	<span class='label end-time'>Jan 30, 2025 06:21:05 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+968ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:20:54 pm</td>
+				<td class='step-details'>
+						Test Started : TC13_MouseAction
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:20:54 pm</td>
+				<td class='step-details'>
+						Test Description : Test to verify the usage of the Mouse Actions class for performing complex user interactions
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:20:54 pm</td>
+				<td class='step-details'>
+						Navigated to the login page of WebApp
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:20:57 pm</td>
+				<td class='step-details'>
+						Clicked on element :ACTIONS button using the Actions class_click() method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:00 pm</td>
+				<td class='step-details'>
+						Double-clicked on element : Double Click Me! button using the Actions class_doubleClick() method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:01 pm</td>
+				<td class='step-details'>
+						Mouse-over on the 'Hover Over Me First!' button using the Actions class_moveToElement() method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:01 pm</td>
+				<td class='step-details'>
+						Mouse-over on the 'Hover Over Me Second!' button using the Actions class_moveToElement() method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:01 pm</td>
+				<td class='step-details'>
+						Mouse-over on the 'Hover Over Me Third!' button using the Actions class_moveToElement() method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:01 pm</td>
+				<td class='step-details'>
+						Dragged element 'DRAG ME TO MY TARGET!' and Dropped to element 'DROP HERE!' using the Actions class_dragAndDrop() method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:01 pm</td>
+				<td class='step-details'>
+						Scrolled upto desired element : Click and Hold!
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:02 pm</td>
+				<td class='step-details'>
+						Clicked and hold the 'Click and Hold!' button using the Actions class_clickAndHold() method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:03 pm</td>
+				<td class='step-details'>
+						Text validated successfully : 'Well done! keep holding that click now.....'
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:03 pm</td>
+				<td class='step-details'>
+						Released the mouse hold on 'Well done! keep holding that click now.....' button using the Actions class_release() method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:03 pm</td>
+				<td class='step-details'>
+						Mouse-over on the '(100, 200)' co-ordinate using the Actions class_moveToLocation() method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:03 pm</td>
+				<td class='step-details'>
+						Method executed successfully : mouseAction();
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:03 pm</td>
+				<td class='step-details'>
+						TestCase Passed : TC13_MouseAction
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:21:05 pm</td>
+				<td class='step-details'>
+						TestCase Failed : TC14_DataProviderMethod
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:21:05 pm</td>
+				<td class='step-details'>
+						TestCase Failed : java.lang.RuntimeException: java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5
+					
+				</td>
+			</tr>
+			<tr class='log' status='warning'>
+				<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+				<td class='timestamp'>6:21:05 pm</td>
+				<td class='step-details'>
+						An error occurred while attaching the screenshot to report : Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55244}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55244/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>TC15_MultipleTabAndWindows</span>
+						<span class='test-time'>Jan 30, 2025 06:21:19 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 30, 2025 06:21:19 pm</span>
+	<span class='label end-time'>Jan 30, 2025 06:21:36 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+800ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:21:19 pm</td>
+				<td class='step-details'>
+						Test Started : TC15_MultipleTabAndWindows
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:21:19 pm</td>
+				<td class='step-details'>
+						Test Description : Test to verify handling of multiple browser tabs and windows
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:19 pm</td>
+				<td class='step-details'>
+						Navigated to the login page of WebApp
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:21 pm</td>
+				<td class='step-details'>
+						Script focus on : Google
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:26 pm</td>
+				<td class='step-details'>
+						Script focus on : Power Your Software Testing with AI and Cloud | LambdaTest
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:28 pm</td>
+				<td class='step-details'>
+						List of window handles : [3DB728CF1D147CAF07405EE11BA98D86, 57490C076F343091AA119EAC6B371479]
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:28 pm</td>
+				<td class='step-details'>
+						Method executed successfully : multipleWindow();
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:21:33 pm</td>
+				<td class='step-details'>
+						Script focus on : YouTube
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:21:36 pm</td>
+				<td class='step-details'>
+						Script focus on : Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:21:36 pm</td>
+				<td class='step-details'>
+						List of tab handles : [3DB728CF1D147CAF07405EE11BA98D86, 57490C076F343091AA119EAC6B371479, 067A7676A408C85B6F6CA006CBDF22C7]
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:36 pm</td>
+				<td class='step-details'>
+						Method executed successfully : multipleTab();
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:36 pm</td>
+				<td class='step-details'>
+						TestCase Passed : TC15_MultipleTabAndWindows
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>TC16_sslCertificateMethod</span>
+						<span class='test-time'>Jan 30, 2025 06:21:43 pm</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 30, 2025 06:21:43 pm</span>
+	<span class='label end-time'>Jan 30, 2025 06:21:51 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+733ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:21:43 pm</td>
+				<td class='step-details'>
+						Test Started : TC16_sslCertificateMethod
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:21:43 pm</td>
+				<td class='step-details'>
+						Test Description : Test to verify the acceptance and handling of SSL certificates in the browser
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:43 pm</td>
+				<td class='step-details'>
+						Navigated to the login page of WebApp
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:21:50 pm</td>
+				<td class='step-details'>
+						The page title is : OrangeHRM
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:50 pm</td>
+				<td class='step-details'>
+						Method executed successfully : sslCertificateMethod();
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:51 pm</td>
+				<td class='step-details'>
+						TestCase Passed : TC16_sslCertificateMethod
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>TC17_FailedTestCase</span>
+						<span class='test-time'>Jan 30, 2025 06:21:57 pm</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 30, 2025 06:21:57 pm</span>
+	<span class='label end-time'>Jan 30, 2025 06:21:59 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+69ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:21:57 pm</td>
+				<td class='step-details'>
+						Test Started : TC17_FailedTestCase
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:21:57 pm</td>
+				<td class='step-details'>
+						Test Description : Test to verify that user should NOT be able to login with invalid credentials_TestShouldFail
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:57 pm</td>
+				<td class='step-details'>
+						Navigated to the login page of WebApp
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:57 pm</td>
+				<td class='step-details'>
+						Clicked on element : Login button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:57 pm</td>
+				<td class='step-details'>
+						Entered text 'JohnGarry' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:58 pm</td>
+				<td class='step-details'>
+						Entered text 'JohnGarry09' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:58 pm</td>
+				<td class='step-details'>
+						Clicked on element : Login button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:21:59 pm</td>
+				<td class='step-details'>
+						TestCase Failed : TC17_FailedTestCase
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:21:59 pm</td>
+				<td class='step-details'>
+						TestCase Failed : java.lang.AssertionError: expected [true] but found [false]
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:21:59 pm</td>
+				<td class='step-details'>
+						Screenshot captured and saved at : C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC17_FailedTestCase30012025_182159.jpg
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:21:59 pm</td>
+				<td class='step-details'>
+						Screenshot attached :
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC17_FailedTestCase30012025_182159.jpg' src='C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC17_FailedTestCase30012025_182159.jpg'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>TC18_PdfDownloadAndValidation</span>
+						<span class='test-time'>Jan 30, 2025 06:22:11 pm</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 30, 2025 06:22:11 pm</span>
+	<span class='label end-time'>Jan 30, 2025 06:25:30 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 19s+99ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:22:11 pm</td>
+				<td class='step-details'>
+						Test Started : TC18_PdfDownloadAndValidation
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:22:11 pm</td>
+				<td class='step-details'>
+						Test Description : Test to ensure that the user can download PDF and store at desired repository
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:22:11 pm</td>
+				<td class='step-details'>
+						Navigated to the login page of WebApp
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:24:58 pm</td>
+				<td class='step-details'>
+						Clicked on element : FURNITURE button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:24:58 pm</td>
+				<td class='step-details'>
+						Scrolled upto desired element : 1 - 48 of 4953 results
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:25:30 pm</td>
+				<td class='step-details'>
+						Method failed : navigateToProduct();
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:25:30 pm</td>
+				<td class='step-details'>
+						TestCase Failed : TC18_PdfDownloadAndValidation
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:25:30 pm</td>
+				<td class='step-details'>
+						TestCase Failed : org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (fe3321da10735bfdabc77fb97e83868f)] -> xpath: (//img[@class='product-image'])[30]] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55436}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55436/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fe3321da10735bfdabc77fb97e83868f
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:25:30 pm</td>
+				<td class='step-details'>
+						Screenshot captured and saved at : C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC18_PdfDownloadAndValidation30012025_182530.jpg
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:25:30 pm</td>
+				<td class='step-details'>
+						Screenshot attached :
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC18_PdfDownloadAndValidation30012025_182530.jpg' src='C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC18_PdfDownloadAndValidation30012025_182530.jpg'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>TC19_LoginLogoutDataDriven</span>
+						<span class='test-time'>Jan 30, 2025 06:25:39 pm</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 30, 2025 06:25:39 pm</span>
+	<span class='label end-time'>Jan 30, 2025 06:25:52 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 12s+485ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:25:39 pm</td>
+				<td class='step-details'>
+						Test Started : TC19_LoginLogoutDataDriven
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:25:39 pm</td>
+				<td class='step-details'>
+						Test Description : Test to verify the login and logout functionality of the application using multiple set of data
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:25:39 pm</td>
+				<td class='step-details'>
+						Navigated to the login page of WebApp
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:25:41 pm</td>
+				<td class='step-details'>
+						Entered text 'Password' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:25:41 pm</td>
+				<td class='step-details'>
+						Entered text 'secret_sauce' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:25:41 pm</td>
+				<td class='step-details'>
+						Clicked on element :  button using click(); method
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:25:51 pm</td>
+				<td class='step-details'>
+						Method failed : navigateToProduct();
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:25:51 pm</td>
+				<td class='step-details'>
+						TestCase Failed : TC19_LoginLogoutDataDriven
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:25:51 pm</td>
+				<td class='step-details'>
+						TestCase Failed : org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='title']"}
+  (Session info: chrome=132.0.6834.111)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [874b90fc9f4941798af4bbda727090ff, findElement {using=xpath, value=//span[@class='title']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55559}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55559/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 874b90fc9f4941798af4bbda727090ff
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:25:52 pm</td>
+				<td class='step-details'>
+						Screenshot captured and saved at : C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC19_LoginLogoutDataDriven30012025_182552.jpg
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:25:52 pm</td>
+				<td class='step-details'>
+						Screenshot attached :
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC19_LoginLogoutDataDriven30012025_182552.jpg' src='C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC19_LoginLogoutDataDriven30012025_182552.jpg'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>TC20_ImageComparison</span>
+						<span class='test-time'>Jan 30, 2025 06:25:57 pm</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 30, 2025 06:25:57 pm</span>
+	<span class='label end-time'>Jan 30, 2025 06:26:04 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+343ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:25:57 pm</td>
+				<td class='step-details'>
+						Test Started : TC20_ImageComparison
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:25:57 pm</td>
+				<td class='step-details'>
+						Test Description : Test to verify that actual image is matches with the expected image using pixel to pixel mapping
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:25:57 pm</td>
+				<td class='step-details'>
+						Navigated to the login page of WebApp
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:26:02 pm</td>
+				<td class='step-details'>
+						Screenshot captured and saved at : C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\ImageCompare_30012025_182602.jpg
+					
+				</td>
+			</tr>
+			<tr class='log' status='warning'>
+				<td class='status warning' title='warning' alt='warning'><i class='material-icons'>warning</i></td>
+				<td class='timestamp'>6:26:04 pm</td>
+				<td class='step-details'>
+						An error occurred during image comparison : Can't read input file!
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:26:04 pm</td>
+				<td class='step-details'>
+						TestCase Failed : TC20_ImageComparison
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:26:04 pm</td>
+				<td class='step-details'>
+						TestCase Failed : java.lang.RuntimeException: Image comparison failed due to an IOException :
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:26:04 pm</td>
+				<td class='step-details'>
+						Screenshot captured and saved at : C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC20_ImageComparison30012025_182604.jpg
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:26:04 pm</td>
+				<td class='step-details'>
+						Screenshot attached :
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC20_ImageComparison30012025_182604.jpg' src='C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC20_ImageComparison30012025_182604.jpg'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>TC21_MutualFundAnalysis</span>
+						<span class='test-time'>Jan 30, 2025 06:26:12 pm</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 30, 2025 06:26:12 pm</span>
+	<span class='label end-time'>Jan 30, 2025 06:26:26 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+381ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:26:12 pm</td>
+				<td class='step-details'>
+						Test Started : TC21_MutualFundAnalysis
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:26:12 pm</td>
+				<td class='step-details'>
+						Test Description : Test to verify mutual fund values
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:26:12 pm</td>
+				<td class='step-details'>
+						Navigated to the login page of WebApp
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:26:14 pm</td>
+				<td class='step-details'>
+						Entered text 'Axis Small Cap Fund - Direct Plan - Growth' into the :  field
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:26:16 pm</td>
+				<td class='step-details'>
+						Clicked on element : Nifty 50 button using Javascript executor interface
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:26:26 pm</td>
+				<td class='step-details'>
+						Method failed : analyzeFunds()
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:26:26 pm</td>
+				<td class='step-details'>
+						TestCase Failed : TC21_MutualFundAnalysis
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:26:26 pm</td>
+				<td class='step-details'>
+						TestCase Failed : org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h2[text()='Fund Info']"}
+  (Session info: chrome=132.0.6834.111)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.0', revision: 'b6bf9de7cc*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c2109ac373268cce047e8c034267b384, findElement {using=xpath, value=//h2[text()='Fund Info']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\ASHISH~1.ANA\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55625}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55625/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c2109ac373268cce047e8c034267b384
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:26:26 pm</td>
+				<td class='step-details'>
+						Screenshot captured and saved at : C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC21_MutualFundAnalysis30012025_182626.jpg
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>6:26:26 pm</td>
+				<td class='step-details'>
+						Screenshot attached :
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC21_MutualFundAnalysis30012025_182626.jpg' src='C:\Users\ashish.anarase\git\DemoSiteAutomationE2E\Screenshots\TC21_MutualFundAnalysis30012025_182626.jpg'>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>TC22_SkippedTestCase</span>
+						<span class='test-time'>Jan 30, 2025 06:26:34 pm</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 30, 2025 06:26:34 pm</span>
+	<span class='label end-time'>Jan 30, 2025 06:26:34 pm</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:26:34 pm</td>
+				<td class='step-details'>
+						Test Started : TC22_SkippedTestCase
+					
+				</td>
+			</tr>
+			<tr class='log' status='info'>
+				<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+				<td class='timestamp'>6:26:34 pm</td>
+				<td class='step-details'>
+						Test Description : Test to verify login ata driven test for validation on login saucelab_TestShouldSkipped
+					
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:26:34 pm</td>
+				<td class='step-details'>
+						Navigated to the login page of WebApp
+					
+				</td>
+			</tr>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>6:26:34 pm</td>
+				<td class='step-details'>
+						TestCase Skipped : TC22_SkippedTestCase
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>21</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Jan 30, 2025 06:10:32 pm</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Jan 30, 2025 06:26:36 pm</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 16m 4s+791ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Host Name</td>
+								<td>AshishAnarase</td>
+							</tr>
+							<tr>
+								<td>User Name</td>
+								<td>ashish.anarase</td>
+							</tr>
+							<tr>
+								<td>Environment</td>
+								<td>Demo Automation</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 21,
+				passParent: 10,
+				failParent: 10,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 1,
+				exceptionsParent: 11,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "TC01_ActionOnBrowser":6.51,"TC02_LoginLogOut":4.792,"TC03_WebElementAction":63.351,"TC04_ClickOperationType":6.306,"TC05_DynamicTableStructure":8.925,"TC06_WindowHandling":9.631,"TC07_IFrameHandling":2.106,"TC08_SearchResultAndCartValidation":304.967,"TC09_AlertHandling":5.52,"TC10_DropdownHandling":17.874,"TC11_ExplicitWaitConditions":4.146,"TC12_BrokenLinkValidation":67.266,"TC13_MouseAction":10.968,"TC15_MultipleTabAndWindows":16.8,"TC16_sslCertificateMethod":7.733,"TC17_FailedTestCase":2.069,"TC18_PdfDownloadAndValidation":199.099,"TC19_LoginLogoutDataDriven":12.485,"TC20_ImageComparison":6.343,"TC21_MutualFundAnalysis":14.381,"TC22_SkippedTestCase":0.001
+			};
+		</script>
+	
+		  <script src='https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
+</html>
