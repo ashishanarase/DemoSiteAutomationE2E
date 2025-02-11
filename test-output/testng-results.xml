@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-04T17:32:16 IST" name="Default suite" finished-at="2025-02-04T17:36:13 IST" duration-ms="237492">
+  <suite started-at="2025-02-12T01:14:13 IST" name="Default suite" finished-at="2025-02-12T01:14:45 IST" duration-ms="32839">
     <groups>
     </groups>
-    <test started-at="2025-02-04T17:32:16 IST" name="Default test" finished-at="2025-02-04T17:36:13 IST" duration-ms="237492">
+    <test started-at="2025-02-12T01:14:13 IST" name="Default test" finished-at="2025-02-12T01:14:45 IST" duration-ms="32839">
       <class name="com.DemoQA.TestLayer.TestCase">
-        <test-method is-config="true" signature="dataGeneration()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-02-04T17:32:16 IST" name="dataGeneration" finished-at="2025-02-04T17:32:16 IST" duration-ms="65" status="PASS">
+        <test-method is-config="true" signature="dataGeneration()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-02-12T01:14:13 IST" name="dataGeneration" finished-at="2025-02-12T01:14:13 IST" duration-ms="76" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataGeneration -->
-        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-02-04T17:32:16 IST" name="startBrowser" finished-at="2025-02-04T17:34:55 IST" duration-ms="158680" status="PASS">
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-02-12T01:14:13 IST" name="startBrowser" finished-at="2025-02-12T01:14:18 IST" duration-ms="5310" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method signature="TC21_MutualFundAnalysis()[pri:21, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-02-04T17:34:55 IST" name="TC21_MutualFundAnalysis" description="Test to verify mutual fund values" finished-at="2025-02-04T17:36:11 IST" duration-ms="76110" status="PASS">
+        <test-method signature="TC21_MutualFundAnalysis()[pri:21, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-02-12T01:14:18 IST" name="TC21_MutualFundAnalysis" description="Test to verify mutual fund values" finished-at="2025-02-12T01:14:43 IST" duration-ms="24876" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC21_MutualFundAnalysis -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-02-04T17:36:11 IST" name="closeBrowser" finished-at="2025-02-04T17:36:13 IST" duration-ms="2526" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.DemoQA.TestLayer.TestCase@6a03bcb1]" started-at="2025-02-12T01:14:43 IST" name="closeBrowser" finished-at="2025-02-12T01:14:45 IST" duration-ms="2471" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
