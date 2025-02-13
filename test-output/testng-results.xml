@@ -1,59 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-13T23:55:55 IST" name="Default suite" finished-at="2025-02-13T23:55:55 IST" duration-ms="60">
+  <suite started-at="2025-02-14T00:32:24 IST" name="Default suite" finished-at="2025-02-14T00:32:24 IST" duration-ms="65">
     <groups>
     </groups>
-    <test started-at="2025-02-13T23:55:55 IST" name="Default test" finished-at="2025-02-13T23:55:55 IST" duration-ms="60">
-      <class name="com.DemoQA.PageLayer.SoftAsserationExample">
-        <test-method signature="testSoftAssertions()[pri:0, instance:com.DemoQA.PageLayer.SoftAsserationExample@2df3b89c]" started-at="2025-02-13T23:55:55 IST" name="testSoftAssertions" finished-at="2025-02-13T23:55:55 IST" duration-ms="23" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-Step 1 Failed: 2+2 is not 5 expected [5] but found [4],
-Step 2 Failed: 3 is not greater than 5 expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-Step 1 Failed: 2+2 is not 5 expected [5] but found [4],
-Step 2 Failed: 3 is not greater than 5 expected [true] but found [false]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at com.DemoQA.PageLayer.SoftAsserationExample.testSoftAssertions(SoftAsserationExample.java:23)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+    <test started-at="2025-02-14T00:32:24 IST" name="Default test" finished-at="2025-02-14T00:32:24 IST" duration-ms="65">
+      <class name="com.DemoQA.PageLayer.TC23_TestNGPriorityExample">
+        <test-method signature="testB()[pri:-1, instance:com.DemoQA.PageLayer.TC23_TestNGPriorityExample@7c9d8e2]" started-at="2025-02-14T00:32:24 IST" name="testB" finished-at="2025-02-14T00:32:24 IST" duration-ms="14" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSoftAssertions -->
-      </class> <!-- com.DemoQA.PageLayer.SoftAsserationExample -->
+        </test-method> <!-- testB -->
+        <test-method signature="testC()[pri:0, instance:com.DemoQA.PageLayer.TC23_TestNGPriorityExample@7c9d8e2]" started-at="2025-02-14T00:32:24 IST" name="testC" finished-at="2025-02-14T00:32:24 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testC -->
+        <test-method signature="testD()[pri:1, instance:com.DemoQA.PageLayer.TC23_TestNGPriorityExample@7c9d8e2]" started-at="2025-02-14T00:32:24 IST" name="testD" finished-at="2025-02-14T00:32:24 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testD -->
+        <test-method signature="testE()[pri:2, instance:com.DemoQA.PageLayer.TC23_TestNGPriorityExample@7c9d8e2]" started-at="2025-02-14T00:32:24 IST" name="testE" finished-at="2025-02-14T00:32:24 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testE -->
+        <test-method signature="testA()[pri:3, instance:com.DemoQA.PageLayer.TC23_TestNGPriorityExample@7c9d8e2]" started-at="2025-02-14T00:32:24 IST" name="testA" finished-at="2025-02-14T00:32:24 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testA -->
+      </class> <!-- com.DemoQA.PageLayer.TC23_TestNGPriorityExample -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
