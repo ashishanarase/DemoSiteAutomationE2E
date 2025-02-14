@@ -636,7 +636,7 @@ public class GenericActionTemplate extends TestBase {
 
 		element.click();
 
-		List<WebElement> optionsList = selObject.getOptions();
+		List <WebElement> optionsList = selObject.getOptions();
 
 		try {				
 			// Check if the input value is numeric or not

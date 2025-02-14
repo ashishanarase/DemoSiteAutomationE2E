@@ -11,6 +11,7 @@ import utilityPackage.CommonMethods;
 @Listeners(ListenerClass.class)
 public class TestCase extends TestBase{
 
+	
 	//Dynamic data which can change any time
 	String searchkey = "One Plus Nord";
 
@@ -208,9 +209,9 @@ public class TestCase extends TestBase{
 			description = "Test to verify login ata driven test for validation on login saucelab_TestShouldSkipped")
 	public void TC22_SkippedTestCase() {
 
-		boolean condition = false; // You can set this condition dynamically -false always
+		boolean condition = true; // You can set this condition dynamically -barobar(TRU) always
 		if (condition) {
-			throw new SkipException("Skipping this test because the condition is false");
+			throw new SkipException("Skipping this test because the condition is true");
 		}
 	}
 
