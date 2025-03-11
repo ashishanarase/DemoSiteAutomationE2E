@@ -22,7 +22,6 @@ public class RoughWorkClass {
 		RoughWorkClass roughWorkClass = new RoughWorkClass();
 		
 		roughWorkClass.missingNumber(arr, 11);
-		  
-
+ 
 	}
 }
